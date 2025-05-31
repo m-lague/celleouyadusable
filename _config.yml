@@ -1,0 +1,61 @@
+# Site settings
+title: "Celle où ya du sable - Yoga à Lacanau"
+description: "Cours de Hatha et Yin Yoga avec Nathalie à Lacanau. Découvrez la sérénité à travers des pratiques douces et ressourçantes."
+baseurl: ""
+url: "https://celle-ou-yadusable.fr"
+author: "Nathalie - Professeure de Yoga"
+
+# SEO
+lang: fr
+locale: fr_FR
+
+# Collections
+collections:
+  courses:
+    output: false
+    permalink: /:collection/:name/
+  events:
+    output: false
+    permalink: /:collection/:name/
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "_pages/accueil.md"
+    values:
+      layout: "accueil"
+
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - README.md
+  - admin

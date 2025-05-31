@@ -1,0 +1,44 @@
+{% if page.quick_messages %}
+<div class="bg-white py-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Messages rapides -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold text-jungle-800 mb-6 border-l-4 border-sable-500 pl-4 bg-sable-50 py-2">
+                {{ page.quick_messages.title }}
+            </h2>
+            <p class="text-jungle-600 mb-6">{{ page.quick_messages.subtitle }}</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {% assign phone_clean = page.whatsapp_number | remove: ' ' | remove: '+' %}
+                {% for message in page.quick_messages.messages %}
+                {% assign message_encoded = message.message | url_encode %}
+                <a href="https://wa.me/{{ phone_clean }}?text={{ message_encoded }}"
+                   target="_blank"
+                   class="{% cycle 'bg-jungle-100 border-jungle-500 hover:bg-jungle-200', 'bg-sable-100 border-sable-500 hover:bg-sable-200' %} p-4 border-l-4 transition-colors">
+                    <h4 class="font-semibold text-jungle-800 mb-2">{{ message.title }}</h4>
+                    <p class="text-sm text-jungle-600">{{ message.description }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Informations importantes -->
+        {% if page.important_info %}
+        <div class="bg-gradient-to-r from-jungle-100 to-sable-100 p-8 border-t-4 border-jungle-600">
+            <h2 class="text-xl font-bold text-jungle-800 mb-4 text-center">
+                {{ page.important_info.title }}
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-jungle-600">
+                {% for item in page.important_info.items %}
+                <div class="bg-white p-4 border-l-4 {% cycle 'border-jungle-400', 'border-sable-400' %}">
+                    <h4 class="font-semibold mb-2">{{ item.title }}</h4>
+                    <p class="text-sm">{{ item.content }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}

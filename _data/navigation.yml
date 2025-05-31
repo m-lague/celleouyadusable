@@ -1,0 +1,13 @@
+main:
+  - name: "Accueil"
+    url: "/accueil/"
+  - name: "Cours"
+    url: "/cours/"
+  - name: "Événements"
+    url: "/evenements/"
+  - name: "À propos"
+    url: "/a-propos/"
+  - name: "FAQ"
+    url: "/faq/"
+  - name: "Contact"
+    url: "/contact/"

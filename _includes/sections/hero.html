@@ -1,0 +1,57 @@
+<section class="relative bg-gradient-to-br from-jungle-100 to-sable-100 h-dvh max-h-screen flex items-start overflow-hidden" style="height: calc(100vh - 4rem);">
+    <div class="absolute inset-0 bg-black opacity-10"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold text-jungle-800 mb-6 leading-tight">
+                    {{ site.data.site-texts.hero.title | default: page.hero.title }}
+                </h1>
+                <p class="text-xl md:text-2xl text-jungle-600 mb-8">
+                    {{ site.data.site-texts.hero.subtitle | default: page.hero.subtitle }}
+                </p>
+
+                <!-- Boutons d'action modernes -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <!-- Bouton principal -->
+                    {% include button.html
+                       style="primary"
+                       url="/cours/"
+                       text="Découvrir les cours"
+                       icon=true %}
+
+                    <!-- Bouton secondaire -->
+                    {% include button.html
+                       style="hero-secondary"
+                       url="/contact/"
+                       text="Me contacter"
+                       icon=true %}
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="aspect-w-4 aspect-h-5 overflow-hidden shadow-2xl ">
+                    {% if page.hero.image %}
+                    <img src="{{ page.hero.image }}"
+                         alt="Nathalie pratiquant le yoga à Lacanau"
+                         class="w-full h-full object-cover">
+                    {% else %}
+                    <div class="w-full h-96 bg-gradient-to-br from-jungle-200 to-sable-200 flex items-center justify-center rounded-2xl">
+                        <span class="text-jungle-600 text-lg">Photo de yoga</span>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Éléments décoratifs qui dépassent -->
+                <div class="absolute -top-4 -right-4 w-24 h-6 bg-sable-300 opacity-70"></div>
+                <div class="absolute -top-8 -right-8 w-16 h-16 bg-sable-400 opacity-50"></div>
+                <div class="absolute -bottom-6 -left-6 w-32 h-8 bg-jungle-200 opacity-50"></div>
+                <div class="absolute -bottom-12 -left-12 w-20 h-20 bg-jungle-300 opacity-30"></div>
+
+                <!-- Lignes décoratives à l'extérieur -->
+                <div class="absolute top-1/4 -left-8 w-2 h-24 bg-jungle-400 opacity-60"></div>
+                <div class="absolute bottom-1/4 -right-6 w-1 h-32 bg-sable-400 opacity-70"></div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,30 @@
+hero:
+  title: "Trouvez votre équilibre à Lacanau"
+  subtitle: "Cours de Hatha et Yin Yoga avec Nathalie"
+  cta: "Découvrir les cours"
+
+courses:
+  title: "Mes Cours de Yoga"
+  subtitle: "Des pratiques douces pour tous les niveaux"
+
+events:
+  title: "Événements & Retraites"
+  subtitle: "Des moments privilégiés pour approfondir votre pratique"
+
+about:
+  title: "Nathalie, votre professeure"
+  subtitle: "Passionnée de yoga depuis plus de 10 ans"
+
+testimonials:
+  title: "Ce que disent mes élèves"
+  subtitle: "Leurs expériences avec le yoga"
+
+contact:
+  title: "Contactez-moi"
+  subtitle: "Pour toute question ou réservation"
+  whatsapp: "+33 6 XX XX XX XX"
+  whatsapp_text: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga."
+
+footer:
+  copyright: "© 2025 Celle où ya du sable - Tous droits réservés"
+  location: "Lacanau, Gironde"

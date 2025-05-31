@@ -1,0 +1,22 @@
+{% if page.certifications %}
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-jungle-800 mb-8 text-center border-b-4 border-jungle-400 inline-block pb-2">
+            Formations & Certifications
+        </h2>
+
+        <div class="space-y-6">
+            {% for cert in page.certifications %}
+            <div class="flex items-start space-x-4 {% if cert.color == 'jungle' %}bg-jungle-50 border-jungle-600{% else %}bg-sable-50 border-sable-600{% endif %} p-6 border-l-4">
+                <div class="w-4 h-4 {% if cert.color == 'jungle' %}bg-jungle-600{% else %}bg-sable-600{% endif %} mt-2"></div>
+                <div>
+                    <h3 class="text-lg font-semibold text-jungle-800">{{ cert.title }}</h3>
+                    <p class="text-jungle-600">{{ cert.school }}</p>
+                    <p class="text-sm text-jungle-500">{{ cert.year }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

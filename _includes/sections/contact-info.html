@@ -1,0 +1,46 @@
+{% if page.availability or page.location_info %}
+<div class="bg-white py-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Horaires et localisation -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+            {% if page.availability %}
+            <div class="bg-jungle-50 p-6 border-l-4 border-jungle-500">
+                <h3 class="text-xl font-semibold text-jungle-800 mb-4 bg-jungle-100 px-3 py-2">
+                    {{ page.availability.title }}
+                </h3>
+                <div class="space-y-2 text-jungle-600">
+                    {% for schedule in page.availability.schedule %}
+                    <p><strong>{{ schedule.days }} :</strong> {{ schedule.hours }}</p>
+                    {% endfor %}
+                </div>
+                {% if page.availability.note %}
+                <p class="text-sm text-jungle-500 mt-4 bg-white p-2 border-l-2 border-jungle-300">
+                    {{ page.availability.note }}
+                </p>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            {% if page.location_info %}
+            <div class="bg-sable-50 p-6 border-l-4 border-sable-500">
+                <h3 class="text-xl font-semibold text-jungle-800 mb-4 bg-sable-100 px-3 py-2">
+                    {{ page.location_info.title }}
+                </h3>
+                <div class="space-y-2 text-jungle-600">
+                    {% for detail in page.location_info.details %}
+                    <p><strong>{{ detail.label }} :</strong> {{ detail.value }}</p>
+                    {% endfor %}
+                </div>
+                {% if page.location_info.note %}
+                <p class="text-sm text-jungle-500 mt-4 bg-white p-2 border-l-2 border-sable-300">
+                    {{ page.location_info.note }}
+                </p>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %}

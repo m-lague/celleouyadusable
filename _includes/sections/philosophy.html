@@ -1,0 +1,20 @@
+{% if page.philosophy_items %}
+<section class="py-16 bg-gradient-to-r from-jungle-50 to-sable-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-jungle-800 mb-8 text-center border-b-4 border-sable-400 inline-block pb-2">
+            Ma philosophie
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for item in page.philosophy_items %}
+            <div class="bg-white p-8 shadow-lg border-l-4 {% if item.color == 'jungle' %}border-jungle-500{% else %}border-sable-500{% endif %}">
+                <h3 class="text-xl font-semibold text-jungle-800 mb-4 {% if item.color == 'jungle' %}bg-jungle-100{% else %}bg-sable-100{% endif %} px-3 py-2">
+                    {{ item.title }}
+                </h3>
+                <p class="text-jungle-600">{{ item.content }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,88 @@
+<!-- Composant bouton réutilisable -->
+{% assign button_style = include.style | default: "primary" %}
+{% assign button_size = include.size | default: "medium" %}
+{% assign button_url = include.url | default: "#" %}
+{% assign button_text = include.text | default: "Bouton" %}
+{% assign button_icon = include.icon | default: false %}
+{% assign button_target = include.target | default: "_self" %}
+
+{% if button_style == "hero-primary" %}
+    <!-- Bouton principal hero (taille réduite) -->
+    <a href="{{ button_url }}"
+       target="{{ button_target }}"
+       class="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-jungle-600 via-jungle-700 to-jungle-800 text-white font-semibold text-base rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
+
+        <!-- Effet de brillance -->
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-700"></div>
+
+        <!-- Contenu -->
+        <span class="relative z-10">{{ button_text }}</span>
+
+        <!-- Flèche animée -->
+        {% if button_icon %}
+        <svg class="w-4 h-4 ml-2 relative z-10 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+        {% endif %}
+    </a>
+
+{% elsif button_style == "hero-secondary" %}
+    <!-- Bouton secondaire hero (taille réduite) -->
+    <a href="{{ button_url }}"
+       target="{{ button_target }}"
+       class="group relative inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-jungle-800 font-semibold text-base rounded-lg hover:bg-white/20 hover:border-white/50 transition-all duration-300 shadow-md hover:shadow-lg">
+
+        <span>{{ button_text }}</span>
+
+        {% if button_icon %}
+        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+        {% endif %}
+    </a>
+
+{% elsif button_style == "outline" %}
+    <!-- Bouton outline -->
+    <a href="{{ button_url }}"
+       target="{{ button_target }}"
+       class="group inline-flex items-center px-6 py-3 border-2 border-jungle-600 text-jungle-600 hover:bg-jungle-600 hover:text-white font-semibold rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+
+        <span>{{ button_text }}</span>
+
+        {% if button_icon %}
+        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+        {% endif %}
+    </a>
+
+{% elsif button_style == "ghost" %}
+    <!-- Bouton ghost -->
+    <a href="{{ button_url }}"
+       target="{{ button_target }}"
+       class="group inline-flex items-center px-6 py-3 text-jungle-600 hover:text-jungle-800 font-semibold rounded-lg hover:bg-jungle-50 transition-all duration-300">
+
+        <span>{{ button_text }}</span>
+
+        {% if button_icon %}
+        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+        {% endif %}
+    </a>
+
+{% else %}
+    <!-- Bouton standard -->
+    <a href="{{ button_url }}"
+       target="{{ button_target }}"
+       class="group inline-flex items-center px-6 py-3 bg-jungle-600 hover:bg-jungle-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+
+        <span>{{ button_text }}</span>
+
+        {% if button_icon %}
+        <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+        {% endif %}
+    </a>
+{% endif %}

@@ -1,0 +1,34 @@
+<!-- Section About principale -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <!-- Photo principale -->
+            {% if page.portrait_image %}
+            <div class="lg:col-span-1">
+                <div class="aspect-w-3 aspect-h-4 mb-6">
+                    <img src="{{ page.portrait_image }}"
+                         alt="Nathalie en posture de yoga"
+                         class="w-full h-full object-cover shadow-lg">
+                </div>
+
+                <!-- Éléments décoratifs géométriques -->
+                <div class="relative">
+                    <div class="absolute -top-4 -right-4 w-16 h-4 bg-jungle-300 opacity-60"></div>
+                    <div class="absolute -bottom-2 -left-2 w-8 h-8 bg-sable-400 opacity-50"></div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Contenu principal -->
+            <div class="{% if page.portrait_image %}lg:col-span-2{% else %}lg:col-span-3{% endif %}">
+                <h1 class="text-4xl font-bold text-jungle-800 mb-6 border-l-4 border-jungle-500 pl-4">
+                    Mon parcours
+                </h1>
+
+                <div class="prose prose-lg text-jungle-700 space-y-6">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
