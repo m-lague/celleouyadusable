@@ -6,7 +6,7 @@ duration: "2 jours"
 price: 180
 location: "Forêt des Landes"
 participants_max: 12
-image: "/assets/images/retraite-foret.jpg"
+image: "/assets/images/retraite-foret.jpeg"
 ---
 
 Rejoignez-moi pour une retraite ressourçante au cœur de la forêt des Landes. Deux jours pour vous reconnecter à la nature et à vous-même.

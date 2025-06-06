@@ -6,7 +6,7 @@ description: "Cours de Hatha et Yin Yoga avec Nathalie à Lacanau. Trouvez votre
 show_title: false
 hero:
   title: "Cours de Yoga à Lacanau"
-  subtitle: "Sur la plage et au cœur de la forêt landaise, reconnectez-vous à l’essentiel lors de votre pratique"
+  subtitle: "Sur la plage et au cœur de la forêt de Lacanau, reconnectez-vous à l’essentiel lors de votre pratique"
   image: "/assets/images/yoga-lacanau-celleouyadusable.jpeg"
   cta: "Voir les Cours"
 sections:

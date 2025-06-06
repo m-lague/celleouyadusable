@@ -82,11 +82,19 @@
             <div class="hidden md:flex items-center space-x-8">
                 <div class="flex items-baseline space-x-4">
                     {% for item in site.data.navigation.main %}
-                    <a href="{{ item.url }}"
-                       class="text-jungle-600 hover:text-jungle-800 px-3 py-2 text-sm font-medium transition-colors border-b-2 border-transparent hover:border-jungle-300
-                       {% if page.url == item.url %}text-jungle-800 border-jungle-500{% endif %}">
+                      {% assign is_current = false %}
+                      {% if page.permalink == item.url %}
+                        {% assign is_current = true %}
+                      {% endif %}
+                      <a href="{{ item.url }}"
+                        class="px-3 py-2 text-sm font-medium transition-colors border-b-2
+                        {% if is_current %}
+                         text-jungle-800 border-jungle-500
+                        {% else %}
+                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                        {% endif %}">
                         {{ item.name }}
-                    </a>
+                      </a>
                     {% endfor %}
                 </div>
 

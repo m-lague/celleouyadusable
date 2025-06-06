@@ -1,7 +1,7 @@
 <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-sable-200 inline-block pb-2">
                 {{ site.data.site-texts.events.title }}
             </h2>
             <p class="text-xl text-jungle-600 max-w-2xl mx-auto">
@@ -12,7 +12,7 @@
         {% assign upcoming_events = site.events | where_exp: "event", "event.date >= site.time" | sort: "date" %}
 
         {% if upcoming_events.size > 0 %}
-        <div class="bg-gradient-to-r from-jungle-600 to-sable-500 rounded-2xl p-8 text-white mb-8">
+        <div class="bg-gradient-to-r from-jungle-600 to-sable-500 py-8 px-12 text-white mb-8">
             {% assign next_event = upcoming_events.first %}
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="mb-4 md:mb-0">
@@ -21,18 +21,18 @@
                     <p class="opacity-90">{{ next_event.date | date: "%d %B %Y" }}</p>
                 </div>
                 <a href="/evenements/"
-                   class="bg-white text-jungle-700 px-6 py-3 rounded-lg font-semibold hover:bg-jungle-50 transition-colors">
+                   class="bg-white text-jungle-700 px-6 py-3 rounded-md font-semibold hover:bg-jungle-50 transition-colors">
                     Découvrir
                 </a>
             </div>
         </div>
         {% endif %}
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8">
             {% for event in site.events limit:3 %}
-            <div class="bg-gradient-to-br from-sable-50 to-jungle-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <div class="bg-gradient-to-br from-sable-50 to-jungle-50 p-6 shadow-lg hover:shadow-xl transition-shadow">
                 {% if event.image %}
-                <div class="aspect-w-16 aspect-h-9 mb-4 rounded-lg overflow-hidden">
+                <div class="aspect-w-16 aspect-h-9 mb-4 overflow-hidden">
                     <img src="{{ event.image }}"
                          alt="{{ event.title }}"
                          class="w-full h-32 object-cover">
@@ -51,11 +51,12 @@
             {% endfor %}
         </div>
 
-        <div class="text-center mt-8">
-            <a href="/evenements/"
-               class="inline-block bg-sable-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-sable-600 transition-colors">
-                Voir tous les événements
-            </a>
+        <div class="text-center pt-12">
+          {% include button.html
+          style="primary"
+          url="/cours/"
+          text="Tous les évènements"
+          icon=true %}
         </div>
     </div>
 </section>
