@@ -2,13 +2,19 @@
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-1 text-center">
+
+            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-200 inline-block pb-2">
+                    Mon parcours
+                </h2>
+          </div>
             <!-- Photo principale -->
-            {% if page.portrait_image %}
-            <div class="lg:col-span-1">
+            {% if page.about_image %}
+            <div class="lg:col-span-2">
                 <div class="aspect-w-3 aspect-h-4 mb-6">
-                    <img src="{{ page.portrait_image }}"
+                    <img src="{{ page.about_image }}"
                          alt="Nathalie en posture de yoga"
-                         class="w-full h-full object-cover shadow-lg">
+                         class="sm:w-80 h-full object-cover shadow-lg">
                 </div>
 
                 <!-- Éléments décoratifs géométriques -->
@@ -20,14 +26,17 @@
             {% endif %}
 
             <!-- Contenu principal -->
-            <div class="{% if page.portrait_image %}lg:col-span-2{% else %}lg:col-span-3{% endif %}">
-                <h2 class="text-4xl font-bold text-jungle-800 mb-6 border-l-4 border-jungle-500 pl-4">
-                    Mon parcours
-                </h2>
+            <div class="{% if page.about_image %}lg:col-span-3{% else %}lg:col-span-3{% endif %}">
 
+              {% if page.about %}
+              <p class="prose prose-lg text-jungle-700 space-y-6">
+                {{ page.about }}
+              </p>
+              {% else %}
                 <div class="prose prose-lg text-jungle-700 space-y-6">
-                    {{ content }}
+                    {{ content | markdownify }}
                 </div>
+              {% endif %}
             </div>
         </div>
     </div>

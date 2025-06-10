@@ -6,11 +6,11 @@
 {% assign button_icon = include.icon | default: false %}
 {% assign button_target = include.target | default: "_self" %}
 
-{% if button_style == "hero-primary" %}
+{% if button_style == "primary" %}
     <!-- Bouton principal hero (taille réduite) -->
     <a href="{{ button_url }}"
        target="{{ button_target }}"
-       class="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-jungle-600 via-jungle-700 to-jungle-800 text-white font-semibold text-base rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
+       class="group relative inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-jungle-600 via-jungle-700 to-jungle-800 text-white font-semibold text-base rounded-md shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
 
         <!-- Effet de brillance -->
         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-700"></div>
@@ -26,11 +26,11 @@
         {% endif %}
     </a>
 
-{% elsif button_style == "hero-secondary" %}
+{% elsif button_style == "secondary" %}
     <!-- Bouton secondaire hero (taille réduite) -->
     <a href="{{ button_url }}"
        target="{{ button_target }}"
-       class="group relative inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-jungle-800 font-semibold text-base rounded-lg hover:bg-white/20 hover:border-white/50 transition-all duration-300 shadow-md hover:shadow-lg">
+       class="group relative inline-flex items-center justify-center px-6 py-3 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-jungle-800 font-semibold text-base rounded-md hover:bg-white/20 hover:border-white/50 transition-all duration-300 shadow-md hover:shadow-lg">
 
         <span>{{ button_text }}</span>
 
@@ -45,7 +45,7 @@
     <!-- Bouton outline -->
     <a href="{{ button_url }}"
        target="{{ button_target }}"
-       class="group inline-flex items-center px-6 py-3 border-2 border-jungle-600 text-jungle-600 hover:bg-jungle-600 hover:text-white font-semibold rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+       class="group inline-flex items-center justify-center px-6 py-3 border-2 border-jungle-600 text-jungle-600 hover:bg-jungle-600 hover:text-white font-semibold rounded-md transition-all duration-300 shadow-md hover:shadow-lg">
 
         <span>{{ button_text }}</span>
 
@@ -60,7 +60,7 @@
     <!-- Bouton ghost -->
     <a href="{{ button_url }}"
        target="{{ button_target }}"
-       class="group inline-flex items-center px-6 py-3 text-jungle-600 hover:text-jungle-800 font-semibold rounded-lg hover:bg-jungle-50 transition-all duration-300">
+       class="group inline-flex items-center px-6 py-3 text-jungle-600 hover:text-jungle-800 font-semibold rounded-md hover:bg-jungle-50 transition-all duration-300">
 
         <span>{{ button_text }}</span>
 
@@ -75,7 +75,7 @@
     <!-- Bouton standard -->
     <a href="{{ button_url }}"
        target="{{ button_target }}"
-       class="group inline-flex items-center px-6 py-3 bg-jungle-600 hover:bg-jungle-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+       class="group inline-flex items-center px-6 py-3 bg-jungle-600 hover:bg-jungle-700 text-white font-semibold rounded-md shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300">
 
         <span>{{ button_text }}</span>
 

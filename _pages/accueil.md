@@ -15,13 +15,13 @@ sections:
   - about
   - testimonials
   - contact-form
-about: |
+about:
   Passionnée par le yoga depuis plus de 10 ans, je vous accompagne dans votre pratique avec bienveillance et expertise.
 
   Formée en Hatha et Yin Yoga, j'adapte mes cours à tous les niveaux pour vous offrir une expérience unique dans le cadre naturel exceptionnel de Lacanau.
 
   Mon approche privilégie l'écoute du corps et la connexion avec la nature environnante.
-about_image: "/assets/images/nathalie-portrait.jpg"
+about_image: "/assets/images/celleouyadusable-yoga-portrait.jpeg"
 testimonials:
   - content: "Les cours de yoga de Nathalie sont ressourçants, ils donnent de l’énergie et permettent une belle connexion à soi. Ils sont approfondis et enrichissants. Nathalie est une personne extraordinaire, douce et ancrée, elle donne beaucoup lors de ses cours et je suis très reconnaissante d’avoir l’opportunité d’apprendre auprès d’elle. Je recommande à 200% de prendre un cours avec elle !"
     author: "Jade S."

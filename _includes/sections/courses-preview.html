@@ -1,4 +1,4 @@
-<section class="py-16 bg-white">
+<section class="pt-16 pb-8 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-200 inline-block pb-2">
@@ -26,17 +26,17 @@
                 <div class="flex items-center justify-between">
                     <div class="text-sm text-jungle-500">
                         {% if course.duration %}
-                        <span class="inline-block mr-4 bg-jungle-100 px-2 py-1">⏱️ {{ course.duration }}</span>
+                        <span class="inline-block mr-4 bg-jungle-100 rounded-full py-1 px-3">⏱️ {{ course.duration }}</span>
                         {% endif %}
                         {% if course.level %}
-                        <span class="inline-block bg-sable-100 px-2 py-1">📊 {{ course.level }}</span>
+                        <span class="inline-block bg-sable-200 rounded-full px-3 py-1">📊 {{ course.level }}</span>
                         {% endif %}
                     </div>
-                    {% if course.price %}
-                    <div class="text-lg font-semibold text-jungle-700 bg-white px-3 py-1 border border-jungle-300">
+                    <!-- {% if course.price %}
+                    <div class="text-lg font-semibold text-jungle-700 bg-white rounded-full py-1 px-3 border border-jungle-300">
                         {{ course.price }}€
                     </div>
-                    {% endif %}
+                    {% endif %} -->
                 </div>
             </div>
             {% endfor %}

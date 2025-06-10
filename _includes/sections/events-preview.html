@@ -4,7 +4,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-sable-200 inline-block pb-2">
                 {{ site.data.site-texts.events.title }}
             </h2>
-            <p class="text-xl text-jungle-600 max-w-2xl mx-auto">
+            <p class="text-xl text-jungle-600 px-4 max-w-2xl mx-auto">
                 {{ site.data.site-texts.events.subtitle }}
             </p>
         </div>
@@ -15,7 +15,7 @@
         <div class="bg-gradient-to-r from-jungle-600 to-sable-500 py-8 px-12 text-white mb-8">
             {% assign next_event = upcoming_events.first %}
             <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="mb-4 md:mb-0">
+                <div class="mb-4 md:mb-0 text-center md:text-left">
                     <h3 class="text-2xl font-bold mb-2">Prochain événement</h3>
                     <h4 class="text-xl mb-2">{{ next_event.title }}</h4>
                     <p class="opacity-90">{{ next_event.date | date: "%d %B %Y" }}</p>
@@ -28,7 +28,7 @@
         </div>
         {% endif %}
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
             {% for event in site.events limit:3 %}
             <div class="bg-gradient-to-br from-sable-50 to-jungle-50 p-6 shadow-lg hover:shadow-xl transition-shadow">
                 {% if event.image %}
@@ -45,8 +45,8 @@
                     {% endif %}
                 </div>
 
-                <h3 class="text-lg font-bold text-jungle-800 mb-2">{{ event.title }}</h3>
-                <p class="text-jungle-600 text-sm">{{ event.excerpt | strip_html | truncate: 80 }}</p>
+                <h3 class="text-2xl font-bold text-jungle-800 mb-2">{{ event.title }}</h3>
+                <p class="text-jungle-600 text-md">{{ event.excerpt | strip_html | truncate: 80 }}</p>
             </div>
             {% endfor %}
         </div>
