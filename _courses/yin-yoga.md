@@ -4,7 +4,7 @@ style: "Yin"
 level: "Tous niveaux"
 duration: "60-75 minutes"
 price: 20
-image: "/assets/images/yin-yoga.jpeg"
+image: "/assets/images/vinyasa-yoga.jpeg"
 planning_color: "purple"
 planning_icon: "🧘‍♀️"
 description_courte: "Yoga doux et profond pour la détente et la récupération"
