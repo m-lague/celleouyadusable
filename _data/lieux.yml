@@ -1,0 +1,18 @@
+plage_sud:
+  nom: "Plage SUD"
+  icone: "🏖️"
+  couleur: "blue"
+  adresse: "Sous le @rainbowcafelacanau"
+  reservation: "Au plus tard 19h la veille, en cliquant directement sur le planning"
+
+bo_co:
+  nom: "Bo&Co"
+  icone: "🏄‍♀️"
+  couleur: "sable"
+  adresse: "Plage NORD, École de surf @boandcosurf"
+
+maison_pada:
+  nom: "Maison Pada"
+  icone: "🏠"
+  couleur: "jungle"
+  adresse: "La maison des Dunes, @maison_pada_33"

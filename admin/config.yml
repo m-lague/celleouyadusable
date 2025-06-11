@@ -220,26 +220,86 @@ collections:
 
   # Cours
   - name: "courses"
-    label: "Cours"
+    label: "Types de Cours"
     folder: "_courses"
     create: true
+    delete: true
     slug: "{{slug}}"
     fields:
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Style de yoga", name: "style", widget: "select", options: ["Hatha", "Yin", "Vinyasa", "Restoratif"]}
+      # Informations générales
+      - {label: "Nom du cours", name: "title", widget: "string"}
+      - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha"}
       - {label: "Niveau", name: "level", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
-      - {label: "Durée", name: "duration", widget: "string"}
+      - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 60-75 minutes"}
       - {label: "Prix", name: "price", widget: "number"}
-      - {label: "Lieu", name: "location", widget: "string"}
-      - {label: "Horaires", name: "schedule", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Description courte", name: "description_courte", widget: "text"}
+
+      # Apparence dans le planning
+      - {label: "Couleur", name: "planning_color", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
+      - {label: "Icône", name: "planning_icon", widget: "select", options: ["🏖️", "🏄‍♀️", "🏠", "🧘‍♀️", "🌅"]}
+
+      # Planning des créneaux
+      - label: "Créneaux Hors Saison"
+        name: "planning_creneaux"
+        widget: "object"
+        fields:
+          - label: "Hors saison (mai, juin, septembre, octobre)"
+            name: "hors_saison"
+            widget: "list"
+            fields:
+              - {label: "Jour", name: "jour", widget: "select", options: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]}
+              - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
+              - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
+              - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
+
+          - label: "Été (juillet, août)"
+            name: "ete"
+            widget: "list"
+            fields:
+              - {label: "Jour", name: "jour", widget: "select", options: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]}
+              - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
+              - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
+              - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
+
+      # Bénéfices
       - label: "Bénéfices"
         name: "benefits"
         widget: "list"
-        required: false
         field: {label: "Bénéfice", name: "benefit", widget: "string"}
 
+      # Description complète
+      - {label: "Description complète", name: "body", widget: "markdown"}
+  - name: "lieux"
+    label: "Lieux de Cours"
+    files:
+      - name: "lieux-config"
+        label: "Configuration des Lieux"
+        file: "_data/lieux.yml"
+        fields:
+          - label: "Plage SUD"
+            name: "plage_sud"
+            widget: "object"
+            fields:
+              - {label: "Nom", name: "nom", widget: "string", default: "Plage SUD"}
+              - {label: "Icône", name: "icone", widget: "string", default: "🏖️"}
+              - {label: "Couleur", name: "couleur", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
+
+          - label: "Bo&Co"
+            name: "bo_co"
+            widget: "object"
+            fields:
+              - {label: "Nom", name: "nom", widget: "string", default: "Bo&Co"}
+              - {label: "Icône", name: "icone", widget: "string", default: "🏄‍♀️"}
+              - {label: "Couleur", name: "couleur", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
+
+          - label: "Maison Pada"
+            name: "maison_pada"
+            widget: "object"
+            fields:
+              - {label: "Nom", name: "nom", widget: "string", default: "Maison Pada"}
+              - {label: "Icône", name: "icone", widget: "string", default: "🏠"}
+              - {label: "Couleur", name: "couleur", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
   # Événements
   - name: "events"
     label: "Événements"

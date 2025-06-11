@@ -14,7 +14,7 @@
             <div class="p-2">
                 <button id="hors-saison-btn"
                         class="px-6 py-2 font-semibold transition-colors season-btn active"
-                        data-season="hors-saison">
+                        data-season="hors_saison">
                     Hors Saison
                 </button>
                 <button id="ete-btn"
@@ -71,321 +71,223 @@
             </div>
         </div>
 
-        <!-- Légendes et informations avec couleurs différentes -->
+        <!-- Légendes et informations avec couleurs dynamiques -->
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Plage SUD - Bleu -->
-            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 border-l-4 border-blue-500">
-                <h3 class="text-xl font-bold text-blue-800 mb-4 bg-blue-200 px-3 py-2">Plage SUD</h3>
-                <div class="space-y-2 text-blue-700">
-                    <p><strong>Lieu :</strong> Sous le @rainbowcafelacanau</p>
-                    <p><strong>Durée :</strong> 75 minutes</p>
+            {% for lieu in site.data.lieux %}
+            {% assign lieu_data = lieu[1] %}
+            {% assign color_class = lieu_data.couleur %}
+            <div class="bg-gradient-to-br from-{{ color_class }}-50 to-{{ color_class }}-100 p-6 border-l-4 border-{{ color_class }}-500">
+                <h3 class="text-xl font-bold text-{{ color_class }}-800 mb-4 bg-{{ color_class }}-200 px-3 py-2 flex items-center">
+                    <span class="mr-2">{{ lieu_data.icone }}</span>
+                    {{ lieu_data.nom }}
+                </h3>
+                <div class="space-y-2 text-{{ color_class }}-700">
+                    {% if lieu_data.nom == "Plage SUD" %}
+                    <p><strong>Lieu :</strong> {{ lieu_data.adresse }}</p>
                     <p><strong>Tarifs :</strong> 20€ le cours, 180€ 10 cours</p>
-                    <p><strong>Réservation :</strong> @Celle_ou_yadusable<br>06 01 28 30 70</p>
-                </div>
-            </div>
-
-            <!-- Bo&Co - Orange -->
-            <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 border-l-4 border-orange-500">
-                <h3 class="text-xl font-bold text-orange-800 mb-4 bg-orange-200 px-3 py-2">Bo&Co</h3>
-                <div class="space-y-2 text-orange-700">
-                    <p><strong>Lieu :</strong> Plage NORD, École de surf @boandcosurf</p>
+                    <p><strong>Réservation :</strong> {{lieu_data.reservation }}</p>
+                    {% elsif lieu_data.nom == "Bo&Co" %}
+                    <p><strong>Lieu :</strong> {{ lieu_data.adresse }}</p>
                     <p><strong>Durée :</strong> 60 minutes</p>
                     <p><strong>Réservation :</strong> @boandcosurf<br>05 56 26 33 99</p>
-                </div>
-            </div>
-
-            <!-- Maison Pada - Violet -->
-            <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 border-l-4 border-purple-500">
-                <h3 class="text-xl font-bold text-purple-800 mb-4 bg-purple-200 px-3 py-2">Maison Pada</h3>
-                <div class="space-y-2 text-purple-700">
-                    <p><strong>Lieu :</strong> La maison des Dunes, @maison_pada_33</p>
+                    {% elsif lieu_data.nom == "Maison Pada" %}
+                    <p><strong>Lieu :</strong> {{ lieu_data.adresse }}</p>
                     <p><strong>Période :</strong> Mai à fin novembre</p>
                     <p><strong>Réservation :</strong> @maison_pada_33</p>
+                    {% endif %}
                 </div>
             </div>
+            {% endfor %}
         </div>
+
     </div>
 </section>
 
 <script>
-// Données des cours avec niveaux et couleurs par lieu
-const coursesData = {
-    "hors-saison": {
-        "lundi": [
-            {
-                "time": "18h-19h15",
-                "type": "Vinyasa intermédiaire",
-                "location": "Maison Pada",
-                "level": "Intermédiaire",
-                "color": "purple",
-                "icon": "🏠"
-            },
-            {
-                "time": "19h30-20h30",
-                "type": "KIRTAN",
-                "location": "Maison Pada",
-                "level": "Tous niveaux",
-                "color": "purple",
-                "icon": "🏠"
-            }
-        ],
-        "mardi": [],
-        "mercredi": [],
-        "jeudi": [
-            {
-                "time": "17h",
-                "type": "Vinyasa",
-                "location": "Bo&Co",
-                "level": "Tous niveaux",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ],
-        "vendredi": [
-            {
-                "time": "8h30-9h30",
-                "type": "Vinyasa tous niveaux",
-                "location": "Maison Pada",
-                "level": "Tous niveaux",
-                "color": "purple",
-                "icon": "🏠"
-            }
-        ],
-        "samedi": [
-            {
-                "time": "11h",
-                "type": "Yoga",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            }
-        ],
-        "dimanche": [
-            {
-                "time": "11h",
-                "type": "Yoga",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "17h",
-                "type": "Yin & Sounds healing",
-                "location": "Bo&Co",
-                "level": "Débutant",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ]
-    },
-    "ete": {
-        "lundi": [
-            {
-                "time": "8h30",
-                "type": "Vinyasa",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "10h30",
-                "type": "Yin",
-                "location": "Plage SUD",
-                "level": "Débutant",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "18h-19h15",
-                "type": "Vinyasa intermédiaire",
-                "location": "Maison Pada",
-                "level": "Intermédiaire",
-                "color": "purple",
-                "icon": "🏠"
-            },
-            {
-                "time": "19h30-20h30",
-                "type": "KIRTAN",
-                "location": "Maison Pada",
-                "level": "Tous niveaux",
-                "color": "purple",
-                "icon": "🏠"
-            }
-        ],
-        "mardi": [],
-        "mercredi": [],
-        "jeudi": [
-            {
-                "time": "8h30",
-                "type": "Vinyasa",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "10h30",
-                "type": "Yin",
-                "location": "Plage SUD",
-                "level": "Débutant",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "18h",
-                "type": "Vinyasa",
-                "location": "Bo&Co",
-                "level": "Tous niveaux",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ],
-        "vendredi": [
-            {
-                "time": "8h30-9h30",
-                "type": "Vinyasa tous niveaux",
-                "location": "Maison Pada",
-                "level": "Tous niveaux",
-                "color": "purple",
-                "icon": "🏠"
-            },
-            {
-                "time": "18h",
-                "type": "Vinyasa",
-                "location": "Bo&Co",
-                "level": "Tous niveaux",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ],
-        "samedi": [
-            {
-                "time": "8h30",
-                "type": "Vinyasa",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "10h30",
-                "type": "Yin",
-                "location": "Plage SUD",
-                "level": "Débutant",
-                "color": "blue",
-                "icon": "🏖️"
-            }
-        ],
-        "dimanche": [
-            {
-                "time": "8h30",
-                "type": "Vinyasa",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "10h30",
-                "type": "Yin",
-                "location": "Plage SUD",
-                "level": "Débutant",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "18h",
-                "type": "Yin & Sounds Healing",
-                "location": "Bo&Co",
-                "level": "Débutant",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ]
-    }
-};
-
-let currentSeason = 'hors-saison';
+// Variables globales manquantes
+let currentSeason = 'hors_saison';
 let currentDay = 'lundi';
 
-// Fonction pour créer une carte de cours avec niveau et icône
-// Fonction pour créer une carte de cours avec niveau et icône
+// Fonction pour organiser les créneaux par jour et saison
+function organizePlanningFromCourses() {
+    const organized = {
+        hors_saison: { lundi: [], mardi: [], mercredi: [], jeudi: [], vendredi: [], samedi: [], dimanche: [] },
+        ete: { lundi: [], mardi: [], mercredi: [], jeudi: [], vendredi: [], samedi: [], dimanche: [] }
+    };
+
+    // Données des cours générées par Jekyll
+    const coursesData = {
+        {% for course in site.courses %}
+        "{{ course.slug }}": {
+            title: "{{ course.title }}",
+            style: "{{ course.style }}",
+            level: "{{ course.level }}",
+            color: "{{ course.planning_color }}",
+            icon: "{{ course.planning_icon }}",
+            url: "{{ course.url }}",
+            planning_creneaux: {{ course.planning_creneaux | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    };
+
+    // Organiser les créneaux
+    Object.values(coursesData).forEach(course => {
+        if (course.planning_creneaux) {
+            ['hors_saison', 'ete'].forEach(saison => {
+                if (course.planning_creneaux[saison]) {
+                    course.planning_creneaux[saison].forEach(creneau => {
+                        organized[saison][creneau.jour].push({
+                            ...course,
+                            heure: creneau.heure,
+                            lieu: creneau.lieu,
+                            duree: creneau.duree,
+                            jour: creneau.jour,
+                            level: creneau.niveau
+                        });
+                    });
+                }
+            });
+        }
+    });
+
+    // AJOUT : Trier chaque jour par heure
+    ['hors_saison', 'ete'].forEach(saison => {
+        ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'].forEach(jour => {
+            organized[saison][jour].sort((a, b) => {
+                // Convertir les heures en format comparable
+                const timeA = convertTimeToMinutes(a.heure);
+                const timeB = convertTimeToMinutes(b.heure);
+                return timeA - timeB;
+            });
+        });
+    });
+
+    return organized;
+}
+
+// Fonction utilitaire pour convertir l'heure en minutes
+function convertTimeToMinutes(timeStr) {
+    // Gérer les formats comme "8h30", "18h", "10h30"
+    const match = timeStr.match(/(\d+)h(\d*)/);
+    if (match) {
+        const hours = parseInt(match[1]);
+        const minutes = match[2] ? parseInt(match[2]) : 0;
+        return hours * 60 + minutes;
+    }
+    return 0; // Fallback
+}
+
+// Fonction pour créer une carte de cours avec données dynamiques
 function createCourseCard(course) {
+    // Données des lieux générées par Jekyll
+    const lieuxData = {
+        {% for lieu in site.data.lieux %}
+        "{{ lieu[1].nom }}": {
+            icone: "{{ lieu[1].icone }}",
+            couleur: "{{ lieu[1].couleur }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    };
+
+    // Couleurs basées sur la couleur définie pour chaque lieu
     const colorClasses = {
         'blue': 'bg-blue-100 border-blue-400 text-blue-800',
-        'orange': 'bg-orange-100 border-orange-400 text-orange-800',
-        'purple': 'bg-purple-100 border-purple-400 text-purple-800'
+        'sable': 'bg-sable-100 border-sable-400 text-sable-800',
+        'purple': 'bg-purple-100 border-purple-400 text-purple-800',
+        'green': 'bg-green-100 border-green-400 text-green-800',
+        'red': 'bg-red-100 border-red-400 text-red-800',
+        'jungle': 'bg-jungle-100 border-jungle-400 text-jungle-800'
     };
 
     const levelColors = {
-        'Débutant': 'bg-green-200 text-green-800 rounded-full',
-        'Intermédiaire': 'bg-yellow-200 text-yellow-800 rounded-full',
-        'Avancé': 'bg-red-200 text-red-800 rounded-full',
-        'Tous niveaux': 'bg-gray-200 text-gray-800  rounded-full'
+        'Débutant': 'bg-green-200 text-green-800',
+        'Intermédiaire': 'bg-yellow-200 text-yellow-800',
+        'Avancé': 'bg-red-200 text-red-800',
+        'Tous niveaux': 'bg-gray-200 text-gray-800'
     };
 
-    const colorClass = colorClasses[course.color] || 'bg-gray-100 border-gray-400 text-gray-800';
+    // Récupérer les données du lieu
+    const lieuInfo = lieuxData[course.lieu] || { icone: '❓', couleur: 'gray' };
+    const colorClass = colorClasses[lieuInfo.couleur] || 'bg-gray-100 border-gray-400 text-gray-800';
     const levelClass = levelColors[course.level] || 'bg-gray-200 text-gray-800';
 
+    // Message WhatsApp contextualisé
+    const whatsappMessage = `Bonjour Nathalie, je souhaite réserver le cours ${course.style} prévu le ${course.jour} à ${course.heure} à ${course.lieu}. Merci`;
+    const whatsappUrl = `https://wa.me/33601283070?text=${encodeURIComponent(whatsappMessage)}`;
+
     return `
-        <div class="${colorClass} p-3 mb-2 border-l-4 shadow-sm">
-            <div class="font-semibold text-sm mb-1">${course.time}</div>
-            <div class="font-bold mb-2">${course.type}</div>
-            <div class="flex items-center text-xs opacity-75 mb-1">
-                <span class="mr-1">${course.icon}</span>
-                <span>${course.location}</span>
+        <a href="${whatsappUrl}" target="_blank" class="block">
+            <div class="${colorClass} p-3 mb-2 border-l-4 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105">
+                <div class="font-semibold text-sm mb-1">${course.heure}</div>
+                <div class="font-bold mb-2">${course.style}</div>
+                <div class="flex items-center text-xs opacity-75 mb-1">
+                    <span class="mr-1">${lieuInfo.icone}</span>
+                    <span>${course.lieu}</span>
+                </div>
+                <div class="flex flex-col items-start justify-between gap-2">
+                    <div class="${levelClass} px-2 py-1 text-xs font-medium rounded-full">${course.level}</div>
+                    <div class="mx-auto bg-jungle-500 text-white rounded-full px-2 py-1 text-xs font-medium">
+                        📱&nbspRéserver
+                    </div>
+                </div>
             </div>
-            <div class="${levelClass} px-2 py-1 text-xs font-medium inline-block">${course.level}</div>
-        </div>
+        </a>
     `;
 }
 
-// Fonction pour mettre à jour le planning desktop
-function updateDesktopPlanning() {
-    const container = document.getElementById('desktop-planning');
+
+
+
+
+// Fonction utilitaire pour obtenir le nom du jour
+function getCurrentDayName() {
+    const days = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+    return days[new Date().getDay()];
+}
+
+// Mise à jour du planning
+function updatePlanning() {
+    const organized = organizePlanningFromCourses();
+
+    // Desktop
+    const desktopContainer = document.getElementById('desktop-planning');
     const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
 
-    let html = '';
+    let desktopHtml = '';
     days.forEach(day => {
-        const courses = coursesData[currentSeason][day] || [];
-        html += `<div class="min-h-32 p-2 bg-gray-50 border border-gray-200">`;
+        const courses = organized[currentSeason][day] || [];
+        desktopHtml += `<div class="min-h-32 p-2 bg-gray-50 border border-gray-200">`;
         courses.forEach(course => {
-            html += createCourseCard(course);
+            desktopHtml += createCourseCard(course);
         });
-        html += '</div>';
+        desktopHtml += '</div>';
     });
+    desktopContainer.innerHTML = desktopHtml;
 
-    container.innerHTML = html;
-}
+    // Mobile
+    const mobileContainer = document.getElementById('mobile-planning');
+    const courses = organized[currentSeason][currentDay] || [];
 
-// Fonction pour mettre à jour le planning mobile
-function updateMobilePlanning() {
-    const container = document.getElementById('mobile-planning');
-    const courses = coursesData[currentSeason][currentDay] || [];
-
-    let html = `<div class="bg-gray-50 p-4 border border-gray-200">`;
-    html += `<h3 class="text-lg font-bold text-jungle-800 mb-4 capitalize">${currentDay}</h3>`;
+    let mobileHtml = `<div class="bg-gray-50 p-4 border border-gray-200">`;
+    mobileHtml += `<h3 class="text-lg font-bold text-jungle-800 mb-4 capitalize">${currentDay}</h3>`;
 
     if (courses.length === 0) {
-        html += '<p class="text-jungle-600 italic">Aucun cours programmé</p>';
+        mobileHtml += '<p class="text-jungle-600 italic">Aucun cours programmé</p>';
     } else {
         courses.forEach(course => {
-            html += createCourseCard(course);
+            mobileHtml += createCourseCard(course);
         });
     }
-    html += '</div>';
-
-    container.innerHTML = html;
+    mobileHtml += '</div>';
+    mobileContainer.innerHTML = mobileHtml;
 }
 
-// Gestion des boutons de saison
+// Initialisation et gestion des événements
 document.addEventListener('DOMContentLoaded', function() {
     const seasonBtns = document.querySelectorAll('.season-btn');
     const dayBtns = document.querySelectorAll('.day-btn');
 
+    // Gestion des boutons de saison
     seasonBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             seasonBtns.forEach(b => {
@@ -397,11 +299,11 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.remove('bg-jungle-100', 'text-jungle-800');
 
             currentSeason = this.dataset.season;
-            updateDesktopPlanning();
-            updateMobilePlanning();
+            updatePlanning();
         });
     });
 
+    // Gestion des boutons de jour (mobile)
     dayBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             dayBtns.forEach(b => {
@@ -413,13 +315,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.remove('bg-jungle-100', 'text-jungle-800');
 
             currentDay = this.dataset.day;
-            updateMobilePlanning();
+            updatePlanning();
         });
     });
 
-    // Initialisation
-    updateDesktopPlanning();
-    updateMobilePlanning();
+    // Initialisation du planning
+    updatePlanning();
 });
 </script>
 

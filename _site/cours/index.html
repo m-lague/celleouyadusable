@@ -325,7 +325,7 @@
             <div class="p-2">
                 <button id="hors-saison-btn"
                         class="px-6 py-2 font-semibold transition-colors season-btn active"
-                        data-season="hors-saison">
+                        data-season="hors_saison">
                     Hors Saison
                 </button>
                 <button id="ete-btn"
@@ -382,321 +382,267 @@
             </div>
         </div>
 
-        <!-- Légendes et informations avec couleurs différentes -->
+        <!-- Légendes et informations avec couleurs dynamiques -->
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Plage SUD - Bleu -->
+            
+            
+            
             <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 border-l-4 border-blue-500">
-                <h3 class="text-xl font-bold text-blue-800 mb-4 bg-blue-200 px-3 py-2">Plage SUD</h3>
+                <h3 class="text-xl font-bold text-blue-800 mb-4 bg-blue-200 px-3 py-2 flex items-center">
+                    <span class="mr-2">🏖️</span>
+                    Plage SUD
+                </h3>
                 <div class="space-y-2 text-blue-700">
+                    
                     <p><strong>Lieu :</strong> Sous le @rainbowcafelacanau</p>
-                    <p><strong>Durée :</strong> 75 minutes</p>
                     <p><strong>Tarifs :</strong> 20€ le cours, 180€ 10 cours</p>
-                    <p><strong>Réservation :</strong> @Celle_ou_yadusable<br>06 01 28 30 70</p>
+                    <p><strong>Réservation :</strong> Au plus tard 19h la veille, en cliquant directement sur le planning</p>
+                    
                 </div>
             </div>
-
-            <!-- Bo&Co - Orange -->
-            <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 border-l-4 border-orange-500">
-                <h3 class="text-xl font-bold text-orange-800 mb-4 bg-orange-200 px-3 py-2">Bo&Co</h3>
-                <div class="space-y-2 text-orange-700">
+            
+            
+            
+            <div class="bg-gradient-to-br from-sable-50 to-sable-100 p-6 border-l-4 border-sable-500">
+                <h3 class="text-xl font-bold text-sable-800 mb-4 bg-sable-200 px-3 py-2 flex items-center">
+                    <span class="mr-2">🏄‍♀️</span>
+                    Bo&Co
+                </h3>
+                <div class="space-y-2 text-sable-700">
+                    
                     <p><strong>Lieu :</strong> Plage NORD, École de surf @boandcosurf</p>
                     <p><strong>Durée :</strong> 60 minutes</p>
                     <p><strong>Réservation :</strong> @boandcosurf<br>05 56 26 33 99</p>
+                    
                 </div>
             </div>
-
-            <!-- Maison Pada - Violet -->
-            <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 border-l-4 border-purple-500">
-                <h3 class="text-xl font-bold text-purple-800 mb-4 bg-purple-200 px-3 py-2">Maison Pada</h3>
-                <div class="space-y-2 text-purple-700">
+            
+            
+            
+            <div class="bg-gradient-to-br from-jungle-50 to-jungle-100 p-6 border-l-4 border-jungle-500">
+                <h3 class="text-xl font-bold text-jungle-800 mb-4 bg-jungle-200 px-3 py-2 flex items-center">
+                    <span class="mr-2">🏠</span>
+                    Maison Pada
+                </h3>
+                <div class="space-y-2 text-jungle-700">
+                    
                     <p><strong>Lieu :</strong> La maison des Dunes, @maison_pada_33</p>
                     <p><strong>Période :</strong> Mai à fin novembre</p>
                     <p><strong>Réservation :</strong> @maison_pada_33</p>
+                    
                 </div>
             </div>
+            
         </div>
+
     </div>
 </section>
 
 <script>
-// Données des cours avec niveaux et couleurs par lieu
-const coursesData = {
-    "hors-saison": {
-        "lundi": [
-            {
-                "time": "18h-19h15",
-                "type": "Vinyasa intermédiaire",
-                "location": "Maison Pada",
-                "level": "Intermédiaire",
-                "color": "purple",
-                "icon": "🏠"
-            },
-            {
-                "time": "19h30-20h30",
-                "type": "KIRTAN",
-                "location": "Maison Pada",
-                "level": "Tous niveaux",
-                "color": "purple",
-                "icon": "🏠"
-            }
-        ],
-        "mardi": [],
-        "mercredi": [],
-        "jeudi": [
-            {
-                "time": "17h",
-                "type": "Vinyasa",
-                "location": "Bo&Co",
-                "level": "Tous niveaux",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ],
-        "vendredi": [
-            {
-                "time": "8h30-9h30",
-                "type": "Vinyasa tous niveaux",
-                "location": "Maison Pada",
-                "level": "Tous niveaux",
-                "color": "purple",
-                "icon": "🏠"
-            }
-        ],
-        "samedi": [
-            {
-                "time": "11h",
-                "type": "Yoga",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            }
-        ],
-        "dimanche": [
-            {
-                "time": "11h",
-                "type": "Yoga",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "17h",
-                "type": "Yin & Sounds healing",
-                "location": "Bo&Co",
-                "level": "Débutant",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ]
-    },
-    "ete": {
-        "lundi": [
-            {
-                "time": "8h30",
-                "type": "Vinyasa",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "10h30",
-                "type": "Yin",
-                "location": "Plage SUD",
-                "level": "Débutant",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "18h-19h15",
-                "type": "Vinyasa intermédiaire",
-                "location": "Maison Pada",
-                "level": "Intermédiaire",
-                "color": "purple",
-                "icon": "🏠"
-            },
-            {
-                "time": "19h30-20h30",
-                "type": "KIRTAN",
-                "location": "Maison Pada",
-                "level": "Tous niveaux",
-                "color": "purple",
-                "icon": "🏠"
-            }
-        ],
-        "mardi": [],
-        "mercredi": [],
-        "jeudi": [
-            {
-                "time": "8h30",
-                "type": "Vinyasa",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "10h30",
-                "type": "Yin",
-                "location": "Plage SUD",
-                "level": "Débutant",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "18h",
-                "type": "Vinyasa",
-                "location": "Bo&Co",
-                "level": "Tous niveaux",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ],
-        "vendredi": [
-            {
-                "time": "8h30-9h30",
-                "type": "Vinyasa tous niveaux",
-                "location": "Maison Pada",
-                "level": "Tous niveaux",
-                "color": "purple",
-                "icon": "🏠"
-            },
-            {
-                "time": "18h",
-                "type": "Vinyasa",
-                "location": "Bo&Co",
-                "level": "Tous niveaux",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ],
-        "samedi": [
-            {
-                "time": "8h30",
-                "type": "Vinyasa",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "10h30",
-                "type": "Yin",
-                "location": "Plage SUD",
-                "level": "Débutant",
-                "color": "blue",
-                "icon": "🏖️"
-            }
-        ],
-        "dimanche": [
-            {
-                "time": "8h30",
-                "type": "Vinyasa",
-                "location": "Plage SUD",
-                "level": "Tous niveaux",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "10h30",
-                "type": "Yin",
-                "location": "Plage SUD",
-                "level": "Débutant",
-                "color": "blue",
-                "icon": "🏖️"
-            },
-            {
-                "time": "18h",
-                "type": "Yin & Sounds Healing",
-                "location": "Bo&Co",
-                "level": "Débutant",
-                "color": "orange",
-                "icon": "🏄‍♀️"
-            }
-        ]
-    }
-};
-
-let currentSeason = 'hors-saison';
+// Variables globales manquantes
+let currentSeason = 'hors_saison';
 let currentDay = 'lundi';
 
-// Fonction pour créer une carte de cours avec niveau et icône
-// Fonction pour créer une carte de cours avec niveau et icône
+// Fonction pour organiser les créneaux par jour et saison
+function organizePlanningFromCourses() {
+    const organized = {
+        hors_saison: { lundi: [], mardi: [], mercredi: [], jeudi: [], vendredi: [], samedi: [], dimanche: [] },
+        ete: { lundi: [], mardi: [], mercredi: [], jeudi: [], vendredi: [], samedi: [], dimanche: [] }
+    };
+
+    // Données des cours générées par Jekyll
+    const coursesData = {
+        
+        "vinyasa-yoga": {
+            title: "Vinyasa Yoga",
+            style: "Vinyasa",
+            level: "Tous niveaux",
+            color: "blue",
+            icon: "",
+            url: "/courses/vinyasa-yoga/",
+            planning_creneaux: {"hors_saison":[{"jour":"jeudi","heure":"17h","lieu":"Bo&Co","duree":"1h15","niveau":"Tous niveaux"},{"jour":"samedi","heure":"11h","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"dimanche","heure":"11h","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"lundi","heure":"18h","lieu":"Maison Pada","duree":"1h15","niveau":"Intermédiaire"},{"jour":"vendredi","heure":"8h30","lieu":"Maison Pada","duree":"1h","niveau":"Tous niveaux"}],"ete":[{"jour":"lundi","heure":"8h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"lundi","heure":"18h","lieu":"Maison Pada","duree":"1h15","niveau":"Intermédiaire"},{"jour":"jeudi","heure":"8h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"jeudi","heure":"18h","lieu":"Bo&Co","duree":"60min","niveau":"Tous niveaux"},{"jour":"vendredi","heure":"8h30","lieu":"Maison Pada","duree":"1h","niveau":"Tous niveaux"},{"jour":"vendredi","heure":"18h","lieu":"Bo&Co","duree":"1h","niveau":"Tous niveaux"},{"jour":"samedi","heure":"8h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"dimanche","heure":"8h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"}]}
+        },
+        
+        "yin-yoga": {
+            title: "Yin Yoga",
+            style: "Yin",
+            level: "Tous niveaux",
+            color: "purple",
+            icon: "🧘‍♀️",
+            url: "/courses/yin-yoga/",
+            planning_creneaux: {"hors_saison":[{"jour":"dimanche","heure":"17h","lieu":"Bo&Co","duree":"60min","niveau":"Tous niveaux"}],"ete":[{"jour":"lundi","heure":"10h30","lieu":"Plage SUD","duree":"1h15min","niveau":"Tous niveaux"},{"jour":"jeudi","heure":"10h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"samedi","heure":"10h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"dimanche","heure":"10h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"dimanche","heure":"18h","lieu":"Bo&Co","duree":"60min","niveau":"Tous niveaux"}]}
+        }
+        
+    };
+
+    // Organiser les créneaux
+    Object.values(coursesData).forEach(course => {
+        if (course.planning_creneaux) {
+            ['hors_saison', 'ete'].forEach(saison => {
+                if (course.planning_creneaux[saison]) {
+                    course.planning_creneaux[saison].forEach(creneau => {
+                        organized[saison][creneau.jour].push({
+                            ...course,
+                            heure: creneau.heure,
+                            lieu: creneau.lieu,
+                            duree: creneau.duree,
+                            jour: creneau.jour,
+                            level: creneau.niveau
+                        });
+                    });
+                }
+            });
+        }
+    });
+
+    // AJOUT : Trier chaque jour par heure
+    ['hors_saison', 'ete'].forEach(saison => {
+        ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'].forEach(jour => {
+            organized[saison][jour].sort((a, b) => {
+                // Convertir les heures en format comparable
+                const timeA = convertTimeToMinutes(a.heure);
+                const timeB = convertTimeToMinutes(b.heure);
+                return timeA - timeB;
+            });
+        });
+    });
+
+    return organized;
+}
+
+// Fonction utilitaire pour convertir l'heure en minutes
+function convertTimeToMinutes(timeStr) {
+    // Gérer les formats comme "8h30", "18h", "10h30"
+    const match = timeStr.match(/(\d+)h(\d*)/);
+    if (match) {
+        const hours = parseInt(match[1]);
+        const minutes = match[2] ? parseInt(match[2]) : 0;
+        return hours * 60 + minutes;
+    }
+    return 0; // Fallback
+}
+
+// Fonction pour créer une carte de cours avec données dynamiques
 function createCourseCard(course) {
+    // Données des lieux générées par Jekyll
+    const lieuxData = {
+        
+        "Plage SUD": {
+            icone: "🏖️",
+            couleur: "blue"
+        },
+        
+        "Bo&Co": {
+            icone: "🏄‍♀️",
+            couleur: "sable"
+        },
+        
+        "Maison Pada": {
+            icone: "🏠",
+            couleur: "jungle"
+        }
+        
+    };
+
+    // Couleurs basées sur la couleur définie pour chaque lieu
     const colorClasses = {
         'blue': 'bg-blue-100 border-blue-400 text-blue-800',
-        'orange': 'bg-orange-100 border-orange-400 text-orange-800',
-        'purple': 'bg-purple-100 border-purple-400 text-purple-800'
+        'sable': 'bg-sable-100 border-sable-400 text-sable-800',
+        'purple': 'bg-purple-100 border-purple-400 text-purple-800',
+        'green': 'bg-green-100 border-green-400 text-green-800',
+        'red': 'bg-red-100 border-red-400 text-red-800',
+        'jungle': 'bg-jungle-100 border-jungle-400 text-jungle-800'
     };
 
     const levelColors = {
-        'Débutant': 'bg-green-200 text-green-800 rounded-full',
-        'Intermédiaire': 'bg-yellow-200 text-yellow-800 rounded-full',
-        'Avancé': 'bg-red-200 text-red-800 rounded-full',
-        'Tous niveaux': 'bg-gray-200 text-gray-800  rounded-full'
+        'Débutant': 'bg-green-200 text-green-800',
+        'Intermédiaire': 'bg-yellow-200 text-yellow-800',
+        'Avancé': 'bg-red-200 text-red-800',
+        'Tous niveaux': 'bg-gray-200 text-gray-800'
     };
 
-    const colorClass = colorClasses[course.color] || 'bg-gray-100 border-gray-400 text-gray-800';
+    // Récupérer les données du lieu
+    const lieuInfo = lieuxData[course.lieu] || { icone: '❓', couleur: 'gray' };
+    const colorClass = colorClasses[lieuInfo.couleur] || 'bg-gray-100 border-gray-400 text-gray-800';
     const levelClass = levelColors[course.level] || 'bg-gray-200 text-gray-800';
 
+    // Message WhatsApp contextualisé
+    const whatsappMessage = `Bonjour Nathalie, je souhaite réserver le cours ${course.style} prévu le ${course.jour} à ${course.heure} à ${course.lieu}. Merci`;
+    const whatsappUrl = `https://wa.me/33601283070?text=${encodeURIComponent(whatsappMessage)}`;
+
     return `
-        <div class="${colorClass} p-3 mb-2 border-l-4 shadow-sm">
-            <div class="font-semibold text-sm mb-1">${course.time}</div>
-            <div class="font-bold mb-2">${course.type}</div>
-            <div class="flex items-center text-xs opacity-75 mb-1">
-                <span class="mr-1">${course.icon}</span>
-                <span>${course.location}</span>
+        <a href="${whatsappUrl}" target="_blank" class="block">
+            <div class="${colorClass} p-3 mb-2 border-l-4 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105">
+                <div class="font-semibold text-sm mb-1">${course.heure}</div>
+                <div class="font-bold mb-2">${course.style}</div>
+                <div class="flex items-center text-xs opacity-75 mb-1">
+                    <span class="mr-1">${lieuInfo.icone}</span>
+                    <span>${course.lieu}</span>
+                </div>
+                <div class="flex flex-col items-start justify-between gap-2">
+                    <div class="${levelClass} px-2 py-1 text-xs font-medium rounded-full">${course.level}</div>
+                    <div class="mx-auto bg-jungle-500 text-white rounded-full px-2 py-1 text-xs font-medium">
+                        📱&nbspRéserver
+                    </div>
+                </div>
             </div>
-            <div class="${levelClass} px-2 py-1 text-xs font-medium inline-block">${course.level}</div>
-        </div>
+        </a>
     `;
 }
 
-// Fonction pour mettre à jour le planning desktop
-function updateDesktopPlanning() {
-    const container = document.getElementById('desktop-planning');
+
+
+
+
+// Fonction utilitaire pour obtenir le nom du jour
+function getCurrentDayName() {
+    const days = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+    return days[new Date().getDay()];
+}
+
+// Mise à jour du planning
+function updatePlanning() {
+    const organized = organizePlanningFromCourses();
+
+    // Desktop
+    const desktopContainer = document.getElementById('desktop-planning');
     const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
 
-    let html = '';
+    let desktopHtml = '';
     days.forEach(day => {
-        const courses = coursesData[currentSeason][day] || [];
-        html += `<div class="min-h-32 p-2 bg-gray-50 border border-gray-200">`;
+        const courses = organized[currentSeason][day] || [];
+        desktopHtml += `<div class="min-h-32 p-2 bg-gray-50 border border-gray-200">`;
         courses.forEach(course => {
-            html += createCourseCard(course);
+            desktopHtml += createCourseCard(course);
         });
-        html += '</div>';
+        desktopHtml += '</div>';
     });
+    desktopContainer.innerHTML = desktopHtml;
 
-    container.innerHTML = html;
-}
+    // Mobile
+    const mobileContainer = document.getElementById('mobile-planning');
+    const courses = organized[currentSeason][currentDay] || [];
 
-// Fonction pour mettre à jour le planning mobile
-function updateMobilePlanning() {
-    const container = document.getElementById('mobile-planning');
-    const courses = coursesData[currentSeason][currentDay] || [];
-
-    let html = `<div class="bg-gray-50 p-4 border border-gray-200">`;
-    html += `<h3 class="text-lg font-bold text-jungle-800 mb-4 capitalize">${currentDay}</h3>`;
+    let mobileHtml = `<div class="bg-gray-50 p-4 border border-gray-200">`;
+    mobileHtml += `<h3 class="text-lg font-bold text-jungle-800 mb-4 capitalize">${currentDay}</h3>`;
 
     if (courses.length === 0) {
-        html += '<p class="text-jungle-600 italic">Aucun cours programmé</p>';
+        mobileHtml += '<p class="text-jungle-600 italic">Aucun cours programmé</p>';
     } else {
         courses.forEach(course => {
-            html += createCourseCard(course);
+            mobileHtml += createCourseCard(course);
         });
     }
-    html += '</div>';
-
-    container.innerHTML = html;
+    mobileHtml += '</div>';
+    mobileContainer.innerHTML = mobileHtml;
 }
 
-// Gestion des boutons de saison
+// Initialisation et gestion des événements
 document.addEventListener('DOMContentLoaded', function() {
     const seasonBtns = document.querySelectorAll('.season-btn');
     const dayBtns = document.querySelectorAll('.day-btn');
 
+    // Gestion des boutons de saison
     seasonBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             seasonBtns.forEach(b => {
@@ -708,11 +654,11 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.remove('bg-jungle-100', 'text-jungle-800');
 
             currentSeason = this.dataset.season;
-            updateDesktopPlanning();
-            updateMobilePlanning();
+            updatePlanning();
         });
     });
 
+    // Gestion des boutons de jour (mobile)
     dayBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             dayBtns.forEach(b => {
@@ -724,13 +670,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.remove('bg-jungle-100', 'text-jungle-800');
 
             currentDay = this.dataset.day;
-            updateMobilePlanning();
+            updatePlanning();
         });
     });
 
-    // Initialisation
-    updateDesktopPlanning();
-    updateMobilePlanning();
+    // Initialisation du planning
+    updatePlanning();
 });
 </script>
 
@@ -777,26 +722,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
 
                     <div class="prose prose-jungle mb-6">
-                        <p>Le Hatha Yoga est une pratique douce et accessible qui convient à tous les niveaux. Cette forme traditionnelle de yoga met l’accent sur les postures (asanas) et la respiration (pranayama).</p>
+                        <p>Le Vinyasa est un yoga dynamique qui synchronise mouvement et respiration dans un flow continu. Cette pratique développe force, souplesse et concentration.</p>
 
-<h2 id="déroulement-dune-séance">Déroulement d’une séance</h2>
+<h2 id="quest-ce-que-le-vinyasa-">Qu’est-ce que le Vinyasa ?</h2>
 
-<p>Chaque cours de Hatha Yoga suit une progression logique :</p>
+<p>Le Vinyasa Yoga est caractérisé par des transitions fluides entre les postures, guidées par la respiration. Chaque mouvement est synchronisé avec une inspiration ou une expiration, créant une méditation en mouvement.</p>
+
+<h2 id="déroulement-dun-cours">Déroulement d’un cours</h2>
 
 <ul>
-  <li><strong>Échauffement</strong> : Préparation du corps en douceur</li>
-  <li><strong>Postures debout</strong> : Renforcement et ancrage</li>
-  <li><strong>Postures assises</strong> : Flexibilité et introspection</li>
-  <li><strong>Relaxation finale</strong> : Intégration et détente profonde</li>
+  <li><strong>Échauffement</strong> : Préparation du corps et de l’esprit</li>
+  <li><strong>Salutations au soleil</strong> : Séquences dynamiques</li>
+  <li><strong>Postures debout</strong> : Renforcement et équilibre</li>
+  <li><strong>Flow créatif</strong> : Enchaînements fluides</li>
+  <li><strong>Relaxation finale</strong> : Intégration et détente</li>
 </ul>
 
-<h2 id="pour-qui-">Pour qui ?</h2>
+<h2 id="à-qui-sadresse-ce-cours-">À qui s’adresse ce cours ?</h2>
 
-<p>Le Hatha Yoga s’adresse à tous, débutants comme pratiquants expérimentés. Les postures sont adaptées selon les besoins de chacun.</p>
-
-<h2 id="matériel-fourni">Matériel fourni</h2>
-
-<p>Tapis, blocs, sangles et coussins sont mis à disposition pour votre confort et sécurité.</p>
+<p>Le Vinyasa convient à tous les niveaux. Les débutants peuvent adapter les postures, tandis que les pratiquants expérimentés peuvent approfondir leur pratique.</p>
 
                     </div>
 
@@ -806,7 +750,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
-                            <span>1h15</span>
+                            <span>75 minutes</span>
                         </div>
                         
 
@@ -820,22 +764,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         
 
                         
-                        <div class="flex items-center text-jungle-600">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            </svg>
-                            <span>Lacanau Océan - Plage Sud</span>
-                        </div>
-                        
 
-                        
-                        <div class="flex items-center text-jungle-600">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                            </svg>
-                            <span>Mardis 18h30, Jeudis 10h00</span>
-                        </div>
                         
                     </div>
 
@@ -848,14 +777,14 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Amélioration de la flexibilité
+                                Renforcement musculaire
                             </li>
                             
                             <li class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Renforcement musculaire en douceur
+                                Amélioration de la flexibilité
                             </li>
                             
                             <li class="flex items-start">
@@ -869,14 +798,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Meilleur équilibre
-                            </li>
-                            
-                            <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                </svg>
-                                Connexion corps-esprit
+                                Connexion avec la nature
                             </li>
                             
                         </ul>
@@ -896,7 +818,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <article class="bg-gradient-to-br from-jungle-50 to-sable-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 
                 <div class="aspect-w-16 aspect-h-9">
-                    <img src="/assets/images/vinyasa-yoga.jpeg"
+                    <img src="/assets/images/yin-yoga.jpg"
                          alt="Yin Yoga"
                          class="w-full h-64 object-cover">
                 </div>
@@ -919,7 +841,35 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
 
                     <div class="prose prose-jungle mb-6">
-                        
+                        <p>Le Yin Yoga est une pratique douce et méditative qui invite à la lenteur et à l’introspection. Les postures sont maintenues pendant plusieurs minutes pour permettre un étirement profond des tissus conjonctifs.</p>
+
+<h2 id="quest-ce-que-le-yin-yoga-">Qu’est-ce que le Yin Yoga ?</h2>
+
+<p>Le Yin Yoga se caractérise par des postures passives tenues longtemps (3 à 7 minutes), principalement au sol. Cette pratique complète parfaitement les activités yang (dynamiques) comme le surf ou la course.</p>
+
+<h2 id="déroulement-dun-cours">Déroulement d’un cours</h2>
+
+<ul>
+  <li><strong>Centrage</strong> : Moment de connexion avec soi-même</li>
+  <li><strong>Postures au sol</strong> : Étirements profonds et passifs</li>
+  <li><strong>Utilisation d’accessoires</strong> : Bolsters, coussins, sangles pour le confort</li>
+  <li><strong>Relaxation finale</strong> : Intégration complète</li>
+  <li><strong>Méditation</strong> : Retour au calme</li>
+</ul>
+
+<h2 id="bienfaits-du-yin-yoga">Bienfaits du Yin Yoga</h2>
+
+<p>Cette pratique apporte une détente profonde du système nerveux et améliore la circulation de l’énergie dans le corps. Parfait après une journée active à Lacanau !</p>
+
+<h2 id="à-qui-sadresse-ce-cours-">À qui s’adresse ce cours ?</h2>
+
+<p>Le Yin Yoga convient à tous, particulièrement aux personnes cherchant :</p>
+<ul>
+  <li>Un complément aux activités sportives</li>
+  <li>Une pratique de détente et de lâcher-prise</li>
+  <li>Un moment de reconnexion avec soi</li>
+  <li>Une amélioration de la souplesse en douceur</li>
+</ul>
 
                     </div>
 
@@ -929,7 +879,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
-                            <span>1h15</span>
+                            <span>60-75 minutes</span>
                         </div>
                         
 
@@ -943,22 +893,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         
 
                         
-                        <div class="flex items-center text-jungle-600">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            </svg>
-                            <span>Lacanau Océan - Plage Sud</span>
-                        </div>
-                        
 
-                        
-                        <div class="flex items-center text-jungle-600">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                            </svg>
-                            <span>Mardis 18h30, Jeudis 10h00</span>
-                        </div>
                         
                     </div>
 
@@ -971,14 +906,14 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Amélioration de la flexibilité
+                                Relaxation profonde
                             </li>
                             
                             <li class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Renforcement musculaire en douceur
+                                Amélioration de la souplesse
                             </li>
                             
                             <li class="flex items-start">
@@ -992,14 +927,14 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Meilleur équilibre
+                                Équilibre énergétique
                             </li>
                             
                             <li class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
-                                Connexion corps-esprit
+                                Meilleur sommeil
                             </li>
                             
                         </ul>
@@ -1050,7 +985,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     Trouvez votre équilibre dans un cadre naturel exceptionnel.
                 </p>
                 <p class="text-jungle-300 text-sm">
-                    📍 Lacanau, Gironde
+                    📍 Lacanau Océan, Gironde
                 </p>
             </div>
 
