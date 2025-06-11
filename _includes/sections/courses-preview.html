@@ -10,37 +10,33 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {% for course in site.courses limit:2 %}
-            <div class="bg-gradient-to-br from-jungle-50 to-sable-50 p-8 shadow-lg hover:shadow-xl transition-shadow">
-                {% if course.image %}
-                <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden">
-                    <img src="{{ course.image }}"
-                         alt="{{ course.title }}"
-                         class="w-full h-48 object-cover">
-                </div>
-                {% endif %}
-
-                <h3 class="text-2xl font-bold text-jungle-800 mb-3 border-b-2 border-sable-300 pb-2">{{ course.title }}</h3>
-                <p class="text-jungle-600 mb-4">{{ course.excerpt | strip_html | truncate: 120 }}</p>
-
-                <div class="flex items-center justify-between">
-                    <div class="text-sm text-jungle-500">
-                        {% if course.duration %}
-                        <span class="inline-block mr-4 bg-jungle-100 rounded-full py-1 px-3">⏱️ {{ course.duration }}</span>
-                        {% endif %}
-                        {% if course.level %}
-                        <span class="inline-block bg-sable-200 rounded-full px-3 py-1">📊 {{ course.level }}</span>
-                        {% endif %}
-                    </div>
-                    <!-- {% if course.price %}
-                    <div class="text-lg font-semibold text-jungle-700 bg-white rounded-full py-1 px-3 border border-jungle-300">
-                        {{ course.price }}€
-                    </div>
-                    {% endif %} -->
-                </div>
-            </div>
-            {% endfor %}
+    {% for course in site.courses limit:2 %}
+    <a href="/cours/#cours" class="block bg-gradient-to-br from-jungle-50 to-sable-50 p-8 shadow-lg hover:shadow-xl transition-shadow">
+        {% if course.image %}
+        <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden">
+            <img src="{{ course.image }}"
+                 alt="{{ course.title }}"
+                 class="w-full h-48 object-cover">
         </div>
+        {% endif %}
+
+        <h3 class="text-2xl font-bold text-jungle-800 mb-3 border-b-2 border-sable-300 pb-2">{{ course.title }}</h3>
+        <p class="text-jungle-600 mb-4">{{ course.excerpt | strip_html | truncate: 120 }}</p>
+
+        <div class="flex items-center justify-between">
+            <div class="text-sm text-jungle-500">
+                {% if course.duration %}
+                <span class="inline-block mr-4 bg-jungle-100 rounded-full py-1 px-3">⏱️ {{ course.duration }}</span>
+                {% endif %}
+                {% if course.level %}
+                <span class="inline-block bg-sable-200 rounded-full px-3 py-1">📊 {{ course.level }}</span>
+                {% endif %}
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
 
         <div class="text-center">
           {% include button.html

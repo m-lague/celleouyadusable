@@ -1,5 +1,5 @@
 <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto">
+    <div class=" mx-auto">
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-sable-200 inline-block pb-2">
                 {{ site.data.site-texts.events.title }}
@@ -14,10 +14,10 @@
         {% if upcoming_events.size > 0 %}
         <div class="bg-gradient-to-r from-jungle-600 to-sable-500 py-8 px-12 text-white mb-8">
             {% assign next_event = upcoming_events.first %}
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="mb-4 md:mb-0 text-center md:text-left">
-                    <h3 class="text-2xl font-bold mb-2">Prochain événement</h3>
-                    <h4 class="text-xl mb-2">{{ next_event.title }}</h4>
+            <div class="flex flex-col items-center justify-between">
+                <div class="mb-4 text-center ">
+                    <h2 class="text-3xl font-bold mb-2">Prochain événement</h2>
+                    <p class="text-xl mb-2">{{ next_event.title }}</p>
                     <p class="opacity-90">{{ next_event.date | date: "%d %B %Y" }}</p>
                 </div>
                 <a href="{{ next_event.url}}"
