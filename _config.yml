@@ -15,8 +15,8 @@ collections:
     output: false
     permalink: /:collection/:name/
   events:
-    output: false
-    permalink: /:collection/:name/
+    output: true
+    permalink: /evenement/:name/
   pages:
     output: true
     permalink: /:name/
@@ -32,6 +32,11 @@ defaults:
       path: "_pages/accueil.md"
     values:
       layout: "accueil"
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
 
 
 # Plugins

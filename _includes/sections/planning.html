@@ -1,0 +1,436 @@
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-400 inline-block pb-2">
+                Planning des Cours
+            </h2>
+            <p class="text-xl text-jungle-600">
+                Découvrez tous mes cours de yoga à Lacanau
+            </p>
+        </div>
+
+        <!-- Sélecteur de saison (sans bordure) -->
+        <div class="flex justify-center mb-4">
+            <div class="p-2">
+                <button id="hors-saison-btn"
+                        class="px-6 py-2 font-semibold transition-colors season-btn active"
+                        data-season="hors-saison">
+                    Hors Saison
+                </button>
+                <button id="ete-btn"
+                        class="px-6 py-2 font-semibold transition-colors season-btn"
+                        data-season="ete">
+                    Été
+                </button>
+            </div>
+        </div>
+
+        <!-- Information sur les mois -->
+        <div class="text-center text-jungle-600 mb-8">
+            <p><strong>Hors Saison :</strong> Mai, juin, septembre et octobre</p>
+            <p><strong>Été :</strong> Juillet et août</p>
+        </div>
+
+        <!-- Planning Desktop -->
+        <div class="hidden md:block">
+            <div class="grid grid-cols-7 gap-2 mb-8">
+                <!-- En-têtes des jours (couleur éclaircie) -->
+                <div class="text-center font-bold text-jungle-800 py-3 bg-jungle-50">Lundi</div>
+                <div class="text-center font-bold text-jungle-800 py-3 bg-jungle-50">Mardi</div>
+                <div class="text-center font-bold text-jungle-800 py-3 bg-jungle-50">Mercredi</div>
+                <div class="text-center font-bold text-jungle-800 py-3 bg-jungle-50">Jeudi</div>
+                <div class="text-center font-bold text-jungle-800 py-3 bg-jungle-50">Vendredi</div>
+                <div class="text-center font-bold text-jungle-800 py-3 bg-jungle-50">Samedi</div>
+                <div class="text-center font-bold text-jungle-800 py-3 bg-jungle-50">Dimanche</div>
+
+                <!-- Contenu des cours -->
+                <div id="desktop-planning" class="col-span-7 grid grid-cols-7 gap-2">
+                    <!-- Le contenu sera généré par JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Planning Mobile -->
+        <div class="md:hidden">
+            <!-- Sélecteur de jour -->
+            <div class="flex overflow-x-auto mb-6 pb-2">
+                <div class="flex space-x-2 min-w-full">
+                    <button class="day-btn active flex-shrink-0 px-4 py-2 bg-jungle-600 text-white font-semibold" data-day="lundi">Lun</button>
+                    <button class="day-btn flex-shrink-0 px-4 py-2 bg-jungle-100 text-jungle-800 font-semibold" data-day="mardi">Mar</button>
+                    <button class="day-btn flex-shrink-0 px-4 py-2 bg-jungle-100 text-jungle-800 font-semibold" data-day="mercredi">Mer</button>
+                    <button class="day-btn flex-shrink-0 px-4 py-2 bg-jungle-100 text-jungle-800 font-semibold" data-day="jeudi">Jeu</button>
+                    <button class="day-btn flex-shrink-0 px-4 py-2 bg-jungle-100 text-jungle-800 font-semibold" data-day="vendredi">Ven</button>
+                    <button class="day-btn flex-shrink-0 px-4 py-2 bg-jungle-100 text-jungle-800 font-semibold" data-day="samedi">Sam</button>
+                    <button class="day-btn flex-shrink-0 px-4 py-2 bg-jungle-100 text-jungle-800 font-semibold" data-day="dimanche">Dim</button>
+                </div>
+            </div>
+
+            <!-- Contenu mobile -->
+            <div id="mobile-planning">
+                <!-- Le contenu sera généré par JavaScript -->
+            </div>
+        </div>
+
+        <!-- Légendes et informations avec couleurs différentes -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Plage SUD - Bleu -->
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 border-l-4 border-blue-500">
+                <h3 class="text-xl font-bold text-blue-800 mb-4 bg-blue-200 px-3 py-2">Plage SUD</h3>
+                <div class="space-y-2 text-blue-700">
+                    <p><strong>Lieu :</strong> Sous le @rainbowcafelacanau</p>
+                    <p><strong>Durée :</strong> 75 minutes</p>
+                    <p><strong>Tarifs :</strong> 20€ le cours, 180€ 10 cours</p>
+                    <p><strong>Réservation :</strong> @Celle_ou_yadusable<br>06 01 28 30 70</p>
+                </div>
+            </div>
+
+            <!-- Bo&Co - Orange -->
+            <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-6 border-l-4 border-orange-500">
+                <h3 class="text-xl font-bold text-orange-800 mb-4 bg-orange-200 px-3 py-2">Bo&Co</h3>
+                <div class="space-y-2 text-orange-700">
+                    <p><strong>Lieu :</strong> Plage NORD, École de surf @boandcosurf</p>
+                    <p><strong>Durée :</strong> 60 minutes</p>
+                    <p><strong>Réservation :</strong> @boandcosurf<br>05 56 26 33 99</p>
+                </div>
+            </div>
+
+            <!-- Maison Pada - Violet -->
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 border-l-4 border-purple-500">
+                <h3 class="text-xl font-bold text-purple-800 mb-4 bg-purple-200 px-3 py-2">Maison Pada</h3>
+                <div class="space-y-2 text-purple-700">
+                    <p><strong>Lieu :</strong> La maison des Dunes, @maison_pada_33</p>
+                    <p><strong>Période :</strong> Mai à fin novembre</p>
+                    <p><strong>Réservation :</strong> @maison_pada_33</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Données des cours avec niveaux et couleurs par lieu
+const coursesData = {
+    "hors-saison": {
+        "lundi": [
+            {
+                "time": "18h-19h15",
+                "type": "Vinyasa intermédiaire",
+                "location": "Maison Pada",
+                "level": "Intermédiaire",
+                "color": "purple",
+                "icon": "🏠"
+            },
+            {
+                "time": "19h30-20h30",
+                "type": "KIRTAN",
+                "location": "Maison Pada",
+                "level": "Tous niveaux",
+                "color": "purple",
+                "icon": "🏠"
+            }
+        ],
+        "mardi": [],
+        "mercredi": [],
+        "jeudi": [
+            {
+                "time": "17h",
+                "type": "Vinyasa",
+                "location": "Bo&Co",
+                "level": "Tous niveaux",
+                "color": "orange",
+                "icon": "🏄‍♀️"
+            }
+        ],
+        "vendredi": [
+            {
+                "time": "8h30-9h30",
+                "type": "Vinyasa tous niveaux",
+                "location": "Maison Pada",
+                "level": "Tous niveaux",
+                "color": "purple",
+                "icon": "🏠"
+            }
+        ],
+        "samedi": [
+            {
+                "time": "11h",
+                "type": "Yoga",
+                "location": "Plage SUD",
+                "level": "Tous niveaux",
+                "color": "blue",
+                "icon": "🏖️"
+            }
+        ],
+        "dimanche": [
+            {
+                "time": "11h",
+                "type": "Yoga",
+                "location": "Plage SUD",
+                "level": "Tous niveaux",
+                "color": "blue",
+                "icon": "🏖️"
+            },
+            {
+                "time": "17h",
+                "type": "Yin & Sounds healing",
+                "location": "Bo&Co",
+                "level": "Débutant",
+                "color": "orange",
+                "icon": "🏄‍♀️"
+            }
+        ]
+    },
+    "ete": {
+        "lundi": [
+            {
+                "time": "8h30",
+                "type": "Vinyasa",
+                "location": "Plage SUD",
+                "level": "Tous niveaux",
+                "color": "blue",
+                "icon": "🏖️"
+            },
+            {
+                "time": "10h30",
+                "type": "Yin",
+                "location": "Plage SUD",
+                "level": "Débutant",
+                "color": "blue",
+                "icon": "🏖️"
+            },
+            {
+                "time": "18h-19h15",
+                "type": "Vinyasa intermédiaire",
+                "location": "Maison Pada",
+                "level": "Intermédiaire",
+                "color": "purple",
+                "icon": "🏠"
+            },
+            {
+                "time": "19h30-20h30",
+                "type": "KIRTAN",
+                "location": "Maison Pada",
+                "level": "Tous niveaux",
+                "color": "purple",
+                "icon": "🏠"
+            }
+        ],
+        "mardi": [],
+        "mercredi": [],
+        "jeudi": [
+            {
+                "time": "8h30",
+                "type": "Vinyasa",
+                "location": "Plage SUD",
+                "level": "Tous niveaux",
+                "color": "blue",
+                "icon": "🏖️"
+            },
+            {
+                "time": "10h30",
+                "type": "Yin",
+                "location": "Plage SUD",
+                "level": "Débutant",
+                "color": "blue",
+                "icon": "🏖️"
+            },
+            {
+                "time": "18h",
+                "type": "Vinyasa",
+                "location": "Bo&Co",
+                "level": "Tous niveaux",
+                "color": "orange",
+                "icon": "🏄‍♀️"
+            }
+        ],
+        "vendredi": [
+            {
+                "time": "8h30-9h30",
+                "type": "Vinyasa tous niveaux",
+                "location": "Maison Pada",
+                "level": "Tous niveaux",
+                "color": "purple",
+                "icon": "🏠"
+            },
+            {
+                "time": "18h",
+                "type": "Vinyasa",
+                "location": "Bo&Co",
+                "level": "Tous niveaux",
+                "color": "orange",
+                "icon": "🏄‍♀️"
+            }
+        ],
+        "samedi": [
+            {
+                "time": "8h30",
+                "type": "Vinyasa",
+                "location": "Plage SUD",
+                "level": "Tous niveaux",
+                "color": "blue",
+                "icon": "🏖️"
+            },
+            {
+                "time": "10h30",
+                "type": "Yin",
+                "location": "Plage SUD",
+                "level": "Débutant",
+                "color": "blue",
+                "icon": "🏖️"
+            }
+        ],
+        "dimanche": [
+            {
+                "time": "8h30",
+                "type": "Vinyasa",
+                "location": "Plage SUD",
+                "level": "Tous niveaux",
+                "color": "blue",
+                "icon": "🏖️"
+            },
+            {
+                "time": "10h30",
+                "type": "Yin",
+                "location": "Plage SUD",
+                "level": "Débutant",
+                "color": "blue",
+                "icon": "🏖️"
+            },
+            {
+                "time": "18h",
+                "type": "Yin & Sounds Healing",
+                "location": "Bo&Co",
+                "level": "Débutant",
+                "color": "orange",
+                "icon": "🏄‍♀️"
+            }
+        ]
+    }
+};
+
+let currentSeason = 'hors-saison';
+let currentDay = 'lundi';
+
+// Fonction pour créer une carte de cours avec niveau et icône
+// Fonction pour créer une carte de cours avec niveau et icône
+function createCourseCard(course) {
+    const colorClasses = {
+        'blue': 'bg-blue-100 border-blue-400 text-blue-800',
+        'orange': 'bg-orange-100 border-orange-400 text-orange-800',
+        'purple': 'bg-purple-100 border-purple-400 text-purple-800'
+    };
+
+    const levelColors = {
+        'Débutant': 'bg-green-200 text-green-800 rounded-full',
+        'Intermédiaire': 'bg-yellow-200 text-yellow-800 rounded-full',
+        'Avancé': 'bg-red-200 text-red-800 rounded-full',
+        'Tous niveaux': 'bg-gray-200 text-gray-800  rounded-full'
+    };
+
+    const colorClass = colorClasses[course.color] || 'bg-gray-100 border-gray-400 text-gray-800';
+    const levelClass = levelColors[course.level] || 'bg-gray-200 text-gray-800';
+
+    return `
+        <div class="${colorClass} p-3 mb-2 border-l-4 shadow-sm">
+            <div class="font-semibold text-sm mb-1">${course.time}</div>
+            <div class="font-bold mb-2">${course.type}</div>
+            <div class="flex items-center text-xs opacity-75 mb-1">
+                <span class="mr-1">${course.icon}</span>
+                <span>${course.location}</span>
+            </div>
+            <div class="${levelClass} px-2 py-1 text-xs font-medium inline-block">${course.level}</div>
+        </div>
+    `;
+}
+
+// Fonction pour mettre à jour le planning desktop
+function updateDesktopPlanning() {
+    const container = document.getElementById('desktop-planning');
+    const days = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+
+    let html = '';
+    days.forEach(day => {
+        const courses = coursesData[currentSeason][day] || [];
+        html += `<div class="min-h-32 p-2 bg-gray-50 border border-gray-200">`;
+        courses.forEach(course => {
+            html += createCourseCard(course);
+        });
+        html += '</div>';
+    });
+
+    container.innerHTML = html;
+}
+
+// Fonction pour mettre à jour le planning mobile
+function updateMobilePlanning() {
+    const container = document.getElementById('mobile-planning');
+    const courses = coursesData[currentSeason][currentDay] || [];
+
+    let html = `<div class="bg-gray-50 p-4 border border-gray-200">`;
+    html += `<h3 class="text-lg font-bold text-jungle-800 mb-4 capitalize">${currentDay}</h3>`;
+
+    if (courses.length === 0) {
+        html += '<p class="text-jungle-600 italic">Aucun cours programmé</p>';
+    } else {
+        courses.forEach(course => {
+            html += createCourseCard(course);
+        });
+    }
+    html += '</div>';
+
+    container.innerHTML = html;
+}
+
+// Gestion des boutons de saison
+document.addEventListener('DOMContentLoaded', function() {
+    const seasonBtns = document.querySelectorAll('.season-btn');
+    const dayBtns = document.querySelectorAll('.day-btn');
+
+    seasonBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            seasonBtns.forEach(b => {
+                b.classList.remove('active', 'bg-jungle-600', 'text-white');
+                b.classList.add('bg-jungle-100', 'text-jungle-800');
+            });
+
+            this.classList.add('active', 'bg-jungle-600', 'text-white');
+            this.classList.remove('bg-jungle-100', 'text-jungle-800');
+
+            currentSeason = this.dataset.season;
+            updateDesktopPlanning();
+            updateMobilePlanning();
+        });
+    });
+
+    dayBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            dayBtns.forEach(b => {
+                b.classList.remove('active', 'bg-jungle-600', 'text-white');
+                b.classList.add('bg-jungle-100', 'text-jungle-800');
+            });
+
+            this.classList.add('active', 'bg-jungle-600', 'text-white');
+            this.classList.remove('bg-jungle-100', 'text-jungle-800');
+
+            currentDay = this.dataset.day;
+            updateMobilePlanning();
+        });
+    });
+
+    // Initialisation
+    updateDesktopPlanning();
+    updateMobilePlanning();
+});
+</script>
+
+<style>
+.season-btn.active {
+    background-color: #2a7c47 !important;
+    color: white !important;
+}
+
+.day-btn.active {
+    background-color: #2a7c47 !important;
+    color: white !important;
+}
+</style>

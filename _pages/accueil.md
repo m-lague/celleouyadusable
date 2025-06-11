@@ -8,7 +8,7 @@ hero:
   title: "Cours de Yoga à Lacanau"
   subtitle: "Sur la plage et au cœur de la forêt de Lacanau, reconnectez-vous à l’essentiel lors de votre pratique"
   image: "/assets/images/yoga-lacanau-celleouyadusable.jpeg"
-  cta: "Voir les Cours"
+  cta: "Voir le Planning"
 sections:
   - courses-preview
   - events-preview

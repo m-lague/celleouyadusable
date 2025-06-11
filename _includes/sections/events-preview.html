@@ -20,7 +20,7 @@
                     <h4 class="text-xl mb-2">{{ next_event.title }}</h4>
                     <p class="opacity-90">{{ next_event.date | date: "%d %B %Y" }}</p>
                 </div>
-                <a href="/evenements/"
+                <a href="{{ next_event.url}}"
                    class="bg-white text-jungle-700 px-6 py-3 rounded-md font-semibold hover:bg-jungle-50 transition-colors">
                     Découvrir
                 </a>

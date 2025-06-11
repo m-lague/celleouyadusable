@@ -1,7 +1,7 @@
 ---
 title: "Retraite Yoga en Forêt"
 type: "Retraite"
-date: 2025-07-15T09:00:00+02:00
+event_date: 2025-07-15T09:00:00+02:00
 duration: "2 jours"
 price: 180
 location: "Forêt des Landes"

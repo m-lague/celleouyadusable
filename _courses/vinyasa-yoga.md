@@ -1,12 +1,12 @@
 ---
-title: "Hatha Yoga"
-style: "Hatha"
+title: "Vinyasa Yoga"
+style: "Vinyasa"
 level: "Tous niveaux"
 duration: "1h15"
 price: 20
-location: "Studio Lacanau"
+location: "Lacanau Océan - Plage Sud"
 schedule: "Mardis 18h30, Jeudis 10h00"
-image: "/assets/images/hatha-yoga.jpeg"
+image: "/assets/images/vinyasa-yoga.jpeg"
 benefits:
   - "Amélioration de la flexibilité"
   - "Renforcement musculaire en douceur"
