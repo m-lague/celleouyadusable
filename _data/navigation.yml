@@ -1,6 +1,6 @@
 main:
   - name: "Accueil"
-    url: "/accueil/"
+    url: "/"
   - name: "Cours"
     url: "/cours/"
   - name: "Événements"
