@@ -9,7 +9,7 @@ public_folder: "/assets/images"
 
 locale: 'fr'
 
-# collections:
+collections:
   # Configuration du site
   - name: "config"
     label: "Configuration du site"
@@ -82,240 +82,241 @@ locale: 'fr'
               - {label: "URL", name: "url", widget: "string"}
 
   # Pages
-  - name: "pages"
-    label: "Pages"
-    folder: "_pages"
-    create: false
-    slug: "{{slug}}"
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Permalien", name: "permalink", widget: "string"}
-      - {label: "Description SEO", name: "description", widget: "text", required: false}
-      - {label: "Afficher le titre", name: "show_title", widget: "boolean", default: true}
+  # - name: "pages"
+  #   label: "Pages"
+  #   folder: "_pages"
+  #   create: false
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+  #     - {label: "Titre", name: "title", widget: "string"}
+  #     - {label: "Permalien", name: "permalink", widget: "string"}
+  #     - {label: "Description SEO", name: "description", widget: "text", required: false}
+  #     - {label: "Afficher le titre", name: "show_title", widget: "boolean", default: true}
 
-      # Hero section
-      - label: "Hero (bannière)"
-        name: "hero"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "Titre", name: "title", widget: "string", required: false}
-          - {label: "Sous-titre", name: "subtitle", widget: "string", required: false}
-          - {label: "Image", name: "image", widget: "image", required: false}
+  #     # Hero section
+  #     - label: "Hero (bannière)"
+  #       name: "hero"
+  #       widget: "object"
+  #       required: false
+  #       fields:
+  #         - {label: "Titre", name: "title", widget: "string", required: false}
+  #         - {label: "Sous-titre", name: "subtitle", widget: "string", required: false}
+  #         - {label: "Image", name: "image", widget: "image", required: false}
 
-      # Sections à afficher
-      - label: "Sections à afficher"
-        name: "sections"
-        widget: "list"
-        required: false
-        default: []
+  #     # Sections à afficher
+  #     - label: "Sections à afficher"
+  #       name: "sections"
+  #       widget: "list"
+  #       required: false
+  #       default: []
 
-      # Contenu principal
-      - {label: "Contenu", name: "body", widget: "markdown"}
+  #     # Contenu principal
+  #     - {label: "Contenu", name: "body", widget: "markdown"}
 
-      # Page À propos
-      - {label: "Image portrait", name: "portrait_image", widget: "image", required: false}
-      - label: "Éléments de philosophie"
-        name: "philosophy_items"
-        widget: "list"
-        required: false
-        fields:
-          - {label: "Titre", name: "title", widget: "string"}
-          - {label: "Contenu", name: "content", widget: "text"}
-          - {label: "Couleur", name: "color", widget: "select", options: ["jungle", "sable"]}
+  #     # Page À propos
+  #     - {label: "Image portrait", name: "portrait_image", widget: "image", required: false}
+  #     - label: "Éléments de philosophie"
+  #       name: "philosophy_items"
+  #       widget: "list"
+  #       required: false
+  #       fields:
+  #         - {label: "Titre", name: "title", widget: "string"}
+  #         - {label: "Contenu", name: "content", widget: "text"}
+  #         - {label: "Couleur", name: "color", widget: "select", options: ["jungle", "sable"]}
 
-      - label: "Certifications"
-        name: "certifications"
-        widget: "list"
-        required: false
-        fields:
-          - {label: "Titre", name: "title", widget: "string"}
-          - {label: "École/Organisme", name: "school", widget: "string"}
-          - {label: "Année", name: "year", widget: "string"}
-          - {label: "Couleur", name: "color", widget: "select", options: ["jungle", "sable"]}
+  #     - label: "Certifications"
+  #       name: "certifications"
+  #       widget: "list"
+  #       required: false
+  #       fields:
+  #         - {label: "Titre", name: "title", widget: "string"}
+  #         - {label: "École/Organisme", name: "school", widget: "string"}
+  #         - {label: "Année", name: "year", widget: "string"}
+  #         - {label: "Couleur", name: "color", widget: "select", options: ["jungle", "sable"]}
 
-      # Page FAQ
-      - label: "Sections FAQ"
-        name: "faq_sections"
-        widget: "list"
-        required: false
-        fields:
-          - {label: "Titre de section", name: "title", widget: "string"}
-          - {label: "Couleur", name: "color", widget: "select", options: ["jungle", "sable"]}
-          - label: "Questions"
-            name: "questions"
-            widget: "list"
-            fields:
-              - {label: "Question", name: "question", widget: "string"}
-              - {label: "Réponse", name: "answer", widget: "text"}
+  #     # Page FAQ
+  #     - label: "Sections FAQ"
+  #       name: "faq_sections"
+  #       widget: "list"
+  #       required: false
+  #       fields:
+  #         - {label: "Titre de section", name: "title", widget: "string"}
+  #         - {label: "Couleur", name: "color", widget: "select", options: ["jungle", "sable"]}
+  #         - label: "Questions"
+  #           name: "questions"
+  #           widget: "list"
+  #           fields:
+  #             - {label: "Question", name: "question", widget: "string"}
+  #             - {label: "Réponse", name: "answer", widget: "text"}
 
-      - label: "Appel à l'action contact"
-        name: "contact_cta"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "Titre", name: "title", widget: "string"}
-          - {label: "Sous-titre", name: "subtitle", widget: "string"}
-          - {label: "Texte du bouton", name: "button_text", widget: "string"}
-          - {label: "URL du bouton", name: "button_url", widget: "string"}
+  #     - label: "Appel à l'action contact"
+  #       name: "contact_cta"
+  #       widget: "object"
+  #       required: false
+  #       fields:
+  #         - {label: "Titre", name: "title", widget: "string"}
+  #         - {label: "Sous-titre", name: "subtitle", widget: "string"}
+  #         - {label: "Texte du bouton", name: "button_text", widget: "string"}
+  #         - {label: "URL du bouton", name: "button_url", widget: "string"}
 
-      # Page Contact
-      - {label: "Numéro WhatsApp", name: "whatsapp_number", widget: "string", required: false}
-      - {label: "Message WhatsApp par défaut", name: "whatsapp_message", widget: "text", required: false}
+  #     # Page Contact
+  #     - {label: "Numéro WhatsApp", name: "whatsapp_number", widget: "string", required: false}
+  #     - {label: "Message WhatsApp par défaut", name: "whatsapp_message", widget: "text", required: false}
 
-      - label: "Disponibilité"
-        name: "availability"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "Titre", name: "title", widget: "string"}
-          - label: "Horaires"
-            name: "schedule"
-            widget: "list"
-            fields:
-              - {label: "Jours", name: "days", widget: "string"}
-              - {label: "Heures", name: "hours", widget: "string"}
-          - {label: "Note", name: "note", widget: "text", required: false}
+  #     - label: "Disponibilité"
+  #       name: "availability"
+  #       widget: "object"
+  #       required: false
+  #       fields:
+  #         - {label: "Titre", name: "title", widget: "string"}
+  #         - label: "Horaires"
+  #           name: "schedule"
+  #           widget: "list"
+  #           fields:
+  #             - {label: "Jours", name: "days", widget: "string"}
+  #             - {label: "Heures", name: "hours", widget: "string"}
+  #         - {label: "Note", name: "note", widget: "text", required: false}
 
-      - label: "Informations de localisation"
-        name: "location_info"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "Titre", name: "title", widget: "string"}
-          - label: "Détails"
-            name: "details"
-            widget: "list"
-            fields:
-              - {label: "Label", name: "label", widget: "string"}
-              - {label: "Valeur", name: "value", widget: "string"}
-          - {label: "Note", name: "note", widget: "text", required: false}
+  #     - label: "Informations de localisation"
+  #       name: "location_info"
+  #       widget: "object"
+  #       required: false
+  #       fields:
+  #         - {label: "Titre", name: "title", widget: "string"}
+  #         - label: "Détails"
+  #           name: "details"
+  #           widget: "list"
+  #           fields:
+  #             - {label: "Label", name: "label", widget: "string"}
+  #             - {label: "Valeur", name: "value", widget: "string"}
+  #         - {label: "Note", name: "note", widget: "text", required: false}
 
-      - label: "Messages rapides"
-        name: "quick_messages"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "Titre", name: "title", widget: "string"}
-          - {label: "Sous-titre", name: "subtitle", widget: "string"}
-          - label: "Messages"
-            name: "messages"
-            widget: "list"
-            fields:
-              - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "string"}
-              - {label: "Message", name: "message", widget: "text"}
+  #     - label: "Messages rapides"
+  #       name: "quick_messages"
+  #       widget: "object"
+  #       required: false
+  #       fields:
+  #         - {label: "Titre", name: "title", widget: "string"}
+  #         - {label: "Sous-titre", name: "subtitle", widget: "string"}
+  #         - label: "Messages"
+  #           name: "messages"
+  #           widget: "list"
+  #           fields:
+  #             - {label: "Titre", name: "title", widget: "string"}
+  #             - {label: "Description", name: "description", widget: "string"}
+  #             - {label: "Message", name: "message", widget: "text"}
 
-      - label: "Informations importantes"
-        name: "important_info"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "Titre", name: "title", widget: "string"}
-          - label: "Éléments"
-            name: "items"
-            widget: "list"
-            fields:
-              - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Contenu", name: "content", widget: "text"}
+  #     - label: "Informations importantes"
+  #       name: "important_info"
+  #       widget: "object"
+  #       required: false
+  #       fields:
+  #         - {label: "Titre", name: "title", widget: "string"}
+  #         - label: "Éléments"
+  #           name: "items"
+  #           widget: "list"
+  #           fields:
+  #             - {label: "Titre", name: "title", widget: "string"}
+  #             - {label: "Contenu", name: "content", widget: "text"}
 
-  # Cours
-  - name: "courses"
-    label: "Types de Cours"
-    folder: "_courses"
-    create: true
-    delete: true
-    slug: "{{slug}}"
-    fields:
-      # Informations générales
-      - {label: "Nom du cours", name: "title", widget: "string"}
-      - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha"}
-      - {label: "Niveau", name: "level", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
-      - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 60-75 minutes"}
-      - {label: "Prix", name: "price", widget: "number"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Description courte", name: "description_courte", widget: "text"}
+  # # Cours
+  # - name: "courses"
+  #   label: "Types de Cours"
+  #   folder: "_courses"
+  #   create: true
+  #   delete: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     # Informations générales
+  #     - {label: "Nom du cours", name: "title", widget: "string"}
+  #     - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha"}
+  #     - {label: "Niveau", name: "level", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
+  #     - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 60-75 minutes"}
+  #     - {label: "Prix", name: "price", widget: "number"}
+  #     - {label: "Image", name: "image", widget: "image", required: false}
+  #     - {label: "Description courte", name: "description_courte", widget: "text"}
 
-      # Apparence dans le planning
-      - {label: "Couleur", name: "planning_color", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
-      - {label: "Icône", name: "planning_icon", widget: "select", options: ["🏖️", "🏄‍♀️", "🏠", "🧘‍♀️", "🌅"]}
+  #     # Apparence dans le planning
+  #     - {label: "Couleur", name: "planning_color", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
+  #     - {label: "Icône", name: "planning_icon", widget: "select", options: ["🏖️", "🏄‍♀️", "🏠", "🧘‍♀️", "🌅"]}
 
-      # Planning des créneaux
-      - label: "Créneaux Hors Saison"
-        name: "planning_creneaux"
-        widget: "object"
-        fields:
-          - label: "Hors saison (mai, juin, septembre, octobre)"
-            name: "hors_saison"
-            widget: "list"
-            fields:
-              - {label: "Jour", name: "jour", widget: "select", options: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]}
-              - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
-              - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
-              - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
+  #     # Planning des créneaux
+  #     - label: "Créneaux Hors Saison"
+  #       name: "planning_creneaux"
+  #       widget: "object"
+  #       fields:
+  #         - label: "Hors saison (mai, juin, septembre, octobre)"
+  #           name: "hors_saison"
+  #           widget: "list"
+  #           fields:
+  #             - {label: "Jour", name: "jour", widget: "select", options: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]}
+  #             - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
+  #             - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
+  #             - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
 
-          - label: "Été (juillet, août)"
-            name: "ete"
-            widget: "list"
-            fields:
-              - {label: "Jour", name: "jour", widget: "select", options: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]}
-              - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
-              - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
-              - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
+  #         - label: "Été (juillet, août)"
+  #           name: "ete"
+  #           widget: "list"
+  #           fields:
+  #             - {label: "Jour", name: "jour", widget: "select", options: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]}
+  #             - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
+  #             - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
+  #             - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
 
-      # Bénéfices
-      - label: "Bénéfices"
-        name: "benefits"
-        widget: "list"
-        field: {label: "Bénéfice", name: "benefit", widget: "string"}
+  #     # Bénéfices
+  #     - label: "Bénéfices"
+  #       name: "benefits"
+  #       widget: "list"
+  #       field: {label: "Bénéfice", name: "benefit", widget: "string"}
 
-      # Description complète
-      - {label: "Description complète", name: "body", widget: "markdown"}
-  - name: "lieux"
-    label: "Lieux de Cours"
-    files:
-      - name: "lieux-config"
-        label: "Configuration des Lieux"
-        file: "_data/lieux.yml"
-        fields:
-          - label: "Plage SUD"
-            name: "plage_sud"
-            widget: "object"
-            fields:
-              - {label: "Nom", name: "nom", widget: "string", default: "Plage SUD"}
-              - {label: "Icône", name: "icone", widget: "string", default: "🏖️"}
-              - {label: "Couleur", name: "couleur", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
+  #     # Description complète
+  #     - {label: "Description complète", name: "body", widget: "markdown"}
+  # # Lieux de cours
+  # - name: "lieux"
+  #   label: "Lieux de Cours"
+  #   files:
+  #     - name: "lieux-config"
+  #       label: "Configuration des Lieux"
+  #       file: "_data/lieux.yml"
+  #       fields:
+  #         - label: "Plage SUD"
+  #           name: "plage_sud"
+  #           widget: "object"
+  #           fields:
+  #             - {label: "Nom", name: "nom", widget: "string", default: "Plage SUD"}
+  #             - {label: "Icône", name: "icone", widget: "string", default: "🏖️"}
+  #             - {label: "Couleur", name: "couleur", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
 
-          - label: "Bo&Co"
-            name: "bo_co"
-            widget: "object"
-            fields:
-              - {label: "Nom", name: "nom", widget: "string", default: "Bo&Co"}
-              - {label: "Icône", name: "icone", widget: "string", default: "🏄‍♀️"}
-              - {label: "Couleur", name: "couleur", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
+  #         - label: "Bo&Co"
+  #           name: "bo_co"
+  #           widget: "object"
+  #           fields:
+  #             - {label: "Nom", name: "nom", widget: "string", default: "Bo&Co"}
+  #             - {label: "Icône", name: "icone", widget: "string", default: "🏄‍♀️"}
+  #             - {label: "Couleur", name: "couleur", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
 
-          - label: "Maison Pada"
-            name: "maison_pada"
-            widget: "object"
-            fields:
-              - {label: "Nom", name: "nom", widget: "string", default: "Maison Pada"}
-              - {label: "Icône", name: "icone", widget: "string", default: "🏠"}
-              - {label: "Couleur", name: "couleur", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
-  # Événements
-  - name: "events"
-    label: "Événements"
-    folder: "_events"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Atelier", "Stage", "Cercle"]}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Durée", name: "duration", widget: "string"}
-      - {label: "Prix", name: "price", widget: "number"}
-      - {label: "Lieu", name: "location", widget: "string"}
-      - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: false}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Description", name: "body", widget: "markdown"}
-  # À ajouter dans admin/config.yml pour la collection pages
+  #         - label: "Maison Pada"
+  #           name: "maison_pada"
+  #           widget: "object"
+  #           fields:
+  #             - {label: "Nom", name: "nom", widget: "string", default: "Maison Pada"}
+  #             - {label: "Icône", name: "icone", widget: "string", default: "🏠"}
+  #             - {label: "Couleur", name: "couleur", widget: "select", options: ["blue", "orange", "purple", "green", "red"]}
+  # # Événements
+  # - name: "events"
+  #   label: "Événements"
+  #   folder: "_events"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - {label: "Titre", name: "title", widget: "string"}
+  #     - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Atelier", "Stage", "Cercle"]}
+  #     - {label: "Date", name: "date", widget: "datetime"}
+  #     - {label: "Durée", name: "duration", widget: "string"}
+  #     - {label: "Prix", name: "price", widget: "number"}
+  #     - {label: "Lieu", name: "location", widget: "string"}
+  #     - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: false}
+  #     - {label: "Image", name: "image", widget: "image", required: false}
+  #     - {label: "Description", name: "body", widget: "markdown"}
+  # # À ajouter dans admin/config.yml pour la collection pages
