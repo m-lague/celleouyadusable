@@ -219,11 +219,11 @@ collections:
   # Lieux de cours
   - name: "lieux"
     label: "Lieux de Pratique"
-    files: [_data/lieux.yml]
-    fields:
+    files:
       - label: "Liste des lieux"
         name: "lieux"
         widget: "list"
+        file: "_data/lieux.yml"
         fields:
           - {label: "Nom du lieu", name: "nom", widget: "string"}
           - {label: "Icône", name: "icone", widget: "string", default: "🏖️", hint: "Copiez-collez un emoji depuis votre téléphone"}
