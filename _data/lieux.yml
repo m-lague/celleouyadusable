@@ -14,8 +14,3 @@ lieux:
     couleur: jungle
     adresse: La maison des Dunes, @maison_pada_33
     reservation: "@maison_pada_33"
-  - icone: 🏖️
-    nom: lieu test
-    couleur: lime
-    adresse: place du marché
-    reservation: sans reservation
