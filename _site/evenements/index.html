@@ -66,7 +66,7 @@
             }
         }
     </script>
-
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -355,7 +355,7 @@
                     </div>
 
                     <div class="text-center">
-                        <a href="https://wa.me/33601283070?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement Atelier+Respiration du 11+June+2025"
+                        <a href="https://wa.me/33601283070?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement Atelier+Respiration du 12+June+2025"
                            target="_blank"
                            class="inline-block bg-sable-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-sable-600 transition-colors">
                             S'inscrire
@@ -440,7 +440,7 @@
                     </div>
 
                     <div class="text-center">
-                        <a href="https://wa.me/33601283070?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement Retraite+Yoga+en+For%C3%AAt du 11+June+2025"
+                        <a href="https://wa.me/33601283070?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement Retraite+Yoga+en+For%C3%AAt du 12+June+2025"
                            target="_blank"
                            class="inline-block bg-sable-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-sable-600 transition-colors">
                             S'inscrire
@@ -467,7 +467,7 @@
             <div>
                 <h3 class="text-xl font-bold mb-4">Celle où ya du sable</h3>
                 <p class="text-jungle-200 mb-4">
-                    Cours de Hatha et Yin Yoga à Lacanau avec Nathalie.
+                    Cours de Vinyasa yoga et Yin Yoga à Lacanau Océan avec Nathalie.
                     Trouvez votre équilibre dans un cadre naturel exceptionnel.
                 </p>
                 <p class="text-jungle-300 text-sm">
@@ -603,5 +603,16 @@
             menu.classList.toggle('hidden');
         });
     </script>
+     <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>

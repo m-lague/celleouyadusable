@@ -179,15 +179,31 @@ function convertTimeToMinutes(timeStr) {
 
 // Fonction pour créer une carte de cours avec données dynamiques
 function createCourseCard(course) {
-    // Données des lieux générées par Jekyll
-    const lieuxData = {
-        {% for lieu in site.data.lieux %}
-        "{{ lieu[1].nom }}": {
-            icone: "{{ lieu[1].icone }}",
-            couleur: "{{ lieu[1].couleur }}"
-        }{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-    };
+    // Fonction pour générer un ID automatiquement depuis le nom
+      function generateId(nom) {
+        return nom.toLowerCase()
+                  .replace(/[àáâãäå]/g, 'a')
+                  .replace(/[èéêë]/g, 'e')
+                  .replace(/[ìíîï]/g, 'i')
+                  .replace(/[òóôõö]/g, 'o')
+                  .replace(/[ùúûü]/g, 'u')
+                  .replace(/[ç]/g, 'c')
+                  .replace(/[^a-z0-9]/g, '_')
+                  .replace(/_+/g, '_')
+                  .replace(/^_|_$/g, '');
+      }
+
+    // Données des lieux avec ID automatique
+     const lieuxData = {
+          {% for lieu in site.data.lieux.lieux %}
+          "{{ lieu.nom }}": {
+              icone: "{{ lieu.icone }}",
+              couleur: "{{ lieu.couleur }}",
+              id: "{{ lieu.nom | downcase | replace: ' ', '_' | replace: '&', '' }}"
+          }{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+      };
+
 
     // Couleurs basées sur la couleur définie pour chaque lieu
     const colorClasses = {
@@ -196,7 +212,9 @@ function createCourseCard(course) {
         'purple': 'bg-purple-100 border-purple-400 text-purple-800',
         'green': 'bg-green-100 border-green-400 text-green-800',
         'red': 'bg-red-100 border-red-400 text-red-800',
-        'jungle': 'bg-jungle-100 border-jungle-400 text-jungle-800'
+        'jungle': 'bg-jungle-100 border-jungle-400 text-jungle-800',
+        'emerald': 'bg-emerald-100 border-emerald-400 text-emerald-800',
+        'lime': 'bg-lime-100 border-lime-400 text-lime-800'
     };
 
     const levelColors = {
