@@ -1,18 +1,21 @@
 lieux:
-  - nom: "Plage SUD"
-    icone: "🏖️"
-    couleur: "blue"
-    adresse: "Sous le @rainbowcafelacanau"
-    reservation: "Au plus tard 19h la veille, en cliquant directement sur le planning"
-
-  - nom: "Bo&Co"
-    icone: "🏄‍♀️"
-    couleur: "sable"
-    adresse: "Plage NORD, École de surf @boandcosurf"
-    reservation: ""
-
-  - nom: "Maison Pada"
-    icone: "🏠"
-    couleur: "jungle"
-    adresse: "La maison des Dunes, @maison_pada_33"
-    reservation: ""
+  - nom: Plage SUD
+    icone: 🏖️
+    couleur: blue
+    adresse: Sous le @rainbowcafelacanau
+    reservation: Au plus tard 19h la veille, en cliquant directement sur le planning
+  - nom: Bo&Co
+    icone: 🏄‍♀️
+    couleur: sable
+    adresse: Plage NORD, École de surf @boandcosurf
+    reservation: "@boandcosurl ou 0556263399"
+  - nom: Maison Pada
+    icone: 🏠
+    couleur: jungle
+    adresse: La maison des Dunes, @maison_pada_33
+    reservation: "@maison_pada_33"
+  - icone: 🏖️
+    nom: lieu test
+    couleur: lime
+    adresse: place du marché
+    reservation: sans reservation
