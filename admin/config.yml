@@ -224,6 +224,7 @@ collections:
         name: "lieux"
         widget: "list"
         file: "_data/lieux.yml"
+        create: true
         fields:
           - {label: "Nom du lieu", name: "nom", widget: "string"}
           - {label: "Icône", name: "icone", widget: "string", default: "🏖️", hint: "Copiez-collez un emoji depuis votre téléphone"}
