@@ -72,33 +72,29 @@
         </div>
 
         <!-- Légendes et informations avec couleurs dynamiques -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {% for lieu in site.data.lieux %}
-            {% assign lieu_data = lieu[1] %}
-            {% assign color_class = lieu_data.couleur %}
-            <div class="bg-gradient-to-br from-{{ color_class }}-50 to-{{ color_class }}-100 p-6 border-l-4 border-{{ color_class }}-500">
-                <h3 class="text-xl font-bold text-{{ color_class }}-800 mb-4 bg-{{ color_class }}-200 px-3 py-2 flex items-center">
-                    <span class="mr-2">{{ lieu_data.icone }}</span>
-                    {{ lieu_data.nom }}
-                </h3>
-                <div class="space-y-2 text-{{ color_class }}-700">
-                    {% if lieu_data.nom == "Plage SUD" %}
-                    <p><strong>Lieu :</strong> {{ lieu_data.adresse }}</p>
-                    <p><strong>Tarifs :</strong> 20€ le cours, 180€ 10 cours</p>
-                    <p><strong>Réservation :</strong> {{lieu_data.reservation }}</p>
-                    {% elsif lieu_data.nom == "Bo&Co" %}
-                    <p><strong>Lieu :</strong> {{ lieu_data.adresse }}</p>
-                    <p><strong>Durée :</strong> 60 minutes</p>
-                    <p><strong>Réservation :</strong> @boandcosurf<br>05 56 26 33 99</p>
-                    {% elsif lieu_data.nom == "Maison Pada" %}
-                    <p><strong>Lieu :</strong> {{ lieu_data.adresse }}</p>
-                    <p><strong>Période :</strong> Mai à fin novembre</p>
-                    <p><strong>Réservation :</strong> @maison_pada_33</p>
-                    {% endif %}
-                </div>
-            </div>
-            {% endfor %}
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+    {% for lieu in site.data.lieux.lieux %}
+    {% assign color_class = lieu.couleur %}
+    <div class="bg-gradient-to-br from-{{ color_class }}-50 to-{{ color_class }}-100 p-6 border-l-4 border-{{ color_class }}-500">
+        <h3 class="text-xl font-bold text-{{ color_class }}-800 mb-4 bg-{{ color_class }}-200 px-3 py-2 flex items-center">
+            <span class="mr-2">{{ lieu.icone }}</span>
+            {{ lieu.nom }}
+        </h3>
+        <div class="space-y-2 text-{{ color_class }}-700">
+            <p><strong>Lieu :</strong> {{ lieu.adresse }}</p>
+            {% if lieu.nom == "Plage SUD" %}
+            <p><strong>Tarifs :</strong> 20€ le cours, 180€ 10 cours</p>
+            {% elsif lieu.nom == "Bo&Co" %}
+            <p><strong>Durée :</strong> 60 minutes</p>
+            {% elsif lieu.nom == "Maison Pada" %}
+            <p><strong>Période :</strong> Mai à fin novembre</p>
+            {% endif %}
+            <p><strong>Réservation :</strong> {{ lieu.reservation }}</p>
         </div>
+    </div>
+    {% endfor %}
+</div>
+
 
     </div>
 </section>

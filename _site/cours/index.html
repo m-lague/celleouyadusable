@@ -385,57 +385,55 @@
         </div>
 
         <!-- Légendes et informations avec couleurs dynamiques -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    
+    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 border-l-4 border-blue-500">
+        <h3 class="text-xl font-bold text-blue-800 mb-4 bg-blue-200 px-3 py-2 flex items-center">
+            <span class="mr-2">🏖️</span>
+            Plage SUD
+        </h3>
+        <div class="space-y-2 text-blue-700">
+            <p><strong>Lieu :</strong> Sous le @rainbowcafelacanau</p>
             
+            <p><strong>Tarifs :</strong> 20€ le cours, 180€ 10 cours</p>
             
-            
-            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 border-l-4 border-blue-500">
-                <h3 class="text-xl font-bold text-blue-800 mb-4 bg-blue-200 px-3 py-2 flex items-center">
-                    <span class="mr-2">🏖️</span>
-                    Plage SUD
-                </h3>
-                <div class="space-y-2 text-blue-700">
-                    
-                    <p><strong>Lieu :</strong> Sous le @rainbowcafelacanau</p>
-                    <p><strong>Tarifs :</strong> 20€ le cours, 180€ 10 cours</p>
-                    <p><strong>Réservation :</strong> Au plus tard 19h la veille, en cliquant directement sur le planning</p>
-                    
-                </div>
-            </div>
-            
-            
-            
-            <div class="bg-gradient-to-br from-sable-50 to-sable-100 p-6 border-l-4 border-sable-500">
-                <h3 class="text-xl font-bold text-sable-800 mb-4 bg-sable-200 px-3 py-2 flex items-center">
-                    <span class="mr-2">🏄‍♀️</span>
-                    Bo&Co
-                </h3>
-                <div class="space-y-2 text-sable-700">
-                    
-                    <p><strong>Lieu :</strong> Plage NORD, École de surf @boandcosurf</p>
-                    <p><strong>Durée :</strong> 60 minutes</p>
-                    <p><strong>Réservation :</strong> @boandcosurf<br>05 56 26 33 99</p>
-                    
-                </div>
-            </div>
-            
-            
-            
-            <div class="bg-gradient-to-br from-jungle-50 to-jungle-100 p-6 border-l-4 border-jungle-500">
-                <h3 class="text-xl font-bold text-jungle-800 mb-4 bg-jungle-200 px-3 py-2 flex items-center">
-                    <span class="mr-2">🏠</span>
-                    Maison Pada
-                </h3>
-                <div class="space-y-2 text-jungle-700">
-                    
-                    <p><strong>Lieu :</strong> La maison des Dunes, @maison_pada_33</p>
-                    <p><strong>Période :</strong> Mai à fin novembre</p>
-                    <p><strong>Réservation :</strong> @maison_pada_33</p>
-                    
-                </div>
-            </div>
-            
+            <p><strong>Réservation :</strong> Au plus tard 19h la veille, en cliquant directement sur le planning</p>
         </div>
+    </div>
+    
+    
+    <div class="bg-gradient-to-br from-sable-50 to-sable-100 p-6 border-l-4 border-sable-500">
+        <h3 class="text-xl font-bold text-sable-800 mb-4 bg-sable-200 px-3 py-2 flex items-center">
+            <span class="mr-2">🏄‍♀️</span>
+            Bo&Co
+        </h3>
+        <div class="space-y-2 text-sable-700">
+            <p><strong>Lieu :</strong> Plage NORD, École de surf @boandcosurf</p>
+            
+            <p><strong>Durée :</strong> 60 minutes</p>
+            
+            <p><strong>Réservation :</strong> @boandcosurl ou 0556263399</p>
+        </div>
+    </div>
+    
+    
+    <div class="bg-gradient-to-br from-jungle-50 to-jungle-100 p-6 border-l-4 border-jungle-500">
+        <h3 class="text-xl font-bold text-jungle-800 mb-4 bg-jungle-200 px-3 py-2 flex items-center">
+            <span class="mr-2">🏠</span>
+            Maison Pada
+        </h3>
+        <div class="space-y-2 text-jungle-700">
+            <p><strong>Lieu :</strong> La maison des Dunes, @maison_pada_33</p>
+            
+            <p><strong>Période :</strong> Mai à fin novembre</p>
+            
+            <p><strong>Réservation :</strong> @maison_pada_33</p>
+        </div>
+    </div>
+    
+</div>
+
 
     </div>
 </section>
@@ -542,6 +540,24 @@ function createCourseCard(course) {
 
     // Données des lieux avec ID automatique
      const lieuxData = {
+          
+          "Plage SUD": {
+              icone: "🏖️",
+              couleur: "blue",
+              id: "plage_sud"
+          },
+          
+          "Bo&Co": {
+              icone: "🏄‍♀️",
+              couleur: "sable",
+              id: "boco"
+          },
+          
+          "Maison Pada": {
+              icone: "🏠",
+              couleur: "jungle",
+              id: "maison_pada"
+          }
           
       };
 

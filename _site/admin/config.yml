@@ -219,23 +219,26 @@ collections:
   # Lieux de cours
   - name: "lieux"
     label: "Lieux de Pratique"
-    file: "_data/lieux.yml"
-    fields:
-      - label: "Liste des lieux"
-        name: "lieux"
-        widget: "list"
+    files:
+      - label: "Gérer les lieux"
+        name: "config_lieux"
+        file: "_data/lieux.yml"
         fields:
-          - {label: "Nom du lieu", name: "nom", widget: "string"}
-          - {label: "Icône", name: "icone", widget: "string", default: "🏖️", hint: "Copiez-collez un emoji depuis votre téléphone"}
-          - {label: "Couleur", name: "couleur", widget: "select", options: [
-              {label: "Bleu", value: "blue"},
-              {label: "Sable", value: "sable"},
-              {label: "Jungle", value: "jungle"},
-              {label: "Emerald", value: "emerald"},
-              {label: "Lime", value: "lime"}
-            ]}
-          - {label: "Adresse", name: "adresse", widget: "string", hint: "Ex: Sous le Rainbow Café, 16 rue du marché", required: true}
-          - {label: "Réservation", name: "reservation", widget: "string", hint: "Ex: Au plus tard 19h la veille, en cliquant directement sur le planning", required: true}
+          - label: "Liste des lieux"
+            name: "lieux"
+            widget: 'list'
+            fields:
+              - {label: "Nom du lieu", name: "nom", widget: "string"}
+              - {label: "Icône", name: "icone", widget: "string", default: "🏖️", hint: "Copiez-collez un emoji depuis votre téléphone"}
+              - {label: "Couleur", name: "couleur", widget: "select", options: [
+                  {label: "Bleu", value: "blue"},
+                  {label: "Sable", value: "sable"},
+                  {label: "Jungle", value: "jungle"},
+                  {label: "Emerald", value: "emerald"},
+                  {label: "Lime", value: "lime"}
+                ]}
+              - {label: "Adresse", name: "adresse", widget: "string", hint: "Ex: Sous le Rainbow Café, 16 rue du marché", required: true}
+              - {label: "Réservation", name: "reservation", widget: "string", hint: "Ex: Au plus tard 19h la veille, en cliquant directement sur le planning", required: true}
 
   # Événements
   - name: "events"
