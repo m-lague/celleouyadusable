@@ -219,7 +219,7 @@ collections:
   # Lieux de cours
   - name: "lieux"
     label: "Lieux de Pratique"
-    file: "_data/lieux.yml"
+    files: [_data/lieux.yml]
     fields:
       - label: "Liste des lieux"
         name: "lieux"
