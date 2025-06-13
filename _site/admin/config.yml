@@ -101,7 +101,22 @@ collections:
               - {label: "Texte du bouton", name: "cta", widget: "string"}
               - {label: "Téléphone", name: "phone", widget: "string"}
               - {label: "Message What's app", name: "whatsapp_message", widget: "string", default: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. À bientôt !"}
-
+      - name: "cours"
+        label: "Page Cours"
+        file: "_pages/cours.md"
+        fields:
+          - {label: "Titre", name: "title", widget: "hidden"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "cours"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/cours/"}
+          - {label: "Description de la page", name: "description", widget: "hidden"}
+          - {label: "Titre du haut de page", name: "page_title", widget: "string"}
+          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
+          - {label: "Titre de l'agenda", name: "agenda_title", widget: "string"}
+          - {label: "Sous-titre de l'agenda", name: "agenda_subtitle", widget: "string"}
+          - {label: "Titre de la présentation des types de cours", name: "yoga_types_title", widget: "string"}
+          - {label: "Titre Appel à l'action", name: "cta_title", widget: "string"}
+          - {label: "Sous-titre Appel à l'action", name: "cta_subtitle", widget: "string"}
+          - {label: "Texte du bouton Appel à l'action", name: "cta_text", widget: "string"}
   # Collections
   - name: "courses"
     label: "Types de Cours"

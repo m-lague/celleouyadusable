@@ -1,19 +1,26 @@
 ---
 layout: default
 title: "Cours de Yoga à Lacanau"
-description: "Découvrez tous les cours de Hatha et Yin Yoga proposés par Nathalie à Lacanau. Séances adaptées à tous les niveaux."
+description: "Découvrez tous les cours de Vinyasa et Yin Yoga proposés par Nathalie à Lacanau Océan. Séances adaptées à tous les niveaux."
 permalink: /cours/
+page_title: "Mes Cours de Yoga"
+page_subtitle: "Découvrez mes différentes pratiques de yoga, adaptées à tous les niveaux. Que vous soyez débutant ou pratiquant expérimenté, trouvez le cours qui vous correspond."
+agenda_title: "Planning des Cours"
+agenda_subtitle: "Découvrez tous mes cours de yoga à Lacanau"
+yoga_types_title: "Types de Yoga Proposés"
+cta_title: "Prêt(e) à commencer votre pratique ?"
+cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."
+cta_text: "Me contacter"
 ---
 
 <div class="bg-gradient-to-br from-jungle-100 to-sable-100 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-bold text-jungle-800 mb-6">
-                Mes Cours de Yoga
+                {{ page.page_title }}
             </h1>
             <p class="text-xl text-jungle-600 max-w-3xl mx-auto">
-                Découvrez mes différentes pratiques de yoga, adaptées à tous les niveaux.
-                Que vous soyez débutant ou pratiquant expérimenté, trouvez le cours qui vous correspond.
+                {{ page.page_subtitle }}
             </p>
         </div>
     </div>
@@ -23,6 +30,11 @@ permalink: /cours/
 
 <section id="cours" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-400 inline-block pb-2">
+                {{page.yoga_types_title}}
+            </h2>
+        </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {% for course in site.courses %}
             <article  class="bg-gradient-to-br from-jungle-50 to-sable-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
@@ -108,14 +120,6 @@ permalink: /cours/
                         </ul>
                     </div>
                     {% endif %}
-
-                    <div class="text-center">
-                        <a href="https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire au cours {{ course.title | url_encode }}"
-                           target="_blank"
-                           class="inline-block bg-jungle-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-jungle-700 transition-colors">
-                            Réserver ce cours
-                        </a>
-                    </div>
                 </div>
             </article>
             {% endfor %}
@@ -127,14 +131,14 @@ permalink: /cours/
 <section class="py-16 bg-gradient-to-r from-jungle-600 to-sable-500">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold text-white mb-4">
-            Prêt(e) à commencer votre pratique ?
+            {{page.cta_title}}
         </h2>
         <p class="text-xl text-white opacity-90 mb-8">
-            Contactez-moi pour plus d'informations ou pour réserver votre première séance.
+            {{page.cta_subtitle}}
         </p>
         <a href="/contact/"
            class="inline-block bg-white text-jungle-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-jungle-50 transition-colors">
-            Me contacter
+            {{page.cta_text}}
         </a>
     </div>
 </section>
