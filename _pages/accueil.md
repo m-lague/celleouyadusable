@@ -16,7 +16,7 @@ sections:
   - about
   - testimonials
   - contact-form
-courses-section:
+courses_section:
   title: "Mes Cours de Yoga"
   subtitle: "Des pratiques douces pour tous les niveaux"
   cta: "Voir le Planning"
