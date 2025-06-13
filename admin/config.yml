@@ -46,10 +46,7 @@ collections:
           - {label: "Titre", name: "title", widget: "hidden"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "accueil"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/"}
-          # Champs spécifiques à l'accueil
-          - {label: "Titre héro", name: "hero_title", widget: "string"}
-          - {label: "Sous-titre héro", name: "hero_subtitle", widget: "string"}
-          - {label: "Image héro", name: "hero_image", widget: "image"}
+
           #hero banner
           - label: "Section Hero Banière"
             name: "hero_banner"
@@ -57,7 +54,7 @@ collections:
             fields:
               - {label: "Titre", name: "title", widget: "string"}
               - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - {label: "Lien", name: "link", widget: "string"}
+              - {label: "Lien du bouton", name: "link", widget: "string"}
               - {label: "Texte du bouton", name: "button_text", widget: "string"}
               - {label: "Image", name: "image", widget: "image"}
           # Section présentation des cours
@@ -91,12 +88,8 @@ collections:
             fields:
               - {label: "Titre", name: "title", widget: "string"}
               - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - label: "Témoignages"
-                name: "testimonials"
-                widget: "list"
-                fields:
-                  - {label: "Témoignage", name: "testimonial", widget: "text"}
-                  - {label: "Auteur", name: "author", widget: "string"}
+              - {label: "Texte du bouton", name: "button_text", widget: "string"}
+
           # Section contact
           - label: "Section Contact"
             name: "contact_section"
@@ -130,6 +123,7 @@ collections:
       #     - {label: "Email", name: "email", widget: "string"}
       #     - {label: "Téléphone", name: "phone", widget: "string"}
     # Cours
+  # Collections
   - name: "courses"
     label: "Types de Cours"
     folder: "_courses"
@@ -181,6 +175,22 @@ collections:
 
 
     # Lieux de cours
+  - name: "events"
+    label: "Événements"
+    folder: "_events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Atelier", "Stage", "Cercle"]}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Durée", name: "duration", widget: "string"}
+      - {label: "Prix", name: "price", widget: "number"}
+      - {label: "Lieu", name: "location", widget: "string"}
+      - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "body", widget: "markdown"}
+  # Listes
   - name: "lieux"
     label: "Lieux de Pratique"
     files:
@@ -205,19 +215,17 @@ collections:
               - {label: "Réservation", name: "reservation", widget: "string", hint: "Ex: Au plus tard 19h la veille, en cliquant directement sur le planning", required: true}
 
     # Événements
-  - name: "events"
-    label: "Événements"
-    folder: "_events"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Atelier", "Stage", "Cercle"]}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Durée", name: "duration", widget: "string"}
-      - {label: "Prix", name: "price", widget: "number"}
-      - {label: "Lieu", name: "location", widget: "string"}
-      - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: false}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Description", name: "body", widget: "markdown"}
-  # À ajouter dans admin/config.yml pour la collection pages
+  - name: "testimonials"
+    label: "Témoignages"
+    files:
+      - name: "testimonials-config"
+        label: "Gérer les témoignages"
+        file: "_data/testimonials.yml"
+        fields:
+          - label: "Liste des témoignages"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - {label: "Témoignage", name: "content", widget: "text"}
+              - {label: "Auteur", name: "author", widget: "string"}
+              - {label: "Note (sur 5)", name: "stars", widget: "number", value_type: "int", min: 1, max: 5, default: 5}
