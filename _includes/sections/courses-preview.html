@@ -2,15 +2,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-200 inline-block pb-2">
-                {{ site.data.site-texts.courses.title }}
+                {{ page.courses-section.title }}
             </h2>
             <p class="text-xl text-jungle-600 max-w-2xl mx-auto">
-                {{ site.data.site-texts.courses.subtitle }}
+                {{ page.courses-section.subtitle }}
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-    {% for course in site.courses limit:2 %}
+    {% for course in site.courses limit:3 %}
     <a href="/cours/#cours" class="block bg-gradient-to-br from-jungle-50 to-sable-50 p-8 shadow-lg hover:shadow-xl transition-shadow">
         {% if course.image %}
         <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden">

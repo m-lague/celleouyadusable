@@ -5,15 +5,15 @@
           <div class="lg:col-span-1 text-center">
 
             <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-200 inline-block pb-2">
-                    Mon parcours
+                    {{ page.about_section.title }}
                 </h2>
           </div>
             <!-- Photo principale -->
-            {% if page.about_image %}
+            {% if page.about_section.profile_image %}
             <div class="lg:col-span-2">
                 <div class="aspect-w-3 aspect-h-4 mb-6">
-                    <img src="{{ page.about_image }}"
-                         alt="Nathalie en posture de yoga"
+                    <img src="{{ page.about_section.profile_image }}"
+                         alt="Nathalie alias celle_ou_yadusable en posture de yoga"
                          class="sm:w-80 h-full object-cover shadow-lg">
                 </div>
 
@@ -26,17 +26,28 @@
             {% endif %}
 
             <!-- Contenu principal -->
-            <div class="{% if page.about_image %}lg:col-span-3{% else %}lg:col-span-3{% endif %}">
+            <div class="{% if page.about_section.profile_image %}lg:col-span-3{% else %}lg:col-span-3{% endif %}">
 
-              {% if page.about %}
-              <p class="prose prose-lg text-jungle-700 space-y-6">
-                {{ page.about }}
-              </p>
-              {% else %}
-                <div class="prose prose-lg text-jungle-700 space-y-6">
-                    {{ content | markdownify }}
-                </div>
+              {% assign about_page = site.pages | where: "slug", "a-propos" | first %}
+              {% if about_page %}
+                <div class="[&>h3]:text-2xl [&>h3]:font-bold prose prose-lg text-jungle-700 space-y-6">
+                  {{ about_page.excerpt | markdownify }}
               {% endif %}
+              <div class="group cursor-pointer bg-gradient-to-r from-jungle-50 to-sable-50 p-6 border-l-4 border-jungle-400 hover:border-sable-400 transition-all duration-300 hover:shadow-md">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h4 class="text-jungle-800 font-semibold mb-2">{{page.about_section.cta}}</h4>
+                    <p class="text-jungle-600 text-sm">{{page.about_section.cta_subtitle}}</p>
+                  </div>
+                  <div class="text-jungle-500 group-hover:text-sable-600 transition-colors">
+                    <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
         </div>
     </div>

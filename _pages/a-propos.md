@@ -2,7 +2,7 @@
 layout: accueil
 title: "À propos - Celle où ya du sable"
 permalink: /a-propos/
-description: "Découvrez Nathalie, votre professeure de yoga à Lacanau, et son approche unique du Hatha et Yin Yoga."
+description: "Découvrez Nathalie, votre professeure de yoga à Lacanau, et son approche unique du Vinyasa et Yin Yoga."
 show_title: false
 hero:
   title: "À propos de Nathalie"
@@ -48,9 +48,11 @@ certifications:
 
 Ma découverte du yoga a commencé lors d'un voyage en Inde. Cette expérience transformatrice m'a menée vers une pratique quotidienne qui est devenue le cœur de ma vie.
 
+<!--more-->
+
 ### Formation et expertise
 
-Certifiée en Hatha et Yin Yoga, j'ai approfondi mes connaissances auprès de maîtres reconnus. Mon approche privilégie l'écoute du corps et l'adaptation à chaque pratiquant.
+Certifiée en Vinyasa et Yin Yoga, j'ai approfondi mes connaissances auprès de maîtres reconnus. Mon approche privilégie l'écoute du corps et l'adaptation à chaque pratiquant.
 
 ### Pourquoi Lacanau ?
 

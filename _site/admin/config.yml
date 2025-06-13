@@ -49,13 +49,13 @@ collections:
 
           #hero banner
           - label: "Section Hero Banière"
-            name: "hero_banner"
+            name: "hero"
             widget: "object"
             fields:
               - {label: "Titre", name: "title", widget: "string"}
               - {label: "Sous-titre", name: "subtitle", widget: "string"}
               - {label: "Lien du bouton", name: "link", widget: "string"}
-              - {label: "Texte du bouton", name: "button_text", widget: "string"}
+              - {label: "Texte du bouton", name: "cta", widget: "string"}
               - {label: "Image", name: "image", widget: "image"}
           # Section présentation des cours
           - label: "Section Présentation des Cours"
@@ -64,7 +64,7 @@ collections:
             fields:
               - {label: "Titre", name: "title", widget: "string"}
               - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - {label: "Texte du bouton", name: "button_text", widget: "string"}
+              - {label: "Texte du bouton", name: "cta", widget: "string"}
           # Section Évènements et retraites
           - label: "Section Évènements et Retraites"
             name: "events_section"
@@ -72,14 +72,15 @@ collections:
             fields:
               - {label: "Titre", name: "title", widget: "string"}
               - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - {label: "Texte du bouton", name: "button_text", widget: "string"}
+              - {label: "Texte du bouton", name: "cta", widget: "string"}
           # Section Mon Parcours
           - label: "Section Mon Parcours"
             name: "about_section"
             widget: "object"
             fields:
               - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Texte du bouton", name: "button_text", widget: "string"}
+              - {label: "Texte du bouton", name: "cta", widget: "string"}
+              - {label: "Sous titre du bouton", name: "cta_subtitle", widget: "string"}
               - {label: "Photo de moi", name: "profile_image", widget: "image"}
           # Section Témoignages
           - label: "Section Témoignages"
@@ -88,7 +89,7 @@ collections:
             fields:
               - {label: "Titre", name: "title", widget: "string"}
               - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - {label: "Texte du bouton", name: "button_text", widget: "string"}
+              - {label: "Texte du bouton", name: "cta", widget: "string"}
 
           # Section contact
           - label: "Section Contact"
@@ -97,32 +98,10 @@ collections:
             fields:
               - {label: "Titre", name: "title", widget: "string"}
               - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - {label: "Texte du bouton", name: "button_text", widget: "string"}
+              - {label: "Texte du bouton", name: "cta", widget: "string"}
               - {label: "Téléphone", name: "phone", widget: "string"}
               - {label: "Message What's app", name: "whatsapp_message", widget: "string", default: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. À bientôt !"}
 
-
-      # - name: "a-propos"
-      #   label: "À propos"
-      #   file: "_pages/a-propos.md"
-      #   fields:
-      #     - {label: "Titre", name: "title", widget: "string"}
-      #     - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
-      #     - {label: "Contenu", name: "body", widget: "markdown"}
-      #     # Champs spécifiques à la page à propos
-      #     - {label: "Photo de profil", name: "profile_image", widget: "image"}
-
-      # - name: "contact"
-      #   label: "Contact"
-      #   file: "_pages/contact.md"
-      #   fields:
-      #     - {label: "Titre", name: "title", widget: "string"}
-      #     - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
-      #     - {label: "Contenu", name: "body", widget: "markdown"}
-      #     # Champs spécifiques au contact
-      #     - {label: "Email", name: "email", widget: "string"}
-      #     - {label: "Téléphone", name: "phone", widget: "string"}
-    # Cours
   # Collections
   - name: "courses"
     label: "Types de Cours"
