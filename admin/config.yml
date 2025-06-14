@@ -103,7 +103,7 @@ collections:
               - {label: "Message What's app", name: "whatsapp_message", widget: "string", default: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. À bientôt !"}
       - name: "cours"
         label: "Page Cours"
-        file: "_pages/cours.md"
+        file: "cours.html"
         fields:
           - {label: "Titre", name: "title", widget: "hidden"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "cours"}
@@ -117,6 +117,33 @@ collections:
           - {label: "Titre Appel à l'action", name: "cta_title", widget: "string"}
           - {label: "Sous-titre Appel à l'action", name: "cta_subtitle", widget: "string"}
           - {label: "Texte du bouton Appel à l'action", name: "cta_text", widget: "string"}
+      - name: "events"
+        label: "Page Événements"
+        file: "_pages/events.md"
+        fields:
+          - {label: "Titre", name: "title", widget: "hidden"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "events"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/evenements/"}
+          - {label: "Description de la page", name: "description", widget: "hidden"}
+          - {label: "Titre du haut de page", name: "page_title", widget: "string"}
+          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
+          - {label: "Texte du bouton d'inscription", name: "cta_text", widget: "string"}
+          - {label: "Retraites à venir", name: "upcoming_retreats_title", widget: "string"}
+          - {label: "Retraites passés", name: "past_retreats_title", widget: "string"}
+          - {label: "Ateliers à venir", name: "upcoming_workshops_title", widget: "string"}
+          - {label: "Ateliers passés", name: "past_workshops_title", widget: "string"}
+      - name: "about"
+        label: "Page À Propos"
+        file: "_pages/about.md"
+        fields:
+          - {label: "Titre", name: "title", widget: "hidden"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "about"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/a-propos/"}
+          - {label: "Description de la page", name: "description", widget: "hidden"}
+          - {label: "Titre du haut de page", name: "page_title", widget: "string"}
+          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
+          - {label: "Texte de présentation", name: "presentation_text", widget: "markdown"}
+          - {label: "Photo de moi", name: "profile_image", widget: "image"}
   # Collections
   - name: "courses"
     label: "Types de Cours"
@@ -205,8 +232,8 @@ collections:
                   {label: "Emerald", value: "emerald"},
                   {label: "Lime", value: "lime"}
                 ]}
-              - {label: "Adresse", name: "adresse", widget: "string", hint: "Ex: Sous le Rainbow Café, 16 rue du marché", required: true}
-              - {label: "Réservation", name: "reservation", widget: "string", hint: "Ex: Au plus tard 19h la veille, en cliquant directement sur le planning", required: true}
+              - {label: "Adresse", name: "adresse", widget: "markdown", hint: "Ex: Sous le Rainbow Café, 16 rue du marché", required: true}
+              - {label: "Réservation", name: "reservation", widget: "markdown", hint: "Ex: Au plus tard 19h la veille, en cliquant directement sur le planning", required: true}
 
     # Événements
   - name: "testimonials"
@@ -220,6 +247,6 @@ collections:
             name: "testimonials"
             widget: "list"
             fields:
-              - {label: "Témoignage", name: "content", widget: "text"}
               - {label: "Auteur", name: "author", widget: "string"}
+              - {label: "Témoignage", name: "content", widget: "text"}
               - {label: "Note (sur 5)", name: "stars", widget: "number", value_type: "int", min: 1, max: 5, default: 5}

@@ -7,25 +7,14 @@ layout: default
         {% include sections/hero.html %}
     {% endif %}
 
+    <!-- Toujours afficher le content (qui peut venir d'un layout enfant) -->
+    {{ content }}
+
+    <!-- Puis afficher les sections -->
     {% if page.sections %}
         {% for section in page.sections %}
             {% include sections/{{ section }}.html %}
         {% endfor %}
-    {% else %}
-        <!-- Affichage du contenu seulement si aucune section n'est définie -->
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            {% if page.title and page.show_title != false %}
-            <header class="mb-8">
-                <h1 class="text-4xl font-bold text-jungle-800 mb-4">{{ page.title }}</h1>
-                {% if page.subtitle %}
-                <p class="text-xl text-jungle-600">{{ page.subtitle }}</p>
-                {% endif %}
-            </header>
-            {% endif %}
-
-            <div class="prose prose-lg max-w-none">
-                {{ content }}
-            </div>
-        </div>
     {% endif %}
 </div>
+

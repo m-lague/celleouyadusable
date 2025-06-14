@@ -1,0 +1,17 @@
+---
+layout: accueil
+---
+{% include sections/page_title.html %}
+<!-- Bandeau image pleine largeur -->
+<div class="w-full h-64 overflow-hidden relative">
+  {% if page.portrait_image %}
+    <img src="{{ page.portrait_image }}" alt="Portrait de Nathalie" class="w-full h-full object-cover">
+  {% endif %}
+</div>
+
+<!-- Contenu en dessous -->
+<div class="max-w-7xl mx-auto px-6 sm:px-8 md:px-20 lg:px-32 py-8">
+  <div class="[&>h3]:text-2xl [&>h3]:font-bold prose prose-lg text-jungle-700 space-y-6 bg-white p-6">
+    {{ content }}
+  </div>
+</div>

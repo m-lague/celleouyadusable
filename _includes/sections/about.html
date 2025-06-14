@@ -29,23 +29,31 @@
             <div class="{% if page.about_section.profile_image %}lg:col-span-3{% else %}lg:col-span-3{% endif %}">
 
               {% assign about_page = site.pages | where: "slug", "a-propos" | first %}
-              {% if about_page %}
+              {% if page.url == "/" %}
                 <div class="[&>h3]:text-2xl [&>h3]:font-bold prose prose-lg text-jungle-700 space-y-6">
-                  {{ about_page.excerpt | markdownify }}
+                    {{ about_page.excerpt | markdownify }}
+                    <a href="/a-propos/" class="block">
+                      <div class="group cursor-pointer bg-gradient-to-r from-jungle-50 to-sable-50 p-6 border-l-4 border-jungle-400 hover:border-sable-400 transition-all duration-300 hover:shadow-md">
+                          <div class="flex items-center justify-between">
+                              <div>
+                                  <h4 class="text-jungle-800 font-semibold mb-2">{{ page.about_section.cta }}</h4>
+                                  <p class="text-jungle-600 text-sm">{{ page.about_section.cta_subtitle }}</p>
+                              </div>
+                              <div class="text-jungle-500 group-hover:text-sable-600 transition-colors">
+                                  <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                  </div>
+              {% else %}
+                <div class="[&>h3]:text-2xl [&>h3]:font-bold prose prose-lg text-jungle-700 space-y-6">
+                    {{ about_page.content | markdownify }}
+
               {% endif %}
-              <div class="group cursor-pointer bg-gradient-to-r from-jungle-50 to-sable-50 p-6 border-l-4 border-jungle-400 hover:border-sable-400 transition-all duration-300 hover:shadow-md">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <h4 class="text-jungle-800 font-semibold mb-2">{{page.about_section.cta}}</h4>
-                    <p class="text-jungle-600 text-sm">{{page.about_section.cta_subtitle}}</p>
-                  </div>
-                  <div class="text-jungle-500 group-hover:text-sable-600 transition-colors">
-                    <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
+
 
 
             </div>

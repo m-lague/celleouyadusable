@@ -1,7 +1,7 @@
 <section class="pt-16 pb-8 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-200 inline-block pb-2">
+            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-jungle-200 inline-block pb-2">
                 {{ page.courses_section.title }}
             </h2>
             <p class="text-xl text-jungle-600 max-w-2xl mx-auto">
@@ -11,9 +11,9 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
     {% for course in site.courses limit:3 %}
-    <a href="/cours/#cours" class="block bg-gradient-to-br from-jungle-50 to-sable-50 p-8 shadow-lg hover:shadow-xl transition-shadow">
+    <a href="/cours/#cours" class="block bg-gradient-to-br from-jungle-50 to-sable-50 p-8 shadow-lg hover:shadow-xl transition-shadow rounded-md">
         {% if course.image %}
-        <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden">
+        <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-md">
             <img src="{{ course.image }}"
                  alt="{{ course.title }}"
                  class="w-full h-48 object-cover">

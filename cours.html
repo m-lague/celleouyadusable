@@ -12,20 +12,7 @@ cta_title: "Prêt(e) à commencer votre pratique ?"
 cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."
 cta_text: "Me contacter"
 ---
-
-<div class="bg-gradient-to-br from-jungle-100 to-sable-100 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-jungle-800 mb-6">
-                {{ page.page_title }}
-            </h1>
-            <p class="text-xl text-jungle-600 max-w-3xl mx-auto">
-                {{ page.page_subtitle }}
-            </p>
-        </div>
-    </div>
-</div>
-
+{% include sections/page_title.html %}
 {% include sections/planning.html %}
 
 <section id="cours" class="py-16 bg-white">
@@ -37,7 +24,7 @@ cta_text: "Me contacter"
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {% for course in site.courses %}
-            <article  class="bg-gradient-to-br from-jungle-50 to-sable-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <article  class="bg-gradient-to-br from-jungle-50 to-sable-50  overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-md">
                 {% if course.image %}
                 <div class="aspect-w-16 aspect-h-9">
                     <img src="{{ course.image }}"
