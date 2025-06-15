@@ -1,9 +1,9 @@
 ---
 title: "Vinyasa Yoga"
 style: "Vinyasa"
-duration: "75 minutes"
+duration: "60-75 minutes"
 level: "Tous niveaux"
-price: 20
+start_price: 20
 image: "/assets/images/vinyasa-yoga.jpeg"
 planning_color: "blue"
 description_courte: "Yoga dynamique qui synchronise mouvement et respiration"

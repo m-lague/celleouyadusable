@@ -2,7 +2,7 @@
 layout: accueil
 title: "Cours de Yoga à Lacanau - Celle où ya du sable"
 permalink: /
-description: "Cours de Hatha et Yin Yoga avec Nathalie à Lacanau. Trouvez votre équilibre dans un cadre naturel exceptionnel."
+description: "Cours de Vinyasa Yoga et Yin Yoga avec Nathalie à Lacanau. Trouvez votre équilibre dans un cadre naturel exceptionnel."
 show_title: false
 hero:
   title: "Cours de Yoga à Lacanau"

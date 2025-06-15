@@ -46,6 +46,7 @@ collections:
           - {label: "Titre", name: "title", widget: "hidden"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "accueil"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/"}
+          - {label: "Description de la page", name: "description", widget: "hidden"}
 
           #hero banner
           - label: "Section Hero Banière"
@@ -153,11 +154,11 @@ collections:
     slug: "{{slug}}"
     fields:
       # Informations générales
-      - {label: "Nom du cours", name: "title", widget: "string"}
-      - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha"}
-
+      - {label: "Nom du cours", name: "title", widget: "string", required: true}
+      - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha", required: true}
       - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 1h15"}
-      - {label: "Prix", name: "price", widget: "number"}
+      - {label: "Niveau", name: "level", widget: "hidden", default: "Tous niveaux"}
+      - {label: "Prix à partir de :", name: "start_price", widget: "number"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Description courte", name: "description_courte", widget: "text"}
       # Description complète

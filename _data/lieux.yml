@@ -4,14 +4,28 @@ lieux:
     couleur: blue
     adresse: Sous le @rainbowcafelacanau
     reservation: Au plus tard 19h la veille, en cliquant directement sur le planning
+    prices:
+      unit_course: 20
+      card_10_courses: 180
+    period: "Mai à Octobre"
+    duration: "75 min"
   - nom: Bo&Co
     icone: 🏄‍♀️
     couleur: sable
     adresse: Plage NORD, École de surf @boandcosurf
-    reservation: "@boandcosurl ou 0556263399"
+    reservation: "[@boandcosurl](https://bocosurf.com/cours-de-yoga/#reservationyoga) ou 0556263399"
+    prices:
+      unit_course: 15
+    period: "Mai à Octobre"
+    duration: "60 min"
   - nom: Maison Pada
     icone: 🏠
     couleur: jungle
     adresse: La maison des Dunes, @maison_pada_33
-    reservation: "@maison_pada_33"
-
+    reservation: "[@maison_pada_33](https://maison-pada.fr/planning/)"
+    prices:
+      unit_course: 18
+      card_10_courses: 160
+      tryout_course: 10
+    period: "Mai à Novembre"
+    duration: "60-75 min suivant le niveau"

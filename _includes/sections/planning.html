@@ -82,14 +82,15 @@
         </h3>
         <div class="space-y-2 text-{{ color_class }}-700">
             <p><strong>Adresse :</strong> {{ lieu.adresse }}</p>
-            {% if lieu.nom == "Plage SUD" %}
-            <p><strong>Tarifs :</strong> 20€ le cours, 180€ 10 cours</p>
-            {% elsif lieu.nom == "Bo&Co" %}
-            <p><strong>Durée :</strong> 60 minutes</p>
-            {% elsif lieu.nom == "Maison Pada" %}
-            <p><strong>Période :</strong> Mai à fin novembre</p>
-            {% endif %}
-            <p><strong>Réservation :</strong> {{ lieu.reservation }}</p>
+
+            <p><strong>Tarifs :</strong> {{lieu.prices.unit_course}}€ le cours, {{lieu.prices.card_10_courses}}€ la carte de 10 cours</p>
+
+
+            <p><strong>Durée :</strong> {{lieu.duration}}</p>
+
+            <p><strong>Période :</strong> {{lieu.period}}</p>
+
+            <p class="[&_a]:underline [&_a]:decoration-jungle-400 [&_a]:text-jungle-700 [&_a]:font-medium [&_a:hover]:decoration-jungle-600 [&_a:hover]:text-jungle-900"><strong>Réservation :</strong> {{ lieu.reservation | markdownify }}</p>
         </div>
     </div>
     {% endfor %}
