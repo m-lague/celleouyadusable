@@ -17,56 +17,49 @@
 <meta property="og:url" content="http://localhost:4000/faq/" />
 <meta property="og:site_name" content="Celle où ya du sable - Yoga à Lacanau" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-06-14T16:54:24+02:00" />
+<meta property="article:published_time" content="2025-06-14T20:50:19+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="FAQ - Celle où ya du sable" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Nathalie - Professeure de Yoga"},"dateModified":"2025-06-14T16:54:24+02:00","datePublished":"2025-06-14T16:54:24+02:00","description":"Questions fréquentes sur les cours de yoga, les tarifs, les événements et la pratique avec Nathalie à Lacanau.","headline":"FAQ - Celle où ya du sable","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/faq/"},"url":"http://localhost:4000/faq/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Nathalie - Professeure de Yoga"},"dateModified":"2025-06-14T20:50:19+02:00","datePublished":"2025-06-14T20:50:19+02:00","description":"Questions fréquentes sur les cours de yoga, les tarifs, les événements et la pratique avec Nathalie à Lacanau.","headline":"FAQ - Celle où ya du sable","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/faq/"},"url":"http://localhost:4000/faq/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        jungle: {
-                            50: '#f0f9f3',
-                            100: '#dcf2e1',
-                            200: '#bce4c7',
-                            300: '#8fd0a4',
-                            400: '#5bb67a',
-                            500: '#379a5a',
-                            600: '#2a7c47',
-                            700: '#23633a',
-                            800: '#1f4f31',
-                            900: '#1a4129'
-                        },
-                        sable: {
-                            50: '#fefcf0',
-                            100: '#fef7d7',
-                            200: '#fdeeb0',
-                            300: '#fbe087',
-                            400: '#f8cc4e',
-                            500: '#f4b942',
-                            600: '#e09a2d',
-                            700: '#bb7b28',
-                            800: '#976227',
-                            900: '#7c5123'
-                        }
-                    },
-                    borderRadius: {
-                        'none': '0',
-                        'sm': '2px',
-                        'md': '4px',
-                        'lg': '6px'
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        /* Couleurs jungle */
+        --color-jungle-50: #f0f9f3;
+        --color-jungle-100: #dcf2e1;
+        --color-jungle-200: #bce4c7;
+        --color-jungle-300: #8fd0a4;
+        --color-jungle-400: #5bb67a;
+        --color-jungle-500: #379a5a;
+        --color-jungle-600: #2a7c47;
+        --color-jungle-700: #23633a;
+        --color-jungle-800: #1f4f31;
+        --color-jungle-900: #1a4129;
+
+        /* Couleurs sable */
+        --color-sable-50: #fefcf0;
+        --color-sable-100: #fef7d7;
+        --color-sable-200: #fdeeb0;
+        --color-sable-300: #fbe087;
+        --color-sable-400: #f8cc4e;
+        --color-sable-500: #f4b942;
+        --color-sable-600: #e09a2d;
+        --color-sable-700: #bb7b28;
+        --color-sable-800: #976227;
+        --color-sable-900: #7c5123;
+
+        /* Borderradius personnalisés */
+        --radius-none: 0;
+        --radius-sm: 2px;
+        --radius-md: 4px;
+        --radius-lg: 6px;
+      }
+    </style>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -104,7 +97,7 @@
 
 
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden lg:flex items-center space-x-8">
                 <div class="flex items-baseline space-x-4">
                     
                       
@@ -192,7 +185,7 @@
             </div>
 
             <!-- Mobile menu button -->
-            <div class="md:hidden">
+            <div class="lg:hidden">
                 <button type="button" id="mobile-menu-button"
                         class="text-jungle-600 hover:text-jungle-800 focus:outline-none focus:text-jungle-800">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -204,7 +197,7 @@
     </div>
 
     <!-- Mobile Navigation -->
-    <div class="md:hidden hidden" id="mobile-menu">
+    <div class="lg:hidden hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
             
               
