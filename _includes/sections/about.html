@@ -1,62 +1,74 @@
-<!-- Section About principale -->
-<section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div class="lg:col-span-1 text-center">
-
-            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-200 inline-block pb-2">
-                    {{ page.about_section.title }}
+<!-- Section About optimisée SEO -->
+<section class="bg-white">
+    <!-- En-tête de section -->
+    <header class="pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-200 inline-block pb-2">
+                    {{ page.about_section.title | default: "À propos de Nathalie" }}
                 </h2>
-          </div>
-            <!-- Photo principale -->
-            {% if page.about_section.profile_image %}
-            <div class="lg:col-span-2">
-                <div class="aspect-w-3 aspect-h-4 mb-6">
-                    <img src="{{ page.about_section.profile_image }}"
-                         alt="Nathalie alias celle_ou_yadusable en posture de yoga"
-                         class="sm:w-80 h-full object-cover shadow-lg">
-                </div>
-
-                <!-- Éléments décoratifs géométriques -->
-                <div class="relative">
-                    <div class="absolute -top-4 -right-4 w-16 h-4 bg-jungle-300 opacity-60"></div>
-                    <div class="absolute -bottom-2 -left-2 w-8 h-8 bg-sable-400 opacity-50"></div>
-                </div>
-            </div>
-            {% endif %}
-
-            <!-- Contenu principal -->
-            <div class="{% if page.about_section.profile_image %}lg:col-span-3{% else %}lg:col-span-3{% endif %}">
-
-              {% assign about_page = site.pages | where: "slug", "a-propos" | first %}
-              {% if page.url == "/" %}
-                <div class="[&>h3]:text-2xl [&>h3]:font-bold prose prose-lg text-jungle-700 space-y-6">
-                    {{ about_page.excerpt | markdownify }}
-                    <a href="/a-propos/" class="block">
-                      <div class="group cursor-pointer bg-gradient-to-r from-jungle-50 to-sable-50 p-6 border-l-4 border-jungle-400 hover:border-sable-400 transition-all duration-300 hover:shadow-md">
-                          <div class="flex items-center justify-between">
-                              <div>
-                                  <h4 class="text-jungle-800 font-semibold mb-2">{{ page.about_section.cta }}</h4>
-                                  <p class="text-jungle-600 text-sm">{{ page.about_section.cta_subtitle }}</p>
-                              </div>
-                              <div class="text-jungle-500 group-hover:text-sable-600 transition-colors">
-                                  <svg class="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                  </div>
-              {% else %}
-                <div class="[&>h3]:text-2xl [&>h3]:font-bold prose prose-lg text-jungle-700 space-y-6">
-                    {{ about_page.content | markdownify }}
-
-              {% endif %}
-
-
-
             </div>
         </div>
+    </header>
+
+    <!-- Image de présentation -->
+    <div class="relative h-64 sm:h-96 mb-16
+                bg-[url('{{ page.about_section.profile_image }}')]
+                bg-scroll sm:bg-fixed bg-cover bg-center bg-no-repeat"
+         role="img"
+         aria-label="Nathalie, professeure de yoga, en posture de méditation à Lacanau">
+
+        <!-- Image cachée pour l'accessibilité -->
+        {% if page.about_section.profile_image %}
+        <img src="{{ page.about_section.profile_image }}"
+             alt="Nathalie, professeure de yoga certifiée à Lacanau"
+             class="sr-only">
+        {% endif %}
+
+      
     </div>
+
+    <!-- Contenu principal -->
+    <article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="max-w-4xl mx-auto">
+            {% assign about_page = site.pages | where: "slug", "a-propos" | first %}
+
+            {% if page.url == "/" %}
+                <!-- Extrait pour la page d'accueil -->
+                <div class="[&>h3]:text-xl [&>h3]:sm:text-2xl [&>h3]:font-bold prose prose-base sm:prose-lg text-jungle-700 space-y-4 sm:space-y-6">
+                    {{ about_page.excerpt | markdownify }}
+
+                    <!-- Call-to-action optimisé -->
+                    <aside class="mt-6 sm:mt-8">
+                        <a href="/a-propos/"
+                           class="block"
+                           aria-label="En savoir plus sur le parcours et la philosophie de Nathalie">
+                            <div class="group cursor-pointer bg-gradient-to-r from-jungle-50 to-sable-50 p-4 sm:p-6 border-l-4 border-jungle-400 hover:border-sable-400 transition-all duration-300 hover:shadow-lg rounded-r-lg">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-jungle-800 font-semibold mb-1 sm:mb-2 text-base sm:text-lg">
+                                            {{ page.about_section.cta | default: "Découvrir mon histoire" }}
+                                        </h3>
+                                        <p class="text-jungle-600 text-xs sm:text-sm">
+                                            {{ page.about_section.cta_subtitle | default: "Mon parcours et ma philosophie du yoga" }}
+                                        </p>
+                                    </div>
+                                    <div class="text-jungle-500 group-hover:text-sable-600 transition-colors ml-4" aria-hidden="true">
+                                        <svg class="w-5 h-5 sm:w-6 sm:h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </aside>
+                </div>
+            {% else %}
+                <!-- Contenu complet pour la page à propos -->
+                <div class="[&>h3]:text-xl [&>h3]:sm:text-2xl [&>h3]:font-bold prose prose-base sm:prose-lg text-jungle-700 space-y-4 sm:space-y-6">
+                    {{ about_page.content | markdownify }}
+                </div>
+            {% endif %}
+        </div>
+    </article>
 </section>

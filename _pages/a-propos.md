@@ -6,7 +6,7 @@ description: "Découvrez Nathalie, votre professeure de yoga à Lacanau, et son 
 show_title: false
 page_title: "À propos de Nathalie"
 page_subtitle: "Votre professeure de yoga à Lacanau Océan et au Costa Rica"
-portrait_image: "/assets/images/celleouyadusable-portrait-about.jpeg"
+portrait_image: "/assets/images/celleouyadusable-portrait-hero.png"
 sections:
 
   - philosophy

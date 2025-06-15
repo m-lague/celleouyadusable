@@ -28,7 +28,7 @@ about_section:
   title: "Mon parcours"
   cta: "Découvrir mon histoire"
   cta_subtitle: "Mon parcours, mes formations et ma philosophie du yoga"
-  profile_image: "assets/images/celleouyadusable-yoga-portrait.jpeg"
+  profile_image: "/assets/images/celleouyadusable-portrait-hero.png"
 testimonials_section:
   title: "Ce que disent mes élèves"
   subtitle: "Leurs expériences avec le yoga"

@@ -72,7 +72,7 @@
         </div>
 
         <!-- Légendes et informations avec couleurs dynamiques -->
-<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {% for lieu in site.data.lieux.lieux %}
     {% assign color_class = lieu.couleur %}
     <div class="bg-gradient-to-br from-{{ color_class }}-50 to-{{ color_class }}-100 p-6 border-l-4 border-{{ color_class }}-500">
