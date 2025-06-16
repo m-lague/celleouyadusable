@@ -10,7 +10,7 @@
 
             <div class="space-y-6">
                 {% for qa in section.questions %}
-                <div class="{% if section.color == 'jungle' %}bg-gradient-to-r from-jungle-50 to-white border-jungle-400{% else %}bg-gradient-to-r from-sable-50 to-white border-sable-400{% endif %} p-6 border-l-4">
+                <div class="{% if section.color == 'jungle' %}bg-gradient-to-r from-jungle-50 to-white border-jungle-400{% else %}bg-gradient-to-r from-sable-50 to-white border-sable-400{% endif %} p-6 border-l-2">
                     <h3 class="text-lg font-semibold text-jungle-800 mb-3">{{ qa.question }}</h3>
                     <div class="text-jungle-600 prose">{{ qa.answer | markdownify }}</div>
                 </div>
@@ -29,10 +29,12 @@
                 {{ page.contact_cta.subtitle }}
             </p>
             <div class="text-center">
-                <a href="{{ page.contact_cta.button_url }}"
-                   class="inline-block bg-jungle-600 text-white px-6 py-3 font-semibold hover:bg-jungle-700 transition-colors border-b-4 border-jungle-800">
-                    {{ page.contact_cta.button_text }}
-                </a>
+                {% include button.html
+                       style="primary"
+                       url="/contact/"
+                       text= page.contact_cta.button_text
+                       icon=false %}
+
             </div>
         </div>
         {% endif %}

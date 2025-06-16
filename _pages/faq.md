@@ -1,13 +1,12 @@
 ---
-layout: default
+layout: accueil
 title: "FAQ - Celle où ya du sable"
 permalink: /faq/
 description: "Questions fréquentes sur les cours de yoga, les tarifs, les événements et la pratique avec Nathalie à Lacanau."
-show_title: true
-hero:
-  title: "Foire aux questions"
-  subtitle: "Tout ce que vous devez savoir sur mes cours"
+page_title: "FAQ - celle_ou_yadusable"
+page_subtitle: "Si vous avez d'autres questions qui ne figurent pas ici, n'hésitez pas à me contacter directement !"
 sections:
+  - page_title
   - faq-content
 faq_sections:
   - title: "À propos des cours"
@@ -54,5 +53,3 @@ contact_cta:
   button_text: "Me contacter"
   button_url: "/contact/"
 ---
-
-Si vous avez d'autres questions qui ne figurent pas ici, n'hésitez pas à me contacter directement !

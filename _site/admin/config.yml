@@ -120,7 +120,7 @@ collections:
           - {label: "Texte du bouton Appel à l'action", name: "cta_text", widget: "string"}
       - name: "events"
         label: "Page Événements"
-        file: "_pages/events.md"
+        file: "evenements.html"
         fields:
           - {label: "Titre", name: "title", widget: "hidden"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "events"}
@@ -172,6 +172,41 @@ collections:
                   {label: "Méditation", value: "meditation"},
                   {label: "Autre", value: "other"}
                 ]}
+      - name: "faq"
+        label: "Page FAQ"
+        file: "_pages/faq.md"
+        fields:
+          - {label: "Titre", name: "title", widget: "hidden"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "faq"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/faq/"}
+          - {label: "Description de la page", name: "description", widget: "hidden"}
+          - {label: "Titre du haut de page", name: "page_title", widget: "string"}
+          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
+          - {label: "Sections", name: "sections", widget: "hidden", default: ["page_title", "faq-content"]}
+          - {label: "Zone de contact en bas de page", name: "contact_cta", widget: "object", fields: [
+              {label: "Titre", name: "title", widget: "string"},
+              {label: "Sous-titre", name: "subtitle", widget: "string"},
+              {label: "Texte du bouton", name: "button_text", widget: "string"},
+              {label: "Lien du bouton", name: "button_url", widget: "string"}]}
+          - label: "Questions Fréquemment Posées"
+            name: "faq_sections"
+            widget: "list"
+            fields:
+              - {label: "Catégorie", name: "title", widget: "string"}
+              - {label: "Couleur de présentation", name: "color", widget: "select", options: [
+                  {label: "Bleu", value: "blue"},
+                  {label: "Sable", value: "sand"},
+                  {label: "Jungle", value: "jungle"},
+                  {label: "Emerald", value: "emerald"},
+                  {label: "Lime", value: "lime"},
+                  {label: "Océan", value: "ocean"}
+                ]}
+              - label: "Questions"
+                name: "questions"
+                widget: "list"
+                fields:
+                  - {label: "Question", name: "question", widget: "string"}
+                  - {label: "Réponse", name: "answer", widget: "markdown"}
   # Collections
   - name: "courses"
     label: "Types de Cours"
