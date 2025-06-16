@@ -1,6 +1,6 @@
 ---
 title: Cérémonie de Lune
-type: Cercle, Cérémonie
+type: Cercle & Cérémonie
 event_date: 2025-07-09T20:00:00.000Z
 duration: 2h30
 prices:
@@ -11,7 +11,7 @@ location: Plage sud , Lacanau Océan
 participants_max: 16
 image: /assets/images/tambour-chamanique-celleouyadusable.jpg
 ---
-**Rejoignez-nous pour une soirée magique de connexion lunaire, où les énergies féminines sacrées se révèlent à travers des pratiques ancestrales et modernes. Cette cérémonie unique vous invite à honorer les cycles de la lune tout en explorant votre essence profonde.**
+Rejoignez-nous pour une soirée magique de connexion lunaire, où les énergies féminines sacrées se révèlent à travers des pratiques ancestrales et modernes. Cette cérémonie unique vous invite à honorer les cycles de la lune tout en explorant votre essence profonde.
 
 Une expérience transformatrice qui allie tradition et modernité, dans un cadre bienveillant propice à l'introspection et à la guérison. Laissez-vous porter par la puissance de la lune et découvrez votre lumière intérieure.
 
