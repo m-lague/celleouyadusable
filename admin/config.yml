@@ -346,12 +346,12 @@ collections:
       - {label: "Date de l'évènement", name: "event_date", widget: "datetime"}
       - {label: "Durée", name: "duration", widget: "string"}
       - label: "Prix"
-        name: "price"
+        name: "prices"
         widget: "object"
         fields:
           - {label: "Prix early bird", name: "early_bird", widget: "number"}
           - {label: "Prix standard", name: "standard", widget: "number"}
-      - {label: "Date limite Early bird", name: "early_bird_deadline", widget: "datetime", required: false}
+      - {label: "Date limite Early bird", name: "early_bird_deadline", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
       - {label: "Lieu", name: "location", widget: "string"}
       - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
