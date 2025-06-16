@@ -10,7 +10,7 @@
             <p class="text-jungle-600 mb-6">{{ page.quick_messages.subtitle }}</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {% assign phone_clean = page.whatsapp_number | remove: ' ' | remove: '+' %}
+                {% assign phone_clean = page.contact_section.phone | remove: ' ' | remove: '+' %}
                 {% for message in page.quick_messages.messages %}
                 {% assign message_encoded = message.message | url_encode %}
                 <a href="https://wa.me/{{ phone_clean }}?text={{ message_encoded }}"
