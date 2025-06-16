@@ -232,13 +232,19 @@ collections:
               - {label: "Nom du lieu", name: "nom", widget: "string"}
               - {label: "Icône", name: "icone", widget: "string", default: "🏖️", hint: "Copiez-collez un emoji depuis votre téléphone"}
               - {label: "Couleur", name: "couleur", widget: "select", options: [
-                  {label: "Bleu", value: "blue"},
+                  {label: "Bleu", value: "bleu"},
                   {label: "Sable", value: "sable"},
                   {label: "Jungle", value: "jungle"},
                   {label: "Emerald", value: "emerald"},
-                  {label: "Lime", value: "lime"}
+                  {label: "Lime", value: "lime"},
+                  {label: "Océan", value: "ocean"}
                 ]}
-              - {label: "Adresse", name: "adresse", widget: "markdown", hint: "Ex: Sous le Rainbow Café, 16 rue du marché", required: true}
+              - {label: "Tarifs", name: "prices", widget: "object", fields: [
+                  {label: "Tarif à l'unité", name: "unit_course", widget: "number"},
+                  {label: "Carte de 10 cours", name: "card_10_courses", widget: "number"}]}
+              - {label: "Adresse", name: "adresse", widget: "markdown", hint: "Ex: Sous le Rainbow Café, 16 rue du marché - Possibilité de rajouter des liens", required: true}
+              - {label: "Période", name: "period", widget: "string", hint: "Ex: Mai à Octobre"}
+              - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 75 min"}
               - {label: "Réservation", name: "reservation", widget: "markdown", hint: "Ex: Au plus tard 19h la veille, en cliquant directement sur le planning", required: true}
 
     # Événements
