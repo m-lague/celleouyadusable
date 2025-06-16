@@ -2,19 +2,19 @@
 layout: accueil
 title: "Contact - Celle où ya du sable"
 permalink: /contact/
-description: "Contactez Nathalie pour toute question ou réservation de cours de yoga à Lacanau. Communication uniquement via WhatsApp."
-show_title: true
-hero:
-  title: "Contactez Nathalie"
-  subtitle: "Disponible via WhatsApp pour toutes vos questions"
+description: "Contactez Nathalie pour toute question ou réservation de cours de vinyasa yoga et yin yoga à Lacanau Océan. Communication uniquement via WhatsApp."
 sections:
-  - contact-whatsapp
+  - contact-form
   - contact-info
   - contact-quick-messages
-whatsapp_number: "+33612345678"
-whatsapp_message: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga."
+contact_section:
+  title: "Contactez-moi"
+  subtitle: "Pour toute question ou réservation"
+  cta: "M'écrire sur What's app"
+  phone: "+33 6 01 28 30 70"
+  whatsapp_message: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. Merci"
 availability:
-  title: "Horaires de réponse"
+  title: "Horaires d'ouverture"
   schedule:
     - days: "Lundi - Vendredi"
       hours: "8h00 - 20h00"
@@ -25,7 +25,7 @@ availability:
   note: "Je réponds généralement dans les 2 heures pendant ces créneaux."
 
 location_info:
-  title: "Localisation"
+  title: "Où me trouver"
   details:
     - label: "Studio"
       value: "Centre-ville de Lacanau"
@@ -33,7 +33,7 @@ location_info:
       value: "Plage et forêt de Lacanau"
     - label: "Région"
       value: "Gironde, Nouvelle-Aquitaine"
-  note: "L'adresse exacte vous sera communiquée lors de la réservation."
+  note: "Retrouvez les comptes instagram des lieux de pratique sur le planning des cours"
 
 quick_messages:
   title: "Messages rapides"
@@ -56,9 +56,7 @@ important_info:
   title: "Informations importantes"
   items:
     - title: "Réservation obligatoire"
-      content: "Contactez-moi au moins 24h à l'avance pour garantir votre place."
+      content: "Réservez avant 19h la veille du cour pour garantir votre place."
     - title: "Annulation"
       content: "Possible jusqu'à 12h avant le cours pour éviter la facturation."
 ---
-
-Pour toute question, réservation ou information, je suis disponible uniquement via WhatsApp. Je vous réponds généralement dans les 2 heures !

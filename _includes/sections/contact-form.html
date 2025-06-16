@@ -14,7 +14,7 @@
                 <h3 class="text-2xl font-bold text-jungle-800 mb-4 pl-4 inline-block">Contactez-moi via WhatsApp</h3>
                  </div>
 
-            <a href="https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text={{ site.data.site-texts.contact.whatsapp_text | url_encode }}"
+            <a href="https://wa.me/{{ page.contact_section.phone | remove: ' ' | remove: '+' }}?text={{ page.contact_section.whatsapp_message | url_encode }}"
                target="_blank"
                class="inline-flex items-center bg-green-500 text-white px-8 py-4 text-lg font-semibold hover:bg-green-600 transition-colors shadow-lg rounded-md">
                 <svg class="w-6 h-6 mr-3 grow-2" fill="currentColor" viewBox="0 0 24 24">

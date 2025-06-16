@@ -207,6 +207,83 @@ collections:
                 fields:
                   - {label: "Question", name: "question", widget: "string"}
                   - {label: "Réponse", name: "answer", widget: "markdown"}
+      - name: "contact"
+        label: "Page Contact"
+        file: "_pages/contact.md"
+        fields:
+          - {label: "Titre", name: "title", widget: "hidden", default: "Contact - Celle où ya du sable"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "contact"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/contact/"}
+          - {label: "Description de la page", name: "description", widget: "hidden", default: "Contactez Nathalie pour toute question ou réservation de cours de vinyasa yoga et yin yoga à Lacanau Océan. Communication uniquement via WhatsApp."}
+          - {label: "Sections", name: "sections", widget: "hidden", default: ["contact-form", "contact-info", "contact-quick-messages"]}
+
+          # Section Contact Principal
+          - label: "Section Contact Principal"
+            name: "contact_section"
+            widget: "object"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Sous-titre", name: "subtitle", widget: "string"}
+              - {label: "Texte du bouton", name: "cta", widget: "string"}
+              - {label: "Téléphone", name: "phone", widget: "string"}
+              - {label: "Message WhatsApp par défaut", name: "whatsapp_message", widget: "string", default: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. Merci"}
+
+          # Horaires d'ouverture
+          - label: "Horaires d'ouverture"
+            name: "availability"
+            widget: "object"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - label: "Planning"
+                name: "schedule"
+                widget: "list"
+                fields:
+                  - {label: "Jours", name: "days", widget: "string"}
+                  - {label: "Heures", name: "hours", widget: "string", hint: "Ex: 8h00 - 20h00"}
+              - {label: "Note", name: "note", widget: "string", hint: "Information sur les délais de réponse"}
+
+          # Informations de localisation
+          - label: "Où me trouver"
+            name: "location_info"
+            widget: "object"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - label: "Détails des lieux"
+                name: "details"
+                widget: "list"
+                fields:
+                  - {label: "Type de lieu", name: "label", widget: "string", hint: "Ex: Studio, Cours extérieurs"}
+                  - {label: "Localisation", name: "value", widget: "string"}
+              - {label: "Note", name: "note", widget: "string", hint: "Information complémentaire sur les lieux"}
+
+          # Messages rapides WhatsApp
+          - label: "Messages rapides WhatsApp"
+            name: "quick_messages"
+            widget: "object"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Sous-titre", name: "subtitle", widget: "string"}
+              - label: "Liste des messages"
+                name: "messages"
+                widget: "list"
+                fields:
+                  - {label: "Titre du bouton", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
+                  - {label: "Message pré-rédigé", name: "message", widget: "text"}
+
+          # Informations importantes
+          - label: "Informations importantes"
+            name: "important_info"
+            widget: "object"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - label: "Liste des informations"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Titre", name: "title", widget: "string"}
+                  - {label: "Contenu", name: "content", widget: "text"}
+
   # Collections
   - name: "courses"
     label: "Types de Cours"
