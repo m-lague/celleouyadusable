@@ -10,8 +10,6 @@ benefits:
   - "Amélioration de la flexibilité"
   - "Réduction du stress"
   - "Connexion avec la nature"
-
-# Planning des créneaux pour ce type de cours
 planning_creneaux:
   hors_saison:
     - jour: "jeudi"
@@ -84,18 +82,22 @@ planning_creneaux:
 
 Le Vinyasa est un yoga dynamique qui synchronise mouvement et respiration dans un flow continu. Cette pratique développe force, souplesse et concentration.
 
-## Qu'est-ce que le Vinyasa ?
+#### Qu'est-ce que le Vinyasa ?
 
 Le Vinyasa Yoga est caractérisé par des transitions fluides entre les postures, guidées par la respiration. Chaque mouvement est synchronisé avec une inspiration ou une expiration, créant une méditation en mouvement.
 
-## Déroulement d'un cours
+#### Déroulement d'un cours
 
 - **Échauffement** : Préparation du corps et de l'esprit
+
 - **Salutations au soleil** : Séquences dynamiques
+
 - **Postures debout** : Renforcement et équilibre
+
 - **Flow créatif** : Enchaînements fluides
+
 - **Relaxation finale** : Intégration et détente
 
-## À qui s'adresse ce cours ?
+#### À qui s'adresse ce cours ?
 
 Le Vinyasa convient à tous les niveaux. Les débutants peuvent adapter les postures, tandis que les pratiquants expérimentés peuvent approfondir leur pratique.

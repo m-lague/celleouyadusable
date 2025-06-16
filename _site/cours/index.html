@@ -340,7 +340,7 @@
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-400 inline-block pb-2">
+            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-jungle-400 inline-block pb-2">
                 Planning des Cours
             </h2>
             <p class="text-xl text-jungle-600">
@@ -511,8 +511,8 @@ function organizePlanningFromCourses() {
             title: "Yin Yoga",
             style: "Yin",
             level: "Tous niveaux",
-            color: "purple",
-            icon: "🧘‍♀️",
+            color: "",
+            icon: "",
             url: "/courses/yin-yoga/",
             planning_creneaux: {"hors_saison":[{"jour":"dimanche","heure":"17h","lieu":"Bo&Co","duree":"60min","niveau":"Tous niveaux"}],"ete":[{"jour":"lundi","heure":"10h30","lieu":"Plage SUD","duree":"1h15min","niveau":"Tous niveaux"},{"jour":"jeudi","heure":"10h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"samedi","heure":"10h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"dimanche","heure":"10h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"dimanche","heure":"18h","lieu":"Bo&Co","duree":"60min","niveau":"Tous niveaux"}]}
         }
@@ -760,26 +760,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <section id="cours" class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-jungle-400 inline-block pb-2">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-jungle-400 inline-block pb-2">
                 Types de Yoga Proposés
             </h2>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <div class="space-y-12">
             
-            <!--Présentation du cours-->
-            <article id="Vinyasa" class="bg-gradient-to-br from-jungle-50 to-sable-50  overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-md">
+            <!-- Présentation alternée des cours -->
+            
+            <article id="Vinyasa" class="flex flex-col lg:flex-row  bg-gradient-to-br from-jungle-50 to-sable-50 overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-lg">
+
+                <!-- Image du cours -->
                 
-                <div class="aspect-w-16 aspect-h-9">
+                <div class="w-full lg:w-1/2">
                     <img src="/assets/images/vinyasa-yoga.jpeg"
                          alt="Vinyasa Yoga"
-                         class="w-full h-64 object-cover">
+                         class="w-full h-64 lg:h-full object-cover">
                 </div>
                 
 
-                <div class="p-8">
-                    <h2 class="text-2xl font-bold text-jungle-800 mb-4">Vinyasa Yoga</h2>
+                <!-- Contenu du cours -->
+                <div class="w-full lg:w-1/2 p-8 flex flex-col justify-center">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-jungle-800 mb-6 text-center">Vinyasa Yoga</h3>
 
+                    <!-- Tags niveau et style -->
                     <div class="flex flex-wrap gap-2 mb-4">
                         
                         <span class="inline-block bg-jungle-200 text-jungle-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -793,33 +799,46 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                     </div>
 
-                    <div class="prose prose-jungle mb-6">
-                        <p>Le Vinyasa est un yoga dynamique qui synchronise mouvement et respiration dans un flow continu. Cette pratique développe force, souplesse et concentration.</p>
+                    <!-- Description -->
+                    <div class="prose prose-jungle mb-6 max-w-none [&>h4]:text-jungle-800 [&>h4]:font-semibold [&>h4]:my-2 [&>h4]:text-center">
+                      <p>Le Vinyasa est un yoga dynamique qui synchronise mouvement et respiration dans un flow continu. Cette pratique développe force, souplesse et concentration.</p>
 
-<h2 id="quest-ce-que-le-vinyasa-">Qu’est-ce que le Vinyasa ?</h2>
+<h4 id="quest-ce-que-le-vinyasa-">Qu’est-ce que le Vinyasa ?</h4>
 
 <p>Le Vinyasa Yoga est caractérisé par des transitions fluides entre les postures, guidées par la respiration. Chaque mouvement est synchronisé avec une inspiration ou une expiration, créant une méditation en mouvement.</p>
 
-<h2 id="déroulement-dun-cours">Déroulement d’un cours</h2>
+<h4 id="déroulement-dun-cours">Déroulement d’un cours</h4>
 
 <ul>
-  <li><strong>Échauffement</strong> : Préparation du corps et de l’esprit</li>
-  <li><strong>Salutations au soleil</strong> : Séquences dynamiques</li>
-  <li><strong>Postures debout</strong> : Renforcement et équilibre</li>
-  <li><strong>Flow créatif</strong> : Enchaînements fluides</li>
-  <li><strong>Relaxation finale</strong> : Intégration et détente</li>
+  <li>
+    <p><strong>Échauffement</strong> : Préparation du corps et de l’esprit</p>
+  </li>
+  <li>
+    <p><strong>Salutations au soleil</strong> : Séquences dynamiques</p>
+  </li>
+  <li>
+    <p><strong>Postures debout</strong> : Renforcement et équilibre</p>
+  </li>
+  <li>
+    <p><strong>Flow créatif</strong> : Enchaînements fluides</p>
+  </li>
+  <li>
+    <p><strong>Relaxation finale</strong> : Intégration et détente</p>
+  </li>
 </ul>
 
-<h2 id="à-qui-sadresse-ce-cours-">À qui s’adresse ce cours ?</h2>
+<h4 id="à-qui-sadresse-ce-cours-">À qui s’adresse ce cours ?</h4>
 
 <p>Le Vinyasa convient à tous les niveaux. Les débutants peuvent adapter les postures, tandis que les pratiquants expérimentés peuvent approfondir leur pratique.</p>
 
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+
+                    <!-- Informations pratiques -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                         
                         <div class="flex items-center text-jungle-600">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                             <span>60-75 minutes</span>
@@ -828,10 +847,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         
                         <div class="flex items-center text-jungle-600">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
-                            </svg>
-                            <span class="font-semibold">20€</span>
+                            <!-- Icône  -->
+                          <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                          </svg>
+
+
+
+                            <span class="font-semibold">À partir de 20€</span>
                         </div>
                         
 
@@ -840,34 +863,35 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                     </div>
 
+                    <!-- Bénéfices -->
                     
-                    <div class="mb-6">
+                    <div>
                         <h3 class="text-lg font-semibold text-jungle-800 mb-3">Bénéfices</h3>
-                        <ul class="text-jungle-600 space-y-1">
+                        <ul class="text-jungle-600 space-y-2">
                             
                             <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Renforcement musculaire
                             </li>
                             
                             <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Amélioration de la flexibilité
                             </li>
                             
                             <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Réduction du stress
                             </li>
                             
                             <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Connexion avec la nature
@@ -879,19 +903,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </article>
             
-            <!--Présentation du cours-->
-            <article id="Yin" class="bg-gradient-to-br from-jungle-50 to-sable-50  overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-md">
+            <!-- Présentation alternée des cours -->
+            
+            <article id="Yin" class="flex flex-col lg:flex-row lg:flex-row-reverse bg-gradient-to-br from-jungle-50 to-sable-50 overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-lg">
+
+                <!-- Image du cours -->
                 
-                <div class="aspect-w-16 aspect-h-9">
+                <div class="w-full lg:w-1/2">
                     <img src="/assets/images/vinyasa-yoga.jpeg"
                          alt="Yin Yoga"
-                         class="w-full h-64 object-cover">
+                         class="w-full h-64 lg:h-full object-cover">
                 </div>
                 
 
-                <div class="p-8">
-                    <h2 class="text-2xl font-bold text-jungle-800 mb-4">Yin Yoga</h2>
+                <!-- Contenu du cours -->
+                <div class="w-full lg:w-1/2 p-8 flex flex-col justify-center">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-jungle-800 mb-6 text-center">Yin Yoga</h3>
 
+                    <!-- Tags niveau et style -->
                     <div class="flex flex-wrap gap-2 mb-4">
                         
                         <span class="inline-block bg-jungle-200 text-jungle-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -905,14 +934,15 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                     </div>
 
-                    <div class="prose prose-jungle mb-6">
-                        <p>Le Yin Yoga est une pratique douce et méditative qui invite à la lenteur et à l’introspection. Les postures sont maintenues pendant plusieurs minutes pour permettre un étirement profond des tissus conjonctifs.</p>
+                    <!-- Description -->
+                    <div class="prose prose-jungle mb-6 max-w-none [&>h4]:text-jungle-800 [&>h4]:font-semibold [&>h4]:my-2 [&>h4]:text-center">
+                      <p>Le Yin Yoga est une pratique douce et méditative qui invite à la lenteur et à l’introspection. Les postures sont maintenues pendant plusieurs minutes pour permettre un étirement profond des tissus conjonctifs.</p>
 
-<h2 id="quest-ce-que-le-yin-yoga-">Qu’est-ce que le Yin Yoga ?</h2>
+<h4 id="quest-ce-que-le-yin-yoga-">Qu’est-ce que le Yin Yoga ?</h4>
 
 <p>Le Yin Yoga se caractérise par des postures passives tenues longtemps (3 à 7 minutes), principalement au sol. Cette pratique complète parfaitement les activités yang (dynamiques) comme le surf ou la course.</p>
 
-<h2 id="déroulement-dun-cours">Déroulement d’un cours</h2>
+<h4 id="déroulement-dun-cours">Déroulement d’un cours</h4>
 
 <ul>
   <li><strong>Centrage</strong> : Moment de connexion avec soi-même</li>
@@ -922,11 +952,11 @@ document.addEventListener('DOMContentLoaded', function() {
   <li><strong>Méditation</strong> : Retour au calme</li>
 </ul>
 
-<h2 id="bienfaits-du-yin-yoga">Bienfaits du Yin Yoga</h2>
+<h4 id="bienfaits-du-yin-yoga">Bienfaits du Yin Yoga</h4>
 
 <p>Cette pratique apporte une détente profonde du système nerveux et améliore la circulation de l’énergie dans le corps. Parfait après une journée active à Lacanau !</p>
 
-<h2 id="à-qui-sadresse-ce-cours-">À qui s’adresse ce cours ?</h2>
+<h4 id="à-qui-sadresse-ce-cours-">À qui s’adresse ce cours ?</h4>
 
 <p>Le Yin Yoga convient à tous, particulièrement aux personnes cherchant :</p>
 <ul>
@@ -938,10 +968,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+
+                    <!-- Informations pratiques -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                         
                         <div class="flex items-center text-jungle-600">
-                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                             <span>60-75 minutes</span>
@@ -949,47 +981,59 @@ document.addEventListener('DOMContentLoaded', function() {
                         
 
                         
+                        <div class="flex items-center text-jungle-600">
+                            <!-- Icône  -->
+                          <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                          </svg>
+
+
+
+                            <span class="font-semibold">À partir de 20€</span>
+                        </div>
+                        
 
                         
 
                         
                     </div>
 
+                    <!-- Bénéfices -->
                     
-                    <div class="mb-6">
+                    <div>
                         <h3 class="text-lg font-semibold text-jungle-800 mb-3">Bénéfices</h3>
-                        <ul class="text-jungle-600 space-y-1">
+                        <ul class="text-jungle-600 space-y-2">
                             
                             <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Relaxation profonde
                             </li>
                             
                             <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Amélioration de la souplesse
                             </li>
                             
                             <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Réduction du stress
                             </li>
                             
                             <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Équilibre énergétique
                             </li>
                             
                             <li class="flex items-start">
-                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500" fill="currentColor" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
                                 Meilleur sommeil

@@ -165,7 +165,7 @@ collections:
         name: "benefits"
         widget: "list"
         field: {label: "Bénéfice", name: "benefit", widget: "string"}
-    
+
       # Planning des créneaux
       - label: "Planning des cours"
         name: "planning_creneaux"
@@ -191,7 +191,7 @@ collections:
               - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
               - {label: "Niveau", name: "niveau", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
       # Description complète
-      - {label: "Description complète", name: "body", widget: "markdown"}
+      - {label: "Description complète", name: "body", widget: "markdown", hint: "mettre les titres en H4"}
 
 
 
