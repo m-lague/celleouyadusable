@@ -155,25 +155,23 @@ collections:
     fields:
       # Informations générales
       - {label: "Nom du cours", name: "title", widget: "string", required: true}
-      - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha", required: true}
-      - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 1h15"}
+      - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha, etc..", required: true}
       - {label: "Niveau", name: "level", widget: "hidden", default: "Tous niveaux"}
       - {label: "Prix à partir de :", name: "start_price", widget: "number"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Description courte", name: "description_courte", widget: "text"}
-      # Description complète
-      - {label: "Description complète", name: "body", widget: "markdown"}
+      - {label: "Image", name: "image", widget: "image", required: true}
+
       # Bénéfices
       - label: "Bénéfices"
         name: "benefits"
         widget: "list"
         field: {label: "Bénéfice", name: "benefit", widget: "string"}
+    
       # Planning des créneaux
-      - label: "Créneaux Hors Saison"
+      - label: "Planning des cours"
         name: "planning_creneaux"
         widget: "object"
         fields:
-          - label: "Hors saison (mai, juin, septembre, octobre)"
+          - label: "Hors Saison (mai, juin, septembre, octobre) "
             name: "hors_saison"
             widget: "list"
             fields:
@@ -181,7 +179,7 @@ collections:
               - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
               - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
               - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
-              - {label: "Niveau", name: "level", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
+              - {label: "Niveau", name: "niveau", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
 
           - label: "Été (juillet, août)"
             name: "ete"
@@ -191,8 +189,9 @@ collections:
               - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
               - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
               - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
-              - {label: "Niveau", name: "level", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
-
+              - {label: "Niveau", name: "niveau", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
+      # Description complète
+      - {label: "Description complète", name: "body", widget: "markdown"}
 
 
 

@@ -5,8 +5,6 @@ duration: "60-75 minutes"
 level: "Tous niveaux"
 start_price: 20
 image: "/assets/images/vinyasa-yoga.jpeg"
-planning_color: "blue"
-description_courte: "Yoga dynamique qui synchronise mouvement et respiration"
 benefits:
   - "Renforcement musculaire"
   - "Amélioration de la flexibilité"

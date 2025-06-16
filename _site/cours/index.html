@@ -501,7 +501,7 @@ function organizePlanningFromCourses() {
             title: "Vinyasa Yoga",
             style: "Vinyasa",
             level: "Tous niveaux",
-            color: "blue",
+            color: "",
             icon: "",
             url: "/courses/vinyasa-yoga/",
             planning_creneaux: {"hors_saison":[{"jour":"jeudi","heure":"17h","lieu":"Bo&Co","duree":"1h15","niveau":"Tous niveaux"},{"jour":"samedi","heure":"11h","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"dimanche","heure":"11h","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"lundi","heure":"18h","lieu":"Maison Pada","duree":"1h15","niveau":"Intermédiaire"},{"jour":"vendredi","heure":"8h30","lieu":"Maison Pada","duree":"1h","niveau":"Tous niveaux"}],"ete":[{"jour":"lundi","heure":"8h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"lundi","heure":"18h","lieu":"Maison Pada","duree":"1h15","niveau":"Intermédiaire"},{"jour":"jeudi","heure":"8h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"jeudi","heure":"18h","lieu":"Bo&Co","duree":"60min","niveau":"Tous niveaux"},{"jour":"vendredi","heure":"8h30","lieu":"Maison Pada","duree":"1h","niveau":"Tous niveaux"},{"jour":"vendredi","heure":"18h","lieu":"Bo&Co","duree":"1h","niveau":"Tous niveaux"},{"jour":"samedi","heure":"8h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"},{"jour":"dimanche","heure":"8h30","lieu":"Plage SUD","duree":"1h15","niveau":"Tous niveaux"}]}
@@ -767,7 +767,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
-            <article  class="bg-gradient-to-br from-jungle-50 to-sable-50  overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-md">
+            <!--Présentation du cours-->
+            <article id="Vinyasa" class="bg-gradient-to-br from-jungle-50 to-sable-50  overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-md">
                 
                 <div class="aspect-w-16 aspect-h-9">
                     <img src="/assets/images/vinyasa-yoga.jpeg"
@@ -878,7 +879,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </article>
             
-            <article  class="bg-gradient-to-br from-jungle-50 to-sable-50  overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-md">
+            <!--Présentation du cours-->
+            <article id="Yin" class="bg-gradient-to-br from-jungle-50 to-sable-50  overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-md">
                 
                 <div class="aspect-w-16 aspect-h-9">
                     <img src="/assets/images/vinyasa-yoga.jpeg"

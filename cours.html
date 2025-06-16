@@ -24,7 +24,8 @@ cta_text: "Me contacter"
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {% for course in site.courses %}
-            <article  class="bg-gradient-to-br from-jungle-50 to-sable-50  overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-md">
+            <!--Présentation du cours-->
+            <article id="{{course.style}}" class="bg-gradient-to-br from-jungle-50 to-sable-50  overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-md">
                 {% if course.image %}
                 <div class="aspect-w-16 aspect-h-9">
                     <img src="{{ course.image }}"
