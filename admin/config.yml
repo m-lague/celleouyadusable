@@ -144,7 +144,34 @@ collections:
           - {label: "Titre du haut de page", name: "page_title", widget: "string"}
           - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
           - {label: "Texte de présentation", name: "presentation_text", widget: "markdown"}
-          - {label: "Photo de moi", name: "profile_image", widget: "image"}
+          - {label: "Photo de moi", name: "portrait_image", widget: "image"}
+          - {label: "Sections", name: "sections", widget: "hidden", default: ["philosophy", "certifications"]}
+          - label: "Philosophie"
+            name: "philosophy_items"
+            widget: "list"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Texte", name: "text", widget: "text"}
+              - {label: "Couleur", name: "color", widget: "select", options: [
+                  {label: "Bleu", value: "blue"},
+                  {label: "Sable", value: "sand"},
+                  {label: "Jungle", value: "jungle"},
+                  {label: "Emerald", value: "emerald"},
+                  {label: "Lime", value: "lime"},
+                  {label: "Océan", value: "ocean"}
+                ]}
+          - label: "Certifications"
+            name: "certifications_items"
+            widget: "list"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Organisme", name: "school", widget: "string"}
+              - {label: "Année", name: "year", widget: "string"}
+              - {label: "Type", name: "type", widget: "select",hint: "Choix du type pour changer l'icone d'illustration", options: [
+                  {label: "Yoga", value: "yoga"},
+                  {label: "Méditation", value: "meditation"},
+                  {label: "Autre", value: "other"}
+                ]}
   # Collections
   - name: "courses"
     label: "Types de Cours"

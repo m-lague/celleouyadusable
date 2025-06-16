@@ -16,5 +16,8 @@ layout: default
             {% include sections/{{ section }}.html %}
         {% endfor %}
     {% endif %}
-</div>
 
+    {% if page.url == '/a-propos/' %}
+      {% include sections/image-bandeau.html %}
+    {% endif %}
+</div>

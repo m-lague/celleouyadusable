@@ -144,7 +144,34 @@ collections:
           - {label: "Titre du haut de page", name: "page_title", widget: "string"}
           - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
           - {label: "Texte de présentation", name: "presentation_text", widget: "markdown"}
-          - {label: "Photo de moi", name: "profile_image", widget: "image"}
+          - {label: "Photo de moi", name: "portrait_image", widget: "image"}
+          - {label: "Sections", name: "sections", widget: "hidden", default: ["philosophy", "certifications"]}
+          - label: "Philosophie"
+            name: "philosophy_items"
+            widget: "list"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Texte", name: "text", widget: "text"}
+              - {label: "Couleur", name: "color", widget: "select", options: [
+                  {label: "Bleu", value: "blue"},
+                  {label: "Sable", value: "sand"},
+                  {label: "Jungle", value: "jungle"},
+                  {label: "Emerald", value: "emerald"},
+                  {label: "Lime", value: "lime"},
+                  {label: "Océan", value: "ocean"}
+                ]}
+          - label: "Certifications"
+            name: "certifications_items"
+            widget: "list"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Organisme", name: "school", widget: "string"}
+              - {label: "Année", name: "year", widget: "string"}
+              - {label: "Type", name: "type", widget: "select",hint: "Choix du type pour changer l'icone d'illustration", options: [
+                  {label: "Yoga", value: "yoga"},
+                  {label: "Méditation", value: "meditation"},
+                  {label: "Autre", value: "other"}
+                ]}
   # Collections
   - name: "courses"
     label: "Types de Cours"
@@ -232,13 +259,19 @@ collections:
               - {label: "Nom du lieu", name: "nom", widget: "string"}
               - {label: "Icône", name: "icone", widget: "string", default: "🏖️", hint: "Copiez-collez un emoji depuis votre téléphone"}
               - {label: "Couleur", name: "couleur", widget: "select", options: [
-                  {label: "Bleu", value: "blue"},
+                  {label: "Bleu", value: "bleu"},
                   {label: "Sable", value: "sable"},
                   {label: "Jungle", value: "jungle"},
                   {label: "Emerald", value: "emerald"},
-                  {label: "Lime", value: "lime"}
+                  {label: "Lime", value: "lime"},
+                  {label: "Océan", value: "ocean"}
                 ]}
-              - {label: "Adresse", name: "adresse", widget: "markdown", hint: "Ex: Sous le Rainbow Café, 16 rue du marché", required: true}
+              - {label: "Tarifs", name: "prices", widget: "object", fields: [
+                  {label: "Tarif à l'unité", name: "unit_course", widget: "number"},
+                  {label: "Carte de 10 cours", name: "card_10_courses", widget: "number"}]}
+              - {label: "Adresse", name: "adresse", widget: "markdown", hint: "Ex: Sous le Rainbow Café, 16 rue du marché - Possibilité de rajouter des liens", required: true}
+              - {label: "Période", name: "period", widget: "string", hint: "Ex: Mai à Octobre"}
+              - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 75 min"}
               - {label: "Réservation", name: "reservation", widget: "markdown", hint: "Ex: Au plus tard 19h la veille, en cliquant directement sur le planning", required: true}
 
     # Événements

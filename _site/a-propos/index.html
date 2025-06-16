@@ -17,11 +17,11 @@
 <meta property="og:url" content="http://localhost:4000/a-propos/" />
 <meta property="og:site_name" content="Celle où ya du sable - Yoga à Lacanau" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-06-16T16:57:13+02:00" />
+<meta property="article:published_time" content="2025-06-16T18:51:58+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="À propos - Celle où ya du sable" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Nathalie - Professeure de Yoga"},"dateModified":"2025-06-16T16:57:13+02:00","datePublished":"2025-06-16T16:57:13+02:00","description":"Découvrez Nathalie, votre professeure de yoga à Lacanau, et son approche unique du Vinyasa et Yin Yoga.","headline":"À propos - Celle où ya du sable","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/a-propos/"},"url":"http://localhost:4000/a-propos/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Nathalie - Professeure de Yoga"},"dateModified":"2025-06-16T18:51:58+02:00","datePublished":"2025-06-16T18:51:58+02:00","description":"Découvrez Nathalie, votre professeure de yoga à Lacanau, et son approche unique du Vinyasa et Yin Yoga.","headline":"À propos - Celle où ya du sable","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/a-propos/"},"url":"http://localhost:4000/a-propos/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -329,29 +329,44 @@
     
 
     <!-- Toujours afficher le content (qui peut venir d'un layout enfant) -->
-    <div class="bg-gradient-to-br from-jungle-100 to-sable-100 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-jungle-800 mb-6">
-                À propos de Nathalie
-            </h1>
-            <p class="text-xl text-jungle-600 max-w-3xl mx-auto">
-                Votre professeure de yoga à Lacanau Océan et au Costa Rica
-            </p>
-        </div>
+    <!-- Bandeau avec parallax responsive et titre -->
+<section class="w-full h-96 sm:h-[calc(100vh-4rem)] overflow-hidden relative">
+  
+    <div class="bg-scroll sm:bg-fixed bg-center bg-cover h-full w-full"
+         style="background-image: url('http://localhost:4000/assets/images/celleouyadusable-portrait-hero.png');">
     </div>
-</div>
+  
 
-<!-- Bandeau image pleine largeur -->
-<div class="w-full h-64 overflow-hidden relative">
-  
-    <img src="/assets/images/celleouyadusable-portrait-hero.png" alt="Portrait de Nathalie" class="w-full h-full object-cover">
-  
-</div>
+  <!-- Overlay léger -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- Titre par-dessus la photo -->
+  <div class="absolute pt-30 inset-0 z-10 flex items-center justify-center">
+    <div class="text-center text-white px-4">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-2xl">
+        À propos de Nathalie
+      </h1>
+      
+      <p class="text-xl md:text-2xl lg:text-3xl font-light drop-shadow-lg opacity-90">
+        Votre professeure de yoga à Lacanau Océan et au Costa Rica
+      </p>
+      
+    </div>
+  </div>
+
+  <!-- Flèche pour indiquer le scroll -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10" aria-hidden="true">
+    <div class="animate-bounce">
+      <svg class="w-6 h-6 mx-auto text-white drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </div>
+</section>
 
 <!-- Contenu en dessous -->
 <div class="max-w-7xl mx-auto px-6 sm:px-8 md:px-20 lg:px-32 py-8">
-  <div class="[&>h3]:text-2xl [&>h3]:font-bold prose prose-lg text-jungle-700 space-y-6 bg-white p-6">
+  <div class="[&>img]:!float-right [&>img]:!h-20 [&>img]:!max-h-32 [&>img]:rounded-lg [&>h3]:text-2xl [&>h3]:font-bold text-jungle-700 space-y-6 bg-white p-6 max-w-7xl mx-auto  sm:px-8   py-8">
     <h3 id="une-passion-née-il-y-a-plus-de-10-ans">Une passion née il y a plus de 10 ans</h3>
 
 <p>Ma découverte du yoga a commencé lors d’un voyage en Inde. Cette expérience transformatrice m’a menée vers une pratique quotidienne qui est devenue le cœur de ma vie.</p>
@@ -366,6 +381,8 @@
 
 <p>Lacanau offre un cadre naturel exceptionnel pour la pratique du yoga. Entre océan et forêt, ce lieu magique permet une connexion profonde avec la nature et soi-même.</p>
 
+<p><img src="/assets/images/triptyque-celleouyadusable.jpg" alt="Cours de yoga sur la plage de Lacanau Océan" /></p>
+
   </div>
 </div>
 
@@ -376,7 +393,7 @@
             
 <section class="py-16 bg-gradient-to-r from-jungle-50 to-sable-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-jungle-800 mb-8 text-center border-b-4 border-sable-400 inline-block pb-2">
+        <h2 class="text-3xl font-bold text-jungle-800 mb-8 text-center border-b-2 border-sable-400 inline-block pb-2">
             Ma philosophie
         </h2>
 
@@ -419,33 +436,67 @@
             
 <section class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-jungle-800 mb-8 text-center border-b-4 border-jungle-400 inline-block pb-2">
+        <h2 class="text-3xl font-bold text-jungle-800 mb-8 text-center border-b-2 border-jungle-400 inline-block pb-2">
             Formations & Certifications
         </h2>
 
         <div class="space-y-6">
             
-            <div class="flex items-start space-x-4 bg-jungle-50 border-jungle-600 p-6 border-l-4">
-                <div class="w-4 h-4 bg-jungle-600 mt-2"></div>
-                <div>
+            <div class="flex items-start space-x-4 bg-jungle-50 border-jungle-600 p-6 border-l-4 rounded-r-lg">
+
+                <!-- Icône selon le type de certification -->
+                <div class="flex-shrink-0 mt-1">
+                    
+                        <!-- Icône Certificat/Diplôme -->
+                        <svg class="w-6 h-6 text-jungle-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    
+                </div>
+
+                <div class="flex-1">
                     <h3 class="text-lg font-semibold text-jungle-800">Certification Hatha Yoga 200h</h3>
                     <p class="text-jungle-600">École Internationale de Yoga, Rishikesh, Inde</p>
                     <p class="text-sm text-jungle-500">2018</p>
                 </div>
             </div>
             
-            <div class="flex items-start space-x-4 bg-sable-50 border-sable-600 p-6 border-l-4">
-                <div class="w-4 h-4 bg-sable-600 mt-2"></div>
-                <div>
+            <div class="flex items-start space-x-4 bg-sable-50 border-sable-600 p-6 border-l-4 rounded-r-lg">
+
+                <!-- Icône selon le type de certification -->
+                <div class="flex-shrink-0 mt-1">
+                    
+                        <!-- Icône Formation/École -->
+                        <svg class="w-6 h-6 text-sable-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                        </svg>
+                    
+                </div>
+
+                <div class="flex-1">
                     <h3 class="text-lg font-semibold text-jungle-800">Formation Yin Yoga 50h</h3>
                     <p class="text-jungle-600">Centre de Yoga Traditionnel, Bordeaux</p>
                     <p class="text-sm text-jungle-500">2020</p>
                 </div>
             </div>
             
-            <div class="flex items-start space-x-4 bg-jungle-50 border-jungle-600 p-6 border-l-4">
-                <div class="w-4 h-4 bg-jungle-600 mt-2"></div>
-                <div>
+            <div class="flex items-start space-x-4 bg-jungle-50 border-jungle-600 p-6 border-l-4 rounded-r-lg">
+
+                <!-- Icône selon le type de certification -->
+                <div class="flex-shrink-0 mt-1">
+                    
+                        <!-- Icône Formation/École -->
+                        <svg class="w-6 h-6 text-jungle-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                        </svg>
+                    
+                </div>
+
+                <div class="flex-1">
                     <h3 class="text-lg font-semibold text-jungle-800">Méditation et Pranayama</h3>
                     <p class="text-jungle-600">Formation continue, Ashram de Sivananda</p>
                     <p class="text-sm text-jungle-500">2021</p>
@@ -459,8 +510,16 @@
 
         
     
+
+    
+      <div>
+    <div class="bg-cover bg-center h-66 sm:h-120 relative" style="background-image: url('/assets/images/tambour-chamanique-celleouyadusable.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
 </div>
 
+    
+</div>
 
     </main>
 

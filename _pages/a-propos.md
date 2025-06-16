@@ -3,12 +3,11 @@ layout: "a-propos"
 title: "À propos - Celle où ya du sable"
 permalink: /a-propos/
 description: "Découvrez Nathalie, votre professeure de yoga à Lacanau, et son approche unique du Vinyasa et Yin Yoga."
-show_title: false
 page_title: "À propos de Nathalie"
 page_subtitle: "Votre professeure de yoga à Lacanau Océan et au Costa Rica"
 portrait_image: "/assets/images/celleouyadusable-portrait-hero.png"
+footer_image: "/assets/images/tambour-chamanique-celleouyadusable.jpg"
 sections:
-
   - philosophy
   - certifications
 philosophy_items:
@@ -29,14 +28,17 @@ certifications:
     school: "École Internationale de Yoga, Rishikesh, Inde"
     year: "2018"
     color: "jungle"
+    type: "certification"
   - title: "Formation Yin Yoga 50h"
     school: "Centre de Yoga Traditionnel, Bordeaux"
     year: "2020"
     color: "sable"
+    type: "formation"
   - title: "Méditation et Pranayama"
     school: "Formation continue, Ashram de Sivananda"
     year: "2021"
     color: "jungle"
+    type: "formation"
 ---
 
 ### Une passion née il y a plus de 10 ans
@@ -52,3 +54,5 @@ Certifiée en Vinyasa et Yin Yoga, j'ai approfondi mes connaissances auprès de 
 ### Pourquoi Lacanau ?
 
 Lacanau offre un cadre naturel exceptionnel pour la pratique du yoga. Entre océan et forêt, ce lieu magique permet une connexion profonde avec la nature et soi-même.
+
+![Cours de yoga sur la plage de Lacanau Océan](/assets/images/triptyque-celleouyadusable.jpg)
