@@ -21,10 +21,11 @@ upcoming_workshops_title: "Ateliers à venir"
 
 <!-- Retraites à venir -->
 {% if upcoming_retreats.size > 0 %}
-<section class="py-16 bg-white">
+<section class="pt-16 pb-8 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-jungle-800 mb-8 text-center">{{page.upcoming_retreats_title}}</h2>
-
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-jungle-400 inline-block pb-2 ">{{page.upcoming_retreats_title}}</h2>
+      </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {% for event in upcoming_retreats %}
 
@@ -121,10 +122,11 @@ upcoming_workshops_title: "Ateliers à venir"
 
 <!-- Ateliers à venir -->
 {% if upcoming_workshops.size > 0 %}
-<section class="py-16 bg-white">
+<section class="pt-8 pb-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-jungle-800 mb-8 text-center">{{page.upcoming_workshops_title}}</h2>
-
+        <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-jungle-400 inline-block pb-2 ">{{page.upcoming_workshops_title}}</h2>
+        </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {% for event in upcoming_workshops %}
 
@@ -220,7 +222,7 @@ upcoming_workshops_title: "Ateliers à venir"
 {% endif %}
 
 <!-- Événements passés -->
-{% if past_events.size > 0 %}
+{%- comment -%} {% if past_events.size > 0 %}
 <section class="py-16 bg-jungle-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-jungle-800 mb-8 text-center">{{page.past_retreats_title}}</h2>
@@ -248,4 +250,4 @@ upcoming_workshops_title: "Ateliers à venir"
         </div>
     </div>
 </section>
-{% endif %}
+{% endif %} {%- endcomment -%}

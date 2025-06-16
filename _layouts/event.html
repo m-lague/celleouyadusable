@@ -2,5 +2,259 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
-<p>{{ content }}</p>
+<!-- Hero Section avec image de l'événement -->
+<section class="relative h-64 sm:h-96 bg-scroll sm:bg-fixed bg-cover bg-center bg-no-repeat"
+         style="background-image: url('/assets/images/retraite-foret.jpeg');"
+         role="img"
+         aria-label="Image de l'événement {{ page.title }}">
+
+    <!-- Overlay pour la lisibilité -->
+    <div class="absolute inset-0 bg-black/30 "></div>
+
+    <!-- Contenu hero -->
+    <div class="relative z-10 h-full flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="text-center text-white">
+                <!-- Type d'événement -->
+                {% if page.type %}
+                <span class="inline-block bg-jungle-500 bg-opacity-90 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    {{ page.type }}
+                </span>
+                {% endif %}
+
+                <!-- Titre -->
+                <h1 class="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                    {{ page.title }}
+                </h1>
+
+                <!-- Date et lieu -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg">
+                    {% if page.event_date %}
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        {{ page.event_date | date: "%d %B %Y" }}
+                    </div>
+                    {% endif %}
+
+                    {% if page.location %}
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                        {{ page.location }}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contenu principal -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-16 lg:pr-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+            <!-- Contenu principal de l'événement -->
+            <div class="lg:col-span-2">
+                <!-- Description de l'événement -->
+                <div class="mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-jungle-800 mb-6 border-b-2 border-jungle-200 inline-block pb-2">
+                        {{ layout.description_title | default: "Description" }}
+                    </h2>
+                    <div class="pl-12 prose prose-lg max-w-none text-jungle-700
+                                [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:text-jungle-800 [&>h3]:mt-6 [&>h3]:mb-3
+                                [&>h4]:text-lg [&>h4]:font-medium [&>h4]:text-jungle-700 [&>h4]:mt-4 [&>h4]:mb-2
+                                [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-4 [&>li]:mb-1">
+                        {{ content }}
+                    </div>
+                </div>
+
+                <!-- Programme (si disponible) -->
+                {% if page.program %}
+                <div class="mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-jungle-800 mb-6 border-b-2 border-jungle-200 inline-block pb-2">
+                        {{ layout.program_title | default: "Programme" }}
+                    </h2>
+                    <div class="space-y-4">
+                        {% for item in page.program %}
+                        <div class="bg-gradient-to-r from-jungle-50 to-sable-50 p-4 rounded-lg border-l-4 border-jungle-400">
+                            {% if item.time %}
+                            <div class="text-sm text-jungle-600 font-medium mb-1">{{ item.time }}</div>
+                            {% endif %}
+                            <h4 class="text-lg font-semibold text-jungle-800 mb-2">{{ item.activity }}</h4>
+                            {% if item.description %}
+                            <p class="text-jungle-600">{{ item.description }}</p>
+                            {% endif %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Ce qui est inclus -->
+                {% if page.included %}
+                <div class="mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-jungle-800 mb-6 border-b-2 border-jungle-200 inline-block pb-2">
+                        {{ layout.included_title | default: "Ce qui est inclus" }}
+                    </h2>
+                    <ul class="space-y-3 pl-12">
+                        {% for item in page.included %}
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-3 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-jungle-700">{{ item }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                <!-- À apporter -->
+                {% if page.to_bring %}
+                <div class="mb-12">
+                    <h2 class="text-2xl md:text-3xl font-bold text-jungle-800 mb-6 border-b-2 border-jungle-200 inline-block pb-2">
+                        {{ layout.to_bring_title | default: "À apporter" }}
+                    </h2>
+                    <ul class="space-y-3 pl-12">
+                        {% for item in page.to_bring %}
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-3 mt-1 text-sable-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            <span class="text-jungle-700">{{ item }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Sidebar avec informations pratiques -->
+            <div class="lg:col-span-1">
+                <div class="bg-gradient-to-br from-jungle-50 to-sable-50 p-6 rounded-lg shadow-lg sticky top-18">
+                    <h3 class="text-xl font-bold text-jungle-800 mb-6 text-center">
+                        {{ layout.practical_info_title | default: "Informations pratiques" }}
+                    </h3>
+
+                    <!-- Informations de base -->
+                    <div class="space-y-4 mb-6">
+                        {% if page.event_date %}
+                        <div class="flex items-center text-jungle-700">
+                            <svg class="w-5 h-5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            <div>
+                                <div class="font-medium">{{ page.event_date | date: "%d %B %Y" }}</div>
+                                {% if page.start_time %}
+                                <div class="text-sm text-jungle-600">{{ page.start_time }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if page.duration %}
+                        <div class="flex items-center text-jungle-700">
+                            <svg class="w-5 h-5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>{{ page.duration }}</span>
+                        </div>
+                        {% endif %}
+
+                        {% if page.location %}
+                        <div class="flex items-start text-jungle-700">
+                            <svg class="w-5 h-5 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span>{{ page.location }}</span>
+                        </div>
+                        {% endif %}
+
+                        {% if page.participants_max %}
+                        <div class="flex items-center text-jungle-700">
+                            <svg class="w-5 h-5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                            <span>Maximum {{ page.participants_max }} participants</span>
+                        </div>
+                        {% endif %}
+
+                        {% if page.level %}
+                        <div class="flex items-center text-jungle-700">
+                            <svg class="w-5 h-5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                            <span>{{ page.level }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+<!-- Prix -->
+{% if page.prices %}
+<div class="bg-white p-4 rounded-lg border-2 border-jungle-300 mb-6">
+    <div class="text-center">
+        <div class="text-sm text-jungle-600 mb-2">{{ layout.price_label | default: "Tarifs" }}</div>
+
+        <!-- Tarif Early Bird -->
+        {% if page.prices.early_bird %}
+        <div class="mb-3 pb-3 {% if page.prices.standard %}border-b border-jungle-100{% endif %}">
+            <div class="text-lg font-bold text-sable-600">{{ page.prices.early_bird }}€</div>
+            <div class="text-xs text-sable-500">{{ layout.early_bird_label | default: "Early Bird" }}</div>
+            {% if page.early_bird_deadline %}
+            <div class="text-xs text-jungle-600 mt-1">Jusqu'au {{ page.early_bird_deadline | date: "%d/%m" }}</div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <!-- Tarif Standard -->
+        {% if page.prices.standard %}
+        <div>
+            <div class="text-2xl font-bold text-jungle-800">{{ page.prices.standard }}€</div>
+            <div class="text-xs text-jungle-600">{{ layout.standard_price_label | default: "Tarif standard" }}</div>
+            {% if page.price_details %}
+            <div class="text-sm text-jungle-600 mt-1">{{ page.price_details }}</div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
+
+
+                    <!-- Bouton de réservation -->
+                    <div class="text-center">
+                        <a href="https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement {{ page.title | url_encode }} du {{ page.event_date | date: '%d %B %Y' | url_encode }}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="w-full inline-block bg-gradient-to-r from-jungle-600 to-jungle-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-jungle-700 hover:to-jungle-800 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            {{ layout.booking_button | default: "Réserver ma place" }}
+                        </a>
+
+                        {% if page.booking_info %}
+                        <p class="text-sm text-jungle-600 mt-3">{{ page.booking_info }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section retour aux événements -->
+<section class="py-8 bg-jungle-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <a href="/evenements/"
+           class="inline-flex items-center text-jungle-600 hover:text-jungle-800 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Retour aux événements
+        </a>
+    </div>
+</section>

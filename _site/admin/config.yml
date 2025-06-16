@@ -191,7 +191,7 @@ collections:
               - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
               - {label: "Niveau", name: "niveau", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
       # Description complète
-      - {label: "Description complète", name: "body", widget: "markdown", hint: "mettre les titres en H4"}
+      - {label: "Description complète", name: "body", widget: "markdown", hint: "mettre les titres en titre 4"}
 
 
 
@@ -203,14 +203,20 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Atelier", "Stage", "Cercle"]}
-      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Atelier", "Stage", "Cercle, Cérémonie"]}
+      - {label: "Date de l'évènement", name: "event_date", widget: "datetime"}
       - {label: "Durée", name: "duration", widget: "string"}
-      - {label: "Prix", name: "price", widget: "number"}
+      - label: "Prix"
+        name: "price"
+        widget: "object"
+        fields:
+          - {label: "Prix early bird", name: "early_bird", widget: "number"}
+          - {label: "Prix standard", name: "standard", widget: "number"}
+      - {label: "Date limite Early bird", name: "early_bird_deadline", widget: "datetime", required: false}
       - {label: "Lieu", name: "location", widget: "string"}
       - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Description", name: "body", widget: "markdown", hint: "titre 'Programme' en Titre 3, les autres titres en titre 4"}
   # Listes
   - name: "lieux"
     label: "Lieux de Pratique"
