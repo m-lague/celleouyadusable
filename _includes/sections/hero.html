@@ -12,7 +12,7 @@
                 </p>
 
                 <!-- Boutons d'action modernes -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <!-- Bouton principal -->
                     {% include button.html
                        style="primary"
@@ -20,23 +20,17 @@
                        text= page.hero.cta
                        icon=true %}
 
-                    <!-- Bouton secondaire -->
-                    {% include button.html
-                       style="secondary"
-                       url="/contact/"
-                       text="Me contacter"
-                       icon=true %}
                 </div>
             </div>
-
+            <!-- Image -->
             <div class="relative">
-                <div class="aspect-w-4 aspect-h-5 overflow-hidden shadow-2xl ">
+                <div class="aspect-[2/3] lg:h-120 md:aspect-[16/9] overflow-hidden shadow-2xl ">
                     {% if page.hero.image %}
                     <img src="{{ page.hero.image }}"
                          alt="Nathalie pratiquant le yoga à Lacanau"
-                         class="object-cover">
+                         class="w-full h-full object-center object-cover">
                     {% else %}
-                    <div class="w-full h-96 bg-gradient-to-br from-jungle-200 to-sable-200 flex items-center justify-center rounded-2xl">
+                    <div class="w-full h-full bg-gradient-to-br from-jungle-200 to-sable-200 flex items-center justify-center">
                         <span class="text-jungle-600 text-lg">Photo de yoga</span>
                     </div>
                     {% endif %}

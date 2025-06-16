@@ -12,6 +12,7 @@ hero:
   link: "/cours/"
 sections:
   - courses-preview
+  - upcoming-event
   - events-preview
   - about
   - testimonials

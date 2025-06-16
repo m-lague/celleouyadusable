@@ -1,7 +1,7 @@
 <section class="py-16 bg-white">
     <div class=" mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-4 border-sable-200 inline-block pb-2">
+            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-sable-200 inline-block pb-2">
                 {{ page.events_section.title }}
             </h2>
             <p class="text-xl text-jungle-600 px-4 max-w-2xl mx-auto">
@@ -9,24 +9,6 @@
             </p>
         </div>
 
-        {% assign upcoming_events = site.events | where_exp: "event", "event.date >= site.time" | sort: "date" %}
-
-        {% if upcoming_events.size > 0 %}
-        <div class="bg-gradient-to-r from-jungle-600 to-sable-500 py-8 px-12 text-white mb-8">
-            {% assign next_event = upcoming_events.first %}
-            <div class="flex flex-col items-center justify-between">
-                <div class="mb-4 text-center ">
-                    <h2 class="text-3xl font-bold mb-2">Prochain événement</h2>
-                    <p class="text-xl mb-2">{{ next_event.title }}</p>
-                    <p class="opacity-90">{{ next_event.date | date: "%d %B %Y" }}</p>
-                </div>
-                <a href="{{ next_event.url}}"
-                   class="bg-white text-jungle-700 px-6 py-3 rounded-md font-semibold hover:bg-jungle-50 transition-colors">
-                    Découvrir
-                </a>
-            </div>
-        </div>
-        {% endif %}
 <!-- Listes des évènements -->
         <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8">
             {% for event in site.events limit:3 %}

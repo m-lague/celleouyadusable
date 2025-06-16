@@ -1,0 +1,18 @@
+{% assign upcoming_events = site.events | where_exp: "event", "event.date >= site.time" | sort: "date" %}
+
+        {% if upcoming_events.size > 0 %}
+        <section class="bg-gradient-to-r from-jungle-600 to-sable-500 py-8 px-12 text-white">
+            {% assign next_event = upcoming_events.first %}
+            <div class="flex flex-col items-center justify-between">
+                <div class="mb-4 text-center ">
+                    <h2 class="text-3xl font-bold mb-2">Prochain événement</h2>
+                    <p class="text-xl mb-2">{{ next_event.title }}</p>
+                    <p class="opacity-90">{{ next_event.date | date: "%d %B %Y" }}</p>
+                </div>
+                <a href="{{ next_event.url}}"
+                   class="bg-white text-jungle-700 px-6 py-3 rounded-md font-semibold hover:bg-jungle-50 transition-colors">
+                    Découvrir
+                </a>
+            </div>
+        </section>
+        {% endif %}
