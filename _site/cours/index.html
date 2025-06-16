@@ -41,7 +41,7 @@
         --color-jungle-900: #1a4129;
 
         /* Couleurs sable */
-        --color-sable-50: #fefcf0;
+        /* --color-sable-50: #fefcf0;
         --color-sable-100: #fef7d7;
         --color-sable-200: #fdeeb0;
         --color-sable-300: #fbe087;
@@ -50,7 +50,41 @@
         --color-sable-600: #e09a2d;
         --color-sable-700: #bb7b28;
         --color-sable-800: #976227;
-        --color-sable-900: #7c5123;
+        --color-sable-900: #7c5123; */
+
+        --color-sable-50: #fefcf8;
+        --color-sable-100: #fdf7e8;
+        --color-sable-200: #fbedc4;
+        --color-sable-300: #f7dd96;
+        --color-sable-400: #f2c866;
+        --color-sable-500: #edb441;
+        --color-sable-600: #d49a2d;
+        --color-sable-700: #b07b28;
+        --color-sable-800: #8f6327;
+        --color-sable-900: #765124;
+
+        /* Couleur bleu ocean et ciel */
+        --color-bleu-50: #e6f0fa;
+        --color-bleu-100: #c0d8f9;
+        --color-bleu-200: #99c0f7;
+        --color-bleu-300: #73a8f5;
+        --color-bleu-400: #4d90f3;
+        --color-bleu-500: #2768d1;
+        --color-bleu-600: #1f52a0;
+        --color-bleu-700: #173d70;
+        --color-bleu-800: #102840;
+        --color-bleu-900: #091420;
+
+        --color-ocean-50: #f0faf8;
+--color-ocean-100: #d8f2ed;
+--color-ocean-200: #b8e6db;
+--color-ocean-300: #8fd4c4;
+--color-ocean-400: #5bb8a6;
+--color-ocean-500: #379a8a;
+--color-ocean-600: #2a7c6f;
+--color-ocean-700: #236356;
+--color-ocean-800: #1f4f44;
+--color-ocean-900: #1a4138;
 
         /* Borderradius personnalisés */
         --radius-none: 0;
@@ -380,12 +414,12 @@
 <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     
     
-    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 border-l-4 border-blue-500">
-        <h3 class="text-xl font-bold text-blue-800 mb-4 bg-blue-200 px-3 py-2 flex items-center">
+    <div class="bg-gradient-to-br from-bleu-50 to-bleu-100 p-6 border-l-4 border-bleu-500">
+        <h3 class="text-xl font-bold text-bleu-800 mb-4 bg-bleu-200 px-3 py-2 flex items-center">
             <span class="mr-2">🏖️</span>
             Plage SUD
         </h3>
-        <div class="space-y-2 text-blue-700">
+        <div class="space-y-2 text-bleu-700">
             <p><strong>Adresse :</strong> Sous le @rainbowcafelacanau</p>
 
             <p><strong>Tarifs :</strong> 20€ le cours, 180€ la carte de 10 cours</p>
@@ -553,7 +587,7 @@ function createCourseCard(course) {
           
           "Plage SUD": {
               icone: "🏖️",
-              couleur: "blue",
+              couleur: "bleu",
               id: "plage_sud"
           },
           
@@ -581,7 +615,9 @@ function createCourseCard(course) {
         'red': 'bg-red-100 border-red-400 text-red-800',
         'jungle': 'bg-jungle-100 border-jungle-400 text-jungle-800',
         'emerald': 'bg-emerald-100 border-emerald-400 text-emerald-800',
-        'lime': 'bg-lime-100 border-lime-400 text-lime-800'
+        'lime': 'bg-lime-100 border-lime-400 text-lime-800',
+        'bleu': 'bg-bleu-100 border-bleu-400 text-bleu-800',
+        'ocean': 'bg-ocean-100 border-ocean-400 text-ocean-800'
     };
 
     const levelColors = {

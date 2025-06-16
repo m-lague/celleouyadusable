@@ -1,7 +1,7 @@
 lieux:
   - nom: Plage SUD
     icone: 🏖️
-    couleur: blue
+    couleur: bleu
     adresse: Sous le @rainbowcafelacanau
     reservation: Au plus tard 19h la veille, en cliquant directement sur le planning
     prices:
