@@ -1,0 +1,97 @@
+---
+layout: default
+title: "Témoignages - Cours de Yoga à Lacanau"
+description: "Découvrez les avis Google authentiques de mes élèves. Témoignages réels sur mes cours de Vinyasa et Yin Yoga à Lacanau."
+permalink: /temoignages/
+page_title: "Témoignages"
+page_subtitle: "Ce que disent mes élèves sur leur expérience avec le yoga"
+---
+
+{% include sections/page_title.html %}
+
+<!-- Section Avis Google avec Elfsight -->
+      <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+          <!-- Integration des témoignages ici-->
+          <div class="py-16 bg-gradient-to-br from-jungle-50 to-sable-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-sable-400 inline-block pb-2">
+                  Avis Google de mes élèves
+                </h2>
+                <p class="text-xl text-jungle-600">
+                  Découvrez les retours authentiques sur les cours de yoga à Lacanau
+                </p>
+              </div>
+
+              <div class="masonry">
+                {% for testimonial in site.data.testimonials.testimonials %}
+                  <article class="masonry-item bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 {% cycle 'border-jungle-400', 'border-sable-400' %}">
+                    <div class="flex items-center mb-4 space-x-1">
+                      {% for i in (1..testimonial.stars) %}
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                      {% endfor %}
+                    </div>
+                    {% if testimonial.content %}
+                      <blockquote class="text-jungle-700 mb-6 text-lg leading-relaxed italic">
+                        "{{ testimonial.content }}"
+                      </blockquote>
+                    {% endif %}
+                    <footer class="flex items-center justify-between">
+                      <cite class="text-jungle-800 font-semibold text-md bg-gradient-to-r {% cycle 'from-jungle-100 to-jungle-50', 'from-sable-100 to-sable-50' %} px-4 py-2 rounded-full">
+                      {{ testimonial.author }}
+                      </cite>
+                    </footer>
+                  </article>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <!-- Lien vers la fiche Google -->
+          <div class="text-center mt-12">
+              <a href="https://www.google.com/search?sa=X&sca_esv=6b1c196fe93c51f0&hl=fr-FR&tbm=lcl&sxsrf=AE3TifOpzMDPiQK280l4taAViptTz0nHNg:1750152217711&q=Yoga+-+Celle_ou_yadusable-+Nathalie+Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDOytDQwN7Y0NTc3sTQwNjYwM9jAyPiKUSMyPz1RQVfBOTUnJzU-vzS-MjGltDgxKSdVV8EvsSQjMSczVcGxLLN4ESvRSgE4D_G_cQAAAA&rldimm=16299073957749033060&ved=2ahUKEwiPi_WJkfiNAxWEAPsDHUbfDcEQ9fQKegQITRAF&biw=1309&bih=685&dpr=2.2#lkt=LocalPoiReviews"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg">
+                  <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                  </svg>
+                  Voir tous nos avis Google
+              </a>
+          </div>
+        </div>
+      </section>
+
+<!-- Section CTA pour laisser un avis -->
+<section class="py-16 bg-gradient-to-r from-jungle-600 to-sable-500">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+            Vous avez pris un cours avec moi ?
+        </h2>
+        <p class="text-xl text-white opacity-90 mb-8">
+            Partagez votre expérience et aidez d'autres personnes à découvrir le yoga
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://www.google.com/search?sa=X&sca_esv=6b1c196fe93c51f0&hl=fr-FR&tbm=lcl&sxsrf=AE3TifOpzMDPiQK280l4taAViptTz0nHNg:1750152217711&q=Yoga+-+Celle_ou_yadusable-+Nathalie+Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDOytDQwN7Y0NTc3sTQwNjYwM9jAyPiKUSMyPz1RQVfBOTUnJzU-vzS-MjGltDgxKSdVV8EvsSQjMSczVcGxLLN4ESvRSgE4D_G_cQAAAA&rldimm=16299073957749033060&ved=2ahUKEwiPi_WJkfiNAxWEAPsDHUbfDcEQ9fQKegQITRAF&biw=1309&bih=685&dpr=2.2#lkt=LocalPoiReviews"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center bg-white text-jungle-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-jungle-50 transition-colors shadow-lg">
+                <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                Laisser un avis Google
+            </a>
+        </div>
+    </div>
+</section>

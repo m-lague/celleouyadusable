@@ -6,7 +6,7 @@ description: "Cours de Vinyasa Yoga et Yin Yoga avec Nathalie à Lacanau. Trouve
 show_title: false
 hero:
   title: "Cours de Yoga à Lacanau"
-  subtitle: "Sur la plage et au cœur de la forêt de Lacanau, reconnectez-vous à l’essentiel lors de votre pratique"
+  subtitle: "Sur la plage et au cœur de la forêt de Lacanau Océan, reconnectez-vous à l’essentiel lors de votre pratique"
   image: "/assets/images/yoga-lacanau-celleouyadusable.jpeg"
   cta: "Voir le Planning"
   link: "/cours/"
