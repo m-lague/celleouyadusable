@@ -2,22 +2,25 @@ lieux:
   - nom: Plage SUD
     icone: 🏖️
     couleur: bleu
-    adresse: Sous le @rainbowcafelacanau
+    adresse: Sous le
+      [@rainbowcafelacanau](https://www.instagram.com/rainbowcafe_lacanau)
     reservation: Au plus tard 19h la veille, en cliquant directement sur le planning
     prices:
       unit_course: 20
       card_10_courses: 180
-    period: "Mai à Octobre"
-    duration: "75 min"
+    period: Mai à Octobre
+    duration: 75 min
   - nom: Bo&Co
     icone: 🏄‍♀️
     couleur: sable
     adresse: Plage NORD, École de surf @boandcosurf
-    reservation: "[@boandcosurl](https://bocosurf.com/cours-de-yoga/#reservationyoga) ou 0556263399"
+    reservation: "[@boandcosurl](https://bocosurf.com/cours-de-yoga/#reservationyog\
+      a) ou 0556263399"
     prices:
       unit_course: 15
-    period: "Mai à Octobre"
-    duration: "60 min"
+      card_10_courses: 150
+    period: Mai à Octobre
+    duration: 60 min
   - nom: Maison Pada
     icone: 🏠
     couleur: jungle
@@ -27,5 +30,5 @@ lieux:
       unit_course: 18
       card_10_courses: 160
       tryout_course: 10
-    period: "Mai à Novembre"
-    duration: "60-75 min suivant le niveau"
+    period: Mai à Novembre
+    duration: 60-75 min suivant le niveau
