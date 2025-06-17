@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+
+    <!-- CSS -->
+    <link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        /* Couleurs jungle */
+        --color-jungle-50: #f0f9f3;
+        --color-jungle-100: #dcf2e1;
+        --color-jungle-200: #bce4c7;
+        --color-jungle-300: #8fd0a4;
+        --color-jungle-400: #5bb67a;
+        --color-jungle-500: #379a5a;
+        --color-jungle-600: #2a7c47;
+        --color-jungle-700: #23633a;
+        --color-jungle-800: #1f4f31;
+        --color-jungle-900: #1a4129;
+
+        /* Couleurs sable */
+        /* --color-sable-50: #fefcf0;
+        --color-sable-100: #fef7d7;
+        --color-sable-200: #fdeeb0;
+        --color-sable-300: #fbe087;
+        --color-sable-400: #f8cc4e;
+        --color-sable-500: #f4b942;
+        --color-sable-600: #e09a2d;
+        --color-sable-700: #bb7b28;
+        --color-sable-800: #976227;
+        --color-sable-900: #7c5123; */
+
+        --color-sable-50: #fefcf8;
+        --color-sable-100: #fdf7e8;
+        --color-sable-200: #fbedc4;
+        --color-sable-300: #f7dd96;
+        --color-sable-400: #f2c866;
+        --color-sable-500: #edb441;
+        --color-sable-600: #d49a2d;
+        --color-sable-700: #b07b28;
+        --color-sable-800: #8f6327;
+        --color-sable-900: #765124;
+
+        /* Couleur bleu ocean et ciel */
+        --color-bleu-50: #e6f0fa;
+        --color-bleu-100: #c0d8f9;
+        --color-bleu-200: #99c0f7;
+        --color-bleu-300: #73a8f5;
+        --color-bleu-400: #4d90f3;
+        --color-bleu-500: #2768d1;
+        --color-bleu-600: #1f52a0;
+        --color-bleu-700: #173d70;
+        --color-bleu-800: #102840;
+        --color-bleu-900: #091420;
+
+        --color-ocean-50: #f0faf8;
+        --color-ocean-100: #d8f2ed;
+        --color-ocean-200: #b8e6db;
+        --color-ocean-300: #8fd4c4;
+        --color-ocean-400: #5bb8a6;
+        --color-ocean-500: #379a8a;
+        --color-ocean-600: #2a7c6f;
+        --color-ocean-700: #236356;
+        --color-ocean-800: #1f4f44;
+        --color-ocean-900: #1a4138;
+
+        /* Borderradius personnalisés */
+        --radius-none: 0;
+        --radius-sm: 2px;
+        --radius-md: 4px;
+        --radius-lg: 6px;
+      }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+
+    <!-- Meta robots pour éviter l'indexation des pages légales -->
+    <meta name="robots" content="noindex, nofollow">
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    {% include sections/nav.html %}
+
+    <!-- Contenu principal -->
+    <main class="min-h-screen">
+        <!-- Hero section simple -->
+        <section class="bg-gradient-to-br from-jungle-50 to-sable-50 py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4">
+                    {{ page.title }}
+                </h1>
+                {% if page.description %}
+                <p class="text-xl text-jungle-600">
+                    {{ page.description }}
+                </p>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- Contenu de la page -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="prose prose-lg prose-jungle max-w-none">
+                    {{ content | markdownify }}
+                </div>
+
+                <!-- Bouton retour -->
+                <div class="mt-12 text-center">
+                    <a href="/"
+                       class="inline-flex items-center bg-jungle-600 text-white px-6 py-3 rounded-lg hover:bg-jungle-700 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                        </svg>
+                        Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {% include sections/footer.html %}
+</body>
+</html>

@@ -81,7 +81,7 @@
             {{ lieu.nom }}
         </h3>
         <div class="space-y-2 text-{{ color_class }}-700">
-            <p><strong>Adresse :</strong> {{ lieu.adresse | markdownify | remove: '<p>' | remove: '</p>'}}</p>
+            <p class= "[&_a]:underline [&_a]:decoration-jungle-400 [&_a]:text-jungle-700 [&_a]:font-medium [&_a:hover]:decoration-jungle-600 [&_a:hover]:text-jungle-900"><strong>Adresse :</strong> {{ lieu.adresse | markdownify | remove: '<p>' | remove: '</p>' | replace: '<a href="http', '<a rel="noopener noreferrer nofollow" target="_blank" href="http' }}</p>
 
             <p><strong>Tarifs :</strong> {{lieu.prices.unit_course}}€ le cours, {{lieu.prices.card_10_courses}}€ la carte de 10 cours</p>
 
@@ -90,7 +90,7 @@
 
             <p><strong>Période :</strong> {{lieu.period}}</p>
 
-            <p class="[&_a]:underline [&_a]:decoration-jungle-400 [&_a]:text-jungle-700 [&_a]:font-medium [&_a:hover]:decoration-jungle-600 [&_a:hover]:text-jungle-900"><strong>Réservation :</strong> {{ lieu.reservation | markdownify }}</p>
+            <p class="[&_a]:underline [&_a]:decoration-jungle-400 [&_a]:text-jungle-700 [&_a]:font-medium [&_a:hover]:decoration-jungle-600 [&_a:hover]:text-jungle-900"><strong>Réservation :</strong> {{ lieu.reservation | markdownify | remove: '<p>' | remove: '</p>' | replace: '<a href="http', '<a rel="noopener noreferrer nofollow" target="_blank" href="http' }}</p>
         </div>
     </div>
     {% endfor %}
@@ -233,7 +233,7 @@ function createCourseCard(course) {
     const whatsappUrl = `https://wa.me/33601283070?text=${encodeURIComponent(whatsappMessage)}`;
 
     return `
-        <a href="${whatsappUrl}" target="_blank" class="block">
+        <a href="${whatsappUrl}" target="_blank" class="block" rel="noopener noreferrer nofollow">
             <div class="${colorClass} p-3 mb-2 border-l-4 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105">
                 <div class="font-semibold text-sm mb-1">${course.heure}</div>
                 <div class="font-bold mb-2">${course.style}</div>

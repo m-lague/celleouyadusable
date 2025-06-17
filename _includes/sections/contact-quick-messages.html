@@ -15,6 +15,7 @@
                 {% assign message_encoded = message.message | url_encode %}
                 <a href="https://wa.me/{{ phone_clean }}?text={{ message_encoded }}"
                    target="_blank"
+                   rel="noopener noreferrer nofollow"
                    class="{% cycle 'bg-jungle-100 border-jungle-500 hover:bg-jungle-200', 'bg-sable-100 border-sable-500 hover:bg-sable-200' %} p-4 border-l-4 transition-colors">
                     <h4 class="font-semibold text-jungle-800 mb-2">{{ message.title }}</h4>
                     <p class="text-sm text-jungle-600">{{ message.description }}</p>
