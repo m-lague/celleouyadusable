@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: "Conditions Générales d'Utilisation"
-description: "Conditions générales d'utilisation du site de Nathalie Kummer, professeure de yoga à Lacanau."
+description: "Conditions générales d'utilisation du site celleouyadusable.com de Nathalie Kummer, professeure de yoga à Lacanau."
 permalink: /conditions-generales-utilisation/
 ---
 
@@ -9,7 +9,7 @@ permalink: /conditions-generales-utilisation/
 
 ## Article 1 - Objet et champ d'application
 
-Les présentes conditions générales d'utilisation (ci-après "CGU") ont pour objet de définir les modalités et conditions d'utilisation du site internet de Nathalie Kummer, accessible à l'adresse [URL du site].
+Les présentes conditions générales d'utilisation (ci-après "CGU") ont pour objet de définir les modalités et conditions d'utilisation du site internet de Nathalie Kummer, accessible à l'adresse celleouyadusable.com.
 
 L'utilisation du site implique l'acceptation pleine et entière des présentes CGU.
 
@@ -18,7 +18,7 @@ L'utilisation du site implique l'acceptation pleine et entière des présentes C
 Le site est édité par :
 
 **Kummer Nathalie**
-[Statut à compléter : Micro-entreprise / EI / etc.]
+Micro-entreprise
 Adresse : 17 rue du chai des farines, 33000 Bordeaux
 Numéro SIRET : (à compléter)
 TVA non applicable, art. 293 B du CGI
@@ -81,8 +81,8 @@ Le site peut contenir des liens vers des sites tiers. Nathalie Kummer n'exerce a
 ## Article 11 - Médiation de la consommation
 
 Conformément à l'article L.612-1 du Code de la consommation, tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable d'un litige.
-Médiateur de la consommation : [Nom du médiateur à compléter ou mentionner "en cours de désignation"]
-Site web du médiateur : [URL à compléter]
+Médiateur de la consommation : Médiateur National de la Consommation ou tout médiateur sectoriel dont relève l'activité de l'entreprise
+Site web du médiateur : https://www.mediation-conso.fr/
 
 ## Article 12 - Opposition au démarchage téléphonique
 
@@ -113,8 +113,8 @@ Si une ou plusieurs stipulations des présentes CGU sont tenues pour non valides
 Pour toute question relative aux présentes CGU, vous pouvez contacter Nathalie Kummer :
 
 Adresse postale : 17 rue du chai des farines, 33000 Bordeaux
-E-mail : [à compléter]
-Téléphone : [à compléter]
+E-mail : nath.kummer@gmail.com
+Téléphone : +33 6 01 28 30 70
 
 ---
 

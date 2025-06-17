@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: "Mentions Légales"
-description: "Mentions légales du site de Nathalie Kummer, professeure de yoga à Lacanau."
+description: "Mentions légales du site celleouyadusable.com de Nathalie Kummer, professeure de yoga à Lacanau."
 permalink: /mentions-legales/
 ---
 
@@ -16,8 +16,8 @@ Micro-entreprise
 Adresse : 17 rue du chai des farines, 33000 Bordeaux
 Numéro SIRET : (à compléter)
 TVA non applicable, art. 293 B du CGI
-E-mail : nathalie@celleouyadusable
-Téléphone : [numéro à compléter]
+E-mail : nath.kummer@gmail.com
+Téléphone : +33 6 01 28 30 70
 
 ## Directeur de la publication
 
@@ -64,8 +64,8 @@ Ce site n'utilise pas de cookies de suivi ou de traçage. Seuls les cookies tech
 ## Médiation de la consommation
 
 Conformément à l'article L.612-1 du Code de la consommation, tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable d'un litige.
-Médiateur de la consommation : [Nom du médiateur à compléter ou mentionner "en cours de désignation"]
-Site web du médiateur : [URL à compléter]
+Médiateur de la consommation : Médiateur National de la Consommation ou tout médiateur sectoriel dont relève l'activité de l'entreprise
+Site web du médiateur : https://www.mediation-conso.fr/
 
 ## Droit applicable et juridiction
 
@@ -80,8 +80,8 @@ Si vous ne souhaitez pas faire l'objet de prospection commerciale par voie tél�
 Pour toute question relative aux présentes mentions légales, vous pouvez contacter Nathalie Kummer :
 
 Adresse postale : 17 rue du chai des farines, 33000 Bordeaux
-E-mail : [à compléter]
-Téléphone : [à compléter]
+E-mail : nath.kummer@gmail.com
+Téléphone : +33 6 01 28 30 70
 
 ---
 
