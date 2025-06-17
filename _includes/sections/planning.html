@@ -81,7 +81,7 @@
             {{ lieu.nom }}
         </h3>
         <div class="space-y-2 text-{{ color_class }}-700">
-            <p><strong>Adresse :</strong> {{ lieu.adresse }}</p>
+            <p><strong>Adresse :</strong> {{ lieu.adresse | markdownify | remove: '<p>' | remove: '</p>'}}</p>
 
             <p><strong>Tarifs :</strong> {{lieu.prices.unit_course}}€ le cours, {{lieu.prices.card_10_courses}}€ la carte de 10 cours</p>
 
