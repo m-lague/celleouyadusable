@@ -285,7 +285,7 @@ collections:
                   - {label: "Contenu", name: "content", widget: "text"}
       - name: "testimonials"
         label: "Page Témoignages"
-        file: "_pages/testimonials.md"
+        file: "testimonials.html"
         fields:
           - {label: "Titre", name: "title", widget: "hidden"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "testimonials"}
@@ -293,6 +293,24 @@ collections:
           - {label: "Description de la page", name: "description", widget: "hidden"}
           - {label: "Titre du haut de page", name: "page_title", widget: "string"}
           - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
+      - name: "legal"
+        label: "Page Mentions Légales"
+        file: "_pages/mentions-legales.md"
+        fields:
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "legal"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/mentions-legales/"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+          - {label: "Contenu", name: "body", widget: "markdown", hint: "Rédigez les mentions légales ici. Utilisez des titres pour structurer le contenu."}
+      - name: "cgu"
+        label: "Page CGU"
+        file: "_pages/cgu.md"
+        fields:
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "cgu"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/cgu/"}
+          - {label: "Description de la page", name: "description", widget: "string"}
+          - {label: "Contenu", name: "body", widget: "markdown", hint: "Rédigez les CGU ici. Utilisez des titres pour structurer le contenu."}
   # Collections
   - name: "courses"
     label: "Types de Cours"
