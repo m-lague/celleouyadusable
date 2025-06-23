@@ -1,6 +1,13 @@
 <section class="relative h-dvh max-h-screen flex items-start overflow-hidden" style="height: calc(100vh - 4rem);">
-  <!-- Background avec images côte à côte -->
-  <div class="absolute inset-0 flex">
+  <!-- Background avec images côte à côte qui slide -->
+  <div id="carousel-background" class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
+    {% for image in page.hero.images %}
+    <div class="flex-shrink-0 h-full">
+      <img src="{{ image }}" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+    </div>
+    {% endfor %}
+
+    <!-- Dupliquer les images pour la boucle -->
     {% for image in page.hero.images %}
     <div class="flex-shrink-0 h-full">
       <img src="{{ image }}" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
@@ -32,3 +39,37 @@
     </div>
   </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const background = document.getElementById('carousel-background');
+  const images = background.querySelectorAll('img');
+  const totalImages = {{ page.hero.images.size }};
+  let currentTranslate = 0;
+
+  function slideNext() {
+    // Calculer la largeur de la première image
+    const imageWidth = images[0].offsetWidth;
+
+    // Slider vers la gauche d'une largeur d'image
+    currentTranslate -= imageWidth;
+    background.style.transform = `translateX(${currentTranslate}px)`;
+
+    // Reset quand on a fait défiler toutes les images originales
+    if (Math.abs(currentTranslate) >= imageWidth * totalImages) {
+      setTimeout(() => {
+        background.style.transition = 'none';
+        currentTranslate = 0;
+        background.style.transform = `translateX(0px)`;
+
+        setTimeout(() => {
+          background.style.transition = 'transform 0.7s ease-in-out';
+        }, 50);
+      }, 700);
+    }
+  }
+
+  // Démarrer l'animation toutes les 4 secondes
+  setInterval(slideNext, 4000);
+});
+</script>
