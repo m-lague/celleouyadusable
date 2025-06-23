@@ -8,6 +8,6 @@ prices:
   early_bird: 150
 location: "Forêt des Landes"
 participants_max: 12
-image: "/assets/images/retraite-foret.jpeg"
+image: "/assets/images/Cours-de-yoga-sur-la-plage.jpg"
 ---
 test atelier repiration

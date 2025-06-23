@@ -3,17 +3,17 @@
         {% if upcoming_events.size > 0 %}
         <section class=" w-full py-8 sm:px-24">
           {% assign next_event = upcoming_events.first %}
-          <div class="flex w-full flex-col sm:flex-row justify-between items-center gap-8">
+          <div class="flex flex-col sm:flex-row justify-between items-center ">
             <div class="flex flex-col flex-1 text-center">
               <h2 class="text-3xl font-bold mb-2">Prochain événement</h2>
               <p class="text-xl mb-2">{{ next_event.title }}</p>
               <p class="opacity-90">{{ next_event.date | date: "%d %B %Y" }}</p>
               <a href="{{ next_event.url}}"
-                class="bg-white text-jungle-700 px-6 py-3  font-semibold hover:bg-jungle-50 transition-colors mx-auto">
+                class="bg-white text-jungle-700 px-6 py-3  font-semibold hover:bg-jungle-50 transition-colors mx-auto mt-4">
                   Découvrir
               </a>
             </div>
-            <div class="w-full sm:w-2/5 flex justify-end">
+            <div class="w-full sm:w-3/8 flex justify-end">
               <figure class ="w-full shrink-1">
                 {% if next_event.image %}
                 <img src="{{ next_event.image }}" alt="{{ next_event.title }}" class="w-full object-cover shadow-lg">
