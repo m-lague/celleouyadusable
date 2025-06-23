@@ -1,5 +1,4 @@
-<nav class="bg-transaprent
- shadow-sm sticky top-0 z-50">
+<nav id="navbar" class=" fixed top-0 w-full z-50 transition-all duration-300 ease-in-out">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
       <!-- Logo -->
@@ -8,7 +7,7 @@
                 <div class="logo-preview">
                   <div class="relative w-[80px] h-[80px] mt-6 rounded-full  bg-cover bg-[center_30%] shadow-[0_5px_25px_rgba(0,0,0,0.15)]" style="background-image: url('/assets/images/celleouyadusable-logo.jpg');">
                     <div class="absolute h-px w-[120%] bg-jungle-800/90 left-[35%] top-[calc(18%_+_0.7rem)] z-10 shadow-[1px_1px_3px_rgba(0,0,0,0.2)]"></div>
-                    <div class="absolute text-jungle-700 py-2 whitespace-nowrap font-['Montserrat'] font-normal text-[1.1rem] tracking-[0.1em] uppercase left-[60%] top-[18%] z-20" style="text-shadow: 1px 1px 3px rgba(255,255,255)">Celle_ou_yadusable</div>
+                    <div class="absolute text-jungle-700 py-2 whitespace-nowrap font-['Montserrat'] font-normal text-[1.1rem] tracking-[0.1em] uppercase left-[60%] top-[18%] z-20 text-sable-100">Celle_ou_yadusable</div>
                   </div>
                 </div>
             </div>
@@ -24,11 +23,11 @@
                         {% assign is_current = true %}
                       {% endif %}
                       <a href="{{ item.url }}"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         {% if is_current %}
-                         text-jungle-800 border-jungle-500
+                         text-sable-400 border-jungle-500
                         {% else %}
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         {% endif %}">
                         {{ item.name }}
                       </a>
@@ -114,3 +113,29 @@
         </div>
     </div>
 </nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('nav');
+  const heroSection = document.querySelector('section'); // Ta section hero
+
+  // Fonction pour gérer le scroll
+  function handleScroll() {
+    const heroHeight = heroSection.offsetHeight;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > heroHeight - 100) {
+      // Quand on sort de la hero : fond blanc + blur + ombre
+      navbar.classList.add('scrolled');
+    } else {
+      // Dans la hero : transparent
+      navbar.classList.remove('scrolled');
+    }
+  }
+
+  // Écouter le scroll
+  window.addEventListener('scroll', handleScroll);
+
+  // Vérifier au chargement
+  handleScroll();
+});
+</script>

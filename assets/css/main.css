@@ -17,6 +17,26 @@
   font-style: normal;
   font-display: swap;
 }
+/* Navbar par défaut - transparente */
+nav {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Navbar quand on scroll - fond blanc + blur */
+nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Optionnel : changer la couleur du texte si besoin */
+nav.scrolled .text-jungle-600,
+nav.scrolled .text-jungle-700,
+nav.scrolled .text-neutral-600 {
+  color: #23633a; /* jungle-700 */
+}
 
 .masonry {
   column-count: 1;

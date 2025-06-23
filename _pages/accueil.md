@@ -5,7 +5,7 @@ permalink: /
 description: "Cours de Vinyasa Yoga et Yin Yoga avec Nathalie à Lacanau. Trouvez votre équilibre dans un cadre naturel exceptionnel."
 show_title: false
 hero:
-  title: "COURS DE YOGA À LACANAU ET AU COSTA RICA"
+  title: "COURS DE YOGA À LACANAU ET AU COSTA-RICA"
   subtitle: "Sur la plage et au cœur de la forêt de Lacanau Océan, reconnectez-vous à l’essentiel lors de votre pratique"
   images:
     - "/assets/images/celleouyadusable-yoga-darwin-hero2.jpg"
@@ -18,9 +18,7 @@ hero:
   cta: "PLANNING"
   link: "/cours/"
 sections:
-  - courses-preview
   - upcoming-event
-  - events-preview
   - about
   - testimonials
   - contact-form

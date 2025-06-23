@@ -18,11 +18,11 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Celle où ya du sable - Yoga à Lacanau" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-06-23T12:52:57+02:00" />
+<meta property="article:published_time" content="2025-06-23T16:23:18+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Cours de Yoga à Lacanau - Celle où ya du sable" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Nathalie - Professeure de Yoga"},"dateModified":"2025-06-23T12:52:57+02:00","datePublished":"2025-06-23T12:52:57+02:00","description":"Cours de Vinyasa Yoga et Yin Yoga avec Nathalie à Lacanau. Trouvez votre équilibre dans un cadre naturel exceptionnel.","headline":"Cours de Yoga à Lacanau - Celle où ya du sable","name":"Celle où ya du sable - Yoga à Lacanau","url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Nathalie - Professeure de Yoga"},"dateModified":"2025-06-23T16:23:18+02:00","datePublished":"2025-06-23T16:23:18+02:00","description":"Cours de Vinyasa Yoga et Yin Yoga avec Nathalie à Lacanau. Trouvez votre équilibre dans un cadre naturel exceptionnel.","headline":"Cours de Yoga à Lacanau - Celle où ya du sable","name":"Celle où ya du sable - Yoga à Lacanau","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/assets/css/main.css">
@@ -31,7 +31,7 @@
     <style type="text/tailwindcss">
       @theme {
         --font-sans: "FuturaPT", system-ui, -apple-system, sans-serif;
-    
+
         /* Couleurs jungle */
         --color-jungle-50: #f0f9f3;
         --color-jungle-100: #dcf2e1;
@@ -117,8 +117,7 @@
 </head>
 <body class="bg-white text-jungle-900 overflow-x-hidden">
     <!-- Navigation -->
- <nav class="bg-transaprent
- shadow-sm sticky top-0 z-50">
+ <nav id="navbar" class=" fixed top-0 w-full z-50 transition-all duration-300 ease-in-out">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
       <!-- Logo -->
@@ -127,7 +126,7 @@
                 <div class="logo-preview">
                   <div class="relative w-[80px] h-[80px] mt-6 rounded-full  bg-cover bg-[center_30%] shadow-[0_5px_25px_rgba(0,0,0,0.15)]" style="background-image: url('/assets/images/celleouyadusable-logo.jpg');">
                     <div class="absolute h-px w-[120%] bg-jungle-800/90 left-[35%] top-[calc(18%_+_0.7rem)] z-10 shadow-[1px_1px_3px_rgba(0,0,0,0.2)]"></div>
-                    <div class="absolute text-jungle-700 py-2 whitespace-nowrap font-['Montserrat'] font-normal text-[1.1rem] tracking-[0.1em] uppercase left-[60%] top-[18%] z-20" style="text-shadow: 1px 1px 3px rgba(255,255,255)">Celle_ou_yadusable</div>
+                    <div class="absolute text-jungle-700 py-2 whitespace-nowrap font-['Montserrat'] font-normal text-[1.1rem] tracking-[0.1em] uppercase left-[60%] top-[18%] z-20 text-sable-100">Celle_ou_yadusable</div>
                   </div>
                 </div>
             </div>
@@ -141,9 +140,9 @@
                       
                       
                       <a href="/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                         text-jungle-800 border-jungle-500
+                         text-sable-400 border-jungle-500
                         ">
                         ACCUEIL
                       </a>
@@ -151,9 +150,9 @@
                       
                       
                       <a href="/cours/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         COURS
                       </a>
@@ -161,9 +160,9 @@
                       
                       
                       <a href="/evenements/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         ÉVÉNEMENTS
                       </a>
@@ -171,9 +170,9 @@
                       
                       
                       <a href="/a-propos/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         À PROPOS
                       </a>
@@ -181,9 +180,9 @@
                       
                       
                       <a href="/FAQ/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         FAQ
                       </a>
@@ -191,9 +190,9 @@
                       
                       
                       <a href="/contact/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         CONTACT
                       </a>
@@ -201,9 +200,9 @@
                       
                       
                       <a href="/temoignages/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         TÉMOIGNAGES
                       </a>
@@ -345,6 +344,32 @@
         </div>
     </div>
 </nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('nav');
+  const heroSection = document.querySelector('section'); // Ta section hero
+
+  // Fonction pour gérer le scroll
+  function handleScroll() {
+    const heroHeight = heroSection.offsetHeight;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > heroHeight - 100) {
+      // Quand on sort de la hero : fond blanc + blur + ombre
+      navbar.classList.add('scrolled');
+    } else {
+      // Dans la hero : transparent
+      navbar.classList.remove('scrolled');
+    }
+  }
+
+  // Écouter le scroll
+  window.addEventListener('scroll', handleScroll);
+
+  // Vérifier au chargement
+  handleScroll();
+});
+</script>
 
 
 
@@ -352,85 +377,82 @@
     <main>
         <div class="min-h-screen">
     
-        <section class="relative h-dvh max-h-screen flex items-start overflow-hidden" style="height: calc(100vh - 4rem);">
+        <section class="relative h-screen  flex items-start overflow-hidden">
   <!-- Background avec images côte à côte qui slide -->
   <div id="carousel-background" class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero2.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero2.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero3.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero3.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero4.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero4.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero5.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero5.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero6.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero6.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero7.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero7.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero8.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero8.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
 
     <!-- Dupliquer les images pour la boucle -->
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero2.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero2.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero3.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero3.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero4.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero4.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero5.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero5.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero6.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero6.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero7.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero7.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
     <div class="flex-shrink-0 h-full">
-      <img src="/assets/images/celleouyadusable-yoga-darwin-hero8.jpg" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="/assets/images/celleouyadusable-yoga-darwin-hero8.jpg" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     
   </div>
 
   <!-- Overlay -->
-  <div class="absolute inset-0 bg-black opacity-20"></div>
+  <div class="absolute inset-0 bg-black opacity-30"></div>
 
   <!-- Contenu -->
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="text-center lg:text-left">
-        <h1 class="text-2xl md:text-4xl font-bold text-neutral-50 mb-6 tracking-[11px] leading-tight">
-          COURS DE YOGA À LACANAU ET AU COSTA RICA
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-40">
+    <div class="flex gap-12 items-center">
+      
+        <h1 class="text-balance text-2xl md:text-3xl text-neutral-50 mb-6 tracking-[11px] leading-12">
+          COURS DE YOGA À LACANAU ET AU COSTA-RICA
         </h1>
-        <p class="text-xl md:text-2xl text-jungle-600 mb-8 opacity-0">
-          Sur la plage et au cœur de la forêt de Lacanau Océan, reconnectez-vous à l’essentiel lors de votre pratique
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-start">
+        <div class="flex flex-col sm:flex-row gap-4 justify-start tracking-[8px]">
           <!-- Composant bouton réutilisable -->
 
 
@@ -443,7 +465,7 @@
     <!-- Bouton outline -->
     <a href="/cours/"
        target="_self"
-       class="group inline-flex items-center justify-center px-6 py-3 border-2 border-jungle-600 text-jungle-600 hover:bg-jungle-600 hover:text-white font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
+       class="group inline-flex items-center justify-center px-6 py-3 border-2 border-sable-600 text-sable-600  hover:bg-sable-600 hover:text-white font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
 
         <span>PLANNING</span>
 
@@ -457,7 +479,11 @@
 
 
         </div>
-      </div>
+        <p class="text-xl md:text-3xl text-jungle-600 mb-8 opacity-0">
+          Sur la plage et au cœur de la forêt de Lacanau Océan, reconnectez-vous à l’essentiel lors de votre pratique
+        </p>
+
+
     </div>
   </div>
 </section>
@@ -505,107 +531,6 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Puis afficher les sections -->
     
         
-            <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-jungle-200 inline-block pb-2">
-                Mes Cours de Yoga
-            </h2>
-            <p class="text-xl text-jungle-600 max-w-2xl mx-auto">
-                Des pratiques douces pour tous les niveaux
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <!--CARTE des cours-->
-          
-    <a href="/cours/#Vinyasa" class="block bg-gradient-to-br from-jungle-50 to-sable-50 p-8 shadow-lg hover:shadow-xl transition-shadow rounded-md">
-        
-        <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-md">
-            <img src="/assets/images/vinyasa-yoga.jpeg"
-                 alt="Vinyasa Yoga"
-                 class="w-full h-48 object-cover">
-        </div>
-        
-
-        <h3 class="text-2xl font-bold text-jungle-800 mb-3 border-b-2 border-sable-300 pb-2">Vinyasa Yoga</h3>
-        <p class="text-jungle-600 mb-4">Le Vinyasa est un yoga dynamique qui synchronise mouvement et respiration dans un flow continu. Cette pratique dévelo...</p>
-
-        <div class="flex items-center justify-between">
-            <div class="text-sm text-jungle-500">
-                
-                <span class="inline-block mr-4 bg-jungle-100 rounded-full py-1 px-3">⏱️ 60-75 minutes</span>
-                
-                
-                <span class="inline-block bg-sable-200 rounded-full px-3 py-1">📊 Tous niveaux</span>
-                
-            </div>
-        </div>
-    </a>
-    
-    <a href="/cours/#Yin" class="block bg-gradient-to-br from-jungle-50 to-sable-50 p-8 shadow-lg hover:shadow-xl transition-shadow rounded-md">
-        
-        <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden rounded-md">
-            <img src="/assets/images/vinyasa-yoga.jpeg"
-                 alt="Yin Yoga"
-                 class="w-full h-48 object-cover">
-        </div>
-        
-
-        <h3 class="text-2xl font-bold text-jungle-800 mb-3 border-b-2 border-sable-300 pb-2">Yin Yoga</h3>
-        <p class="text-jungle-600 mb-4">Le Yin Yoga est une pratique douce et méditative qui invite à la lenteur et à l’introspection. Les postures sont main...</p>
-
-        <div class="flex items-center justify-between">
-            <div class="text-sm text-jungle-500">
-                
-                <span class="inline-block mr-4 bg-jungle-100 rounded-full py-1 px-3">⏱️ 60-75 minutes</span>
-                
-                
-                <span class="inline-block bg-sable-200 rounded-full px-3 py-1">📊 Tous niveaux</span>
-                
-            </div>
-        </div>
-    </a>
-    
-</div>
-
-
-        <div class="text-center">
-          <!-- Composant bouton réutilisable -->
-
-
-
-
-
-
-
-
-    <!-- Bouton principal hero (taille réduite) -->
-    <a href="/cours/"
-       target="_self"
-       class="group relative inline-flex items-center justify-center px-6 py-3  bg-jungle-600 text-neutral-50 font-semibold text-base shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
-
-        <!-- Effet de brillance -->
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-700"></div>
-
-        <!-- Contenu -->
-        <span class="relative z-10">Voir tous les cours</span>
-
-        <!-- Flèche animée -->
-        
-        <svg class="w-4 h-4 ml-2 relative z-10 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
-        
-    </a>
-
-
-
-        </div>
-    </div>
-</section>
-
-        
             
 
         
@@ -624,154 +549,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </section>
         
-
-        
-            <section class="py-16 bg-white">
-    <div class=" mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-sable-200 inline-block pb-2">
-                Évènements & Retraites
-            </h2>
-            <p class="text-xl text-jungle-600 px-4 max-w-2xl mx-auto">
-                Des moments privilégiés pour approfondir votre pratique
-            </p>
-        </div>
-
-<!-- Listes des évènements -->
-        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8">
-            
-            <div class="bg-gradient-to-br from-sable-50 to-jungle-50 p-6 shadow-lg hover:shadow-xl transition-shadow relative group cursor-pointer rounded-md">
-                <!-- Lien vers l'événement -->
-              <a href="/evenement/atelier-respiration-copy/" class="absolute inset-0 z-0" aria-label="Voir l'événement Stage Yoga en Forêt 2">
-                    <span class="sr-only">Voir l'événement Stage Yoga en Forêt 2</span>
-                </a>
-                
-                <div class="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded-md">
-                    <img src="/assets/images/retraite-foret.jpeg"
-                         alt="Stage Yoga en Forêt 2"
-                         class="w-full h-32 object-cover">
-                </div>
-                
-
-                <div class="flex justify-between text-sm text-jungle-500 mb-2">
-                    
-                    <div class="flex items-center">
-                      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                      </svg> 23 June 2025
-                      </div>
-                    
-                    <span class="inline-block bg-jungle-200 text-jungle-800 px-3 py-1 rounded-full text-sm font-medium">
-                              Atelier
-                          </span>
-                </div>
-
-
-                <h3 class="text-2xl font-bold text-jungle-800 mb-2">Stage Yoga en Forêt 2</h3>
-                <p class="text-jungle-600 text-md">test atelier repiration
-</p>
-            </div>
-            
-            <div class="bg-gradient-to-br from-sable-50 to-jungle-50 p-6 shadow-lg hover:shadow-xl transition-shadow relative group cursor-pointer rounded-md">
-                <!-- Lien vers l'événement -->
-              <a href="/evenement/atelier-respiration/" class="absolute inset-0 z-0" aria-label="Voir l'événement Retraite Yoga en Forêt">
-                    <span class="sr-only">Voir l'événement Retraite Yoga en Forêt</span>
-                </a>
-                
-                <div class="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded-md">
-                    <img src="/assets/images/retraite-foret.jpeg"
-                         alt="Retraite Yoga en Forêt"
-                         class="w-full h-32 object-cover">
-                </div>
-                
-
-                <div class="flex justify-between text-sm text-jungle-500 mb-2">
-                    
-                    <div class="flex items-center">
-                      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                      </svg> 23 June 2025
-                      </div>
-                    
-                    <span class="inline-block bg-jungle-200 text-jungle-800 px-3 py-1 rounded-full text-sm font-medium">
-                              Atelier
-                          </span>
-                </div>
-
-
-                <h3 class="text-2xl font-bold text-jungle-800 mb-2">Retraite Yoga en Forêt</h3>
-                <p class="text-jungle-600 text-md">test atelier repiration
-</p>
-            </div>
-            
-            <div class="bg-gradient-to-br from-sable-50 to-jungle-50 p-6 shadow-lg hover:shadow-xl transition-shadow relative group cursor-pointer rounded-md">
-                <!-- Lien vers l'événement -->
-              <a href="/evenement/atelier-test/" class="absolute inset-0 z-0" aria-label="Voir l'événement atelier test">
-                    <span class="sr-only">Voir l'événement atelier test</span>
-                </a>
-                
-                <div class="aspect-w-16 aspect-h-9 mb-4 overflow-hidden rounded-md">
-                    <img src="/assets/images/retraite-foret.jpeg"
-                         alt="atelier test"
-                         class="w-full h-32 object-cover">
-                </div>
-                
-
-                <div class="flex justify-between text-sm text-jungle-500 mb-2">
-                    
-                    <div class="flex items-center">
-                      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                      </svg> 23 June 2025
-                      </div>
-                    
-                    <span class="inline-block bg-jungle-200 text-jungle-800 px-3 py-1 rounded-full text-sm font-medium">
-                              Atelier
-                          </span>
-                </div>
-
-
-                <h3 class="text-2xl font-bold text-jungle-800 mb-2">atelier test</h3>
-                <p class="text-jungle-600 text-md">test atelier repiration
-</p>
-            </div>
-            
-        </div>
-
-        <div class="text-center pt-12">
-          <!-- Composant bouton réutilisable -->
-
-
-
-
-
-
-
-
-    <!-- Bouton principal hero (taille réduite) -->
-    <a href="/cours/"
-       target="_self"
-       class="group relative inline-flex items-center justify-center px-6 py-3  bg-jungle-600 text-neutral-50 font-semibold text-base shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
-
-        <!-- Effet de brillance -->
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-700"></div>
-
-        <!-- Contenu -->
-        <span class="relative z-10">Tous les évènements</span>
-
-        <!-- Flèche animée -->
-        
-        <svg class="w-4 h-4 ml-2 relative z-10 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
-        
-    </a>
-
-
-
-        </div>
-    </div>
-</section>
 
         
             <!-- Section About optimisée SEO -->
@@ -1184,5 +961,34 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   </script>
+ <script>
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('nav');
+  const heroSection = document.querySelector('section'); // Ta première section (hero)
+  const navLinks = navbar.querySelectorAll('.nav-link');
+  // Calculer la hauteur de la hero
+  const heroHeight = heroSection.offsetHeight;
+
+  // Déclencher quand on dépasse la hero (avec un petit offset)
+  if (window.scrollY > heroHeight - 80) {
+    navbar.style.backgroundColor = 'transparent';
+    navbar.style.backdropFilter = 'blur(2px)';
+    navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    navLinks.forEach(link => {
+      link.style.color = '#23633a'; // Mets la couleur que tu veux
+    });
+  } else {
+    navbar.style.backgroundColor = 'transparent';
+    navbar.style.backdropFilter = 'none';
+    navbar.style.boxShadow = 'none';
+    navLinks.forEach(link => {
+      link.style.color = ''; // Mets la couleur que tu veux
+    });
+  }
+});
+</script>
+
+
+
 </body>
 </html>

@@ -1,41 +1,42 @@
-<section class="relative h-dvh max-h-screen flex items-start overflow-hidden" style="height: calc(100vh - 4rem);">
+<section class="relative h-screen  flex items-start overflow-hidden">
   <!-- Background avec images côte à côte qui slide -->
   <div id="carousel-background" class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
     {% for image in page.hero.images %}
     <div class="flex-shrink-0 h-full">
-      <img src="{{ image }}" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="{{ image }}" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     {% endfor %}
 
     <!-- Dupliquer les images pour la boucle -->
     {% for image in page.hero.images %}
     <div class="flex-shrink-0 h-full">
-      <img src="{{ image }}" alt="Yoga à Lacanau" class="h-full w-auto object-contain">
+      <img src="{{ image }}" alt="Yoga à Lacanau, au Costa Rica et à Darwin Bordeaux" class="h-full w-auto object-contain">
     </div>
     {% endfor %}
   </div>
 
   <!-- Overlay -->
-  <div class="absolute inset-0 bg-black opacity-20"></div>
+  <div class="absolute inset-0 bg-black opacity-30"></div>
 
   <!-- Contenu -->
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div class="text-center lg:text-left">
-        <h1 class="text-2xl md:text-4xl font-bold text-neutral-50 mb-6 tracking-[11px] leading-tight">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-40">
+    <div class="flex gap-12 items-center">
+      
+        <h1 class="text-balance text-2xl md:text-3xl text-neutral-50 mb-6 tracking-[11px] leading-12">
           {{ page.hero.title }}
         </h1>
-        <p class="text-xl md:text-2xl text-jungle-600 mb-8 opacity-0">
-          {{ page.hero.subtitle }}
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-start">
+        <div class="flex flex-col sm:flex-row gap-4 justify-start tracking-[8px]">
           {% include button.html
               style="outline"
               url="/cours/"
               text= page.hero.cta
               icon=true %}
         </div>
-      </div>
+        <p class="text-xl md:text-3xl text-jungle-600 mb-8 opacity-0">
+          {{ page.hero.subtitle }}
+        </p>
+
+
     </div>
   </div>
 </section>

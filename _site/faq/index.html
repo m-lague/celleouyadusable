@@ -18,11 +18,11 @@
 <meta property="og:url" content="http://localhost:4000/faq/" />
 <meta property="og:site_name" content="Celle où ya du sable - Yoga à Lacanau" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-06-23T12:52:57+02:00" />
+<meta property="article:published_time" content="2025-06-23T16:23:18+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="FAQ - Celle où ya du sable" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Nathalie - Professeure de Yoga"},"dateModified":"2025-06-23T12:52:57+02:00","datePublished":"2025-06-23T12:52:57+02:00","description":"Questions fréquentes sur les cours de yoga, les tarifs, les événements et la pratique avec Nathalie à Lacanau.","headline":"FAQ - Celle où ya du sable","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/faq/"},"url":"http://localhost:4000/faq/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Nathalie - Professeure de Yoga"},"dateModified":"2025-06-23T16:23:18+02:00","datePublished":"2025-06-23T16:23:18+02:00","description":"Questions fréquentes sur les cours de yoga, les tarifs, les événements et la pratique avec Nathalie à Lacanau.","headline":"FAQ - Celle où ya du sable","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/faq/"},"url":"http://localhost:4000/faq/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/assets/css/main.css">
@@ -31,7 +31,7 @@
     <style type="text/tailwindcss">
       @theme {
         --font-sans: "FuturaPT", system-ui, -apple-system, sans-serif;
-    
+
         /* Couleurs jungle */
         --color-jungle-50: #f0f9f3;
         --color-jungle-100: #dcf2e1;
@@ -117,8 +117,7 @@
 </head>
 <body class="bg-white text-jungle-900 overflow-x-hidden">
     <!-- Navigation -->
- <nav class="bg-transaprent
- shadow-sm sticky top-0 z-50">
+ <nav id="navbar" class=" fixed top-0 w-full z-50 transition-all duration-300 ease-in-out">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
       <!-- Logo -->
@@ -127,7 +126,7 @@
                 <div class="logo-preview">
                   <div class="relative w-[80px] h-[80px] mt-6 rounded-full  bg-cover bg-[center_30%] shadow-[0_5px_25px_rgba(0,0,0,0.15)]" style="background-image: url('/assets/images/celleouyadusable-logo.jpg');">
                     <div class="absolute h-px w-[120%] bg-jungle-800/90 left-[35%] top-[calc(18%_+_0.7rem)] z-10 shadow-[1px_1px_3px_rgba(0,0,0,0.2)]"></div>
-                    <div class="absolute text-jungle-700 py-2 whitespace-nowrap font-['Montserrat'] font-normal text-[1.1rem] tracking-[0.1em] uppercase left-[60%] top-[18%] z-20" style="text-shadow: 1px 1px 3px rgba(255,255,255)">Celle_ou_yadusable</div>
+                    <div class="absolute text-jungle-700 py-2 whitespace-nowrap font-['Montserrat'] font-normal text-[1.1rem] tracking-[0.1em] uppercase left-[60%] top-[18%] z-20 text-sable-100">Celle_ou_yadusable</div>
                   </div>
                 </div>
             </div>
@@ -141,9 +140,9 @@
                       
                       
                       <a href="/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         ACCUEIL
                       </a>
@@ -151,9 +150,9 @@
                       
                       
                       <a href="/cours/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         COURS
                       </a>
@@ -161,9 +160,9 @@
                       
                       
                       <a href="/evenements/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         ÉVÉNEMENTS
                       </a>
@@ -171,9 +170,9 @@
                       
                       
                       <a href="/a-propos/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         À PROPOS
                       </a>
@@ -181,9 +180,9 @@
                       
                       
                       <a href="/FAQ/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         FAQ
                       </a>
@@ -191,9 +190,9 @@
                       
                       
                       <a href="/contact/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         CONTACT
                       </a>
@@ -201,9 +200,9 @@
                       
                       
                       <a href="/temoignages/"
-                        class="px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-jungle-600 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
                         ">
                         TÉMOIGNAGES
                       </a>
@@ -345,6 +344,32 @@
         </div>
     </div>
 </nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('nav');
+  const heroSection = document.querySelector('section'); // Ta section hero
+
+  // Fonction pour gérer le scroll
+  function handleScroll() {
+    const heroHeight = heroSection.offsetHeight;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > heroHeight - 100) {
+      // Quand on sort de la hero : fond blanc + blur + ombre
+      navbar.classList.add('scrolled');
+    } else {
+      // Dans la hero : transparent
+      navbar.classList.remove('scrolled');
+    }
+  }
+
+  // Écouter le scroll
+  window.addEventListener('scroll', handleScroll);
+
+  // Vérifier au chargement
+  handleScroll();
+});
+</script>
 
 
 
@@ -722,5 +747,34 @@
       });
     }
   </script>
+ <script>
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('nav');
+  const heroSection = document.querySelector('section'); // Ta première section (hero)
+  const navLinks = navbar.querySelectorAll('.nav-link');
+  // Calculer la hauteur de la hero
+  const heroHeight = heroSection.offsetHeight;
+
+  // Déclencher quand on dépasse la hero (avec un petit offset)
+  if (window.scrollY > heroHeight - 80) {
+    navbar.style.backgroundColor = 'transparent';
+    navbar.style.backdropFilter = 'blur(2px)';
+    navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    navLinks.forEach(link => {
+      link.style.color = '#23633a'; // Mets la couleur que tu veux
+    });
+  } else {
+    navbar.style.backgroundColor = 'transparent';
+    navbar.style.backdropFilter = 'none';
+    navbar.style.boxShadow = 'none';
+    navLinks.forEach(link => {
+      link.style.color = ''; // Mets la couleur que tu veux
+    });
+  }
+});
+</script>
+
+
+
 </body>
 </html>
