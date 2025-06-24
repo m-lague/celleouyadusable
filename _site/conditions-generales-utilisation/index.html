@@ -84,95 +84,151 @@
 </head>
 <body class="bg-white">
     <!-- Header -->
-    <nav id="navbar" class=" fixed top-0 w-full z-50 transition-all duration-300 ease-in-out">
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-      <!-- Logo -->
-          <a href="/">
-            <div id="logo" class="flex-shrink-0">
-                <div class="logo-preview">
-                  <div class="relative w-[80px] h-[80px] mt-6 rounded-full  bg-cover bg-[center_30%] shadow-[0_5px_25px_rgba(0,0,0,0.15)]" style="background-image: url('/assets/images/celleouyadusable-logo.jpg');">
-                    <div class="absolute h-px w-[120%] bg-jungle-800/90 left-[35%] top-[calc(18%_+_0.7rem)] z-10 shadow-[1px_1px_3px_rgba(0,0,0,0.2)]"></div>
-                    <div class="absolute text-jungle-700 py-2 whitespace-nowrap font-['Montserrat'] font-normal text-[1.1rem] tracking-[0.1em] uppercase left-[60%] top-[18%] z-20 text-sable-100 text-shadow-md">Celle_ou_yadusable</div>
-                  </div>
+            <!-- Logo -->
+            <a href="/">
+                <div id="logo" class="flex-shrink-0">
+                    <div class="logo-preview">
+                        <div class="relative w-[80px] h-[80px] mt-6 rounded-full bg-cover bg-[center_30%] shadow-[0_5px_25px_rgba(0,0,0,0.15)]" style="background-image: url('/assets/images/celleouyadusable-logo.jpg');">
+                            <div class="absolute h-px w-[120%] bg-jungle-800/90 left-[35%] top-[calc(18%_+_0.7rem)] z-10 shadow-[1px_1px_3px_rgba(0,0,0,0.2)]"></div>
+                            <div class="absolute text-jungle-700 py-2 whitespace-nowrap font-['Montserrat'] font-normal text-[1.1rem] tracking-[0.1em] uppercase left-[60%] top-[18%] z-20 text-sable-100 text-shadow-md">Celle_ou_yadusable</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-          </a>
-
+            </a>
 
             <!-- Desktop Navigation -->
             <div class="hidden lg:flex items-center space-x-8">
                 <div class="flex items-baseline space-x-4">
                     
-                      
-                      
-                      <a href="/"
-                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
-                        ">
-                        ACCUEIL
-                      </a>
+                        
+
+                        
+                            <!-- Autres liens normaux -->
+                            <a href="/"
+                               class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                               
+                                   text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                               ">
+                                ACCUEIL
+                            </a>
+                        
                     
-                      
-                      
-                      <a href="/cours/"
-                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
-                        ">
-                        COURS
-                      </a>
+                        
+
+                        
+                            <!-- Menu Cours avec sous-menu -->
+                            <div class="relative group">
+                                <a href="/cours/"
+                                   class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2 flex items-center gap-1
+                                   
+                                       text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                                   ">
+                                    COURS
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </a>
+                                <!-- Sous-menu Cours avec padding invisible -->
+                                <div class="absolute left-0 top-full pt-2 min-w-[180px] z-30 hidden group-hover:block">
+                                    <div class="bg-white shadow-lg py-2">
+                                        <a href="/cours/vinyasa-yoga/" class="block px-4 py-2 text-neutral-800 hover:bg-jungle-50 transition-colors">Vinyasa Yoga</a>
+                                        <a href="/cours/yin-yoga/" class="block px-4 py-2 text-neutral-800 hover:bg-jungle-50 transition-colors">Yin Yoga</a>
+                                        <a href="/cours/planning-tarifs/" class="block px-4 py-2 text-neutral-800 hover:bg-jungle-50 transition-colors">Planning & Tarifs</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
                     
-                      
-                      
-                      <a href="/evenements/"
-                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
-                        ">
-                        ÉVÉNEMENTS
-                      </a>
+                        
+
+                        
+                            <!-- Menu Événements avec sous-menu -->
+                            <div class="relative group">
+                                <a href="/evenements/"
+                                   class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2 flex items-center gap-1
+                                   
+                                       text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                                   ">
+                                    ÉVÉNEMENTS
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                    </svg>
+                                </a>
+                                <!-- Sous-menu Événements avec padding invisible -->
+                                <div class="absolute left-0 top-full pt-2 min-w-[200px] z-30 hidden group-hover:block">
+                                    <div class="bg-white shadow-lg  py-2">
+                                        <a href="/evenements/retraites/" class="block px-4 py-2 text-neutral-800 hover:bg-jungle-50 transition-colors">Retraites</a>
+                                        <a href="/evenements/stages/" class="block px-4 py-2 text-neutral-800 hover:bg-jungle-50 transition-colors">Stages</a>
+                                        <a href="/evenements/workshops/" class="block px-4 py-2 text-neutral-800 hover:bg-jungle-50 transition-colors">Workshops</a>
+                                        <a href="/evenements/cercles-ceremonies/" class="block px-4 py-2 text-neutral-800 hover:bg-jungle-50 transition-colors">Cercles & Cérémonies</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        
                     
-                      
-                      
-                      <a href="/a-propos/"
-                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
-                        ">
-                        À PROPOS
-                      </a>
+                        
+
+                        
+                            <!-- Autres liens normaux -->
+                            <a href="/a-propos/"
+                               class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                               
+                                   text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                               ">
+                                À PROPOS
+                            </a>
+                        
                     
-                      
-                      
-                      <a href="/FAQ/"
-                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
-                        ">
-                        FAQ
-                      </a>
+                        
+
+                        
+                            <!-- Autres liens normaux -->
+                            <a href="/FAQ/"
+                               class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                               
+                                   text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                               ">
+                                FAQ
+                            </a>
+                        
                     
-                      
-                      
-                      <a href="/contact/"
-                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
-                        ">
-                        CONTACT
-                      </a>
+                        
+
+                        
+                            <!-- Autres liens normaux -->
+                            <a href="/contact/"
+                               class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                               
+                                   text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                               ">
+                                CONTACT
+                            </a>
+                        
                     
-                      
-                      
-                      <a href="/temoignages/"
-                        class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
                         
-                          text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
-                        ">
-                        TÉMOIGNAGES
-                      </a>
+                        
+
+                        
+                            <!-- Autres liens normaux -->
+                            <a href="/temoignages/"
+                               class="nav-link px-3 py-2 text-sm tracking-[1px] transition-colors border-b-2
+                               
+                                   text-sable-100 hover:text-jungle-800 border-transparent hover:border-jungle-300
+                               ">
+                                TÉMOIGNAGES
+                            </a>
+                        
                     
                 </div>
 
@@ -186,7 +242,6 @@
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
-
                     <a href="https://www.instagram.com/celle_ou_yadusable/"
                        target="_blank"
                        rel="noopener noreferrer"
@@ -201,7 +256,7 @@
             <!-- Mobile menu button -->
             <div class="lg:hidden">
                 <button type="button" id="mobile-menu-button"
-                        class="text-jungle-600 hover:text-jungle-800 focus:outline-none focus:text-jungle-800">
+                        class="text-sable-100 hover:text-jungle-800 focus:outline-none focus:text-sable-100">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -214,75 +269,120 @@
     <div class="lg:hidden hidden" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
             
-              
-              
-            <a href="/"
-               class="text-jungle-600 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
-               
-                  border-transparent
-               ">
-                ACCUEIL
-            </a>
+                
+                
+
+                
+                    <!-- Autres liens normaux -->
+                    <a href="/"
+                       class="text-neutral-800 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
+                       
+                           border-transparent
+                       ">
+                        ACCUEIL
+                    </a>
+                
             
-              
-              
-            <a href="/cours/"
-               class="text-jungle-600 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
-               
-                  border-transparent
-               ">
-                COURS
-            </a>
+                
+                
+
+                
+                    <!-- Cours mobile avec sous-menu -->
+                    <div>
+                        <a href="/cours/"
+                           class="text-neutral-800 hover:text-neutral-800 block px-3 py-2 text-base font-medium border-l-4
+                           
+                               border-transparent
+                           ">
+                            COURS
+                        </a>
+                        <div class="ml-4 space-y-1">
+                            <a href="/cours/vinyasa-yoga/" class="block px-3 py-2 text-neutral-800">Vinyasa Yoga</a>
+                            <a href="/cours/yin-yoga/" class="block px-3 py-2 text-neutral-800">Yin Yoga</a>
+                            <a href="/cours/planning-tarifs/" class="block px-3 py-2 text-neutral-800">Planning & Tarifs</a>
+                        </div>
+                    </div>
+
+                
             
-              
-              
-            <a href="/evenements/"
-               class="text-jungle-600 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
-               
-                  border-transparent
-               ">
-                ÉVÉNEMENTS
-            </a>
+                
+                
+
+                
+                    <!-- Événements mobile avec sous-menu -->
+                    <div>
+                        <a href="/evenements/"
+                           class="text-neutral-800 hover:text-neutral-800 block px-3 py-2 text-base font-medium border-l-4
+                           
+                               border-transparent
+                           ">
+                            ÉVÉNEMENTS
+                        </a>
+                        <div class="ml-4 space-y-1">
+                            <a href="/evenements/retraites/" class="block px-3 py-2 text-neutral-800">Retraites</a>
+                            <a href="/evenements/stages/" class="block px-3 py-2 text-neutral-800">Stages</a>
+                            <a href="/evenements/workshops/" class="block px-3 py-2 text-neutral-800">Workshops</a>
+                            <a href="/evenements/cercles-ceremonies/" class="block px-3 py-2 text-neutral-800">Cercles & Cérémonies</a>
+                        </div>
+                    </div>
+
+                
             
-              
-              
-            <a href="/a-propos/"
-               class="text-jungle-600 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
-               
-                  border-transparent
-               ">
-                À PROPOS
-            </a>
+                
+                
+
+                
+                    <!-- Autres liens normaux -->
+                    <a href="/a-propos/"
+                       class="text-neutral-800 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
+                       
+                           border-transparent
+                       ">
+                        À PROPOS
+                    </a>
+                
             
-              
-              
-            <a href="/FAQ/"
-               class="text-jungle-600 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
-               
-                  border-transparent
-               ">
-                FAQ
-            </a>
+                
+                
+
+                
+                    <!-- Autres liens normaux -->
+                    <a href="/FAQ/"
+                       class="text-neutral-800 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
+                       
+                           border-transparent
+                       ">
+                        FAQ
+                    </a>
+                
             
-              
-              
-            <a href="/contact/"
-               class="text-jungle-600 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
-               
-                  border-transparent
-               ">
-                CONTACT
-            </a>
+                
+                
+
+                
+                    <!-- Autres liens normaux -->
+                    <a href="/contact/"
+                       class="text-neutral-800 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
+                       
+                           border-transparent
+                       ">
+                        CONTACT
+                    </a>
+                
             
-              
-              
-            <a href="/temoignages/"
-               class="text-jungle-600 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
-               
-                  border-transparent
-               ">
-                TÉMOIGNAGES
-            </a>
+                
+                
+
+                
+                    <!-- Autres liens normaux -->
+                    <a href="/temoignages/"
+                       class="text-neutral-800 hover:text-jungle-800 block px-3 py-2 text-base font-medium border-l-4
+                       
+                           border-transparent
+                       ">
+                        TÉMOIGNAGES
+                    </a>
+                
             
 
             <!-- Réseaux sociaux mobile -->
@@ -297,7 +397,6 @@
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                         </svg>
                     </a>
-
                     <a href="https://www.instagram.com/celle_ou_yadusable/"
                        target="_blank"
                        rel="noopener noreferrer"
@@ -311,29 +410,24 @@
         </div>
     </div>
 </nav>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const navbar = document.querySelector('nav');
-  const heroSection = document.querySelector('section'); // Ta section hero
+  const heroSection = document.querySelector('section');
 
-  // Fonction pour gérer le scroll
   function handleScroll() {
     const heroHeight = heroSection.offsetHeight;
     const scrollPosition = window.scrollY;
 
     if (scrollPosition > heroHeight - 100) {
-      // Quand on sort de la hero : fond blanc + blur + ombre
       navbar.classList.add('scrolled');
     } else {
-      // Dans la hero : transparent
       navbar.classList.remove('scrolled');
     }
   }
 
-  // Écouter le scroll
   window.addEventListener('scroll', handleScroll);
-
-  // Vérifier au chargement
   handleScroll();
 });
 </script>
@@ -628,7 +722,7 @@ Téléphone : +33 6 01 28 30 70</p>
             <!-- Copyright -->
             <div class="text-center">
                 <p class="text-jungle-300 text-sm">
-                    © 2025 Celle où ya du sable - Made with 💚 by
+                    © 2025 Celle_ou_yadusable - Made with 💚 by
                     <a href="https://www.previsionweb.com"
                        target="_blank"
                        rel="noopener"
