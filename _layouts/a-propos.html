@@ -6,7 +6,7 @@ layout: accueil
 <section class="w-full h-96 sm:h-[calc(100vh-4rem)] overflow-hidden relative">
   {% if page.portrait_image %}
     <div class="bg-scroll sm:bg-fixed bg-center bg-cover h-full w-full"
-         style="background-image: url('{{ page.portrait_image | absolute_url }}');">
+         style="background-image: url('{{ page.portrait_image }}');">
     </div>
   {% endif %}
 
@@ -39,7 +39,7 @@ layout: accueil
 
 <!-- Contenu en dessous -->
 <div class="max-w-7xl mx-auto px-6 sm:px-8 md:px-20 lg:px-32 py-8">
-  <div class="[&>img]:!float-right [&>img]:!h-20 [&>img]:!max-h-32 [&>img]:rounded-lg [&>h3]:text-2xl [&>h3]:font-bold text-jungle-700 space-y-6 bg-white p-6 max-w-7xl mx-auto  sm:px-8   py-8">
+  <div class="[&>img]:!float-right [&>img]:!h-20 [&>img]:!max-h-32  [&>h3]:text-2xl [&>h3]:font-bold text-neutral-800 space-y-6 bg-white p-6 max-w-7xl mx-auto  sm:px-8   py-8">
     {{ content }}
   </div>
 </div>
