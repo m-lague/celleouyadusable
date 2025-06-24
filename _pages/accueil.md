@@ -42,5 +42,5 @@ contact_section:
   cta: "M'écrire sur What's app"
   phone: "+33 6 01 28 30 70"
   whatsapp_message: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. Merci"
-  background_image: "/assets/images/triptyque-celleouyadusable.jpg"
+  background_image: "/assets/images/celleouyadusable-vinyasa-yoga-posture-lacanau-et-costa-rica.jpg"
 ---
