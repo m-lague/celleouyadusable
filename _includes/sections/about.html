@@ -1,41 +1,29 @@
 <!-- Section About optimisée SEO -->
-<section class="bg-white mt-8">
-    <!-- En-tête de section -->
-    <header class="">
-
-    </header>
-
-    <!-- Image de présentation -->
-    <div class="relative h-64 sm:h-[600px] mb-16
-                bg-[url('{{ page.about_section.profile_image }}')]
-                bg-scroll sm:bg-fixed bg-cover bg-center bg-no-repeat"
-         role="img"
-         aria-label="Nathalie, professeure de yoga, en posture de méditation à Lacanau">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-8">
-                <h2 class="text-2xl md:text-4xl text-sable-100  mb-4 border-b-2 border-jungle-200 inline-block pb-2 pt-6">
-                    {{ page.about_section.title | default: "À propos de Nathalie" | upcase }}
-                </h2>
-            </div>
-        </div>
-        <!-- Image cachée pour l'accessibilité -->
+<section class="bg-[url('{{ page.about_section.profile_image }}')]
+                bg-scroll sm:bg-fixed bg-cover bg-center bg-no-repeat relative overflow-hidden h-screen">
+                <!-- Image cachée pour l'accessibilité -->
         {% if page.about_section.profile_image %}
         <img src="{{ page.about_section.profile_image }}"
              alt="Nathalie, professeure de yoga certifiée à Lacanau"
              class="sr-only">
         {% endif %}
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black opacity-25"></div>
 
+  <!-- Contenu -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-40">
+    <div class="flex flex-col justify-items-center mx-auto w-full sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-1/2 text-center">
 
-    </div>
-
-    <!-- Contenu principal -->
-    <article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <h1 class="text-balance text-2xl md:text-3xl text-neutral-50 mb-6 tracking-[11px] leading-12">
+        {{ page.about_section.title | upcase}}
+      </h1>
+      <article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 ">
         <div class="max-w-4xl mx-auto">
             {% assign about_page = site.pages | where: "slug", "a-propos" | first %}
 
             {% if page.url == "/" %}
                 <!-- Extrait pour la page d'accueil -->
-                <div class="[&>h3]:text-xl [&>h3]:sm:text-2xl [&>h3]:font-bold prose prose-base sm:prose-lg text-jungle-700 space-y-4 sm:space-y-6">
+                <div class="[&>h3]:text-xl [&>h3]:sm:text-2xl   text-neutral-50 space-y-4 sm:space-y-6">
                     {{ about_page.excerpt | markdownify }}
 
                     <!-- Call-to-action optimisé -->
@@ -43,33 +31,25 @@
                 </div>
             {% else %}
                 <!-- Contenu complet pour la page à propos -->
-                <div class="[&>h3]:text-xl [&>h3]:sm:text-2xl [&>h3]:font-bold prose prose-base sm:prose-lg text-jungle-700 space-y-4 sm:space-y-6">
+                <div class="text-neutral-50 [&>h3]:text-xl [&>h3]:sm:text-2xl [&>h3]:font-bold prose prose-base sm:prose-lg  space-y-4 sm:space-y-6">
                     {{ about_page.content | markdownify }}
                 </div>
             {% endif %}
         </div>
     </article>
-    <aside class="mt-6 sm:mt-8">
-                        <a href="/a-propos/"
-                           class="block"
-                           aria-label="En savoir plus sur le parcours et la philosophie de Nathalie">
-                            <div class="group cursor-pointer bg-gradient-to-r from-jungle-50 to-sable-50 px-4 py-6 sm:p-6  transition-all duration-300 hover:shadow-lg rounded-r-lg">
-                                <div class="flex items-center justify-between sm:justify-start sm:pl-32 lg:pl-56">
-                                    <div>
-                                        <h3 class="text-jungle-800 font-semibold mb-1 sm:mb-2 text-base sm:text-lg">
-                                            {{ page.about_section.cta | default: "Découvrir mon histoire" }}
-                                        </h3>
-                                        <p class="text-jungle-600 text-xs sm:text-sm">
-                                            {{ page.about_section.cta_subtitle | default: "Mon parcours et ma philosophie du yoga" }}
-                                        </p>
-                                    </div>
-                                    <div class="text-jungle-500 group-hover:text-sable-600 transition-colors ml-4" aria-hidden="true">
-                                        <svg class="w-5 h-5 sm:w-6 sm:h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </aside>
+    <div class="flex gap-4 justify-center tracking-[8px] pt-32">
+        {% include button.html
+            style="outline"
+            url="/cours/"
+            text=page.about_section.cta
+            icon=true %}
+      </div>
+      <p class=" text-jungle-600 mb-8 opacity-0">
+        {{ page.about_section.cta_subtitle }}
+      </p>
+
+
+    </div>
+  </div>
+
 </section>
