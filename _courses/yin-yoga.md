@@ -8,7 +8,8 @@ start_price: 20
 cta_title: "Prêt(e) à commencer votre pratique ?"
 cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."
 cta_text: "Me contacter"
-image: "/assets/images/vinyasa-yoga.jpeg"
+images:
+  - "/assets/images/vinyasa-yoga.jpeg"
 benefits:
   - "Relaxation profonde"
   - "Amélioration de la souplesse"
