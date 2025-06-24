@@ -1,5 +1,6 @@
 <!-- Section About optimisée SEO -->
 <section class="bg-[url('{{ page.about_section.profile_image }}')]
+                sm:bg-[url('{{ page.about_section.profile_image_sm }}')]
                 bg-scroll sm:bg-fixed bg-cover bg-center bg-no-repeat relative overflow-hidden h-screen">
                 <!-- Image cachée pour l'accessibilité -->
         {% if page.about_section.profile_image %}
@@ -8,7 +9,7 @@
              class="sr-only">
         {% endif %}
   <!-- Overlay -->
-  <div class="absolute inset-0 bg-black opacity-25"></div>
+  <div class="absolute inset-0 bg-black opacity-20"></div>
 
   <!-- Contenu -->
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-40">
