@@ -9,6 +9,7 @@ cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre pr
 cta_text: "Me contacter"
 images:
   - "/assets/images/celleouyadusable-vinyasa-yoga-lacanau-costa-rica.jpg"
+  - "/assets/images/celleouyadusable-vinyasa-yoga-posture-lacanau-et-costa-rica.jpg"
 benefits:
   - "Renforcement musculaire"
   - "Amélioration de la flexibilité"
