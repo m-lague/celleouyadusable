@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (isHomePage) {
     // Page d'accueil : comportement avec hero
-    const heroSection = document.querySelector('section');
+    const heroSection = document.getElementById('hero'); // Sélection par ID
 
     function handleHomeScroll() {
       const heroHeight = heroSection.offsetHeight;
@@ -149,14 +149,17 @@ document.addEventListener('DOMContentLoaded', function() {
         navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.24)';
         navbar.style.backdropFilter = 'blur(10px)';
         navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+
         navLinks.forEach(link => {
           link.style.color = 'oklch(20.5% 0 0)';
         });
+
       } else {
         // Style transparent
         navbar.style.backgroundColor = 'transparent';
         navbar.style.backdropFilter = 'none';
         navbar.style.boxShadow = 'none';
+
         navLinks.forEach(link => {
           link.style.color = '';
         });
@@ -171,12 +174,14 @@ document.addEventListener('DOMContentLoaded', function() {
     navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.32)';
     navbar.style.backdropFilter = 'blur(4px)';
     navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+
     navLinks.forEach(link => {
       link.style.color = 'oklch(20.5% 0 0)';
     });
   }
 });
 </script>
+
 
 
 
