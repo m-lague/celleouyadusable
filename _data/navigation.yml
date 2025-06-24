@@ -4,11 +4,11 @@ main:
   - name: "COURS"
     sub_nav:
       - name: "Vinyasa Yoga"
-        url: "/vinyasa-yoga/"
+        url: "/cours/vinyasa-yoga/"
       - name: "Yin Yoga"
-        url: "/yin-yoga/"
+        url: "/cours/yin-yoga/"
       - name: "Planning & Tarifs"
-        url: "/planning-tarifs/"
+        url: "/cours/planning-tarifs/"
   - name: "ÉVÉNEMENTS"
     sub_nav:
       - name: "Retraites"

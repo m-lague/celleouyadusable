@@ -132,31 +132,52 @@
     }
   </script>
  <script>
-window.addEventListener('scroll', function() {
+document.addEventListener('DOMContentLoaded', function() {
   const navbar = document.querySelector('nav');
-  const heroSection = document.querySelector('section'); // Ta première section (hero)
   const navLinks = navbar.querySelectorAll('.nav-link');
-  // Calculer la hauteur de la hero
-  const heroHeight = heroSection.offsetHeight;
+  const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
 
-  // Déclencher quand on dépasse la hero (avec un petit offset)
-  if (window.scrollY > heroHeight - 80) {
-    navbar.style.backgroundColor = 'transparent';
-    navbar.style.backdropFilter = 'blur(2px)';
+  if (isHomePage) {
+    // Page d'accueil : comportement avec hero
+    const heroSection = document.querySelector('section');
+
+    function handleHomeScroll() {
+      const heroHeight = heroSection.offsetHeight;
+
+      if (window.scrollY > heroHeight - 80) {
+        // Style "scrollé"
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.24)';
+        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        navLinks.forEach(link => {
+          link.style.color = 'oklch(20.5% 0 0)';
+        });
+      } else {
+        // Style transparent
+        navbar.style.backgroundColor = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = 'none';
+        navLinks.forEach(link => {
+          link.style.color = '';
+        });
+      }
+    }
+
+    window.addEventListener('scroll', handleHomeScroll);
+    handleHomeScroll(); // Vérifier au chargement
+
+  } else {
+    // Autres pages : toujours en mode "scrollé"
+    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.32)';
+    navbar.style.backdropFilter = 'blur(4px)';
     navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
     navLinks.forEach(link => {
-      link.style.color = 'oklch(20.5% 0 0)'; // Mets la couleur que tu veux
-    });
-  } else {
-    navbar.style.backgroundColor = 'transparent';
-    navbar.style.backdropFilter = 'none';
-    navbar.style.boxShadow = 'none';
-    navLinks.forEach(link => {
-      link.style.color = ''; // Mets la couleur que tu veux
+      link.style.color = 'oklch(20.5% 0 0)';
     });
   }
 });
 </script>
+
 
 
 

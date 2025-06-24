@@ -1,4 +1,5 @@
 ---
+permalink: "/cours/yin-yoga/"
 title: "Yin Yoga"
 style: "Yin"
 duration: "60-75 minutes"

@@ -12,8 +12,8 @@ locale: fr_FR
 # Collections
 collections:
   courses:
-    output: false
-    permalink: /:collection/:name/
+    output: true
+    permalink: /cours/:name/
   events:
     output: true
     permalink: /evenement/:name/
@@ -37,6 +37,11 @@ defaults:
       type: "events"
     values:
       layout: "event"
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "course"
 
 
 # Plugins
