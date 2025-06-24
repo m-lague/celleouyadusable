@@ -12,57 +12,43 @@ layout: default
         </div>
 
         <div class="space-y-12">
-            {% for course in site.courses %}
-            <!-- Présentation alternée des cours -->
-            {% assign mod = forloop.index0 | modulo: 2 %}
-            <article id="{{course.style}}" class="flex flex-col lg:flex-row {% if mod == 1 %}lg:flex-row-reverse{% endif %} bg-gradient-to-br from-jungle-50 to-sable-50 overflow-hidden shadow-lg hover:shadow-xl transition-shadow rounded-lg">
+
+
+            <article id="{{course.style}}" class="flex flex-col gap-4 lg:flex-row  overflow-hidden">
 
                 <!-- Image du cours -->
-                {% if course.image %}
+                {% if page.images %}
+
                 <div class="w-full lg:w-1/2">
-                    <img src="{{ course.image }}"
-                         alt="{{ course.title }}"
-                         class="w-full h-64 lg:h-full object-cover">
+                    <img src="{{ page.images | first }}"
+                         alt="{{ page.title }}"
+                         class="w-full h-96 lg:h-full object-cover">
                 </div>
                 {% endif %}
 
                 <!-- Contenu du cours -->
-                <div class="w-full lg:w-1/2 p-8 flex flex-col justify-center">
-                    <h3 class="text-2xl lg:text-3xl font-bold text-jungle-800 mb-6 text-center">{{ course.title }}</h3>
-
-                    <!-- Tags niveau et style -->
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        {% if course.level %}
-                        <span class="inline-block bg-jungle-200 text-jungle-800 px-3 py-1 rounded-full text-sm font-medium">
-                            {{ course.level }}
-                        </span>
-                        {% endif %}
-                        {% if course.style %}
-                        <span class="inline-block bg-sable-200 text-sable-800 px-3 py-1 rounded-full text-sm font-medium">
-                            {{ course.style }}
-                        </span>
-                        {% endif %}
-                    </div>
+                <div class="w-full lg:w-1/2 sm:p-8 flex flex-col justify-center">
+                    <h3 class="text-2xl lg:text-3xl  text-neutral-800 mb-6 text-center">{{ page.title | upcase}}</h3>
 
                     <!-- Description -->
-                    <div class="prose prose-jungle mb-6 max-w-none [&>h4]:text-jungle-800 [&>h4]:font-semibold [&>h4]:my-2 [&>h4]:text-center">
-                      {{ course.content | markdownify }}
+                    <div class="prose prose-jungle mb-6 max-w-none [&>h4]:text-neutral-800 [&>h4]:font-semibold [&>h4]:my-2 [&>h4]:text-center">
+                      {{ page.content | markdownify }}
                     </div>
 
 
                     <!-- Informations pratiques -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                        {% if course.duration %}
-                        <div class="flex items-center text-jungle-600">
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        {% if page.duration %}
+                        <div class="flex items-center text-neutral-400">
                             <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
-                            <span>{{ course.duration }}</span>
+                            <span>{{ page.duration }}</span>
                         </div>
                         {% endif %}
 
-                        {% if course.start_price %}
-                        <div class="flex items-center text-jungle-600">
+                        {% if page.start_price %}
+                        <div class="flex items-center text-neutral-400">
                             <!-- Icône  -->
                           <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
@@ -70,36 +56,36 @@ layout: default
 
 
 
-                            <span class="font-semibold">À partir de {{ course.start_price }}€</span>
+                            <span class="">À partir de {{ page.start_price }}€</span>
                         </div>
                         {% endif %}
 
-                        {% if course.location %}
+                        {% if page.location %}
                         <div class="flex items-center text-jungle-600">
                             <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
-                            <span>{{ course.location }}</span>
+                            <span>{{ page.location }}</span>
                         </div>
                         {% endif %}
 
-                        {% if course.schedule %}
+                        {% if page.schedule %}
                         <div class="flex items-center text-jungle-600">
                             <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                             </svg>
-                            <span>{{ course.schedule }}</span>
+                            <span>{{ page.schedule }}</span>
                         </div>
                         {% endif %}
                     </div>
 
                     <!-- Bénéfices -->
-                    {% if course.benefits %}
+                    {% if page.benefits %}
                     <div>
-                        <h3 class="text-lg font-semibold text-jungle-800 mb-3">Bénéfices</h3>
-                        <ul class="text-jungle-600 space-y-2">
-                            {% for benefit in course.benefits %}
+                        <h3 class="text-lg font-semibold text-neutral-800 mb-3">Bénéfices</h3>
+                        <ul class=" space-y-2">
+                            {% for benefit in page.benefits %}
                             <li class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
@@ -112,23 +98,26 @@ layout: default
                     {% endif %}
                 </div>
             </article>
-            {% endfor %}
+
         </div>
     </div>
 </section>
+<div class="flex justify-center pb-8 md:px-8">
+<img src="/assets/images/celleouyadusable-vinyasa-yoga-posture-lacanau-et-costa-rica.jpg" alt="" class="w-9/10 center">
+</div>
 
 <!-- Section CTA -->
-<section class="py-16 bg-gradient-to-r from-jungle-600 to-sable-500">
+<section class="py-16 ">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">
-            {{page.cta_title}}
+        <h2 class="text-2xl  mb-4">
+            {{page.cta_title | upcase}}
         </h2>
-        <p class="text-xl text-white opacity-90 mb-8">
+        <p class="text-xl opacity-90 mb-8">
             {{page.cta_subtitle}}
         </p>
         <a href="/contact/"
-           class="inline-block bg-white text-jungle-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-jungle-50 transition-colors">
-            {{page.cta_text}}
+           class="inline-block bg-white text-neutral-700 px-8 py-4 text-lg border hover:border-sable-300 hover:text-white font-semibold hover:bg-sable-300 transition-colors">
+            {{page.cta_text }}
         </a>
     </div>
 </section>

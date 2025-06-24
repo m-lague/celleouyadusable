@@ -4,7 +4,11 @@ style: "Vinyasa"
 duration: "60-75 minutes"
 level: "Tous niveaux"
 start_price: 20
-image: "/assets/images/vinyasa-yoga.jpeg"
+cta_title: "Prêt(e) à commencer votre pratique ?"
+cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."
+cta_text: "Me contacter"
+images:
+  - "/assets/images/celleouyadusable-vinyasa-yoga-lacanau-costa-rica.jpg"
 benefits:
   - "Renforcement musculaire"
   - "Amélioration de la flexibilité"
@@ -85,6 +89,8 @@ Le Vinyasa est un yoga dynamique qui synchronise mouvement et respiration dans u
 #### Qu'est-ce que le Vinyasa ?
 
 Le Vinyasa Yoga est caractérisé par des transitions fluides entre les postures, guidées par la respiration. Chaque mouvement est synchronisé avec une inspiration ou une expiration, créant une méditation en mouvement.
+
+![posture de yoga vinyasa par celleouyadasable](/assets/images/celleouyadusable-posture-vinyasa-yoga-lacanau-costa-rica.jpg)
 
 #### Déroulement d'un cours
 
