@@ -5,6 +5,7 @@
 {% assign button_text = include.text | default: "Bouton" %}
 {% assign button_icon = include.icon | default: false %}
 {% assign button_target = include.target | default: "_self" %}
+{% assign button_color = include.color | default: "sable-100" %}
 
 {% if button_style == "primary" %}
     <!-- Bouton principal hero (taille réduite) -->
@@ -45,9 +46,9 @@
     <!-- Bouton outline -->
     <a href="{{ button_url }}"
        target="{{ button_target }}"
-       class="group inline-flex items-center justify-center px-6 py-3 border-2 border-sable-100 text-sable-100  hover:bg-sable-600 hover:text-white hover:border-sable-600 transition-all duration-300 shadow-md hover:shadow-lg">
+       class="group inline-flex items-center justify-center px-6 py-3 border-2 border-{{button_color}} text-{{button_color}}  hover:bg-sable-600 hover:text-white hover:border-sable-600 transition-all duration-300 shadow-md hover:shadow-lg">
 
-        <span>{{ button_text }}</span>
+        <span>{{ button_text | upcase}}</span>
 
         {% if button_icon %}
         <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -22,20 +22,20 @@
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 pt-40">
     <div class="flex flex-col justify-items-center mx-auto w-full sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-1/2 text-center">
 
-        <h1 class="text-balance text-2xl md:text-3xl text-neutral-50 mb-6 tracking-[11px] leading-12">
-          {{ page.hero.title }}
-        </h1>
+      <h1 class="text-balance text-2xl md:text-3xl text-neutral-50 mb-6 tracking-[11px] leading-12">
+        {{ page.hero.title }}
+      </h1>
 
-        <p class=" text-jungle-600 mb-8 opacity-0">
-          {{ page.hero.subtitle }}
-        </p>
-        <div class="flex gap-4 justify-center tracking-[8px] pt-32">
-          {% include button.html
-              style="outline"
-              url="/cours/"
-              text= page.hero.cta
-              icon=true %}
-        </div>
+      <p class=" text-jungle-600 mb-8 opacity-0">
+        {{ page.hero.subtitle }}
+      </p>
+      <div class="flex gap-4 justify-center tracking-[8px] pt-32">
+        {% include button.html
+            style="outline"
+            url="/cours/"
+            text= page.hero.cta
+            icon=true %}
+      </div>
 
     </div>
   </div>

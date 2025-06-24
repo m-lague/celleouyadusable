@@ -135,11 +135,12 @@
 document.addEventListener('DOMContentLoaded', function() {
   const navbar = document.querySelector('nav');
   const navLinks = navbar.querySelectorAll('.nav-link');
+  const petitTrait = navbar.querySelector('.absolute.h-px.w-\\[120\\%\\]'); // Sélectionne le petit trait
   const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
 
   if (isHomePage) {
     // Page d'accueil : comportement avec hero
-    const heroSection = document.getElementById('hero'); // Sélection par ID
+    const heroSection = document.getElementById('hero');
 
     function handleHomeScroll() {
       const heroHeight = heroSection.offsetHeight;
@@ -154,6 +155,11 @@ document.addEventListener('DOMContentLoaded', function() {
           link.style.color = 'oklch(20.5% 0 0)';
         });
 
+        // Changer la couleur du petit trait
+        if (petitTrait) {
+          petitTrait.style.backgroundColor = 'oklch(20.5% 0 0)';
+        }
+
       } else {
         // Style transparent
         navbar.style.backgroundColor = 'transparent';
@@ -163,11 +169,16 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.forEach(link => {
           link.style.color = '';
         });
+
+        // Remettre la couleur originale du petit trait
+        if (petitTrait) {
+          petitTrait.style.backgroundColor = '';
+        }
       }
     }
 
     window.addEventListener('scroll', handleHomeScroll);
-    handleHomeScroll(); // Vérifier au chargement
+    handleHomeScroll();
 
   } else {
     // Autres pages : toujours en mode "scrollé"
@@ -178,9 +189,15 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
       link.style.color = 'oklch(20.5% 0 0)';
     });
+
+    // Petit trait en mode scrollé sur les autres pages
+    if (petitTrait) {
+      petitTrait.style.backgroundColor = 'oklch(20.5% 0 0)';
+    }
   }
 });
 </script>
+
 
 
 
