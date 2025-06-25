@@ -1,80 +1,83 @@
-<article class="bg-[url('{{ event.image }}')] bg-cover bg-center overflow-hidden transition-shadow relative group cursor-pointer">
-
-  <!-- Overlay invisible pour le clic -->
-  <a href="{{ event.url }}" class="absolute inset-0 z-20" aria-label="Voir l'événement {{ event.title }}">
-    <span class="sr-only">Voir l'événement {{ event.title }}</span>
-  </a>
+<article class="bg-[url('{{ event.image }}')] bg-cover bg-center overflow-hidden transition-shadow relative group">
 
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black opacity-25 z-10"></div>
 
-  <div class="p-6 relative z-30">
-    <div class="flex items-center justify-between mb-4">
+  <!-- Zone cliquable (tout sauf le bouton) -->
+  <div class="absolute inset-0 z-20 pointer-events-none">
+    <a href="{{ event.url }}" class="absolute inset-0 pointer-events-auto" aria-label="Voir l'événement {{ event.title }}">
+      <span class="sr-only">Voir l'événement {{ event.title }}</span>
+    </a>
+  </div>
 
+  <div class="p-6 relative z-30 pointer-events-none">
+    <!-- Contenu non-cliquable -->
+    <div class="pointer-events-none">
+      <h3 class="text-xl text-white text-shadow-lg mb-3">{{ event.title  | upcase}}</h3>
+
+      <div class="prose  mb-4 [&>p]:text-white [&>p]:mb-2 [&>p]:leading-relaxed [&>p]:text-md [&>p]:max-w-none [&>p]:text-shadow-lg">
+        {{ event.content | truncate: 150 }}
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 mb-4 text-sm text-white text-shadow-lg">
+        <div class="flex items-center text-white text-shadow-md">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          <span class="">{{ event.event_date | date: "%d %B %Y" }}</span>
+        </div>
+
+        {% if event.duration %}
+        <div class="flex items-center text-white text-shadow-lg">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          {{ event.duration }}
+        </div>
+        {% endif %}
+
+        {% if event.location %}
+        <div class="flex items-center text-white text-shadow-lg">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          {{ event.location }}
+        </div>
+        {% endif %}
+
+        {% if event.prices.standard %}
+        <div class="flex items-center text-white text-shadow-lg">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+          </svg>
+          À partir de {{ event.prices.early_bird | default: event.prices.standard }}€
+        </div>
+        {% endif %}
+
+        {% if event.participants_max %}
+        <div class="flex items-center text-white text-shadow-lg">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          Max {{ event.participants_max }} personnes
+        </div>
+        {% endif %}
+      </div>
     </div>
 
-    <h3 class="text-xl text-sable-100 mb-3">{{ event.title  | upcase}}</h3>
-
-    <div class="prose  mb-4 [&>p]:text-sable-100 [&>p]:mb-2 [&>p]:leading-relaxed [&>p]:text-md [&>p]:max-w-none">
-      {{ event.content | truncate: 150 }}
-    </div>
-
-    <div class="grid grid-cols-2 gap-3 mb-4 text-sm text-sable-100">
-      <div class="flex items-center text-sable-100">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-        </svg>
-        <span class="">{{ event.event_date | date: "%d %B %Y" }}</span>
-      </div>
-      {% if event.duration %}
-      <div class="flex items-center">
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-        </svg>
-        {{ event.duration }}
-      </div>
-      {% endif %}
-
-      {% if event.location %}
-      <div class="flex items-center">
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-        </svg>
-        {{ event.location }}
-      </div>
-      {% endif %}
-
-      {% if event.prices.standard %}
-      <div class="flex items-center">
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
-        </svg>
-        À partir de {{ event.prices.early_bird | default: event.prices.standard }}€
-      </div>
-      {% endif %}
-
-      {% if event.participants_max %}
-      <div class="flex items-center">
-        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-        </svg>
-        Max {{ event.participants_max }} personnes
-      </div>
-      {% endif %}
-    </div>
-
-    <div class="text-center relative z-40 tracking-[8px]">
+    <!-- Zone du bouton réactivée -->
+    <div class="text-center relative z-40 tracking-[8px] pointer-events-auto">
       <a href="https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement {{ event.title | url_encode }} du {{ event.event_date | date: '%d %B %Y' | url_encode }}"
        target="_blank"
-       class="group inline-flex items-center justify-center px-6 py-3 border-2 border-sable-100 text-sable-100  hover:bg-sable-600 hover:text-white hover:border-sable-600 transition-all duration-300 shadow-md hover:shadow-lg">
+       class="group inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-sable-600 hover:border-sable-600 transition-all duration-300 shadow-md hover:shadow-lg">
 
         <span>{{ page.cta_text | upcase}}</span>
         <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>
 
-    </a>
+      </a>
     </div>
   </div>
 </article>
