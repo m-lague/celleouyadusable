@@ -1,0 +1,73 @@
+---
+layout: default
+title: "Workshops Yoga à Lacanau"
+description: "Découvrez les retraites, ateliers et événements spéciaux organisés par Nathalie à Lacanau et dans la région."
+permalink: /workshops/
+page_title: "Workshops"
+page_subtitle: "Participez à des moments privilégiés pour approfondir votre pratique du yoga. Retraites, ateliers thématiques et événements spéciaux vous attendent."
+cta_text: "S'inscrire"
+upcoming_workshops_title: "Workshops à venir"
+past_workshops_title: "Workshops passés"
+---
+
+{% assign upcoming_workshops = site.events | where_exp: "event", "event.event_date >= site.time" | where: "type", "Workshop" | sort: "event_date" %}
+{% assign past_workshops = site.events | where_exp: "event", "event.event_date < site.time" | where: "type", "Workshop" | sort: "event_date" %}
+
+
+<!-- Workshops à venir -->
+{% if upcoming_workshops.size > 0 %}
+<section class="pt-22 pb-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl  text-neutral-800 mb-4 inline-block pb-2">{{page.upcoming_workshops_title | upcase}}</h2>
+      </div>
+        <div class="grid grid-cols-1
+                                      {% case upcoming_workshops.size %}
+                                        {% when 1 %}
+                                          lg:grid-cols-1
+                                        {% when 2 %}
+                                          lg:grid-cols-2
+                                        {% else %}
+                                          lg:grid-cols-3
+                                        {% endcase %}
+                                        gap-8">
+            {% for event in upcoming_workshops %}
+              {% include card.html %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% else %}
+<section class="pt-22 pb-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl text-neutral-800 mb-4  inline-block pb-2">{{page.upcoming_workshops_title | upcase}}</h2>
+      </div>
+        <p class="text-center text-neutral-600">Aucun workshop à venir pour le moment. Restez à l'écoute pour les prochaines annonces !</p>
+    </div>
+</section>
+{% endif %}
+<!-- Workshops passés -->
+{% if past_workshops.size > 0 %}
+<section class="pt-16 pb-8 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl  text-neutral-800 mb-4  inline-block pb-2">{{page.past_workshops_title | upcase}}</h2>
+      </div>
+        <div class="grid grid-cols-1
+                                      {% case upcoming_workshops.size %}
+                                        {% when 1 %}
+                                          lg:grid-cols-1
+                                        {% when 2 %}
+                                          lg:grid-cols-2
+                                        {% else %}
+                                          lg:grid-cols-3
+                                        {% endcase %}
+                                        gap-8">
+            {% for event in upcoming_workshops %}
+              {% include card.html %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
