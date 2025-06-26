@@ -4,7 +4,7 @@ description: "Cours de Hatha et Yin Yoga avec Nathalie à Lacanau. Découvrez la
 baseurl: ""
 url: "https://celle-ou-yadusable.com"
 author: "Nathalie - Professeure de Yoga"
-
+future: true
 # SEO
 lang: fr
 locale: fr_FR
