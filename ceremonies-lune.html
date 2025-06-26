@@ -1,17 +1,17 @@
 ---
 layout: default
-title: "Cérémonies Cacao à Lacanau"
-description: "Découvrez les Cérémonies Cacao organisés par Nathalie à Lacanau Océan et dans la région."
-permalink: /ceremonies-cacao/
-page_title: "Cérémonie Cacao"
-page_subtitle: "Participez aux Cérémonies Cacao organisées dans un cadre naturel à Lacanau Océan."
+title: "Cérémonies de lune à Lacanau océan"
+description: "Découvrez les Cérémonies de Lune organisés par Nathalie à Lacanau Océan et dans la région."
+permalink: /ceremonies-lune/
+page_title: "Cérémonie de Lune"
+page_subtitle: "Participez aux Cérémonies de Lune organisées dans un cadre naturel à Lacanau Océan."
 cta_text: "S'inscrire"
 upcoming_ceremonies_title: "Cérémonies à venir"
 past_ceremonies_title: "Cérémonies passées"
 ---
 
-{% assign upcoming_ceremonies = site.ceremonie_cacao | where_exp: "event", "event.event_date >= site.time" | where: "type", "Cérémonie de Lune" | sort: "event_date" %}
-{% assign past_ceremonies = site.ceremonie_cacao | where_exp: "event", "event.event_date < site.time" | where: "type", "Cérémonie de Lune" | sort: "event_date" %}
+{% assign upcoming_ceremonies = site.ceremonie_lune | where_exp: "event", "event.event_date >= site.time" | where: "type", "Cérémonie de Lune" | sort: "event_date" %}
+{% assign past_ceremonies = site.ceremonie_lune | where_exp: "event", "event.event_date < site.time" | where: "type", "Cérémonie de Lune" | sort: "event_date" %}
 
 
 <!-- Cerémonies à venir -->

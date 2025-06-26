@@ -17,9 +17,9 @@ collections:
   events:
     output: true
     permalink: /evenement/:name/
-  ceremonie_cacao:  # Nouvelle collection dédiée
+  ceremonie_lune:  # Nouvelle collection dédiée
     output: true
-    permalink: /ceremonie-cacao/:day-:month-:year/
+    permalink: /ceremonie-lune/:day-:month-:year/
   pages:
     output: true
     permalink: /:name/
@@ -42,7 +42,7 @@ defaults:
       layout: "event"
   - scope:
       path: ""
-      type: "ceremonie_cacao"
+      type: "ceremonie_lune"
     values:
       layout: "event"
   - scope:
