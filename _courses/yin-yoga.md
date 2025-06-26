@@ -9,7 +9,8 @@ cta_title: "Prêt(e) à commencer votre pratique ?"
 cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."
 cta_text: "Me contacter"
 images:
-  - "/assets/images/vinyasa-yoga.jpeg"
+  - "/assets/images/celleouyadusable-cours-yin-yoga-lacanau.jpeg"
+  - "/assets/images/celleouyadusable-cours-yin-yoga-lacanau-3.jpeg"
 benefits:
   - "Relaxation profonde"
   - "Amélioration de la souplesse"
@@ -52,6 +53,8 @@ planning_creneaux:
 ---
 
 Le Yin Yoga est une pratique douce et méditative qui invite à la lenteur et à l'introspection. Les postures sont maintenues pendant plusieurs minutes pour permettre un étirement profond des tissus conjonctifs.
+
+!["cours de yin yoga à lacanau - celle_ou_yadusable"](/assets/images/celleouyadusable-cours-yin-yoga-lacanau-2.jpeg)
 
 #### Qu'est-ce que le Yin Yoga ?
 
