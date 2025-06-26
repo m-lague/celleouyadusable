@@ -79,7 +79,7 @@ layout: default
 
                 </div>
                 <!-- Bouton d'inscription -->
-                 <a href="https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement {{ page.title | url_encode }} du {{ page.event_date | date: '%d %B %Y' | url_encode }}"
+                 <a href="https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement {{ page.title | url_encode }} du {{ page.event_date | date: '%d %B %Y' | url_encode }}. Merci à bientôt"
                            target="_blank"
                            rel="noopener noreferrer"
                            class=" mt-16 group inline-flex items-center justify-center px-6 py-3 border-2 border-white tracking-[8px] text-white hover:bg-sable-600 hover:border-sable-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
@@ -284,7 +284,7 @@ layout: default
                                 {% endif %}
                             </div>
                             {% endfor %}
-                            
+
                             {% endif %}
                         </div>
                     </div>
