@@ -1,6 +1,6 @@
 ---
-title: "Cérémonie Cacao"
-type: "Cérémonie Cacao"
+title: "Cérémonie de Lune"
+type: "Cérémonie de Lune"
 event_date: 2025-07-23T20:00:00+02:00
 date: 2025-07-23T20:00:00+02:00
 duration: "de 20h à 22h30"
@@ -12,7 +12,7 @@ prices:
 early_bird_deadline: 2025-07-16
 location: "LACANAU-OCÉAN, Sur le magic deck de @boandcosurf"
 participants_max: 8
-image: "/assets/images/celleouyadusable-retraite-yoga-costa-rica.jpeg"
+image: "/assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean.jpeg"
 level: "Tous niveaux"
 booking_infos: "SPOTS LIMITÉS! Book ton spot!"
 ---
@@ -28,3 +28,5 @@ MOON MEDITATION
 SOUNDS HEALING
 
 Prendre avec soi tapis de yoga si tu as, éléments chauds, plaid, sweet, chaussettes
+
+!["celleouyadusable jouant du tambour chamanique sur la dune"](/assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean-2.jpeg)

@@ -1,7 +1,7 @@
 {% assign upcoming_events = site.events | where_exp: "event", "event.date >= site.time" | sort: "date" %}
 
         {% if upcoming_events.size > 0 %}
-        {% assign next_event = upcoming_events.first %}
+        {% assign next_event = upcoming_events.last %}
         <section class=" w-full h-screen py-8 sm:px-24 bg-[url({{next_event.image}})] bg-no-repeat bg-cover bg-center relative overflow-hidden">
 
           <!-- Overlay -->
