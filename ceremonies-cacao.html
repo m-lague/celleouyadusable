@@ -10,8 +10,8 @@ upcoming_ceremonies_title: "Cérémonies à venir"
 past_ceremonies_title: "Cérémonies passées"
 ---
 
-{% assign upcoming_ceremonies = site.events | where_exp: "event", "event.event_date >= site.time" | where: "type", "Céremonie Cacao" | sort: "event_date" %}
-{% assign past_ceremonies = site.events | where_exp: "event", "event.event_date < site.time" | where: "type", "Cérémonie Cacao" | sort: "event_date" %}
+{% assign upcoming_ceremonies = site.ceremonie_cacao | where_exp: "event", "event.event_date >= site.time" | where: "type", "Cérémonie Cacao" | sort: "event_date" %}
+{% assign past_ceremonies = site.ceremonie_cacao | where_exp: "event", "event.event_date < site.time" | where: "type", "Cérémonie Cacao" | sort: "event_date" %}
 
 
 <!-- Cerémonies à venir -->
@@ -64,7 +64,7 @@ past_ceremonies_title: "Cérémonies passées"
                                           lg:grid-cols-3
                                         {% endcase %}
                                         gap-8">
-            {% for event in upcoming_ceremonies %}
+            {% for event in past_ceremonies %}
               {% include card.html %}
             {% endfor %}
         </div>

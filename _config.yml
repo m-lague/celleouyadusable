@@ -2,7 +2,7 @@
 title: "Celle où ya du sable - Yoga à Lacanau"
 description: "Cours de Hatha et Yin Yoga avec Nathalie à Lacanau. Découvrez la sérénité à travers des pratiques douces et ressourçantes."
 baseurl: ""
-url: "https://celle-ou-yadusable.fr"
+url: "https://celle-ou-yadusable.com"
 author: "Nathalie - Professeure de Yoga"
 
 # SEO
@@ -17,6 +17,9 @@ collections:
   events:
     output: true
     permalink: /evenement/:name/
+  ceremonie_cacao:  # Nouvelle collection dédiée
+    output: true
+    permalink: /ceremonie-cacao/:day-:month-:year/
   pages:
     output: true
     permalink: /:name/
@@ -35,6 +38,11 @@ defaults:
   - scope:
       path: ""
       type: "events"
+    values:
+      layout: "event"
+  - scope:
+      path: ""
+      type: "ceremonie_cacao"
     values:
       layout: "event"
   - scope:
