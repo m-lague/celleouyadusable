@@ -4,7 +4,9 @@ type: "Retraite"
 event_date: 2025-10-02T09:00:00+02:00
 duration: "4 jours"
 prices:
-  standard: 860
+  standard:
+    - amount: 860
+      details: "Tarif standard"
   early_bird: 790
 early_bird_deadline: 2025-08-15
 location: "Lacanau océan"
