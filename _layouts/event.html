@@ -260,7 +260,7 @@ layout: default
                     {% if page.prices %}
                     <div class="bg-white p-4 mb-6">
                         <div class="text-center">
-                            <div class="text-md  mb-2">{{ layout.price_label | default: "Tarifs" }}</div>
+                            <div class="text-md  mb-2">Tarifs</div>
 
                             <!-- Tarif Early Bird -->
                             {% if page.prices.early_bird %}
@@ -275,13 +275,16 @@ layout: default
 
                             <!-- Tarif Standard -->
                             {% if page.prices.standard %}
+                            {% for price in page.prices.standard %}
                             <div>
-                                <div class="text-2xl font-bold text-jungle-800">{{ page.prices.standard }}€</div>
-                                <div class="text-xs text-jungle-600">{{ layout.standard_price_label | default: "Tarif standard" }}</div>
+                                <div class="text-2xl font-bold text-jungle-800">{{ price.amount }}€</div>
+                                <div class="text-xs text-jungle-600">{{ price.details | default:"Tarif standard"}}</div>
                                 {% if page.price_details %}
                                 <div class="text-sm text-jungle-600 mt-1">{{ page.price_details }}</div>
                                 {% endif %}
                             </div>
+                            {% endfor %}
+                            
                             {% endif %}
                         </div>
                     </div>
@@ -295,7 +298,7 @@ layout: default
                            class="w-full group inline-flex items-center justify-center px-6 py-3 border-2 border-neutral-700 tracking-[8px] text-neutral-700 hover:bg-sable-600 hover:border-sable-600 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
                             {{ layout.booking_button | default: "Réserver ma place" | upcase}}
                         </a>
-
+<!--informations de paiement-->
                         {% if page.booking_infos %}
                         <p class="text-sm text-jungle-600 mt-3">{{ page.booking_infos }}</p>
                         {% endif %}
