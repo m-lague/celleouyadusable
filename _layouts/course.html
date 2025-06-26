@@ -14,30 +14,30 @@ layout: default
         <div class="space-y-12">
 
 
-            <article id="{{course.style}}" class="flex flex-col gap-4 lg:flex-row  overflow-hidden">
+            <article id="{{page.style | downcase}}" class="grid grid-cols-1 lg:grid-cols-2 gap-4 overflow-hidden">
 
                 <!-- Image du cours -->
                 {% if page.images %}
-
-                <div class="w-full lg:w-1/2">
-                    <img src="{{ page.images | first }}"
-                         alt="{{ page.title }}"
-                         class="w-full h-96 lg:h-full object-cover">
+                <div class="w-full h-full"> <!-- Conteneur principal pour l'image -->
+                    <div class="w-full" style="aspect-ratio: 2/3"> <!-- Conteneur pour le ratio -->
+                        <img src="{{ page.images | first }}"
+                             alt="{{ page.title }}"
+                             class="w-full h-full object-cover">
+                    </div>
                 </div>
                 {% endif %}
 
                 <!-- Contenu du cours -->
-                <div class="w-full lg:w-1/2 sm:p-8 flex flex-col justify-center">
-                    <h3 class="text-2xl lg:text-3xl  text-neutral-800 mb-6 text-center">{{ page.title | upcase}}</h3>
+                <div class="w-full h-full sm:p-8 flex flex-col justify-center"> <!-- Ajout de w-full et h-full -->
+                    <h3 class="text-2xl lg:text-3xl text-neutral-800 mb-6 text-center">{{ page.title | upcase}}</h3>
 
                     <!-- Description -->
-                    <div class="prose prose-jungle mb-6 max-w-none [&>h4]:text-neutral-800 [&>h4]:font-semibold [&>h4]:my-2 [&>h4]:text-center">
+                    <div class="prose prose-jungle mb-6 max-w-none w-full [&>h4]:text-neutral-800 [&>h4]:font-semibold [&>h4]:my-2 [&>h4]:text-center"> <!-- Ajout de w-full -->
                       {{ page.content | markdownify }}
                     </div>
 
-
                     <!-- Informations pratiques -->
-                    <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="grid grid-cols-2 gap-4 mb-6 w-full"> <!-- Ajout de w-full -->
                         {% if page.duration %}
                         <div class="flex items-center text-neutral-400">
                             <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,13 +49,9 @@ layout: default
 
                         {% if page.start_price %}
                         <div class="flex items-center text-neutral-400">
-                            <!-- Icône  -->
-                          <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
-                          </svg>
-
-
-
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                            </svg>
                             <span class="">À partir de {{ page.start_price }}€</span>
                         </div>
                         {% endif %}
@@ -82,9 +78,9 @@ layout: default
 
                     <!-- Bénéfices -->
                     {% if page.benefits %}
-                    <div>
+                    <div class="w-full"> <!-- Ajout de w-full -->
                         <h3 class="text-lg font-semibold text-neutral-800 mb-3">Bénéfices</h3>
-                        <ul class=" space-y-2">
+                        <ul class="space-y-2">
                             {% for benefit in page.benefits %}
                             <li class="flex items-start">
                                 <svg class="w-4 h-4 mr-2 mt-1 text-jungle-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -102,8 +98,8 @@ layout: default
         </div>
     </div>
 </section>
-<div class="flex justify-center pb-8 md:px-8">
-  <img src="{{ page.images.last }}" alt="" class="w-9/10 center">
+<div class="flex justify-center pb-8 px-4 md:px-8 ">
+  <img src="{{ page.images.last }}" alt="" class="w-full h-full center">
 </div>
 
 <!-- Section CTA -->
@@ -115,9 +111,12 @@ layout: default
         <p class="text-xl opacity-90 mb-8">
             {{page.cta_subtitle}}
         </p>
-        <a href="/contact/"
-           class="inline-block bg-white text-neutral-700 px-8 py-4 text-lg border hover:border-sable-300 hover:text-white font-semibold hover:bg-sable-300 transition-colors">
-            {{page.cta_text }}
-        </a>
+        
+        {% include button.html
+          text=page.cta_text
+          url="/contact"
+          style="outline"
+          color="neutral-800"
+          icon=true %}
     </div>
 </section>

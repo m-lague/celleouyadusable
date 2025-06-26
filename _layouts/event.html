@@ -53,6 +53,19 @@ layout: default
     </div>
 </section>
 
+<!-- Lien de retour aux événements -->
+<section class="py-4 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <a href="/evenements/"
+           class="inline-flex items-center text-jungle-600 hover:text-jungle-800 transition-colors text-sm font-medium">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Retour aux événements
+        </a>
+    </div>
+</section>
+
 <!-- Contenu principal -->
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-16 lg:pr-8">
@@ -140,7 +153,6 @@ layout: default
                     <h3 class="text-xl font-bold text-jungle-800 mb-6 text-center">
                         {{ layout.practical_info_title | default: "Informations pratiques" }}
                     </h3>
-
                     <!-- Informations de base -->
                     <div class="space-y-4 mb-6">
                         {% if page.event_date %}
@@ -194,38 +206,37 @@ layout: default
                         </div>
                         {% endif %}
                     </div>
-<!-- Prix -->
-{% if page.prices %}
-<div class="bg-white p-4 rounded-lg border-2 border-jungle-300 mb-6">
-    <div class="text-center">
-        <div class="text-sm text-jungle-600 mb-2">{{ layout.price_label | default: "Tarifs" }}</div>
 
-        <!-- Tarif Early Bird -->
-        {% if page.prices.early_bird %}
-        <div class="mb-3 pb-3 {% if page.prices.standard %}border-b border-jungle-100{% endif %}">
-            <div class="text-lg font-bold text-sable-600">{{ page.prices.early_bird }}€</div>
-            <div class="text-xs text-sable-500">{{ layout.early_bird_label | default: "Early Bird" }}</div>
-            {% if page.early_bird_deadline %}
-            <div class="text-xs text-jungle-600 mt-1">Jusqu'au {{ page.early_bird_deadline | date: "%d/%m" }}</div>
-            {% endif %}
-        </div>
-        {% endif %}
+                    <!-- Prix -->
+                    {% if page.prices %}
+                    <div class="bg-white p-4 rounded-lg border-2 border-jungle-300 mb-6">
+                        <div class="text-center">
+                            <div class="text-sm text-jungle-600 mb-2">{{ layout.price_label | default: "Tarifs" }}</div>
 
-        <!-- Tarif Standard -->
-        {% if page.prices.standard %}
-        <div>
-            <div class="text-2xl font-bold text-jungle-800">{{ page.prices.standard }}€</div>
-            <div class="text-xs text-jungle-600">{{ layout.standard_price_label | default: "Tarif standard" }}</div>
-            {% if page.price_details %}
-            <div class="text-sm text-jungle-600 mt-1">{{ page.price_details }}</div>
-            {% endif %}
-        </div>
-        {% endif %}
-    </div>
-</div>
-{% endif %}
+                            <!-- Tarif Early Bird -->
+                            {% if page.prices.early_bird %}
+                            <div class="mb-3 pb-3 {% if page.prices.standard %}border-b border-jungle-100{% endif %}">
+                                <div class="text-lg font-bold text-sable-600">{{ page.prices.early_bird }}€</div>
+                                <div class="text-xs text-sable-500">{{ layout.early_bird_label | default: "Early Bird" }}</div>
+                                {% if page.early_bird_deadline %}
+                                <div class="text-xs text-jungle-600 mt-1">Jusqu'au {{ page.early_bird_deadline | date: "%d/%m" }}</div>
+                                {% endif %}
+                            </div>
+                            {% endif %}
 
-
+                            <!-- Tarif Standard -->
+                            {% if page.prices.standard %}
+                            <div>
+                                <div class="text-2xl font-bold text-jungle-800">{{ page.prices.standard }}€</div>
+                                <div class="text-xs text-jungle-600">{{ layout.standard_price_label | default: "Tarif standard" }}</div>
+                                {% if page.price_details %}
+                                <div class="text-sm text-jungle-600 mt-1">{{ page.price_details }}</div>
+                                {% endif %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
 
                     <!-- Bouton de réservation -->
                     <div class="text-center">

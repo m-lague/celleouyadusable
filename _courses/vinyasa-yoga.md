@@ -8,8 +8,8 @@ cta_title: "Prêt(e) à commencer votre pratique ?"
 cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."
 cta_text: "Me contacter"
 images:
-  - "/assets/images/celleouyadusable-vinyasa-yoga-lacanau-costa-rica.jpg"
-  - "/assets/images/celleouyadusable-vinyasa-yoga-posture-lacanau-et-costa-rica.jpg"
+  - "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg"
+  - "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg"
 benefits:
   - "Renforcement musculaire"
   - "Amélioration de la flexibilité"
@@ -91,7 +91,7 @@ Le Vinyasa est un yoga dynamique qui synchronise mouvement et respiration dans u
 
 Le Vinyasa Yoga est caractérisé par des transitions fluides entre les postures, guidées par la respiration. Chaque mouvement est synchronisé avec une inspiration ou une expiration, créant une méditation en mouvement.
 
-![posture de yoga vinyasa par celleouyadasable](/assets/images/celleouyadusable-posture-vinyasa-yoga-lacanau-costa-rica.jpg)
+![posture de yoga vinyasa par celleouyadasable](/assets/images/celleouyadusable-cours-vinyasa-lacanau-3.jpeg)
 
 #### Déroulement d'un cours
 
