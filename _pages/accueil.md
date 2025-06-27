@@ -45,4 +45,8 @@ contact_section:
   phone: "+33 6 01 28 30 70"
   whatsapp_message: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. Merci"
   background_image: "/assets/images/celleouyadusable-vinyasa-yoga-posture-lacanau-et-costa-rica.jpg"
+sitemap:
+  priority: 1.0
+  changefreq: 'weekly'
+  lastmod: 2025-06-27
 ---

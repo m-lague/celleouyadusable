@@ -1,0 +1,38 @@
+{% comment %}
+  Calcul automatique de la priorité basé sur le type de page
+{% endcomment %}
+
+{% assign priority = 0.5 %}
+{% assign changefreq = 'monthly' %}
+
+{% if page.url == '/' %}
+  {% assign priority = 1.0 %}
+  {% assign changefreq = 'weekly' %}
+{% elsif page.url contains '/cours/' %}
+  {% assign priority = 0.9 %}
+  {% assign changefreq = 'monthly' %}
+{% elsif page.url contains '/evenement/' or page.url contains '/ceremonie-lune/' %}
+  {% assign priority = 0.8 %}
+  {% assign changefreq = 'weekly' %}
+{% elsif page.url contains '/retraites/' or page.url contains '/temoignages/' %}
+  {% assign priority = 0.7 %}
+  {% assign changefreq = 'monthly' %}
+{% elsif page.url contains '/a-propos/' or page.url contains '/contact/' %}
+  {% assign priority = 0.7 %}
+  {% assign changefreq = 'monthly' %}
+{% elsif page.url contains '/faq/' %}
+  {% assign priority = 0.6 %}
+  {% assign changefreq = 'monthly' %}
+{% elsif page.url contains '/mentions-legales/' or page.url contains '/conditions-generales/' %}
+  {% assign priority = 0.3 %}
+  {% assign changefreq = 'yearly' %}
+{% endif %}
+
+<!-- Surcharge avec les valeurs du front matter si présentes -->
+{% if page.sitemap.priority %}
+  {% assign priority = page.sitemap.priority %}
+{% endif %}
+
+{% if page.sitemap.changefreq %}
+  {% assign changefreq = page.sitemap.changefreq %}
+{% endif %}

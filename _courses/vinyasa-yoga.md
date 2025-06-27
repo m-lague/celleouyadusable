@@ -84,6 +84,10 @@ planning_creneaux:
       lieu: "Plage SUD"
       duree: "1h15"
       niveau: "Tous niveaux"
+sitemap:
+  priority: 0.9
+  changefreq: 'monthly'
+  lastmod: 2025-06-27
 ---
 
 Le Vinyasa est un yoga dynamique qui synchronise mouvement et respiration dans un flow continu. Cette pratique développe force, souplesse et concentration.

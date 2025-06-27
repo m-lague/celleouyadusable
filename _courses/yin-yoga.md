@@ -51,6 +51,10 @@ planning_creneaux:
       lieu: "Bo&Co"
       duree: "60min"
       niveau: "Tous niveaux"
+sitemap:
+  priority: 0.9
+  changefreq: 'monthly'
+  lastmod: 2025-06-27
 ---
 
 Le Yin Yoga est une pratique douce et méditative qui invite à la lenteur et à l'introspection. Les postures sont maintenues pendant plusieurs minutes pour permettre un étirement profond des tissus conjonctifs.

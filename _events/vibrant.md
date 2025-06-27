@@ -26,6 +26,10 @@ not_included:
   - massage Kobido
 level: "Tous niveaux"
 booking_infos: "Un acompte de 200€ est à verser pour l’inscription. Non remboursable.Le solde peut être payé en 2 fois, au plus tard jusqu’au 30 septembre."
+sitemap:
+  priority: 0.8
+  changefreq: 'weekly'
+  lastmod: 2025-06-27
 ---
 
 Un temps hors du temps pour:

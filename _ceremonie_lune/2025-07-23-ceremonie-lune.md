@@ -15,6 +15,10 @@ participants_max: 8
 image: "/assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean.jpeg"
 level: "Tous niveaux"
 booking_infos: "SPOTS LIMITÉS! Book ton spot!"
+sitemap:
+  priority: 0.8
+  changefreq: 'weekly'
+  lastmod: 2025-06-27
 ---
 
 Un voyage sacré pour célébrer la pleine lune et la nouvelle lune, dans ce lieu magique, aux énergies incroyables, sur ce deck sous les pins.

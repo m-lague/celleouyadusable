@@ -1,0 +1,23 @@
+{% comment %}
+  Script de validation pour vérifier la structure du sitemap
+{% endcomment %}
+
+<!-- Validation automatique en mode développement -->
+{% if jekyll.environment == 'development' %}
+  <script>
+    console.log('Sitemap validation:');
+    console.log('Total pages: {{ site.pages | size }}');
+    console.log('Total courses: {{ site.courses | size }}');
+    console.log('Total events: {{ site.events | size }}');
+    console.log('Total ceremonies: {{ site.ceremonie_lune | size }}');
+
+    // Vérification des pages sans lastmod
+    {% for page in site.pages %}
+      {% unless page.sitemap == false %}
+        {% unless page.sitemap.lastmod or page.date %}
+          console.warn('Page sans lastmod: {{ page.url }}');
+        {% endunless %}
+      {% endunless %}
+    {% endfor %}
+  </script>
+{% endif %}

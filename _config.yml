@@ -5,6 +5,8 @@ baseurl: ""
 url: "https://celleouyadusable.com"
 author: "Nathalie - Professeure de Yoga"
 future: true
+
+timezone: Europe/Paris
 # SEO
 lang: fr
 locale: fr_FR
@@ -35,21 +37,82 @@ defaults:
       path: "_pages/accueil.md"
     values:
       layout: "accueil"
+      sitemap:
+        priority: 1.0
+        changefreq: 'weekly'
   - scope:
       path: ""
       type: "events"
     values:
       layout: "event"
+      sitemap:
+        priority: 0.8
+        changefreq: 'weekly'
   - scope:
       path: ""
       type: "ceremonie_lune"
     values:
       layout: "event"
+      sitemap:
+        priority: 0.8
+        changefreq: 'weekly'
   - scope:
       path: ""
       type: "courses"
     values:
       layout: "course"
+      sitemap:
+        priority: 0.9
+        changefreq: 'monthly'
+  - scope:
+      path: "contact/"
+    values:
+      sitemap:
+        priority: 0.7
+        changefreq: 'monthly'
+  - scope:
+      path: "temoignages/"
+    values:
+      sitemap:
+        priority: 0.7
+        changefreq: 'monthly'
+  - scope:
+      path: "retraites/"
+    values:
+      sitemap:
+        priority: 0.7
+        changefreq: 'weekly'
+  - scope:
+      path: "faq/"
+    values:
+      sitemap:
+        priority: 0.6
+        changefreq: 'monthly'
+  - scope:
+      path: "mentions-legales/"
+    values:
+      sitemap:
+        priority: 0.3
+        changefreq: 'yearly'
+  - scope:
+      path: "conditions-generales-utilisation/"
+    values:
+      sitemap:
+        priority: 0.3
+        changefreq: 'yearly'
+  # Exclusions du sitemap
+  - scope:
+      path: "admin/**"
+    values:
+      sitemap: false
+  - scope:
+      path: "assets/**"
+    values:
+      sitemap: false
+  - scope:
+      path: "*.json"
+    values:
+      sitemap: false
 
 
 # Plugins
@@ -65,7 +128,7 @@ sass:
   sass_dir: _sass
   style: compressed
 excerpt_separator: "<!--more-->"
-# Exclude
+# Exclusions du sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -76,3 +139,4 @@ exclude:
   - .jekyll-cache
   - .jekyll-metadata
   - README.md
+  - admin/

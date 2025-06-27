@@ -1,74 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://localhost:4000/ceremonie-lune/23-07-2025/</loc>
-<lastmod>2025-07-23T20:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/ceremonie-lune/10-08-2025/</loc>
-<lastmod>2025-08-10T20:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/ceremonie-lune/24-08-2025/</loc>
-<lastmod>2025-08-24T20:00:00+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/cours/vinyasa-yoga/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/cours/yin-yoga/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/evenement/awakened-souls/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/evenement/vibrant/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/a-propos/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/conditions-generales-utilisation/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/contact/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/faq/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/mentions-legales/</loc>
-<lastmod>2025-06-27T18:36:46+02:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/ceremonies-lune/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/cours/planning-tarifs/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/retraites/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/temoignages/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/workshops/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/admin/</loc>
-<lastmod>2025-06-12T09:46:40+02:00</lastmod>
-</url>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>http://localhost:4000/</loc>
+    <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Pages principales -->
+  
+    
+      
+        <url>
+          <loc>http://localhost:4000/a-propos/</loc>
+          
+            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+          
+
+          
+            <changefreq>monthly</changefreq>
+          
+
+          
+            <priority>0.5</priority>
+          
+
+          <!-- Images pour les pages de cours -->
+          
+        </url>
+      
+    
+  
+    
+      
+        <url>
+          <loc>http://localhost:4000/</loc>
+          
+            <lastmod>2025-06-27T00:00:00+02:00</lastmod>
+          
+
+          
+            <changefreq>weekly</changefreq>
+          
+
+          
+            <priority>1.0</priority>
+          
+
+          <!-- Images pour les pages de cours -->
+          
+        </url>
+      
+    
+  
+    
+      
+        <url>
+          <loc>http://localhost:4000/conditions-generales-utilisation/</loc>
+          
+            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+          
+
+          
+            <changefreq>monthly</changefreq>
+          
+
+          
+            <priority>0.5</priority>
+          
+
+          <!-- Images pour les pages de cours -->
+          
+        </url>
+      
+    
+  
+    
+      
+        <url>
+          <loc>http://localhost:4000/contact/</loc>
+          
+            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+          
+
+          
+            <changefreq>monthly</changefreq>
+          
+
+          
+            <priority>0.5</priority>
+          
+
+          <!-- Images pour les pages de cours -->
+          
+        </url>
+      
+    
+  
+    
+      
+        <url>
+          <loc>http://localhost:4000/faq/</loc>
+          
+            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+          
+
+          
+            <changefreq>monthly</changefreq>
+          
+
+          
+            <priority>0.5</priority>
+          
+
+          <!-- Images pour les pages de cours -->
+          
+        </url>
+      
+    
+  
+    
+      
+        <url>
+          <loc>http://localhost:4000/mentions-legales/</loc>
+          
+            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+          
+
+          
+            <changefreq>monthly</changefreq>
+          
+
+          
+            <priority>0.5</priority>
+          
+
+          <!-- Images pour les pages de cours -->
+          
+        </url>
+      
+    
+  
+
+  <!-- Cours -->
+  
+    
+      <url>
+        <loc>http://localhost:4000/cours/vinyasa-yoga/</loc>
+        
+          <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+
+        <!-- Images des cours -->
+        
+          
+            <image:image>
+              <image:loc>http://localhost:4000/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg</image:loc>
+              <image:caption>Vinyasa Yoga - Cours de yoga à Lacanau</image:caption>
+            </image:image>
+          
+            <image:image>
+              <image:loc>http://localhost:4000/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg</image:loc>
+              <image:caption>Vinyasa Yoga - Cours de yoga à Lacanau</image:caption>
+            </image:image>
+          
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>http://localhost:4000/cours/yin-yoga/</loc>
+        
+          <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+        
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+
+        <!-- Images des cours -->
+        
+          
+            <image:image>
+              <image:loc>http://localhost:4000/assets/images/celleouyadusable-cours-yin-yoga-lacanau.jpeg</image:loc>
+              <image:caption>Yin Yoga - Cours de yoga à Lacanau</image:caption>
+            </image:image>
+          
+            <image:image>
+              <image:loc>http://localhost:4000/assets/images/celleouyadusable-cours-yin-yoga-lacanau-3.jpeg</image:loc>
+              <image:caption>Yin Yoga - Cours de yoga à Lacanau</image:caption>
+            </image:image>
+          
+        
+      </url>
+    
+  
+
+  <!-- Événements et retraites -->
+  
+    
+      <url>
+        <loc>http://localhost:4000/evenement/awakened-souls/</loc>
+        
+          <lastmod>2026-03-09T08:00:00+01:00</lastmod>
+        
+
+        <!-- Fréquence basée sur la date de l'événement -->
+        
+        
+        
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>http://localhost:4000/evenement/vibrant/</loc>
+        
+          <lastmod>2025-10-02T09:00:00+02:00</lastmod>
+        
+
+        <!-- Fréquence basée sur la date de l'événement -->
+        
+        
+        
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        
+      </url>
+    
+  
+
+  <!-- Cérémonies de lune -->
+  
+    
+      <url>
+        <loc>http://localhost:4000/ceremonie-lune/23-07-2025/</loc>
+        
+          <lastmod>2025-07-23T20:00:00+02:00</lastmod>
+        
+
+        <!-- Fréquence basée sur la date de la cérémonie -->
+        
+        
+        
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>http://localhost:4000/ceremonie-lune/10-08-2025/</loc>
+        
+          <lastmod>2025-08-10T20:00:00+02:00</lastmod>
+        
+
+        <!-- Fréquence basée sur la date de la cérémonie -->
+        
+        
+        
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>http://localhost:4000/ceremonie-lune/24-08-2025/</loc>
+        
+          <lastmod>2025-08-24T20:00:00+02:00</lastmod>
+        
+
+        <!-- Fréquence basée sur la date de la cérémonie -->
+        
+        
+        
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        
+      </url>
+    
+  
+
 </urlset>

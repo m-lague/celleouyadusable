@@ -29,6 +29,10 @@ not_included:
   - "autres visites: Waterfalls Montezuma"
 level: "Tous niveaux"
 booking_infos: "Un acompte de 200€ est à verser pour l’inscription. Non remboursable. Le solde peut être versé en plusieurs fois au plus tard jusqu’au 31 janvier."
+sitemap:
+  priority: 0.8
+  changefreq: 'weekly'
+  lastmod: 2025-06-27
 ---
 
 Je vous emmène dans mon coin de Paradis, mon espace de calme et de connections profondes, l’endroit où je suis la plus belle version de moi-même, puissamment alignée avec mon véritable moi, mon essence, et où je crée l’éveil de mon âme.

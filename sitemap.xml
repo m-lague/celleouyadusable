@@ -1,0 +1,139 @@
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Pages principales -->
+  {% for page in site.pages %}
+    {% unless page.sitemap == false or page.sitemap.exclude == 'yes' %}
+      {% if page.url != '/sitemap.xml' and page.url != '/robots.txt' and page.url != '/feed.xml' %}
+        <url>
+          <loc>{{ site.url }}{{ page.url }}</loc>
+          {% if page.sitemap.lastmod %}
+            <lastmod>{{ page.sitemap.lastmod | date_to_xmlschema }}</lastmod>
+          {% elsif page.date %}
+            <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+          {% else %}
+            <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+          {% endif %}
+
+          {% if page.sitemap.changefreq %}
+            <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+          {% else %}
+            <changefreq>monthly</changefreq>
+          {% endif %}
+
+          {% if page.sitemap.priority %}
+            <priority>{{ page.sitemap.priority }}</priority>
+          {% else %}
+            <priority>0.5</priority>
+          {% endif %}
+
+          <!-- Images pour les pages de cours -->
+          {% if page.images %}
+            {% for image in page.images %}
+              <image:image>
+                <image:loc>{{ site.url }}{{ image }}</image:loc>
+                <image:caption>{{ page.title }} - {{ site.title }}</image:caption>
+              </image:image>
+            {% endfor %}
+          {% endif %}
+        </url>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Cours -->
+  {% for course in site.courses %}
+    {% unless course.sitemap == false %}
+      <url>
+        <loc>{{ site.url }}{{ course.url }}</loc>
+        {% if course.date %}
+          <lastmod>{{ course.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+          <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+
+        <!-- Images des cours -->
+        {% if course.images %}
+          {% for image in course.images %}
+            <image:image>
+              <image:loc>{{ site.url }}{{ image }}</image:loc>
+              <image:caption>{{ course.title }} - Cours de yoga à Lacanau</image:caption>
+            </image:image>
+          {% endfor %}
+        {% endif %}
+      </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Événements et retraites -->
+  {% for event in site.events %}
+    {% unless event.sitemap == false %}
+      <url>
+        <loc>{{ site.url }}{{ event.url }}</loc>
+        {% if event.event_date %}
+          <lastmod>{{ event.event_date | date_to_xmlschema }}</lastmod>
+        {% elsif event.date %}
+          <lastmod>{{ event.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+          <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% endif %}
+
+        <!-- Fréquence basée sur la date de l'événement -->
+        {% assign event_date = event.event_date | date: '%s' %}
+        {% assign current_date = site.time | date: '%s' %}
+        {% if event_date > current_date %}
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        {% else %}
+          <changefreq>yearly</changefreq>
+          <priority>0.4</priority>
+        {% endif %}
+      </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Cérémonies de lune -->
+  {% for ceremony in site.ceremonie_lune %}
+    {% unless ceremony.sitemap == false %}
+      <url>
+        <loc>{{ site.url }}{{ ceremony.url }}</loc>
+        {% if ceremony.event_date %}
+          <lastmod>{{ ceremony.event_date | date_to_xmlschema }}</lastmod>
+        {% else %}
+          <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% endif %}
+
+        <!-- Fréquence basée sur la date de la cérémonie -->
+        {% assign ceremony_date = ceremony.event_date | date: '%s' %}
+        {% assign current_date = site.time | date: '%s' %}
+        {% if ceremony_date > current_date %}
+          <changefreq>weekly</changefreq>
+          <priority>0.8</priority>
+        {% else %}
+          <changefreq>yearly</changefreq>
+          <priority>0.3</priority>
+        {% endif %}
+      </url>
+    {% endunless %}
+  {% endfor %}
+
+</urlset>
