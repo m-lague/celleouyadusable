@@ -1,18 +1,22 @@
 {% if page.faq_sections %}
+<div class=" relative text-center flex justify-center items-center h-96 bg-[url('/assets/images/celleouyadusable-cours-de-yoga-faq-lacanau-costa-rica.jpg')] bg-cover bg-bottom bg-no-repeat bg-fixed relative overflow-hidden">
+  <div class="absolute inset-0 bg-black opacity-20"></div>
+        <h1 class="relative pt-22 text-3xl md:text-4xl  text-shadow-lg text-neutral-100 mb-4 inline-block pb-2">{{ page.page_title | upcase}}</h1>
+      </div>
 <div class="bg-white py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {% for section in page.faq_sections %}
         <div class="mb-12">
-            <h2 class="text-2xl font-bold text-jungle-800 mb-6 border-l-4 {% if section.color == 'jungle' %}border-jungle-500 bg-jungle-50{% else %}border-sable-500 bg-sable-50{% endif %} pl-4 py-2">
-                {{ section.title }}
+            <h2 class="text-2xl  text-neutral-800 mb-6  pl-4 py-2">
+                {{ section.title | upcase}}
             </h2>
 
             <div class="space-y-6">
                 {% for qa in section.questions %}
-                <div class="{% if section.color == 'jungle' %}bg-gradient-to-r from-jungle-50 to-white border-jungle-400{% else %}bg-gradient-to-r from-sable-50 to-white border-sable-400{% endif %} p-6 border-l-2">
-                    <h3 class="text-lg font-semibold text-jungle-800 mb-3">{{ qa.question }}</h3>
-                    <div class="text-jungle-600 prose">{{ qa.answer | markdownify }}</div>
+                <div class=" p-6 border-l-2 border-neutral-200">
+                    <h3 class="text-lg font-semibold text-neutral-800 mb-3">{{ qa.question }}</h3>
+                    <div class="text-neutral-600 prose">{{ qa.answer | markdownify }}</div>
                 </div>
                 {% endfor %}
             </div>
@@ -21,19 +25,27 @@
 
         <!-- Section CTA Contact -->
         {% if page.contact_cta %}
-        <div class="bg-gradient-to-br from-jungle-100 to-sable-100 p-8 border-t-4 border-jungle-500">
-            <h2 class="text-2xl font-bold text-jungle-800 mb-4 text-center">
-                {{ page.contact_cta.title }}
+        <div class=" p-8 border-2 border-neutral-200">
+            <h2 class="text-2xl font-bold text-neutral-800 mb-4 text-center">
+                {{ page.contact_cta.title | upcase}}
             </h2>
-            <p class="text-jungle-600 text-center mb-6">
+            <p class="text-neutral-600 text-center mb-6">
                 {{ page.contact_cta.subtitle }}
             </p>
             <div class="text-center">
-                {% include button.html
-                       style="primary"
-                       url="/contact/"
-                       text= page.contact_cta.button_text
-                       icon=false %}
+
+              <a href="{{page.contact_cta.button_url}}"
+                target="_self"
+                class="group inline-flex items-center justify-center px-6 py-3 border-2 border-neutral-800 text-neutral-800  hover:bg-sable-600 hover:text-white hover:border-sable-600 transition-all duration-300 shadow-md hover:shadow-lg tracking-[8px]">
+
+                  <span>{{ page.contact_cta.button_text | upcase}}</span>
+
+                {% if button_icon %}
+                  <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                {% endif %}
+              </a>
 
             </div>
         </div>

@@ -6,14 +6,13 @@ description: "Questions fréquentes sur les cours de yoga, les tarifs, les évé
 page_title: "FAQ - celle_ou_yadusable"
 page_subtitle: "Si vous avez d'autres questions qui ne figurent pas ici, n'hésitez pas à me contacter directement !"
 sections:
-  - page_title
   - faq-content
 faq_sections:
   - title: "À propos des cours"
     color: "jungle"
     questions:
       - question: "Quels types de yoga proposez-vous ?"
-        answer: "Je propose principalement du **Hatha Yoga** et du **Yin Yoga**. Le Hatha est une pratique douce qui renforce et assouplit le corps, tandis que le Yin favorise la détente profonde et la méditation."
+        answer: "Je propose principalement du **Vinyasa Yoga** et du **Yin Yoga**. Le Vinyasa est une pratique douce qui renforce et assouplit le corps, tandis que le Yin favorise la détente profonde et la méditation."
       - question: "Les cours sont-ils adaptés aux débutants ?"
         answer: "Absolument ! Mes cours sont conçus pour **tous les niveaux**. Je propose des variations et adaptations pour chaque posture, permettant à chacun de pratiquer selon ses capacités."
       - question: "Combien de personnes par cours ?"
