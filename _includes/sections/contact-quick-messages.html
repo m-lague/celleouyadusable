@@ -4,10 +4,10 @@
 
         <!-- Messages rapides -->
         <div class="mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4 border-b-2 border-jungle-400 inline-block pb-2">
-                {{ page.quick_messages.title }}
+            <h2 class="w-full text-3xl md:text-4xl  text-neutral-800 mb-4  inline-block text-center">
+                {{ page.quick_messages.title  | upcase}}
             </h2>
-            <p class="text-jungle-600 mb-6">{{ page.quick_messages.subtitle }}</p>
+            <p class="text-neutral-500 mb-6">{{ page.quick_messages.subtitle }}</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {% assign phone_clean = page.contact_section.phone | remove: ' ' | remove: '+' %}
@@ -16,9 +16,9 @@
                 <a href="https://wa.me/{{ phone_clean }}?text={{ message_encoded }}"
                    target="_blank"
                    rel="noopener noreferrer nofollow"
-                   class="{% cycle 'bg-jungle-100 border-jungle-500 hover:bg-jungle-200', 'bg-sable-100 border-sable-500 hover:bg-sable-200' %} p-4 border-l-4 transition-colors">
-                    <h4 class="font-semibold text-jungle-800 mb-2">{{ message.title }}</h4>
-                    <p class="text-sm text-jungle-600">{{ message.description }}</p>
+                   class="bg-neutral-50 hover:bg-neutral-100 p-4 transition-colors">
+                    <h4 class="font-semibold text-neutral-800 mb-2">{{ message.title }}</h4>
+                    <p class="text-sm text-neutral-600">{{ message.description }}</p>
                 </a>
                 {% endfor %}
             </div>
@@ -26,13 +26,13 @@
 
         <!-- Informations importantes -->
         {% if page.important_info %}
-        <div class="bg-gradient-to-r from-jungle-100 to-sable-100 p-8">
-            <h2 class="text-xl font-bold text-jungle-800 mb-4 text-center">
-                {{ page.important_info.title }}
+        <div class=" p-8">
+            <h2 class="text-xl  text-neutral-800 mb-4 text-center">
+                {{ page.important_info.title | upcase}}
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-jungle-600">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-neutral-600">
                 {% for item in page.important_info.items %}
-                <div class="bg-white p-4 border-l-4 {% cycle 'border-jungle-400', 'border-sable-400' %}">
+                <div class="bg-neutral-50 p-4 ">
                     <h4 class="font-semibold mb-2">{{ item.title }}</h4>
                     <p class="text-sm">{{ item.content }}</p>
                 </div>
