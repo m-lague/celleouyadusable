@@ -80,22 +80,7 @@
       }
     </style>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "YogaStudio",
-        "name": "{{ site.title }}",
-        "description": "{{ site.description }}",
-        "url": "{{ site.url }}",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Lacanau",
-            "addressRegion": "Nouvelle-Aquitaine",
-            "addressCountry": "FR"
-        }
-    }
-    </script>
+    
   {% if page.schema == 'accueil' %}
     {% include schema/schema-accueil.html %}
   {% elsif page.schema == 'a-propos' %}
