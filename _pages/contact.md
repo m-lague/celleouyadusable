@@ -1,5 +1,6 @@
 ---
 layout: accueil
+schema: "contact"
 title: "Contact - Celle où ya du sable"
 permalink: /contact/
 description: "Contactez Nathalie pour toute question ou réservation de cours de vinyasa yoga et yin yoga à Lacanau Océan. Communication uniquement via WhatsApp."

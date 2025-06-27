@@ -1,5 +1,6 @@
 ---
 layout: "a-propos"
+schema: "a-propos"
 title: "À propos - Celle où ya du sable"
 permalink: /a-propos/
 description: "Découvrez Nathalie, votre professeure de yoga à Lacanau, et son approche unique du Vinyasa et Yin Yoga."

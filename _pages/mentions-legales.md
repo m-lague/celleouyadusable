@@ -14,7 +14,7 @@ Ce site est édité par :
 **Kummer Nathalie**
 Micro-entreprise
 Adresse : 17 rue du chai des farines, 33000 Bordeaux
-Numéro SIRET : (à compléter)
+Numéro SIREN : 891229809
 TVA non applicable, art. 293 B du CGI
 E-mail : nath.kummer@gmail.com
 Téléphone : +33 6 01 28 30 70

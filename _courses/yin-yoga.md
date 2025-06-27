@@ -1,4 +1,5 @@
 ---
+schema: "yin-yoga"
 permalink: "/cours/yin-yoga/"
 title: "Yin Yoga"
 style: "Yin"

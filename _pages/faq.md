@@ -1,5 +1,6 @@
 ---
 layout: accueil
+schema: "faq"
 title: "FAQ - Celle où ya du sable"
 permalink: /faq/
 description: "Questions fréquentes sur les cours de yoga, les tarifs, les événements et la pratique avec Nathalie à Lacanau."

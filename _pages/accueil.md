@@ -1,4 +1,5 @@
 ---
+schema: "accueil"
 title: Cours de Yoga à Lacanau - Celle où ya du sable
 layout: accueil
 permalink: /

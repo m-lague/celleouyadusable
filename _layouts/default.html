@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'fr' }}">
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
@@ -96,6 +96,27 @@
         }
     }
     </script>
+  {% if page.schema == 'accueil' %}
+    {% include schema/schema-accueil.html %}
+  {% elsif page.schema == 'a-propos' %}
+    {% include schema/schema-a-propos.html %}
+  {% elsif page.schema == 'planning-tarifs' %}
+    {% include schema/schema-planning-tarifs.html %}
+  {% elsif page.schema == 'retraites' %}
+    {% include schema/schema-retraites.html %}
+  {% elsif page.schema == 'temoignages' %}
+    {% include schema/schema-temoignages.html %}
+  {% elsif page.schema == 'faq' %}
+    {% include schema/schema-faq.html %}
+  {% elsif page.schema == 'vinyasa-yoga' %}
+    {% include schema/schema-vinyasa-yoga.html %}
+  {% elsif page.schema == 'yin-yoga' %}
+    {% include schema/schema-yin-yoga.html %}
+  {% elsif page.schema == 'ceremonies-lune' %}
+    {% include schema/schema-ceremonies-lune.html %}
+  {% elsif page.schema == 'contact' %}
+    {% include schema/schema-contact.html %}
+  {% endif %}
 </head>
 <body class="bg-white text-neutral-800 overflow-x-hidden">
     <!-- Navigation -->
