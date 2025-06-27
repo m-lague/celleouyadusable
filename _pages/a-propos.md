@@ -45,7 +45,9 @@ certifications:
     year: "2023"
     color: "sable"
     type: "certification"
-
+sitemap:
+  priority: 0.7
+  changefreq: 'monthly'
 ---
 
 Je suis Nathalie.

@@ -11,12 +11,14 @@ sitemap:
                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- Page d'accueil -->
+{% unless page.url == '/' and forloop.index > 1 %}
   <url>
-    <loc>{{ site.url }}/</loc>
+    <loc>{{ site.url }}{{ page.url }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+{% endunless %}
 
   <!-- Pages principales -->
   {% for page in site.pages %}

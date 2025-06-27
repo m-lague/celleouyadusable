@@ -61,4 +61,7 @@ important_info:
       content: "Réservez avant 19h la veille du cour pour garantir votre place."
     - title: "Annulation"
       content: "Possible jusqu'à 12h avant le cours pour éviter la facturation."
+sitemap:
+  priority: 0.7
+  changefreq: 'monthly'
 ---

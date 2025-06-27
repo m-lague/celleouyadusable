@@ -6,12 +6,14 @@
                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- Page d'accueil -->
+
   <url>
-    <loc>http://localhost:4000/</loc>
-    <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+    <loc>http://localhost:4000/sitemap.xml</loc>
+    <lastmod>2025-06-27T19:31:03+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
 
   <!-- Pages principales -->
   
@@ -20,7 +22,7 @@
         <url>
           <loc>http://localhost:4000/a-propos/</loc>
           
-            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+            <lastmod>2025-06-27T19:31:03+02:00</lastmod>
           
 
           
@@ -28,7 +30,7 @@
           
 
           
-            <priority>0.5</priority>
+            <priority>0.7</priority>
           
 
           <!-- Images pour les pages de cours -->
@@ -64,15 +66,15 @@
         <url>
           <loc>http://localhost:4000/conditions-generales-utilisation/</loc>
           
-            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+            <lastmod>2025-06-27T19:31:03+02:00</lastmod>
           
 
           
-            <changefreq>monthly</changefreq>
+            <changefreq>yearly</changefreq>
           
 
           
-            <priority>0.5</priority>
+            <priority>0.3</priority>
           
 
           <!-- Images pour les pages de cours -->
@@ -86,7 +88,7 @@
         <url>
           <loc>http://localhost:4000/contact/</loc>
           
-            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+            <lastmod>2025-06-27T19:31:03+02:00</lastmod>
           
 
           
@@ -94,7 +96,7 @@
           
 
           
-            <priority>0.5</priority>
+            <priority>0.7</priority>
           
 
           <!-- Images pour les pages de cours -->
@@ -108,7 +110,7 @@
         <url>
           <loc>http://localhost:4000/faq/</loc>
           
-            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+            <lastmod>2025-06-27T19:31:03+02:00</lastmod>
           
 
           
@@ -116,7 +118,7 @@
           
 
           
-            <priority>0.5</priority>
+            <priority>0.6</priority>
           
 
           <!-- Images pour les pages de cours -->
@@ -130,15 +132,15 @@
         <url>
           <loc>http://localhost:4000/mentions-legales/</loc>
           
-            <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+            <lastmod>2025-06-27T19:31:03+02:00</lastmod>
           
 
           
-            <changefreq>monthly</changefreq>
+            <changefreq>yearly</changefreq>
           
 
           
-            <priority>0.5</priority>
+            <priority>0.3</priority>
           
 
           <!-- Images pour les pages de cours -->
@@ -154,7 +156,7 @@
       <url>
         <loc>http://localhost:4000/cours/vinyasa-yoga/</loc>
         
-          <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+          <lastmod>2025-06-27T19:31:03+02:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -180,7 +182,7 @@
       <url>
         <loc>http://localhost:4000/cours/yin-yoga/</loc>
         
-          <lastmod>2025-06-27T19:15:16+02:00</lastmod>
+          <lastmod>2025-06-27T19:31:03+02:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>

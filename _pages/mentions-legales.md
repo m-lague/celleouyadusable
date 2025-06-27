@@ -3,6 +3,9 @@ layout: legal
 title: "Mentions Légales"
 description: "Mentions légales du site celleouyadusable.com de Nathalie Kummer, professeure de yoga à Lacanau."
 permalink: /mentions-legales/
+sitemap:
+  priority: 0.3
+  changefreq: 'yearly'
 ---
 
 # Mentions Légales

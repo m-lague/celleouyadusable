@@ -3,6 +3,9 @@ layout: legal
 title: "Conditions Générales d'Utilisation"
 description: "Conditions générales d'utilisation du site celleouyadusable.com de Nathalie Kummer, professeure de yoga à Lacanau."
 permalink: /conditions-generales-utilisation/
+sitemap:
+  priority: 0.3
+  changefreq: 'yearly'
 ---
 
 # Conditions Générales d'Utilisation (CGU)

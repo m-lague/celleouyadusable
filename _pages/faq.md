@@ -52,4 +52,7 @@ contact_cta:
   subtitle: "N'hésitez pas à me contacter directement via WhatsApp !"
   button_text: "Me contacter"
   button_url: "/contact/"
+sitemap:
+  priority: 0.6
+  changefreq: 'monthly'
 ---
