@@ -454,13 +454,13 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- Contenu principal -->
     <main class="min-h-screen">
         <!-- Hero section simple -->
-        <section class="bg-gradient-to-br from-jungle-50 to-sable-50 py-16">
+        <section class=" py-16">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-3xl md:text-4xl font-bold text-jungle-800 mb-4">
-                    Mentions Légales
+                <h1 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+                    MENTIONS LÉGALES
                 </h1>
                 
-                <p class="text-xl text-jungle-600">
+                <p class="text-xl text-neutral-600">
                     Mentions légales du site celleouyadusable.com de Nathalie Kummer, professeure de yoga à Lacanau.
                 </p>
                 
@@ -560,7 +560,7 @@ Téléphone : +33 6 01 28 30 70</p>
                 <!-- Bouton retour -->
                 <div class="mt-12 text-center">
                     <a href="/"
-                       class="inline-flex items-center bg-jungle-600 text-white px-6 py-3 rounded-lg hover:bg-jungle-700 transition-colors">
+                       class="inline-flex items-center border-2 bg-white px-6 py-3  hover:bg-sable-600 hover:text-white transition-colors">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
                         </svg>
@@ -716,5 +716,71 @@ Téléphone : +33 6 01 28 30 70</p>
     </div>
 </footer>
 
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('nav');
+  const navLinks = navbar.querySelectorAll('.nav-link');
+  const petitTrait = navbar.querySelector('.absolute.h-px.w-\\[120\\%\\]'); // Sélectionne le petit trait
+  const isHomePage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+
+  if (isHomePage) {
+    // Page d'accueil : comportement avec hero
+    const heroSection = document.getElementById('hero');
+
+    function handleHomeScroll() {
+      const heroHeight = heroSection.offsetHeight;
+
+      if (window.scrollY > heroHeight - 80) {
+        // Style "scrollé"
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.24)';
+        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+
+        navLinks.forEach(link => {
+          link.style.color = 'oklch(20.5% 0 0)';
+        });
+
+        // Changer la couleur du petit trait
+        if (petitTrait) {
+          petitTrait.style.backgroundColor = 'oklch(20.5% 0 0)';
+        }
+
+      } else {
+        // Style transparent
+        navbar.style.backgroundColor = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.boxShadow = 'none';
+
+        navLinks.forEach(link => {
+          link.style.color = '';
+        });
+
+        // Remettre la couleur originale du petit trait
+        if (petitTrait) {
+          petitTrait.style.backgroundColor = '';
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleHomeScroll);
+    handleHomeScroll();
+
+  } else {
+    // Autres pages : toujours en mode "scrollé"
+    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.32)';
+    navbar.style.backdropFilter = 'blur(4px)';
+    navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+
+    navLinks.forEach(link => {
+      link.style.color = 'oklch(20.5% 0 0)';
+    });
+
+    // Petit trait en mode scrollé sur les autres pages
+    if (petitTrait) {
+      petitTrait.style.backgroundColor = 'oklch(20.5% 0 0)';
+    }
+  }
+});
+</script>
 </body>
 </html>
