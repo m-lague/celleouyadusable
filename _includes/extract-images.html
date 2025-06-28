@@ -1,0 +1,57 @@
+{% comment %} _includes/extract-images-simple.html {% endcomment %}
+
+{% assign all_images = '' | split: ',' %}
+
+{% comment %} Extraire toutes les propriétés de page {% endcomment %}
+{% assign page_keys = page | map: 'first' %}
+{% assign page_values = page | map: 'last' %}
+
+{% comment %} Parcourir toutes les clés de la page {% endcomment %}
+{% for item in page %}
+  {% assign key = item[0] %}
+  {% assign value = item[1] %}
+
+  {% comment %} Si la clé contient 'image' {% endcomment %}
+  {% if key contains 'image' %}
+    {% if value.size %}
+      {% comment %} C'est un array ou un objet {% endcomment %}
+      {% if value.first %}
+        {% for img in value %}
+          {% assign all_images = all_images | push: img %}
+        {% endfor %}
+      {% else %}
+        {% comment %} C'est un objet, on parcourt ses propriétés {% endcomment %}
+        {% for subitem in value %}
+          {% assign subkey = subitem[0] %}
+          {% assign subvalue = subitem[1] %}
+          {% if subkey contains 'image' %}
+            {% if subvalue.first %}
+              {% for img in subvalue %}
+                {% assign all_images = all_images | push: img %}
+              {% endfor %}
+            {% else %}
+              {% assign all_images = all_images | push: subvalue %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% else %}
+      {% comment %} C'est une string simple {% endcomment %}
+      {% assign all_images = all_images | push: value %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Images du contenu markdown {% endcomment %}
+{% if page.content %}
+  {% assign md_images = page.content | split: '![' %}
+  {% for md_img in md_images offset:1 %}
+    {% if md_img contains "](" %}
+      {% assign url_part = md_img | split: '](' | last | split: ')' | first %}
+      {% assign all_images = all_images | push: url_part %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% comment %} Nettoyer et retourner {% endcomment %}
+{% assign page_all_images = all_images | uniq | compact %}
