@@ -2,7 +2,7 @@
 title: "Cérémonie de Lune"
 type: "Cérémonie de Lune"
 start_date: 2025-08-24T20:00:00+02:00
-end_date: ""
+end_date: 
 date: 2025-08-24T20:00:00+02:00
 duration: "de 20h à 22h30"
 prices:

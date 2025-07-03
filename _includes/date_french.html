@@ -1,0 +1,22 @@
+{% assign event = include.event %}
+{% assign month_num = event.start_date | date: "%m" %}
+{% case month_num %}
+  {% when "01" %}{% assign month_fr = "Janvier" %}
+  {% when "02" %}{% assign month_fr = "Février" %}
+  {% when "03" %}{% assign month_fr = "Mars" %}
+  {% when "04" %}{% assign month_fr = "Avril" %}
+  {% when "05" %}{% assign month_fr = "Mai" %}
+  {% when "06" %}{% assign month_fr = "Juin" %}
+  {% when "07" %}{% assign month_fr = "Juillet" %}
+  {% when "08" %}{% assign month_fr = "Août" %}
+  {% when "09" %}{% assign month_fr = "Septembre" %}
+  {% when "10" %}{% assign month_fr = "Octobre" %}
+  {% when "11" %}{% assign month_fr = "Novembre" %}
+  {% when "12" %}{% assign month_fr = "Décembre" %}
+{% endcase %}
+
+{% if event.end_date == nil or event.end_date == "" %}
+  le {{ event.start_date | date: "%d" | plus: 0 }} {{ month_fr }} {{ event.start_date | date: "%y" }}
+{% else %}
+  du {{ event.start_date | date: "%d" | plus: 0 }} au {{ event.end_date | date: "%d" | plus: 0 }} {{ month_fr }} {{ event.end_date | date: "%y" }}
+{% endif %}

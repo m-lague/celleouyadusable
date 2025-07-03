@@ -29,11 +29,7 @@ layout: default
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
-                        {% unless page.end_date == "" %}
-                          du {{ page.start_date | date: "%d" }} au {{page.end_date | date: "%d %b %y"}}
-                        {% else %}
-                          le {{ page.start_date | date: "%d %b %Y" }}
-                        {% endunless %}
+                        {% include date_french.html event=page %}
                     </div>
                     {% endif %}
 
