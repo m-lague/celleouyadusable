@@ -1,7 +1,8 @@
 ---
 title: "Vibrant"
 type: "Retraite"
-event_date: 2025-10-02T09:00:00+02:00
+start_date: 2025-10-09T09:00:00+02:00
+end_date: 2025-10-12T09:00:00+02:00
 duration: "4 jours"
 prices:
   standard:

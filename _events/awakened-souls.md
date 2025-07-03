@@ -1,7 +1,8 @@
 ---
 title: "awakened souls"
 type: "Retraite"
-event_date: 2026-03-09T09:00:00+02:00
+start_date: 2026-03-09T09:00:00+02:00
+end_date: 2026-03-15T09:00:00+02:00
 duration: "7 jours"
 prices:
   standard:

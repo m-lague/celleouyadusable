@@ -10,8 +10,8 @@ upcoming_retreats_title: "Retraites à venir"
 past_retreats_title: "Retraites passées"
 ---
 
-{% assign upcoming_retreats = site.events | where_exp: "event", "event.event_date >= site.time" | where: "type", "Retraite" | sort: "event_date" %}
-{% assign past_retreats = site.events | where_exp: "event", "event.event_date < site.time" | where: "type", "Retraite" | sort: "event_date" %}
+{% assign upcoming_retreats = site.events | where_exp: "event", "event.start_date >= site.time" | where: "type", "Retraite" | sort: "start_date" %}
+{% assign past_retreats = site.events | where_exp: "event", "event.start_date < site.time" | where: "type", "Retraite" | sort: "start_date" %}
 
 
 <!-- Retraites à venir -->

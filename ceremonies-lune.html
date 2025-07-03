@@ -11,8 +11,8 @@ upcoming_ceremonies_title: "Cérémonies à venir"
 past_ceremonies_title: "Cérémonies passées"
 ---
 
-{% assign upcoming_ceremonies = site.ceremonie_lune | where_exp: "event", "event.event_date >= site.time" | where: "type", "Cérémonie de Lune" | sort: "event_date" %}
-{% assign past_ceremonies = site.ceremonie_lune | where_exp: "event", "event.event_date < site.time" | where: "type", "Cérémonie de Lune" | sort: "event_date" %}
+{% assign upcoming_ceremonies = site.ceremonie_lune | where_exp: "event", "event.start_date >= site.time" | where: "type", "Cérémonie de Lune" | sort: "start_date" %}
+{% assign past_ceremonies = site.ceremonie_lune | where_exp: "event", "event.start_date < site.time" | where: "type", "Cérémonie de Lune" | sort: "start_date" %}
 
 
 <!-- Cerémonies à venir -->
