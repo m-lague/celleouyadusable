@@ -1,4 +1,4 @@
-{% assign upcoming_events = site.events | where_exp: "event", "event.date >= site.time" | sort: "date" %}
+{% assign upcoming_events = site.events | where_exp: "event", "event.start_date >= site.time" | sort: "date" %}
 
         {% if upcoming_events.size > 0 %}
         {% assign next_event = upcoming_events.last %}
@@ -18,7 +18,12 @@
               <p class="flex flex-row justify-center opacity-90">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                </svg> {{ next_event.event_date | date: "%d/%m/%Y" }}
+                </svg>
+                {% unless next_event.end_date == "" %}
+                  du {{ next_event.start_date | date: "%d" }} au {{next_event.end_date | date: "%d %b %y"}}
+                {% else %}
+                  le {{ next_event.start_date | date: "%d %b %Y" }}
+                {% endunless %}
               </p>
               <div class="flex gap-4 justify-center tracking-[8px] pt-32">
                 {% include button.html

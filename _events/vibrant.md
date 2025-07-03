@@ -1,5 +1,5 @@
 ---
-title: "Vibrant"
+title: "Vibrant - Yoga retraite"
 type: "Retraite"
 start_date: 2025-10-09T09:00:00+02:00
 end_date: 2025-10-12T09:00:00+02:00
