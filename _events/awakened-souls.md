@@ -9,7 +9,6 @@ prices:
       details: "Dortoir de 3 ou 4 personnes, lit simple, salle de bain commune"
     - amount: 1980
       details: "Chambre privée, lit double, salle de bain privée"
-
 early_bird_deadline: 2025-08-15
 location: "COSTA-RICA, Santa-Teresa"
 participants_max: 8
