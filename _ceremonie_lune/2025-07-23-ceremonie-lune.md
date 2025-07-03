@@ -27,10 +27,14 @@ Un voyage sacré pour célébrer la pleine lune et la nouvelle lune, dans ce lie
 Un voyage de 2h30, créé par Sheyenne @sheyenneriver et moi-même, pour la 4ème année, et @manupeluche aux platines pour vous envoûter de sons puissants de reconnexion.
 
 MANTRAS
+
 CACAO CEREMONY
-ECSTATIC DANCE
-MOON MEDITATION
-SOUNDS HEALING
+
+ECSTATIC DANCEMOON
+
+MEDITATIONSOUNDS
+
+HEALING
 
 Prendre avec soi tapis de yoga si tu as, éléments chauds, plaid, sweet, chaussettes
 
