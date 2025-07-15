@@ -14,16 +14,6 @@ collections:
   - name: "config"
     label: "Configuration du site"
     files:
-      - name: "site-texts"
-        label: "Pied de page"
-        file: "_data/site-texts.yml"
-        fields:
-          - label: "Pied de page"
-            name: "footer"
-            widget: "object"
-            fields:
-              - {label: "Copyright", name: "copyright", widget: "string"}
-              - {label: "Localisation", name: "location", widget: "string"}
       - name: "navigation"
         label: "Navigation"
         file: "_data/navigation.yml"
@@ -38,6 +28,17 @@ collections:
                   {label: "Nom", name: "name", widget: "string"},
                   {label: "URL", name: "url", widget: "string"}
                 ]}
+      - name: "site-texts"
+        label: "Pied de page"
+        file: "_data/site-texts.yml"
+        fields:
+          - label: "Pied de page"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Copyright", name: "copyright", widget: "string"}
+              - {label: "Localisation", name: "location", widget: "string"}
+
 
   # Pages
   - name: "pages"
