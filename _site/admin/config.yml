@@ -69,8 +69,8 @@ collections:
               - {label: "Sous-titre", name: "subtitle", widget: "string"}
               - {label: "Lien du bouton", name: "link", widget: "string", default: "/cours/"}
               - {label: "Texte du bouton", name: "cta", widget: "string", default: "PLANNING"}
-              - label: "Image"
-                name: "image"
+              - label: "Images"
+                name: "images"
                 widget: "list"
                 fields:
                   - {label: "Image", name: "image", widget: "image"}
