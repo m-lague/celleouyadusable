@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main
 
-site_url: "https://celleeouyadusable.netlify.app/"
+site_url: "https://celleeouyadusable.com/"
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
