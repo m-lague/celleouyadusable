@@ -1,27 +1,28 @@
 main:
-  - name: "ACCUEIL"
-    url: "/"
-  - name: "COURS"
+  - name: ACCUEIL
+    url: /
+  - name: COURS
     sub_nav:
-      - name: "Vinyasa Yoga"
-        url: "/cours/vinyasa-yoga/"
-      - name: "Yin Yoga"
-        url: "/cours/yin-yoga/"
-      - name: "Planning & Tarifs"
-        url: "/cours/planning-tarifs/"
-  - name: "ÉVÉNEMENTS"
+      - name: Vinyasa Yoga
+        url: /cours/vinyasa-yoga/
+      - name: Yin Yoga
+        url: /cours/yin-yoga/
+      - name: Planning & Tarifs
+        url: /cours/planning-tarifs/
+    url: ""
+  - name: ÉVÉNEMENTS
     sub_nav:
-      - name: "Retraites"
-        url: "/retraites/"
-      - name: "Workshops"
-        url: "/workshops/"
-      - name: "Cérémonies de Lune"
-        url: "/ceremonies-lune/"
-  - name: "À PROPOS"
-    url: "/a-propos/"
-  - name: "FAQ"
-    url: "/FAQ/"
-  - name: "CONTACT"
-    url: "/contact/"
-  - name: "TÉMOIGNAGES"
-    url: "/temoignages/"
+      - name: Retraites
+        url: /retraites/
+      - name: Workshops
+        url: /workshops/
+      - name: Cérémonies de Lune
+        url: /ceremonies-lune/
+  - name: À PROPOS
+    url: /a-propos/
+  - name: FAQ
+    url: /FAQ/
+  - name: CONTACT
+    url: /contact/
+  - name: TÉMOIGNAGES
+    url: /temoignages/
