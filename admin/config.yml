@@ -176,31 +176,23 @@ collections:
         label: "Page FAQ"
         file: "_pages/faq.md"
         fields:
-          - {label: "Titre", name: "title", widget: "hidden"}
+          - {label: "Titre", name: "title", widget: "hidden",required: true, default: "FAQ - Celle où ya du sable"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "faq"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/faq/"}
-          - {label: "Description de la page", name: "description", widget: "hidden"}
-          - {label: "Titre du haut de page", name: "page_title", widget: "string"}
-          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "hidden", required: true, default: "Questions fréquentes sur les cours de yoga à Lacanau Océan. Trouvez des réponses aux questions courantes sur les horaires, les tarifs, les lieux et plus encore."}
+          - {label: "Titre du haut de page", name: "page_title", widget: "string", required: true, default: "FAQ - celle_ou_yadusable"}
+          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "hidden", required: true, default: "Si vous avez d'autres questions qui ne figurent pas ici, n'hésitez pas à me contacter directement !"}
           - {label: "Sections", name: "sections", widget: "hidden", default: ["page_title", "faq-content"]}
           - {label: "Zone de contact en bas de page", name: "contact_cta", widget: "object", fields: [
-              {label: "Titre", name: "title", widget: "string"},
-              {label: "Sous-titre", name: "subtitle", widget: "string"},
-              {label: "Texte du bouton", name: "button_text", widget: "string"},
-              {label: "Lien du bouton", name: "button_url", widget: "string"}]}
-          - label: "Questions Fréquemment Posées"
+              {label: "Titre", name: "title", widget: "string", required: true, default: "Une autre question ?"},
+              {label: "Sous-titre", name: "subtitle", widget: "string", required: true, default: "N'hésitez pas à me contacter directement via WhatsApp !"},
+              {label: "Texte du bouton", name: "button_text", widget: "string", required: true, default: "Me contacter"},
+              {label: "Lien du bouton", name: "button_url", widget: "hidden", default: "/contact/"}]}
+          - label: "Catégories de questions"
             name: "faq_sections"
             widget: "list"
             fields:
               - {label: "Catégorie", name: "title", widget: "string"}
-              - {label: "Couleur de présentation", name: "color", widget: "select", options: [
-                  {label: "Bleu", value: "blue"},
-                  {label: "Sable", value: "sand"},
-                  {label: "Jungle", value: "jungle"},
-                  {label: "Emerald", value: "emerald"},
-                  {label: "Lime", value: "lime"},
-                  {label: "Océan", value: "ocean"}
-                ]}
               - label: "Questions"
                 name: "questions"
                 widget: "list"
