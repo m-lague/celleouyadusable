@@ -52,6 +52,13 @@ collections:
           - {label: "Layout", name: "layout", widget: "hidden", default: "accueil"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/"}
           - {label: "Description de la page", name: "description", widget: "hidden", default: "Cours de Vinyasa et Yin Yoga à Lacanau Océan avec Nathalie - Professeure certifiée. Séances en studio et sur la plage pour débutants et confirmés. Trouvez votre équilibre corps-esprit dans un cadre naturel exceptionnel en Gironde."}
+          - {label: "Sections", name: "sections", widget: "hidden", default: [
+
+              "upcoming-event",
+              "about",
+              "testimonials",
+              "contact-form"
+            ]}
 
           #hero banner
           - label: "Section Hero Banière"
@@ -110,23 +117,6 @@ collections:
               - {label: "changefreq", name: "changefreq", widget: "hidden", default: "weekly"}
               - {label: "lastmod", name: "lastmod", widget: "hidden", default: "{{date format='YYYY-MM-DD'}}"}
 
-
-        label: "Page yin Yoga"
-        file: "yin-yoga.md"
-        fields:
-          - {label: "Titre", name: "title", widget: "hidden"}
-          - {label: "Layout", name: "layout", widget: "hidden", default: "cours"}
-          - {label: "Permalink", name: "permalink", widget: "hidden", default: "/cours/"}
-          - {label: "Description de la page", name: "description", widget: "hidden"}
-          - {label: "Titre du haut de page", name: "page_title", widget: "string"}
-          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
-          - {label: "Titre de l'agenda", name: "agenda_title", widget: "string"}
-          - {label: "Sous-titre de l'agenda", name: "agenda_subtitle", widget: "string"}
-          - {label: "Titre de la présentation des types de cours", name: "yoga_types_title", widget: "string"}
-          - {label: "Titre Appel à l'action", name: "cta_title", widget: "string"}
-          - {label: "Sous-titre Appel à l'action", name: "cta_subtitle", widget: "string"}
-          - {label: "Texte du bouton Appel à l'action", name: "cta_text", widget: "string"}
-      - name: "events"
         label: "Page Événements"
         file: "evenements.html"
         fields:
@@ -145,29 +135,22 @@ collections:
         label: "Page À Propos"
         file: "_pages/about.md"
         fields:
-          - {label: "Titre", name: "title", widget: "hidden"}
-          - {label: "Layout", name: "layout", widget: "hidden", default: "about"}
+          - {label: "Titre", name: "title", widget: "hidden", default: "À propos - Celle où ya du sable",required: true}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "a-propos"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/a-propos/"}
-          - {label: "Description de la page", name: "description", widget: "hidden"}
-          - {label: "Titre du haut de page", name: "page_title", widget: "string"}
-          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
-          - {label: "Texte de présentation", name: "presentation_text", widget: "markdown"}
-          - {label: "Photo de moi", name: "portrait_image", widget: "image"}
+          - {label: "Description de la page", name: "description", widget: "hidden", required: true, default: "Découvrez le parcours de Nathalie, professeure de yoga à Lacanau Océan. Passionnée par le bien-être et la nature, elle vous guide dans votre pratique du vinyasa et du yin yoga."}
+          - {label: "Titre du haut de page", name: "page_title", widget: "string", required: true, default: "À propos de Nathalie"}
+          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string", required: true, default: "Votre professeure de yoga à Lacanau Océan et au Costa Rica"}
+          - {label: "Texte de présentation", name: "presentation_textbody", widget: "markdown", hint: "Ne pas utiliser de 'Titre 1'. Utiliser 'Titre 2' pour les titres principaux et 'Titre 3' pour les sous-titres. Possibilité d'utiliser des listes à puces et des liens, des images et des vidéos."}
+          - {label: "Photo de moi en haut de la page", name: "portrait_image", widget: "image", default: "/assets/images/celleouyadusable-costa-rica-plage.jpg", required: true}
+          - {label: "Photo en bas de la page", name: "footer_image", widget: "image", default: "/assets/images/celleouyadusable-posture-yoga-costa-rica.jpg", required: true}
           - {label: "Sections", name: "sections", widget: "hidden", default: ["philosophy", "certifications"]}
           - label: "Philosophie"
             name: "philosophy_items"
             widget: "list"
             fields:
               - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Texte", name: "text", widget: "text"}
-              - {label: "Couleur", name: "color", widget: "select", options: [
-                  {label: "Bleu", value: "blue"},
-                  {label: "Sable", value: "sand"},
-                  {label: "Jungle", value: "jungle"},
-                  {label: "Emerald", value: "emerald"},
-                  {label: "Lime", value: "lime"},
-                  {label: "Océan", value: "ocean"}
-                ]}
+              - {label: "Texte", name: "content", widget: "text"}
           - label: "Certifications"
             name: "certifications_items"
             widget: "list"
@@ -177,9 +160,18 @@ collections:
               - {label: "Année", name: "year", widget: "string"}
               - {label: "Type", name: "type", widget: "select",hint: "Choix du type pour changer l'icone d'illustration", options: [
                   {label: "Yoga", value: "yoga"},
-                  {label: "Méditation", value: "meditation"},
-                  {label: "Autre", value: "other"}
+                  {label: "Spécialisation", value: "specialisation"},
+                  {label: "Formation", value: "formation"},
+                  {label: "Certification", value: "certification"},
+                  {label: "autre -> icone livre", value: "autre"}
                 ]}
+          - label: "sitemap"
+            name: "sitemap"
+            widget: "hidden"
+            fields:
+              - {label: "priority", name: "priority", widget: "hidden", default: "0.7"}
+              - {label: "changefreq", name: "changefreq", widget: "hidden", default: "monthly"}
+              - {label: "lastmod", name: "lastmod", widget: "hidden", default: "{{date format='YYYY-MM-DD'}}"}
       - name: "faq"
         label: "Page FAQ"
         file: "_pages/faq.md"
@@ -391,7 +383,28 @@ collections:
       - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Description", name: "body", widget: "markdown", hint: "titre 'Programme' en Titre 3, les autres titres en titre 4"}
-  # Listes
+  - name: "ceremonie_lune"
+    label: "Cérémonies de Lune"
+    folder: "_ceremonie_lune"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Atelier", "Stage", "Cercle & Cérémonie"]}
+      - {label: "Date de l'évènement", name: "event_date", widget: "datetime"}
+      - {label: "Durée", name: "duration", widget: "string"}
+      - label: "Prix"
+        name: "prices"
+        widget: "object"
+        fields:
+          - {label: "Prix early bird", name: "early_bird", widget: "number"}
+          - {label: "Prix standard", name: "standard", widget: "number"}
+      - {label: "Date limite Early bird", name: "early_bird_deadline", widget: "datetime", required: false, default: "", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
+      - {label: "Lieu", name: "location", widget: "string"}
+      - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "body", widget: "markdown", hint: "titre 'Programme' en Titre 3, les autres titres en titre 4"}
+  # Listes _data
   - name: "lieux"
     label: "Lieux de Pratique"
     files:
