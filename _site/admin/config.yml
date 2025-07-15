@@ -117,7 +117,7 @@ collections:
               - {label: "changefreq", name: "changefreq", widget: "hidden", default: "weekly"}
               - {label: "lastmod", name: "lastmod", widget: "hidden", default: "{{date format='YYYY-MM-DD'}}"}
 
-        
+
       - name: "about"
         label: "Page À Propos"
         file: "_pages/about.md"
@@ -289,13 +289,13 @@ collections:
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/mentions-legales/"}
           - {label: "Description de la page", name: "description", widget: "hidden", required: true, default: "Mentions légales de Celle où ya du sable - Cours de yoga à Lacanau Océan. Informations légales sur l'éditeur du site, les conditions d'utilisation et la politique de confidentialité."}
           - {label: "Contenu", name: "body", widget: "markdown", hint: "Rédigez les mentions légales ici. Utilisez des titres pour structurer le contenu."}
-          - {label: "sitemap",
-            name: "sitemap",
-            widget: "hidden",
+          - label: "sitemap"
+            name: "sitemap"
+            widget: "hidden"
             fields:
-              - {label: "priority", name: "priority", widget: "hidden", default: "0.3"}
-              - {label: "changefreq", name: "changefreq", widget: "hidden", default: "yearly"}
-              - {label: "lastmod", name: "lastmod", widget: "hidden", default: "{{date format='YYYY-MM-DD'}}"}
+                - {label: "priority", name: "priority", widget: "hidden", default: "0.3"}
+                - {label: "changefreq", name: "changefreq", widget: "hidden", default: "yearly"}
+                - {label: "lastmod", name: "lastmod", widget: "hidden", default: "{{date format='YYYY-MM-DD'}}"}
       - name: "cgu"
         label: "Page CGU"
         file: "_pages/cgu.md"
@@ -305,9 +305,9 @@ collections:
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/cgu/"}
           - {label: "Description de la page", name: "description", widget: "hidden", required: true, default: "Conditions Générales d'Utilisation du site Celle où ya du sable - Cours de yoga à Lacanau Océan. Règles d'utilisation du site, droits et obligations des utilisateurs."}
           - {label: "Contenu", name: "body", widget: "markdown", hint: "Rédigez les CGU ici. Utilisez des titres pour structurer le contenu."}
-          - {label: "sitemap",
-            name: "sitemap",
-            widget: "hidden",
+          - label: "sitemap"
+            name: "sitemap"
+            widget: "hidden"
             fields:
               - {label: "priority", name: "priority", widget: "hidden", default: "0.7"}
               - {label: "changefreq", name: "changefreq", widget: "hidden", default: "yearly"}
@@ -405,9 +405,9 @@ collections:
       - {label: "Niveau requis", name: "level", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"], required: true}
       - {label: "Informations de réservation", name: "booking_info", widget: "string", hint: "Ex: Un acompte de 200€ est à verser pour l’inscription..."}
       - {label: "Description", name: "body", widget: "markdown", hint: "titre 'Programme' en Titre 3, les autres titres en titre 4"}
-      - {label: "sitemap",
-        name: "sitemap",
-        widget: "hidden",
+      - label: "sitemap"
+        name: "sitemap"
+        widget: "hidden"
         fields:
           - {label: "priority", name: "priority", widget: "hidden", default: "0.8"}
           - {label: "changefreq", name: "changefreq", widget: "hidden", default: "weekly"}
