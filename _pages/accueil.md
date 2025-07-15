@@ -3,8 +3,7 @@ schema: "accueil"
 title: Cours de Yoga à Lacanau - Celle où ya du sable
 layout: accueil
 permalink: /
-description: Cours de Vinyasa Yoga et Yin Yoga avec Nathalie à Lacanau. Trouvez
-  votre équilibre dans un cadre naturel exceptionnel.
+description: Cours de Vinyasa et Yin Yoga à Lacanau Océan avec Nathalie - Professeure certifiée. Séances en studio et sur la plage pour débutants et confirmés. Trouvez votre équilibre corps-esprit dans un cadre naturel exceptionnel en Gironde.
 hero:
   title: "COURS DE YOGA À LACANAU ET AU COSTA-RICA"
   subtitle: "Sur la plage et au cœur de la forêt de Lacanau Océan, reconnectez-vous à l’essentiel lors de votre pratique"

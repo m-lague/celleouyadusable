@@ -48,10 +48,10 @@ collections:
         label: "Page d'accueil"
         file: "_pages/accueil.md"
         fields:
-          - {label: "Titre", name: "title", widget: "hidden"}
+          - {label: "Titre", name: "title", widget: "hidden", default: "Cours de Yoga à Lacanau - Celle où ya du sable"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "accueil"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/"}
-          - {label: "Description de la page", name: "description", widget: "hidden"}
+          - {label: "Description de la page", name: "description", widget: "hidden", default: "Cours de Vinyasa et Yin Yoga à Lacanau Océan avec Nathalie - Professeure certifiée. Séances en studio et sur la plage pour débutants et confirmés. Trouvez votre équilibre corps-esprit dans un cadre naturel exceptionnel en Gironde."}
 
           #hero banner
           - label: "Section Hero Banière"
@@ -107,9 +107,10 @@ collections:
               - {label: "Texte du bouton", name: "cta", widget: "string"}
               - {label: "Téléphone", name: "phone", widget: "string"}
               - {label: "Message What's app", name: "whatsapp_message", widget: "string", default: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. À bientôt !"}
-      - name: "cours"
-        label: "Page Cours"
-        file: "cours.html"
+
+
+        label: "Page yin Yoga"
+        file: "yin-yoga.md"
         fields:
           - {label: "Titre", name: "title", widget: "hidden"}
           - {label: "Layout", name: "layout", widget: "hidden", default: "cours"}
