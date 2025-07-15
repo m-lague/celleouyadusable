@@ -72,14 +72,16 @@ collections:
               - label: "Image"
                 name: "image"
                 widget: "list"
+                fields:
+                  - {label: "Image", name: "image", widget: "image"}
                 default:
-                  - "/assets/images/celleouyadusable-yoga-darwin-hero2.jpg"
-                  - "/assets/images/celleouyadusable-yoga-darwin-hero3.jpg"
-                  - "/assets/images/celleouyadusable-yoga-darwin-hero4.jpg"
-                  - "/assets/images/celleouyadusable-yoga-darwin-hero5.jpg"
-                  - "/assets/images/celleouyadusable-yoga-darwin-hero6.jpg"
-                  - "/assets/images/celleouyadusable-yoga-darwin-hero7.jpg"
-                  - "/assets/images/celleouyadusable-yoga-darwin-hero8.jpg"
+                  - {image: "/assets/images/celleouyadusable-yoga-darwin-hero2.jpg"}
+                  - {image: "/assets/images/celleouyadusable-yoga-darwin-hero3.jpg"}
+                  - {image: "/assets/images/celleouyadusable-yoga-darwin-hero4.jpg"}
+                  - {image: "/assets/images/celleouyadusable-yoga-darwin-hero5.jpg"}
+                  - {image: "/assets/images/celleouyadusable-yoga-darwin-hero6.jpg"}
+                  - {image: "/assets/images/celleouyadusable-yoga-darwin-hero7.jpg"}
+                  - {image: "/assets/images/celleouyadusable-yoga-darwin-hero8.jpg"}
 
           # Section Évènements et retraites
           - label: "Section Évènements et Retraites"
