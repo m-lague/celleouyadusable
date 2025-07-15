@@ -69,7 +69,17 @@ collections:
               - {label: "Sous-titre", name: "subtitle", widget: "string"}
               - {label: "Lien du bouton", name: "link", widget: "string", default: "/cours/"}
               - {label: "Texte du bouton", name: "cta", widget: "string", default: "PLANNING"}
-              - {label: "Image", name: "image", widget: "list"}
+              - label: "Image"
+                name: "image"
+                widget: "list"
+                default:
+                  - "/assets/images/celleouyadusable-yoga-darwin-hero2.jpg"
+                  - "/assets/images/celleouyadusable-yoga-darwin-hero3.jpg"
+                  - "/assets/images/celleouyadusable-yoga-darwin-hero4.jpg"
+                  - "/assets/images/celleouyadusable-yoga-darwin-hero5.jpg"
+                  - "/assets/images/celleouyadusable-yoga-darwin-hero6.jpg"
+                  - "/assets/images/celleouyadusable-yoga-darwin-hero7.jpg"
+                  - "/assets/images/celleouyadusable-yoga-darwin-hero8.jpg"
 
           # Section Évènements et retraites
           - label: "Section Évènements et Retraites"
@@ -86,7 +96,7 @@ collections:
             fields:
               - {label: "Titre", name: "title", widget: "string", default: "Mon parcours", required: true}
               - {label: "Texte du bouton", name: "cta", widget: "string", default: "Découvrir mon histoire", required: true}
-              - {label: "Photo de moi sur ordinateur", name: "profile_image", widget: "image", required: true, default: "/assets/images/celleouyadusable-costa-rica-plage.jpg"}
+              - {label: "Photo de moi sur ordinateur", name: "profile_image", widget: "image", required: true, default: "/assets/images/celleouyadusable-costa-rica-plage.jpg", hint: "Cette image est affichée sur ordinateur "}
               - {label: "Photo de moi sur téléphone", name: "profile_image_sm", widget: "image", required: true, default: "/assets/images/celleouyadusable-posture-yoga-costa-rica.jpg"}
           # Section Témoignages
           - label: "Section Témoignages"
@@ -328,7 +338,9 @@ collections:
         name: "image"
         widget: "list"
         required: true
-        default: ["/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg","/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg"]
+        default:
+          - "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg"
+          - "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg"
 
       # Bénéfices
       - label: "Bénéfices"
