@@ -4,7 +4,6 @@ permalink: "/cours/yin-yoga/"
 title: "Yin Yoga"
 style: "Yin"
 duration: "60-75 minutes"
-level: "Tous niveaux"
 start_price: 20
 cta_title: "Prêt(e) à commencer votre pratique ?"
 cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."

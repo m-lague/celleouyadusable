@@ -336,7 +336,6 @@ collections:
       # Informations générales
       - {label: "Nom du cours", name: "title", widget: "string", required: true}
       - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha, etc..", required: true}
-      - {label: "Niveau", name: "level", widget: "hidden", default: "Tous niveaux"}
       - {label: "Prix à partir de :", name: "start_price", widget: "number"}
       - {label: "Image", name: "image", widget: "image", required: true}
 
@@ -351,31 +350,42 @@ collections:
         name: "planning_creneaux"
         widget: "object"
         fields:
-          - label: "Hors Saison (mai, juin, septembre, octobre) "
+          - label: "Créneaux Hors Saison (mai, juin, septembre, octobre) "
             name: "hors_saison"
             widget: "list"
             fields:
               - {label: "Jour", name: "jour", widget: "select", options: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]}
               - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
-              - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
+              - label: "Lieu"
+                name: "lieu"
+                widget: "relation"
+                collection: "lieux"
+                file: "config_lieux"
+                search_fields: ["lieux.*.nom"]
+                value_field: "lieux.*.nom"
+                display_fields: ["lieux.*.nom"]
               - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
               - {label: "Niveau", name: "niveau", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
 
-          - label: "Été (juillet, août)"
+          - label: "Créneaux Été (juillet, août)"
             name: "ete"
             widget: "list"
             fields:
               - {label: "Jour", name: "jour", widget: "select", options: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]}
               - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
-              - {label: "Lieu", name: "lieu", widget: "select", options: ["Plage SUD", "Bo&Co", "Maison Pada"]}
+              - label: "Lieu"
+                name: "lieu"
+                widget: "relation"
+                collection: "lieux"
+                file: "config_lieux"
+                search_fields: ["lieux.*.nom"]
+                value_field: "lieux.*.nom"
+                display_fields: ["lieux.*.nom"]
               - {label: "Durée", name: "duree", widget: "string", hint: "Ex: 75min"}
               - {label: "Niveau", name: "niveau", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"]}
       # Description complète
       - {label: "Description complète", name: "body", widget: "markdown", hint: "mettre les titres en titre 4"}
 
-
-
-    # Lieux de cours
   - name: "events"
     label: "Événements"
     folder: "_events"
