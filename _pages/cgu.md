@@ -7,9 +7,6 @@ sitemap:
   priority: 0.3
   changefreq: 'yearly'
 ---
-
-# Conditions Générales d'Utilisation (CGU)
-
 ## Article 1 - Objet et champ d'application
 
 Les présentes conditions générales d'utilisation (ci-après "CGU") ont pour objet de définir les modalités et conditions d'utilisation du site internet de Nathalie Kummer, accessible à l'adresse celleouyadusable.com.

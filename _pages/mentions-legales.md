@@ -7,9 +7,6 @@ sitemap:
   priority: 0.3
   changefreq: 'yearly'
 ---
-
-# Mentions Légales
-
 ## Éditeur du site
 
 Ce site est édité par :
