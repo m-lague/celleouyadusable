@@ -29,12 +29,12 @@ availability:
 location_info:
   title: "Où me trouver"
   details:
-    - label: "Studio"
-      value: "Centre-ville de Lacanau"
-    - label: "Cours extérieurs"
-      value: "Plage et forêt de Lacanau"
-    - label: "Région"
-      value: "Gironde, Nouvelle-Aquitaine"
+    - label: "Cours en intérieur"
+      value: "À Maison Pada"
+    - label: "Cours en extérieur"
+      value: "Plage sud et sur la terrasse de Bo&co"
+    - label: "Localisation"
+      value: "Lacanau Océan en Gironde, Nouvelle-Aquitaine"
   note: "Retrouvez les comptes instagram des lieux de pratique sur le planning des cours"
 
 quick_messages:

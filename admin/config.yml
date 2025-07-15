@@ -204,7 +204,7 @@ collections:
         file: "_pages/contact.md"
         fields:
           - {label: "Titre", name: "title", widget: "hidden", default: "Contact - Celle où ya du sable"}
-          - {label: "Layout", name: "layout", widget: "hidden", default: "contact"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "accueil"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/contact/"}
           - {label: "Description de la page", name: "description", widget: "hidden", default: "Contactez Nathalie pour toute question ou réservation de cours de vinyasa yoga et yin yoga à Lacanau Océan. Communication uniquement via WhatsApp."}
           - {label: "Sections", name: "sections", widget: "hidden", default: ["contact-form", "contact-info", "contact-quick-messages"]}
@@ -214,23 +214,24 @@ collections:
             name: "contact_section"
             widget: "object"
             fields:
-              - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - {label: "Texte du bouton", name: "cta", widget: "string"}
-              - {label: "Téléphone", name: "phone", widget: "string"}
+              - {label: "Titre", name: "title", widget: "string", required: true, default: "Contactez-moi"}
+              - {label: "Sous-titre", name: "subtitle", widget: "hidden", default: "Pour toute question ou réservation"}
+              - {label: "Texte du bouton", name: "cta", widget: "string", required: true, default: "M'écrire sur What's App"}
+              - {label: "Téléphone", name: "phone", widget: "string", required: true, default: "+33 6 01 28 30 70"}
               - {label: "Message WhatsApp par défaut", name: "whatsapp_message", widget: "string", default: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. Merci"}
+              - {label: "Image de fond", name: "background_image", widget: "image", required: true, default: "/assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean-2.jpeg"}
 
           # Horaires d'ouverture
           - label: "Horaires d'ouverture"
             name: "availability"
             widget: "object"
             fields:
-              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Titre", name: "title", widget: "string", required: true, default: "Horaires d'ouverture"}
               - label: "Planning"
                 name: "schedule"
                 widget: "list"
                 fields:
-                  - {label: "Jours", name: "days", widget: "string"}
+                  - {label: "Jours", name: "days", widget: "string", hint: "Ex: Lundi au Vendredi, ou Lundi, Mercredi, Vendredi, ..."}
                   - {label: "Heures", name: "hours", widget: "string", hint: "Ex: 8h00 - 20h00"}
               - {label: "Note", name: "note", widget: "string", hint: "Information sur les délais de réponse"}
 
@@ -239,7 +240,7 @@ collections:
             name: "location_info"
             widget: "object"
             fields:
-              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Titre", name: "title", widget: "string", required: true, default: "Où me trouver ?"}
               - label: "Détails des lieux"
                 name: "details"
                 widget: "list"
@@ -253,9 +254,9 @@ collections:
             name: "quick_messages"
             widget: "object"
             fields:
-              - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - label: "Liste des messages"
+              - {label: "Titre", name: "title", widget: "string", required: true, default: "Messages rapides"}
+              - {label: "Sous-titre", name: "subtitle", widget: "hidden", default: "Cliquez sur un des liens ci-dessous pour envoyer un message pré-rédigé :"}
+              - label: "Messages"
                 name: "messages"
                 widget: "list"
                 fields:
@@ -268,13 +269,20 @@ collections:
             name: "important_info"
             widget: "object"
             fields:
-              - {label: "Titre", name: "title", widget: "string"}
-              - label: "Liste des informations"
+              - {label: "Titre", name: "title", widget: "string",required: true, default: "Informations importantes"}
+              - label: "Informations"
                 name: "items"
                 widget: "list"
                 fields:
                   - {label: "Titre", name: "title", widget: "string"}
-                  - {label: "Contenu", name: "content", widget: "text"}
+                  - {label: "Explications", name: "content", widget: "text"}
+          - label: "sitemap"
+            name: "sitemap"
+            widget: "hidden"
+            fields:
+              - {label: "priority", name: "priority", widget: "hidden", default: "0.7"}
+              - {label: "changefreq", name: "changefreq", widget: "hidden", default: "monthly"}
+              - {label: "lastmod", name: "lastmod", widget: "hidden", default: "{{date format='YYYY-MM-DD'}}"}
       - name: "testimonials"
         label: "Page Témoignages"
         file: "testimonials.html"
