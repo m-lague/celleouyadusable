@@ -324,7 +324,11 @@ collections:
       - {label: "Nom du cours", name: "title", widget: "string", required: true}
       - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha, etc..", required: true}
       - {label: "Prix à partir de :", name: "start_price", widget: "number"}
-      - {label: "Image", name: "image", widget: "image", required: true}
+      - label: "Image"
+        name: "image"
+        widget: "list"
+        required: true
+        default: ["/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg","/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg"]
 
       # Bénéfices
       - label: "Bénéfices"
