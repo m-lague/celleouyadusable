@@ -29,13 +29,12 @@ events_section:
 about_section:
   title: "Mon parcours"
   cta: "Découvrir mon histoire"
-  cta_subtitle: "Mon parcours, mes formations et ma philosophie du yoga"
   profile_image: "/assets/images/celleouyadusable-costa-rica-plage.jpg"
   profile_image_sm: "/assets/images/celleouyadusable-posture-yoga-costa-rica.jpg"
 testimonials_section:
   title: "Ce que disent mes élèves"
   subtitle: "Leurs expériences avec le yoga"
-  cta: "Voir tous les Témoignages"
+ 
 contact_section:
   title: "Contactez-moi"
   subtitle: "Pour toute question ou réservation"
