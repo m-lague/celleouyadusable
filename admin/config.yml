@@ -36,8 +36,8 @@ collections:
             name: "footer"
             widget: "object"
             fields:
-              - {label: "Copyright", name: "copyright", widget: "string"}
-              - {label: "Localisation", name: "location", widget: "string"}
+              - {label: "Copyright", name: "copyright", widget: "string", required: true, default: "© 2025 Celle_ou_yadusable"}
+              - {label: "Localisation", name: "location", widget: "string", required: true, default: "Lacanau Océan, Gironde (33)"}
 
 
   # Pages
