@@ -139,4 +139,3 @@ exclude:
   - .jekyll-cache
   - .jekyll-metadata
   - README.md
-  - admin/
