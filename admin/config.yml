@@ -287,12 +287,12 @@ collections:
         label: "Page Témoignages"
         file: "testimonials.html"
         fields:
-          - {label: "Titre", name: "title", widget: "hidden"}
-          - {label: "Layout", name: "layout", widget: "hidden", default: "testimonials"}
+          - {label: "Titre", name: "title", widget: "hidden", required: true, default: "Témoignages - Celle où ya du sable"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "default"}
           - {label: "Permalink", name: "permalink", widget: "hidden", default: "/temoignages/"}
-          - {label: "Description de la page", name: "description", widget: "hidden"}
-          - {label: "Titre du haut de page", name: "page_title", widget: "string"}
-          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string"}
+          - {label: "Description de la page", name: "description", widget: "hidden", required: true, default: "Découvrez les avis Google authentiques de mes élèves. Témoignages réels sur mes cours de Vinyasa et Yin Yoga à Lacanau."}
+          - {label: "Titre du haut de page", name: "page_title", widget: "string", required: true, default: "Témoignages"}
+          - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "hidden", required: true, default: "Ce que disent mes élèves sur leur expérience avec le yoga"}
       - name: "legal"
         label: "Page Mentions Légales"
         file: "_pages/mentions-legales.md"
@@ -408,7 +408,7 @@ collections:
   - name: "lieux"
     label: "Lieux de Pratique"
     files:
-      - label: "Gérer les lieux"
+      - label: "Lieux"
         name: "config_lieux"
         file: "_data/lieux.yml"
         fields:
@@ -442,7 +442,7 @@ collections:
         label: "Gérer les témoignages"
         file: "_data/testimonials.yml"
         fields:
-          - label: "Liste des témoignages"
+          - label: "Témoignages"
             name: "testimonials"
             widget: "list"
             fields:
