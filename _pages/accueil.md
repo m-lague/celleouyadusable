@@ -24,9 +24,8 @@ sections:
   - contact-form
 show_title: false
 events_section:
-  title: "Évènements & Retraites"
-  subtitle: "Des moments privilégiés pour approfondir votre pratique"
-  cta: "Tous les Évènements"
+  title: "Prochain événement"
+  cta: "découvrir"
 about_section:
   title: "Mon parcours"
   cta: "Découvrir mon histoire"

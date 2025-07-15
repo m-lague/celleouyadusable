@@ -63,15 +63,15 @@ collections:
               - {label: "Lien du bouton", name: "link", widget: "string", default: "/cours/"}
               - {label: "Texte du bouton", name: "cta", widget: "string", default: "PLANNING"}
               - {label: "Image", name: "image", widget: "list"}
-         
+
           # Section Évènements et retraites
           - label: "Section Évènements et Retraites"
             name: "events_section"
             widget: "object"
             fields:
-              - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - {label: "Texte du bouton", name: "cta", widget: "string"}
+              - {label: "Titre", name: "title", widget: "string", default: "prochain évènement", required}
+              - {label: "Texte du bouton", name: "cta", widget: "string", default: "découvrir", required: true }
+
           # Section Mon Parcours
           - label: "Section Mon Parcours"
             name: "about_section"
