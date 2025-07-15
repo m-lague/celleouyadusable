@@ -15,7 +15,7 @@ collections:
     label: "Configuration du site"
     files:
       - name: "navigation"
-        label: "Navigation"
+        label: "Menu"
         file: "_data/navigation.yml"
         fields:
           - label: "Menu principal"
