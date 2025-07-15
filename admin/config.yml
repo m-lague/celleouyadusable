@@ -95,11 +95,20 @@ collections:
             name: "contact_section"
             widget: "object"
             fields:
-              - {label: "Titre", name: "title", widget: "string"}
-              - {label: "Sous-titre", name: "subtitle", widget: "string"}
-              - {label: "Texte du bouton", name: "cta", widget: "string"}
-              - {label: "Téléphone", name: "phone", widget: "string"}
-              - {label: "Message What's app", name: "whatsapp_message", widget: "string", default: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. À bientôt !"}
+              - {label: "Titre", name: "title", widget: "string",required: true, default: "Contactez-moi"}
+              - {label: "Sous-titre", name: "subtitle", widget: "hidden", default: "Pour toute question ou réservation"}
+              - {label: "Texte du bouton", name: "cta", widget: "string",required: true, default: "M'écrire sur What's app"}
+              - {label: "Téléphone", name: "phone", widget: "string", required: true, default: "+33 6 01 28 30 70"}
+              - {label: "Message What's app", name: "whatsapp_message", widget: "string", default: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. À bientôt !",required: true}
+              - {label: "Image de fond", name: "background_image", widget: "image", required: true, default: "/assets/images/celleouyadusable-vinyasa-yoga-posture-lacanau-et-costa-rica.jpg"}
+          #sitemap
+          - label: "sitemap"
+            name: "sitemap"
+            widget: "hidden"
+            fields:
+              - {label: "priority", name: "priority", widget: "hidden", default: "1.0"}
+              - {label: "changefreq", name: "changefreq", widget: "hidden", default: "weekly"}
+              - {label: "lastmod", name: "lastmod", widget: "hidden", default: "{{date format='YYYY-MM-DD'}}"}
 
 
         label: "Page yin Yoga"
