@@ -85,9 +85,9 @@
         </h3>
         <div class="space-y-2 ">
             <p class= "[&_a]:underline [&_a]:decoration-neutral-400 [&_a]:text-neutral-700 [&_a]:font-medium [&_a:hover]:decoration-neutral-600 [&_a:hover]:text-neutral-900"><strong>Adresse :</strong> {{ lieu.adresse | markdownify | remove: '<p>' | remove: '</p>' | replace: '<a href="http', '<a rel="noopener noreferrer nofollow" target="_blank" href="http' }}</p>
-
+            {% if lieu.prices %}
             <p><strong>Tarifs :</strong> {{lieu.prices.unit_course}}€ le cours, {{lieu.prices.card_10_courses}}€ la carte de 10 cours</p>
-
+            {% endif %}
 
             <p><strong>Durée :</strong> {{lieu.duration}}</p>
 
@@ -343,4 +343,3 @@ document.addEventListener('DOMContentLoaded', function() {
     updatePlanning();
 });
 </script>
-

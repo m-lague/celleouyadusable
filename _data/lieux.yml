@@ -16,9 +16,6 @@ lieux:
     adresse: Plage NORD, École de surf @boandcosurf
     reservation: "[@boandcosurl](https://bocosurf.com/cours-de-yoga/#reservationyog\
       a) ou 0556263399"
-    prices:
-      unit_course: 15
-      card_10_courses: 150
     period: Mai à Octobre
     duration: 60 min
   - nom: Maison Pada
@@ -26,9 +23,5 @@ lieux:
     couleur: jungle
     adresse: La maison des Dunes, @maison_pada_33
     reservation: "[@maison_pada_33](https://maison-pada.fr/planning/)"
-    prices:
-      unit_course: 18
-      card_10_courses: 160
-      tryout_course: 10
     period: Mai à Novembre
     duration: 60-75 min suivant le niveau
