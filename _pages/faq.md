@@ -47,9 +47,9 @@ faq_sections:
 
           Portez des vêtements confortables dans lesquels vous pouvez bouger librement.
       - question: Où ont lieu les cours ?
-        answer: Les cours se déroulent dans mon **studio à Lacanau**, mais aussi parfois
-          en extérieur selon la météo (plage, forêt). L'adresse exacte vous sera
-          communiquée lors de la réservation.
+        answer: Les cours sur la plage se déroulent à la plage Sud sous le Rainbow Café,
+          à Lacanau-Océan. L'adresse exacte vous sera communiquée lors de la
+          réservation.
       - question: Comment réserver un cours ?
         answer: La réservation se fait uniquement via **WhatsApp**. Contactez-moi au
           moins 24h à l'avance pour garantir votre place. Les places étant
