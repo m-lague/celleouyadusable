@@ -2,7 +2,7 @@
 title: WorkShop Spinal Mobility & Transitions
 type: Workshop
 start_date: 2025-08-23T17:00:00.000+02:00
-end_date:
+end_date: null
 duration: 2h
 prices:
   standard:
