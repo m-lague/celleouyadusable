@@ -16,7 +16,6 @@ included:
   - 2h de pratique focus sur la mobilité de la colonne vertébrale
   - Travail des tansitions
   - Matériel fourni (Tapis, Sangles, Blocs)
-  - test
 level: Tous niveaux
 booking_infos: "Paiement en ligne sur la page de la billetterie de La Baignoire "
 sitemap:
