@@ -412,7 +412,7 @@ collections:
           - {label: "Prix standard", name: "standard", widget: "list", fields: [
               {label: "Prix", name: "amount", widget: "number"},
               {label: "Détails", name: "details", widget: "string", hint: "Dortoir de 3 ou 4 personnes, lit simple, salle de bain commune"}]}
-      - {label: "Date limite Early bird", name: "early_bird_deadline", widget: "datetime", required: true, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
+      - {label: "Date limite Early bird", name: "early_bird_deadline", widget: "datetime", required: false, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
       - {label: "Lieu", name: "location", widget: "string"}
       - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: true}
       - {label: "Image", name: "image", widget: "image", required: true}
