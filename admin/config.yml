@@ -435,9 +435,10 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Atelier", "Stage", "Cercle & Cérémonie"]}
-      - {label: "Date de l'évènement", name: "event_date", widget: "datetime"}
+      - {label: "Titre", name: "title", widget: "string", required: true, default: "Cérémonie de Lune"}
+      - {label: "Type", name: "type", widget: "hidden", default: "Cérémonie de Lune"}
+      - {label: "Date de l'évènement", name: "start_date", widget: "datetime", required: true, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY"}
+      - {label: "Date de fin", name: "end_date", widget: "hidden", required: false, default: ""}
       - {label: "Durée", name: "duration", widget: "string"}
       - label: "Prix"
         name: "prices"
