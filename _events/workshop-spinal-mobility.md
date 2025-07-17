@@ -13,11 +13,11 @@ location: DOMAINE DE L'ARDILOUSE Hotel du Golf La Baignoire, 33680 Lacanau
 participants_max: 15
 image: /assets/images/celleouyadusable-yoga-darwin-hero7.jpg
 included:
-  - item: 2h de pratique focus sur la mobilité de la colonne vertébrale
-  - item: Travail des tansitions
-  - item: Matériel fourni (Tapis, Sangles, Blocs)
+  - 2h de pratique focus sur la mobilité de la colonne vertébrale
+  - Travail des tansitions
+  - Matériel fourni (Tapis, Sangles, Blocs)
 level: Tous niveaux
-booking_info: "Paiement en ligne sur la page de la billetterie de La Baignoire "
+booking_infos: "Paiement en ligne sur la page de la billetterie de La Baignoire "
 sitemap:
   priority: "0.8"
   changefreq: weekly

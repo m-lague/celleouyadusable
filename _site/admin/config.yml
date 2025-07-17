@@ -421,7 +421,7 @@ collections:
       - {label: "Ce qui n'est pas inclus", name: "not_included", widget: "list", fields: [
           {label: "Pas Inclus", name: "item", widget: "string"}]}
       - {label: "Niveau requis", name: "level", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"], required: true}
-      - {label: "Informations de réservation", name: "booking_info", widget: "string", hint: "Ex: Un acompte de 200€ est à verser pour l’inscription..."}
+      - {label: "Informations de réservation", name: "booking_infos", widget: "string", hint: "Ex: Un acompte de 200€ est à verser pour l’inscription..."}
       - {label: "Description", name: "body", widget: "markdown", hint: "titre 'Programme' en Titre 3, les autres titres en titre 4"}
       - label: "sitemap"
         name: "sitemap"
