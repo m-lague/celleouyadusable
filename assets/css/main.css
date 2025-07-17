@@ -56,10 +56,14 @@ nav.scrolled .text-neutral-600 {
 /* Styles pour les pages légales */
 /* Dans ton main.css */
 .prose {
-  color: #374151;
+  color: oklch(26.9% 0 0);
   max-width: 65ch;
 }
 
+.prose-card{
+  color: oklch(98.5% 0 0);
+  max-width: 65ch;
+}
 .prose h1 {
   color: #1f2937;
   font-weight: 800;
