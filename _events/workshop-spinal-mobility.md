@@ -2,7 +2,7 @@
 title: WorkShop Spinal Mobility & Transitions
 type: Workshop
 start_date: 2025-08-23T17:00:00.000+02:00
-end_date:
+end_date: null
 duration: 2h
 prices:
   standard:
@@ -16,6 +16,7 @@ included:
   - 2h de pratique focus sur la mobilité de la colonne vertébrale
   - Travail des tansitions
   - Matériel fourni (Tapis, Sangles, Blocs)
+  - test
 level: Tous niveaux
 booking_infos: "Paiement en ligne sur la page de la billetterie de La Baignoire "
 sitemap:
