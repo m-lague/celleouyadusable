@@ -400,7 +400,7 @@ collections:
       - {label: "Titre", name: "title", widget: "string"}
       - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Workshop", "Cérémonie de Lune"]}
       - {label: "Date de début", name: "start_date", widget: "datetime"}
-      - {label: "Date de fin", name: "end_date", widget: "datetime"}
+      - {label: "Date de fin", name: "end_date", widget: "datetime", required: false, hint: "Laisser vide si l'événement dure une journée"}
       - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 1 jour, 3 jours, 1 semaine"}
       - label: "Prix"
         name: "prices"

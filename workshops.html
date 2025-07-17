@@ -10,8 +10,8 @@ upcoming_workshops_title: "Workshops à venir"
 past_workshops_title: "Workshops passés"
 ---
 
-{% assign upcoming_workshops = site.events | where_exp: "event", "event.event_date >= site.time" | where: "type", "Workshop" | sort: "event_date" %}
-{% assign past_workshops = site.events | where_exp: "event", "event.event_date < site.time" | where: "type", "Workshop" | sort: "event_date" %}
+{% assign upcoming_workshops = site.events | where_exp: "event", "event.start_date >= site.time" | where: "type", "Workshop" | sort: "start_date" %}
+{% assign past_workshops = site.events | where_exp: "event", "event.start_date < site.time" | where: "type", "Workshop" | sort: "start_date" %}
 
 
 <!-- Workshops à venir -->
