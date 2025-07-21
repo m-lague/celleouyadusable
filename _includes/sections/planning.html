@@ -101,7 +101,7 @@
     {% for lieu in site.data.lieux.lieux %}
     {% assign color_class = lieu.couleur %}
     <div class="bg-{{ color_class }}-50 p-6 ">
-        <h3 class="text-xl font-bold  mb-4 bg-{{ color_class }}-100 px-3 py-2 flex items-center">
+        <h3 class="text-xl font-bold  mb-4  px-3 py-2 flex items-center">
             <span class="mr-2"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
@@ -232,16 +232,16 @@ function createCourseCard(course) {
 
     // Couleurs basées sur la couleur définie pour chaque lieu
     const colorClasses = {
-        'blue': 'bg-blue-100 border-blue-400',
-        'sable': 'bg-sable-100 border-sable-400',
-        'purple': 'bg-purple-100 border-purple-400',
-        'green': 'bg-green-100 border-green-400',
-        'red': 'bg-red-100 border-red-400',
-        'jungle': 'bg-jungle-100 border-jungle-400 ',
-        'emerald': 'bg-emerald-100 border-emerald-400',
-        'lime': 'bg-lime-100 border-lime-400',
-        'bleu': 'bg-bleu-100 border-bleu-400',
-        'ocean': 'bg-ocean-100 border-ocean-400'
+        'blue': 'bg-blue-50 border-blue-400',
+        'sable': 'bg-sable-50 border-sable-400',
+        'purple': 'bg-purple-50 border-purple-400',
+        'green': 'bg-green-50 border-green-400',
+        'red': 'bg-red-50 border-red-400',
+        'jungle': 'bg-jungle-50 border-jungle-400 ',
+        'emerald': 'bg-emerald-50 border-emerald-400',
+        'lime': 'bg-lime-50 border-lime-400',
+        'bleu': 'bg-bleu-50 border-bleu-400',
+        'ocean': 'bg-ocean-50 border-ocean-400'
     };
 
     const levelColors = {
