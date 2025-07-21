@@ -128,8 +128,6 @@ collections:
               - {label: "priority", name: "priority", widget: "hidden", default: "1.0"}
               - {label: "changefreq", name: "changefreq", widget: "hidden", default: "weekly"}
               - {label: "lastmod", name: "lastmod", widget: "hidden", default: "{{date format='YYYY-MM-DD'}}"}
-
-
       - name: "about"
         label: "Page À Propos"
         file: "_pages/about.md"

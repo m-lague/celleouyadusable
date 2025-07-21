@@ -1,16 +1,32 @@
-<section class="py-16 bg-white">
+<section class="pb-16 pt-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4 border-b-2 border-neutral-400 inline-block pb-2">
-                {{ page.agenda_title }}
+            <h2 class="text-3xl md:text-4xl text-neutral-800 mb-4 inline-block pb-2">
+                {{page.page_title | upcase}}
             </h2>
-            <p class="text-xl text-neutral-600">
-                {{page.agenda_subtitle }}
-            </p>
-        </div>
 
+        </div >
+        <!-- Grille des lieux -->
+        {% assign lieux = site.data.lieux.lieux %}
+        {% if lieux.size > 0 %}
+        <div class="grid grid-cols-1
+                                      {% case lieux.size %}
+                                        {% when 1 %}
+                                          lg:grid-cols-1
+                                        {% when 2 %}
+                                          lg:grid-cols-2
+                                        {% else %}
+                                          lg:grid-cols-3
+                                        {% endcase %}
+                                        gap-8">
+            {% for lieu in lieux %}
+            {{include card-lieu.html lieu=lieu}}
+            {% endfor %}
+           
+        </div>
+        {% endif %}
         <!-- Sélecteur de saison (sans bordure) -->
-        <div class="flex justify-center mb-4">
+        <div id="agenda" class="flex justify-center mb-4">
             <div class="p-2">
                 <button id="hors-saison-btn"
                         class="px-6 py-2  transition-colors season-btn active"

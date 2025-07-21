@@ -3,13 +3,12 @@ main:
     url: /
   - name: COURS
     sub_nav:
+      - name: Lieux & Tarifs
+        url: /cours/lieux-tarifs/
       - name: Vinyasa Yoga
         url: /cours/vinyasa-yoga/
       - name: Yin Yoga
         url: /cours/yin-yoga/
-      - name: Planning & Tarifs
-        url: /cours/planning-tarifs/
-    url: ""
   - name: ÉVÉNEMENTS
     sub_nav:
       - name: Retraites
