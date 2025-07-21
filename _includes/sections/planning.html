@@ -20,24 +20,33 @@
                                         {% endcase %}
                                         gap-8">
             {% for lieu in lieux %}
-            {{include card-lieu.html lieu=lieu}}
+            {%include card-lieu.html lieu=lieu%}
+
             {% endfor %}
-           
+
         </div>
         {% endif %}
         <!-- Sélecteur de saison (sans bordure) -->
-        <div id="agenda" class="flex justify-center mb-4">
+        <div id="agenda" class="flex justify-center mb-4 mt-18">
             <div class="p-2">
-                <button id="hors-saison-btn"
-                        class="px-6 py-2  transition-colors season-btn active"
-                        data-season="hors_saison">
-                    HORS SAISON
-                </button>
-                <button id="ete-btn"
-                        class="px-6 py-2  transition-colors season-btn"
-                        data-season="ete">
-                    ÉTÉ
-                </button>
+                {% assign current_month = site.time | date: "%m" %}
+                {% assign is_summer = false %}
+                {% if current_month == '07' or current_month == '08' %}
+                  {% assign is_summer = true %}
+                {% endif %}
+
+              <button id="hors-saison-btn"
+                      class="px-6 py-2 transition-colors season-btn{% unless is_summer %} active{% endunless %}"
+                      data-season="hors_saison">
+                  HORS SAISON
+              </button>
+
+              <button id="ete-btn"
+                      class="px-6 py-2 transition-colors season-btn{% if is_summer %} active{% endif %}"
+                      data-season="ete">
+                  ÉTÉ
+              </button>
+
             </div>
         </div>
 
@@ -121,7 +130,7 @@
 
 <script>
 // Variables globales manquantes
-let currentSeason = 'hors_saison';
+let currentSeason = {% if is_summer %}'ete'{% else %}'hors_saison'{% endif %};
 let currentDay = 'lundi';
 
 // Fonction pour organiser les créneaux par jour et saison

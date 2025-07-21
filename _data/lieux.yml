@@ -4,24 +4,27 @@ lieux:
     couleur: bleu
     adresse: Sous le
       [@rainbowcafelacanau](https://www.instagram.com/rainbowcafe_lacanau)
-    reservation: Au plus tard 19h la veille, en cliquant directement sur le planning
+    reservation: Réservation au plus tard 19h la veille, en cliquant directement sur le planning
     prices:
       unit_course: 20
       card_10_courses: 180
     period: Mai à Octobre
     duration: 75 min
+    image: /assets/images/celleouyadusable-cours-de-yoga-plage-sub-lacanau.jpeg
   - nom: Bo&Co
     icone: 🏄‍♀️
     couleur: sable
     adresse: Plage NORD, École de surf @boandcosurf
-    reservation: "[@boandcosurl](https://bocosurf.com/cours-de-yoga/#reservationyog\
-      a) ou 0556263399"
+    reservation: "Réservation sur [@boandcosurl](https://bocosurf.com/cours-de-yoga/#reservationyog\
+      a) ou au 0556263399"
     period: Mai à Octobre
     duration: 60 min
+    image: /assets/images/celleouyadusable-cours-de-yoga-boandco-lacanau.jpeg
   - nom: Maison Pada
     icone: 🏠
     couleur: jungle
     adresse: La maison des Dunes, @maison_pada_33
-    reservation: "[@maison_pada_33](https://maison-pada.fr/planning/)"
+    reservation: "Réservation sur [@maison_pada_33](https://maison-pada.fr/planning/)"
     period: Mai à Novembre
     duration: 60-75 min suivant le niveau
+    image: /assets/images/celleouyadusable-cours-de-yoga-maison-pada-lacanau.jpeg
