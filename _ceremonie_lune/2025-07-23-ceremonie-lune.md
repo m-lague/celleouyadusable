@@ -38,4 +38,4 @@ HEALING
 
 Prendre avec soi tapis de yoga si tu as, éléments chauds, plaid, sweet, chaussettes
 
-!["celleouyadusable jouant du tambour chamanique sur la dune"](/assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean-2.jpeg)
+![celleouyadusable jouant du tambour chamanique sur la dune](/assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean-2.jpeg)
