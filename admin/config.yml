@@ -99,8 +99,8 @@ collections:
             fields:
               - {label: "Titre", name: "title", widget: "string", default: "Mon parcours", required: true}
               - {label: "Texte du bouton", name: "cta", widget: "string", default: "Découvrir mon histoire", required: true}
-              - {label: "Photo de moi sur ordinateur", name: "profile_image", widget: "image", required: true, default: "/assets/images/celleouyadusable-costa-rica-plage.jpg", hint: "Cette image est affichée sur ordinateur "}
-              - {label: "Photo de moi sur téléphone", name: "profile_image_sm", widget: "image", required: true, default: "/assets/images/celleouyadusable-posture-yoga-costa-rica.jpg"}
+              - {label: "Photo de moi sur téléphone", name: "profile_image", widget: "image", required: true, default: "/assets/images/celleouyadusable-costa-rica-plage.jpg", hint: "Cette image est affichée sur téléphone, elle doit être au format portrait"}
+              - {label: "Photo de moi sur ordinateur", name: "profile_image_sm", widget: "image", required: true, default: "/assets/images/celleouyadusable-posture-yoga-costa-rica.jpg", hint: "Cette image est affichée sur ordinateur, elle doit être au format paysage"}
           # Section Témoignages
           - label: "Section Témoignages"
             name: "testimonials_section"
