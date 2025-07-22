@@ -470,7 +470,7 @@ collections:
             widget: 'list'
             fields:
               - {label: "Nom du lieu", name: "nom", widget: "string"}
-              - {label: "Icône", name: "icone", widget: "string", default: "🏖️", hint: "Copiez-collez un emoji depuis votre téléphone"}
+              - {label: "Icône", name: "icone", widget: "string", default: "🏖️", hint: "Mettre un emoji "}
               - {label: "Couleur", name: "couleur", widget: "select", options: [
                   {label: "Bleu", value: "bleu"},
                   {label: "Sable", value: "sable"},
@@ -486,6 +486,7 @@ collections:
               - {label: "Période", name: "period", widget: "string", hint: "Ex: Mai à Octobre"}
               - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 75 min"}
               - {label: "Réservation", name: "reservation", widget: "markdown", hint: "Ex: Au plus tard 19h la veille, en cliquant directement sur le planning", required: true}
+              - {label: "Lien de réservation", name: "booking_url", widget: "string", hint: "Copier-coller le lien vers la page de réservation", required: false}
   - name: "testimonials"
     label: "Témoignages"
     files:
