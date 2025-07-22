@@ -20,6 +20,7 @@ lieux:
     period: Mai à Octobre
     duration: 60 min
     image: /assets/images/celleouyadusable-cours-de-yoga-boandco-lacanau.jpeg
+    booking_url: https://bocosurf.com/cours-de-yoga/#reservationyoga
   - nom: Maison Pada
     icone: 🏠
     couleur: jungle
@@ -28,3 +29,4 @@ lieux:
     period: Mai à Novembre
     duration: 60-75 min suivant le niveau
     image: /assets/images/celleouyadusable-cours-de-yoga-maison-pada-lacanau.jpeg
+    booking_url: https://maison-pada.fr/planning/

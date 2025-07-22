@@ -36,13 +36,13 @@
                 {% endif %}
 
               <button id="hors-saison-btn"
-                      class="px-6 py-2 transition-colors season-btn{% unless is_summer %} active{% endunless %}"
+                      class="px-6 py-2 transition-colors bg-neutral-100 season-btn{% unless is_summer %} active {% endunless %}"
                       data-season="hors_saison">
                   HORS SAISON
               </button>
 
               <button id="ete-btn"
-                      class="px-6 py-2 transition-colors season-btn{% if is_summer %} active{% endif %}"
+                      class="px-6 py-2 transition-colors bg-neutral-100 season-btn{% if is_summer %} active{% endif %}"
                       data-season="ete">
                   ÉTÉ
               </button>
@@ -224,7 +224,8 @@ function createCourseCard(course) {
           "{{ lieu.nom }}": {
               icone: "{{ lieu.icone }}",
               couleur: "{{ lieu.couleur }}",
-              id: "{{ lieu.nom | downcase | replace: ' ', '_' | replace: '&', '' }}"
+              id: "{{ lieu.nom | downcase | replace: ' ', '_' | replace: '&', '' }}",
+              booking_url: "{{ lieu.booking_url | default: '#' }}"
           }{% unless forloop.last %},{% endunless %}
           {% endfor %}
       };
@@ -257,11 +258,21 @@ function createCourseCard(course) {
     const levelClass = levelColors[course.level] || 'bg-gray-200 text-gray-800';
 
     // Message WhatsApp contextualisé
-    const whatsappMessage = `Bonjour Nathalie, je souhaite réserver le cours ${course.style} prévu le ${course.jour} à ${course.heure} à ${course.lieu}. Merci`;
-    const whatsappUrl = `https://wa.me/33601283070?text=${encodeURIComponent(whatsappMessage)}`;
+    let reservationUrl;
+
+    if (course.lieu.trim().toLowerCase() === "plage sud") {
+        // WhatsApp pour Plage Sud
+        const whatsappMessage = `Bonjour Nathalie, je souhaite réserver le cours ${course.style} prévu le ${course.jour} à ${course.heure} à ${course.lieu}. Merci`;
+        reservationUrl = `https://wa.me/33601283070?text=${encodeURIComponent(whatsappMessage)}`;
+    } else {
+        // URL de booking pour les autres lieux
+        const lieuInfo = lieuxData[course.lieu];
+        reservationUrl = lieuInfo?.booking_url || '#'; // fallback si pas d'URL
+    }
+
 
     return `
-        <a href="${whatsappUrl}" target="_blank" class="block" rel="noopener noreferrer nofollow">
+        <a href="${reservationUrl}" target="_blank" class="block" rel="noopener noreferrer nofollow">
             <div class="${colorClass} p-3 mb-2 shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105">
                 <div class="font-semibold text-sm mb-1">${course.heure}</div>
                 <div class="font-bold flex items-center  mb-2">
