@@ -1,5 +1,6 @@
 ---
 schema: "vinyasa-yoga"
+permalink: /cours/vinyasa-yoga/
 title: "Vinyasa Yoga"
 style: "Vinyasa"
 duration: "60-75 minutes"
