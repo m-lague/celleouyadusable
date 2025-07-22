@@ -71,11 +71,15 @@
 
     <!-- Zone du bouton réactivée -->
     <div class="text-center relative z-40 tracking-[8px] pointer-events-auto">
-      <a href="https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement {{ event.title | url_encode }} du {{ event.start_date | date: '%d %B %Y' | url_encode }}. Merci à bientôt"
+      <a href="{% if event.booking_url %}
+                  {{ event.booking_url }}
+                {% else %}
+                  https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement {{ event.title | url_encode }} du {{ event.start_date | date: '%d %B %Y' | url_encode }}. Merci à bientôt
+                {% endif %}"
        target="_blank"
        class="group inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-sable-600 hover:border-sable-600 transition-all duration-300 shadow-md hover:shadow-lg">
 
-        <span>{{ page.cta_text | upcase}}</span>
+        <span>{{ page.cta_text | upcase }}</span>
         <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>
