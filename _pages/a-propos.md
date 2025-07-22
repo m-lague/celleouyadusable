@@ -1,48 +1,55 @@
 ---
-layout: "a-propos"
-schema: "a-propos"
-title: "À propos - Celle où ya du sable"
+schema: a-propos
+title: À propos - Celle où ya du sable
+layout: a-propos
 permalink: /a-propos/
-description: "Découvrez le parcours de Nathalie, professeure de yoga à Lacanau Océan. Passionnée par le bien-être et la nature, elle vous guide dans votre pratique du vinyasa et du yin yoga."
-page_title: "À propos de Nathalie"
-page_subtitle: "Votre professeure de yoga à Lacanau Océan et au Costa Rica"
-portrait_image: "/assets/images/celleouyadusable-costa-rica-plage.jpg"
-footer_image: "/assets/images/tambour-chamanique-celleouyadusable.jpg"
+description: Découvrez le parcours de Nathalie, professeure de yoga à Lacanau
+  Océan. Passionnée par le bien-être et la nature, elle vous guide dans votre
+  pratique du vinyasa et du yin yoga.
+page_title: À propos de Nathalie
+page_subtitle: Votre professeure de yoga à Lacanau Océan et au Costa Rica
+portrait_image: /assets/images/celleouyadusable-costa-rica-plage.jpg
+footer_image: /assets/images/tambour-chamanique-celleouyadusable.jpg
 sections:
   - philosophy
   - certifications
 philosophy_items:
-  - title: "Connexion"
-    content: "Le yoga relie toutes les sphères de l’être : âme, cœur, esprit, corps et souffle. Il permet de s’aligner avec sa propre essence et de révéler sa vérité intérieure."
-  - title: "Transmission"
-    content: "Partager un enseignement riche, cohérent et sûr, fidèle à mes mentors, pour accompagner chacun avec authenticité, intelligence et bienveillance."
-    color: "sable"
-  - title: "Nature"
-    content: "Pratiquer au contact de la nature, entre océan, jungle et pins, favorise l’ancrage, la croissance et l’expansion de l’être."
-  - title: "Engagement"
-    content: "Passion, discipline et engagement guident chaque cours, chaque retraite et chaque partage, pour incarner pleinement mon Dharma et accompagner votre évolution."
-certifications:
-  - title: "Certification Yoga Vinyasa 200h"
-    school: "Bali Yoga School, Indonésie"
-    year: "2019"
-    type: "certification"
-  - title: "Formation avancée Vinyasa & Mobility 1300h"
-    school: "Mathieu Boldron Yoga, France"
-    year: "2020-2024"
-    type: "formation"
-  - title: "Assistanat formations intensives et professorales"
-    school: "Mathieu Boldron Yoga, Paris et France"
-    year: "2022-2025"
-    type: "autre"
-  - title: "Formation FRC® Mobility Specialist"
-    school: "Functional Range Conditioning"
-    year: "2023"
-    type: "certification"
+  - title: Connexion
+    content: "Le yoga relie toutes les sphères de l’être : âme, cœur, esprit, corps
+      et souffle. Il permet de s’aligner avec sa propre essence et de révéler sa
+      vérité intérieure."
+  - title: Transmission
+    content: Partager un enseignement riche, cohérent et sûr, fidèle à mes mentors,
+      pour accompagner chacun avec authenticité, intelligence et bienveillance.
+    color: sable
+  - title: Nature
+    content: Pratiquer au contact de la nature, entre océan, jungle et pins,
+      favorise l’ancrage, la croissance et l’expansion de l’être.
+  - title: Engagement
+    content: Passion, discipline et engagement guident chaque cours, chaque retraite
+      et chaque partage, pour incarner pleinement mon Dharma et accompagner
+      votre évolution.
 sitemap:
   priority: 0.7
-  changefreq: 'monthly'
+  changefreq: monthly
+certifications:
+  - title: Certification Yoga Vinyasa 200h
+    school: Bali Yoga School, Indonésie
+    year: "2019"
+    type: certification
+  - title: Formation avancée Vinyasa & Mobility 1300h
+    school: Mathieu Boldron Yoga, France
+    year: 2020-2024
+    type: formation
+  - title: Assistanat formations intensives et professorales
+    school: Mathieu Boldron Yoga, Paris et France
+    year: 2022-2025
+    type: autre
+  - title: Formation FRC® Mobility Specialist
+    school: Functional Range Conditioning
+    year: "2023"
+    type: certification
 ---
-
 Je suis Nathalie.
 
 Passionnée et engagée.
@@ -50,6 +57,7 @@ Passionnée et engagée.
 Le **yoga** est apparu dans ma vie comme une révélation, reliant et connectant toutes les sphères de l’être, l’âme, le cœur, l’esprit, le corps, le souffle, en nous permettant de s’aligner pleinement avec sa propre essence, sa propre vérité, et de déployer la plus belle version de nous-même.
 
 <!--more-->
+
 Après avoir réalisé un premier **200h en Indonésie** il y a 6 ans, je n’ai eu de cesse de continuer de me former auprès de mon mentor et professeur Mathieu Boldron, achevant à ses côtés plus de **1300 h de formations** supplémentaires.
 Je suis honorée de l’assister, depuis plus de 2 ans, dans ses formations intensives et professorales, notamment à **Paris et à travers la France**.
 
@@ -66,5 +74,10 @@ C’est au travers de la pratique que l’essence se révèle.
 Je vous propose des **cours sur la plage**, sur des deck **sous les pins** et **dans la jungle**. Je vous emmène en retraite **à Lacanau et au Costa-Rica**, pour déployer un temps pour soi, hors du temps, pour vibrer, sentir, croître et briller la meilleure version de vous-même.
 
 Je vous propose également des **workshops** et des **retraites** urbaines à **Bordeaux**, **Paris** et au **Costa-Rica** pour vous permettre d’aller un peu plus intensément dans des pratiques spécifiques.
+
+```ruby
+var = 32
+puts var
+```
 
 ![Cours de yoga sur la plage de Lacanau Océan](/assets/images/triptyque-celleouyadusable.jpg)
