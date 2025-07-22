@@ -101,10 +101,10 @@ defaults:
         priority: 0.3
         changefreq: 'yearly'
   # Exclusions du sitemap
-  - scope:
-      path: "admin/**"
-    values:
-      sitemap: false
+  # - scope:
+  #     path: "admin/**"
+  #   values:
+  #     sitemap: false
   - scope:
       path: "assets/**"
     values:
