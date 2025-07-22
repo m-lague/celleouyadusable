@@ -2,7 +2,7 @@
 title: "Cérémonie de Lune"
 type: "Cérémonie de Lune"
 start_date: 2025-08-10T20:00:00+02:00
-end_date: 
+end_date:
 date: 2025-08-10T20:00:00+02:00
 duration: "de 20h à 22h30"
 prices:
@@ -23,6 +23,8 @@ sitemap:
 ---
 
 Un voyage sacré pour célébrer la pleine lune et la nouvelle lune, dans ce lieu magique, aux énergies incroyables, sur ce deck sous les pins.
+
+<!-- more -->
 
 Un voyage de 2h30, créé par Sheyenne @sheyenneriver et moi-même, pour la 4ème année, et @manupeluche aux platines pour vous envoûter de sons puissants de reconnexion.
 

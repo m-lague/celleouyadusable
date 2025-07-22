@@ -18,6 +18,7 @@ included:
   - Matériel fourni (Tapis, Sangles, Blocs)
 level: Tous niveaux
 booking_infos: "Paiement en ligne sur la page de la billetterie de La Baignoire "
+booking_url: https://my.weezevent.com/workshop-yoga-spinal-mobility-transitions
 sitemap:
   priority: "0.8"
   changefreq: weekly

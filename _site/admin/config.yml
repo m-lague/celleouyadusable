@@ -398,7 +398,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Workshop", "Cérémonie de Lune"]}
+      - {label: "Type", name: "type", widget: "select", options: ["Retraite", "Workshop"]}
       - {label: "Date de début", name: "start_date", widget: "datetime"}
       - {label: "Date de fin", name: "end_date", widget: "datetime", required: false, hint: "Laisser vide si l'événement dure une journée"}
       - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 1 jour, 3 jours, 1 semaine"}
@@ -411,7 +411,7 @@ collections:
               {label: "Détails", name: "details", widget: "string", hint: "Ex: jusqu'au 1er juin"}]}
           - {label: "Prix standard", name: "standard", widget: "list", fields: [
               {label: "Prix", name: "amount", widget: "number"},
-              {label: "Détails", name: "details", widget: "string", hint: "Dortoir de 3 ou 4 personnes, lit simple, salle de bain commune"}]}
+              {label: "Détails", name: "details", widget: "string",required: false, hint: "Dortoir de 3 ou 4 personnes, lit simple, salle de bain commune"}]}
       - {label: "Date limite Early bird", name: "early_bird_deadline", widget: "datetime", required: false, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
       - {label: "Lieu", name: "location", widget: "string"}
       - {label: "Nombre max de participants", name: "participants_max", widget: "number", required: true}
@@ -422,6 +422,7 @@ collections:
       - {label: "Niveau requis", name: "level", widget: "select", options: ["Débutant", "Intermédiaire", "Avancé", "Tous niveaux"], required: true}
       - {label: "Informations de réservation", name: "booking_infos", widget: "string", hint: "Ex: Un acompte de 200€ est à verser pour l’inscription..."}
       - {label: "Description", name: "body", widget: "markdown", hint: "titre 'Programme' en Titre 3, les autres titres en titre 4"}
+      - {label: "Lien de réservation", name: "booking_url", required: false, widget: "string", hint: "Copier-coller le lien vers la page de réservation ou de paiement en ligne"}
       - label: "sitemap"
         name: "sitemap"
         widget: "hidden"
