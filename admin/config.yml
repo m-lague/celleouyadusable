@@ -436,7 +436,7 @@ collections:
     folder: "_ceremonie_lune"
     create: true
     slug: "{{slug}}"
-    identifier_field: "start_date"
+    summary: "{{start_date | date('DD/MM/YY')}}"
     fields:
       - {label: "Date de l'évènement", name: "start_date", widget: "datetime", required: true, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY"}
       - {label: "Titre", name: "title", widget: "string", required: true, default: "Cérémonie de Lune"}
