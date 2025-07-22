@@ -12,7 +12,7 @@ locale: 'fr'
 collections:
   # Configuration du site
   - name: "config"
-    label: "Configuration du site"
+    label: "Menu et pied de page"
     files:
       - name: "navigation"
         label: "Menu"
@@ -130,7 +130,7 @@ collections:
               - {label: "lastmod", name: "lastmod", widget: "hidden", default: "{{date format='YYYY-MM-DD'}}"}
       - name: "about"
         label: "Page À Propos"
-        file: "_pages/about.md"
+        file: "_pages/a-propos.md"
         fields:
           - {label: "Titre", name: "title", widget: "hidden", default: "À propos - Celle où ya du sable",required: true}
           - {label: "Layout", name: "layout", widget: "hidden", default: "a-propos"}
@@ -138,7 +138,7 @@ collections:
           - {label: "Description de la page", name: "description", widget: "hidden", required: true, default: "Découvrez le parcours de Nathalie, professeure de yoga à Lacanau Océan. Passionnée par le bien-être et la nature, elle vous guide dans votre pratique du vinyasa et du yin yoga."}
           - {label: "Titre du haut de page", name: "page_title", widget: "string", required: true, default: "À propos de Nathalie"}
           - {label: "Sous-titre du haut de page", name: "page_subtitle", widget: "string", required: true, default: "Votre professeure de yoga à Lacanau Océan et au Costa Rica"}
-          - {label: "Texte de présentation", name: "presentation_textbody", widget: "markdown", hint: "Ne pas utiliser de 'Titre 1'. Utiliser 'Titre 2' pour les titres principaux et 'Titre 3' pour les sous-titres. Possibilité d'utiliser des listes à puces et des liens, des images et des vidéos."}
+          - {label: "Texte de présentation", name: "body", widget: "markdown", hint: "Ne pas utiliser de 'Titre 1'. Utiliser 'Titre 2' pour les titres principaux et 'Titre 3' pour les sous-titres. Possibilité d'utiliser des listes à puces et des liens, des images et des vidéos."}
           - {label: "Photo de moi en haut de la page", name: "portrait_image", widget: "image", default: "/assets/images/celleouyadusable-costa-rica-plage.jpg", required: true}
           - {label: "Photo en bas de la page", name: "footer_image", widget: "image", default: "/assets/images/celleouyadusable-posture-yoga-costa-rica.jpg", required: true}
           - {label: "Sections", name: "sections", widget: "hidden", default: ["philosophy", "certifications"]}
@@ -334,13 +334,15 @@ collections:
       - {label: "Nom du cours", name: "title", widget: "string", required: true}
       - {label: "Style de yoga", name: "style", widget: "string", hint: "Ex: Vinyasa, Yin, Hatha, etc..", required: true}
       - {label: "Prix à partir de :", name: "start_price", widget: "number"}
-      - label: "Image"
-        name: "image"
+      - label: "Images"
+        name: "images"
         widget: "list"
+        fields:
+                  - {label: "Image", name: "image", widget: "image"}
         required: true
         default:
-          - "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg"
-          - "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg"
+          - image: "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg"
+          - image: "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg"
 
       # Bénéfices
       - label: "Bénéfices"
