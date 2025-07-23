@@ -262,7 +262,7 @@ function createCourseCard(course) {
 
     if (course.lieu.trim().toLowerCase() === "plage sud") {
         // WhatsApp pour Plage Sud
-        const whatsappMessage = `Bonjour Nathalie, je souhaite réserver le cours ${course.style} prévu le ${course.jour} à ${course.heure} à ${course.lieu}. Merci`;
+        const whatsappMessage = `Bonjour Nathalie, je suis [ VOTRE PRENOM ],je souhaite réserver le cours ${course.style} prévu le ${course.jour} à ${course.heure} à ${course.lieu}. Merci`;
         reservationUrl = `https://wa.me/33601283070?text=${encodeURIComponent(whatsappMessage)}`;
     } else {
         // URL de booking pour les autres lieux
