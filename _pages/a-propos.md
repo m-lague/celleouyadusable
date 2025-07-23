@@ -75,9 +75,5 @@ Je vous propose des **cours sur la plage**, sur des deck **sous les pins** et **
 
 Je vous propose également des **workshops** et des **retraites** urbaines à **Bordeaux**, **Paris** et au **Costa-Rica** pour vous permettre d’aller un peu plus intensément dans des pratiques spécifiques.
 
-```ruby
-var = 32
-puts var
-```
 
 ![Cours de yoga sur la plage de Lacanau Océan](/assets/images/triptyque-celleouyadusable.jpg)
