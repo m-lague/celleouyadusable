@@ -58,6 +58,6 @@ Avec Nathalie
 
 Les places sont limitées!
 
-#### [CLIQUEZ ICI POUR EFFECTUER VOTRE RÉSERVATION : ](https://my.weezevent.com/workshop-yoga-spinal-mobility-transitions)
+#### CLIQUEZ ICI POUR EFFECTUER VOTRE RÉSERVATION : 
 
-#### <https://my.weezevent.com/workshop-yoga-spinal-mobility-transitions>
+#### https://my.weezevent.com/workshop-yoga-spinal-mobility-transitions
