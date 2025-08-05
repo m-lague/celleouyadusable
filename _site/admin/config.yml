@@ -480,8 +480,8 @@ collections:
                   {label: "Océan", value: "ocean"}
                 ]}
               - {label: "Tarifs", name: "prices", widget: "object", fields: [
-                  {label: "Tarif à l'unité", name: "unit_course", widget: "number"},
-                  {label: "Carte de 10 cours", name: "card_10_courses", widget: "number"}]}
+                  {label: "Tarif à l'unité", name: "unit_course", widget: "number", required: false},
+                  {label: "Carte de 10 cours", name: "card_10_courses", widget: "number", required: false}]}
               - {label: "Adresse", name: "adresse", widget: "markdown", hint: "Ex: Sous le Rainbow Café, 16 rue du marché - Possibilité de rajouter des liens", required: true}
               - {label: "Période", name: "period", widget: "string", hint: "Ex: Mai à Octobre"}
               - {label: "Durée", name: "duration", widget: "string", hint: "Ex: 75 min"}

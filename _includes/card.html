@@ -74,7 +74,7 @@
       <a href="{% if event.booking_url %}
                   {{ event.booking_url }}
                 {% else %}
-                  https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement {{ event.title | url_encode }} du {{ event.start_date | date: '%d %B %Y' | url_encode }}. Merci à bientôt
+                  https://wa.me/{{ site.data.site-texts.contact.whatsapp | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je suis [ PRÉNOM ], je souhaite m'inscrire à l'événement {{ event.title | url_encode }} du {{ event.start_date | date: '%d %B %Y' | url_encode }}. Merci à bientôt
                 {% endif %}"
        target="_blank"
        class="group inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white hover:bg-sable-600 hover:border-sable-600 transition-all duration-300 shadow-md hover:shadow-lg">

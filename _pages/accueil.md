@@ -34,13 +34,13 @@ about_section:
 testimonials_section:
   title: "Ce que disent mes élèves"
   subtitle: "Leurs expériences avec le yoga"
- 
+
 contact_section:
   title: "Contactez-moi"
   subtitle: "Pour toute question ou réservation"
   cta: "M'écrire sur What's app"
   phone: "+33 6 01 28 30 70"
-  whatsapp_message: "Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. Merci"
+  whatsapp_message: "Bonjour Nathalie, je suis [ PRÉNOM ], je souhaite des informations sur vos cours de yoga. Merci"
   background_image: "/assets/images/celleouyadusable-vinyasa-yoga-posture-lacanau-et-costa-rica.jpg"
 sitemap:
   priority: 1.0

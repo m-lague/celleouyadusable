@@ -15,7 +15,7 @@ contact_section:
   subtitle: Pour toute question ou réservation
   cta: M'écrire sur What's app
   phone: +33 6 01 28 30 70
-  whatsapp_message: Bonjour Nathalie, je souhaite des informations sur vos cours de yoga. Merci
+  whatsapp_message: Bonjour Nathalie, je suis [ PRÉNOM ], je souhaite des informations sur vos cours de yoga. Merci
   background_image: /assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean-2.jpeg
 availability:
   title: Horaires d'ouverture
@@ -46,19 +46,19 @@ quick_messages:
   messages:
     - title: Réserver un cours
       description: Pour réserver votre prochaine séance
-      message: Bonjour Nathalie, je souhaite réserver un cours de yoga. Comment dois
+      message: Bonjour Nathalie, je suis [ PRÉNOM ], je souhaite réserver un cours de yoga. Comment dois
         je faire ? Merci
     - title: Informations débutant
       description: Pour commencer le yoga en douceur
-      message: Bonjour Nathalie, je suis débutant(e) et j'aimerais des informations
+      message: Bonjour Nathalie, je suis [ PRÉNOM ], je suis débutant(e) et j'aimerais des informations
         sur vos cours. À bientôt
     - title: Événements & Retraites
       description: Pour participer aux événements spéciaux
-      message: Bonjour Nathalie, j'aimerais connaître les prochains événements et
+      message: Bonjour Nathalie, je suis [ PRÉNOM ], j'aimerais connaître les prochains événements et
         retraites. Merci
     - title: Cours particulier
       description: Pour un accompagnement personnalisé
-      message: Bonjour Nathalie, j'aimerais organiser un cours particulier. Merci
+      message: Bonjour Nathalie, je suis [ PRÉNOM ], j'aimerais organiser un cours particulier. Merci
 important_info:
   title: Informations importantes
   items:

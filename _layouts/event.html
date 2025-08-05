@@ -82,7 +82,7 @@ layout: default
                  <a href="{% if page.booking_url %}
                                   {{ page.booking_url }}
                                 {% else %}
-                                  https://wa.me/{{ site.data.site-texts.phone | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement {{ page.title | url_encode }} du {{ page.start_date | date: '%d/%m/%Y' | url_encode }}
+                                  https://wa.me/{{ site.data.site-texts.phone | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je suis [ PRÉNOM ], je souhaite m'inscrire à l'événement {{ page.title | url_encode }} du {{ page.start_date | date: '%d/%m/%Y' | url_encode }}
                                   Merci à bientôt
                                 {% endif %}"
                            target="_blank"
@@ -295,7 +295,7 @@ layout: default
                         <a href="{% if page.booking_url %}
                                   {{ page.booking_url }}
                                 {% else %}
-                                  https://wa.me/{{ site.data.site-texts.phone | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je souhaite m'inscrire à l'événement {{ page.title | url_encode }} du {{ page.start_date | date: '%d/%m/%Y' | url_encode }}
+                                  https://wa.me/{{ site.data.site-texts.phone | remove: ' ' | remove: '+' }}?text=Bonjour Nathalie, je suis [ PRÉNOM ], je souhaite m'inscrire à l'événement {{ page.title | url_encode }} du {{ page.start_date | date: '%d/%m/%Y' | url_encode }}
                                   Merci à bientôt
                                 {% endif %}"
                            target="_blank"
