@@ -31,12 +31,21 @@
           "endDate": "2025-10-31",
           "courseSchedule": {
             "@type": "Schedule",
-            "byDay": ["Monday", "Thursday", "Saturday", "Sunday"],
+            "byDay": ["https://schema.org/Monday", "https://schema.org/Thursday", "https://schema.org/Saturday", "https://schema.org/Sunday"],
             "startTime": "10:30",
             "duration": "PT75M"
           },
           "location": {
-            "@id": "https://celleouyadusable.com/lieux/plage-sud/"
+            "@type": "Place",
+            "name": "Plage SUD - Rainbow Café",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Plage SUD - Sous le Rainbow Café",
+              "addressLocality": "Lacanau Océan",
+              "addressRegion": "Nouvelle-Aquitaine",
+              "postalCode": "33680",
+              "addressCountry": "FR"
+            }
           }
         },
         {
@@ -47,12 +56,21 @@
           "endDate": "2025-10-31",
           "courseSchedule": {
             "@type": "Schedule",
-            "byDay": ["Sunday"],
+            "byDay": ["https://schema.org/Sunday"],
             "startTime": "18:00",
             "duration": "PT60M"
           },
           "location": {
-            "@id": "https://celleouyadusable.com/lieux/boco/"
+            "@type": "Place",
+            "name": "Bo&Co École de Surf",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Plage NORD - École de surf Bo&Co",
+              "addressLocality": "Lacanau Océan",
+              "addressRegion": "Nouvelle-Aquitaine",
+              "postalCode": "33680",
+              "addressCountry": "FR"
+            }
           }
         },
         {
@@ -63,12 +81,21 @@
           "endDate": "2026-04-30",
           "courseSchedule": {
             "@type": "Schedule",
-            "byDay": ["Sunday"],
+            "byDay": ["https://schema.org/Sunday"],
             "startTime": "17:00",
             "duration": "PT60M"
           },
           "location": {
-            "@id": "https://celleouyadusable.com/lieux/boco/"
+            "@type": "Place",
+            "name": "Bo&Co École de Surf",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Plage NORD - École de surf Bo&Co",
+              "addressLocality": "Lacanau Océan",
+              "addressRegion": "Nouvelle-Aquitaine",
+              "postalCode": "33680",
+              "addressCountry": "FR"
+            }
           }
         }
       ],
@@ -109,12 +136,7 @@
           "availability": "https://schema.org/InStock",
           "validFrom": "2025-05-01",
           "validThrough": "2025-10-31",
-          "category": "Cours individuel",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "20",
-            "priceCurrency": "EUR"
-          }
+          "category": "Cours individuel"
         },
         {
           "@type": "Offer",
@@ -157,95 +179,7 @@
       ]
     },
     {
-      "@type": "Place",
-      "@id": "https://celleouyadusable.com/lieux/plage-sud/",
-      "name": "Plage SUD - Cours Yin Yoga",
-      "description": "Cours de Yin Yoga en plein air sur la plage, sous le Rainbow Café. Cadre paisible pour la méditation et la relaxation.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Plage SUD - Sous le Rainbow Café",
-        "addressLocality": "Lacanau Océan",
-        "addressRegion": "Nouvelle-Aquitaine",
-        "postalCode": "33680",
-        "addressCountry": "FR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "44.9778",
-        "longitude": "-1.1967"
-      },
-      "amenityFeature": [
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Plein air",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Vue océan",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Calme et sérénité",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Connexion nature",
-          "value": true
-        }
-      ],
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Thursday", "Saturday", "Sunday"],
-          "opens": "10:30",
-          "closes": "11:45",
-          "validFrom": "2025-05-01",
-          "validThrough": "2025-10-31"
-        }
-      ]
-    },
-    {
-      "@type": "Place",
-      "@id": "https://celleouyadusable.com/lieux/boco/",
-      "name": "Bo&Co - Cours Yin Yoga",
-      "description": "Cours de Yin Yoga à l'école de surf Bo&Co, plage Nord. Espace protégé pour la pratique méditative.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Plage NORD - École de surf Bo&Co",
-        "addressLocality": "Lacanau Océan",
-        "addressRegion": "Nouvelle-Aquitaine",
-        "postalCode": "33680",
-        "addressCountry": "FR"
-      },
-      "telephone": "0556263399",
-      "url": "https://bocosurf.com/cours-de-yoga/#reservationyoga",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "17:00",
-          "closes": "18:00",
-          "validFrom": "2025-11-01",
-          "validThrough": "2026-04-30",
-          "description": "Horaires hors saison"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "18:00",
-          "closes": "19:00",
-          "validFrom": "2025-05-01",
-          "validThrough": "2025-10-31",
-          "description": "Horaires été"
-        }
-      ]
-    },
-    {
       "@type": "BreadcrumbList",
-      "@id": "https://celleouyadusable.com/cours/yin-yoga/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -278,12 +212,6 @@
         "@type": "WebSite",
         "name": "Celle où y'a du sable",
         "url": "https://celleouyadusable.com/"
-      },
-      "mainEntity": {
-        "@id": "https://celleouyadusable.com/cours/yin-yoga/"
-      },
-      "breadcrumb": {
-        "@id": "https://celleouyadusable.com/cours/yin-yoga/#breadcrumb"
       }
     }
   ]
