@@ -14,8 +14,15 @@ early_bird_deadline: 2025-09-08
 location: À Paris,  Yoga Village 17ème
 participants_max: 20
 image: /assets/images/workshop-celleouyadusable-mathieu-boldron-change-perspective.jpeg
-included: []
-not_included: []
+included:
+  - 3 jours de formation 100% en présentiel à Yoga Village Paris 17ème du 26 au
+    28 Septembre à Yoga Village Paris 17ème, 155 bis, Rue Cardinet.
+  - "La certification Yoga Aliiance "
+  - Des Feedbacks constructifs personnels sur votre pratique et votre
+    enseignement
+not_included:
+  - Transport
+  - Nourriture
 level: Tous niveaux
 booking_infos: Finalisez votre réservation sur le site de Mathieu boldron
 booking_url: https://www.mathieuboldron.com/formation-yoga-fondation
