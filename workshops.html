@@ -64,7 +64,7 @@ past_workshops_title: "Workshops passés"
                                           lg:grid-cols-3
                                         {% endcase %}
                                         gap-8">
-            {% for event in upcoming_workshops %}
+            {% for event in past_workshops %}
               {% include card.html %}
             {% endfor %}
         </div>
