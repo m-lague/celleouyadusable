@@ -24,7 +24,8 @@ not_included:
   - Transport
   - Nourriture
 level: Tous niveaux
-booking_infos: Finalisez votre réservation sur le site de Mathieu boldron
+booking_infos: Finalisez votre réservation sur le site de Mathieu boldron en
+  cliquant sur "Réserver ma place"
 booking_url: https://www.mathieuboldron.com/formation-yoga-fondation
 sitemap:
   priority: "0.8"
