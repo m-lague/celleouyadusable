@@ -4,6 +4,12 @@ type: Workshop
 start_date: 2025-09-26T06:00:17.060Z
 end_date: 2025-09-28T16:00:23.555Z
 duration: 3 jours
+prices:
+  standard:
+    - amount: 550
+      details: 30h
+    - amount: 675
+      details: 50h
 early_bird_deadline: 2025-09-08
 location: À Paris,  Yoga Village 17ème
 participants_max: 20
@@ -11,7 +17,8 @@ image: /assets/images/workshop-celleouyadusable-mathieu-boldron-change-perspecti
 included: []
 not_included: []
 level: Tous niveaux
-booking_infos: Réservation via le bouton de réservation
+booking_infos: Finalisez votre réservation sur le site de Mathieu boldron
+booking_url: https://www.mathieuboldron.com/formation-yoga-fondation
 sitemap:
   priority: "0.8"
   changefreq: weekly
