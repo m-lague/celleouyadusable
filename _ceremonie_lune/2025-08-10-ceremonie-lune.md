@@ -1,25 +1,25 @@
 ---
-title: "Cérémonie de Lune"
-type: "Cérémonie de Lune"
 start_date: 2025-08-10T20:00:00+02:00
-end_date:
-date: 2025-08-10T20:00:00+02:00
-duration: "de 20h à 22h30"
 prices:
   standard:
     - amount: 40
-      details: "Tarif moins de 7 jours avant ou sur place"
+      details: Tarif moins de 7 jours avant ou sur place
   early_bird: 30
 early_bird_deadline: 2025-08-03
-location: "LACANAU-OCÉAN, Sur le magic deck de @boandcosurf"
+level: Tous niveaux
 participants_max: 8
-image: "/assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean.jpeg"
-level: "Tous niveaux"
-booking_infos: "SPOTS LIMITÉS! Book ton spot!"
+date: 2025-08-10T20:00:00+02:00
+end_date: null
+duration: de 20h à 22h30
 sitemap:
   priority: 0.8
-  changefreq: 'weekly'
+  changefreq: weekly
   lastmod: 2025-06-27
+title: Cérémonie de Lune
+type: Cérémonie de Lune
+location: LACANAU OCÉAN, Sur le magic deck de @boandcosurf
+image: /assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean.jpeg
+booking_infos: SPOTS LIMITÉS! Book ton spot!
 ---
 
 Un voyage sacré pour célébrer la pleine lune et la nouvelle lune, dans ce lieu magique, aux énergies incroyables, sur ce deck sous les pins.
