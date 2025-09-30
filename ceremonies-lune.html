@@ -11,9 +11,20 @@ upcoming_ceremonies_title: "Cérémonies à venir"
 past_ceremonies_title: "Cérémonies passées"
 ---
 
-{% assign upcoming_ceremonies = site.ceremonie_lune | where_exp: "event", "event.start_date >= site.time" | where: "type", "Cérémonie de Lune" | sort: "start_date" %}
-{% assign past_ceremonies = site.ceremonie_lune | where_exp: "event", "event.start_date < site.time" | where: "type", "Cérémonie de Lune" | sort: "start_date" %}
+{% assign now = site.time | date: "%s" | plus: 0 %}
+{% assign all_ceremonies = site.ceremonie_lune | where: "type", "Cérémonie de Lune" | sort: "start_date" %}
 
+{% assign upcoming_ceremonies = "" | split: "" %}
+{% assign past_ceremonies = "" | split: "" %}
+
+{% for event in all_ceremonies %}
+  {% assign event_timestamp = event.start_date | date: "%s" | plus: 0 %}
+  {% if event_timestamp >= now %}
+    {% assign upcoming_ceremonies = upcoming_ceremonies | push: event %}
+  {% else %}
+    {% assign past_ceremonies = past_ceremonies | push: event %}
+  {% endif %}
+{% endfor %}
 
 <!-- Cerémonies à venir -->
 {% if upcoming_ceremonies.size > 0 %}

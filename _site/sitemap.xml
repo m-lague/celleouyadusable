@@ -45,7 +45,7 @@
         <url>
           <loc>http://localhost:4000/a-propos/</loc>
           
-            <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+            <lastmod>2025-09-30T15:14:16+02:00</lastmod>
           
 
           
@@ -88,7 +88,7 @@
         <url>
           <loc>http://localhost:4000/conditions-generales-utilisation/</loc>
           
-            <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+            <lastmod>2025-09-30T15:14:16+02:00</lastmod>
           
 
           
@@ -127,7 +127,7 @@
         <url>
           <loc>http://localhost:4000/contact/</loc>
           
-            <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+            <lastmod>2025-09-30T15:14:16+02:00</lastmod>
           
 
           
@@ -166,7 +166,7 @@
         <url>
           <loc>http://localhost:4000/faq/</loc>
           
-            <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+            <lastmod>2025-09-30T15:14:16+02:00</lastmod>
           
 
           
@@ -205,7 +205,7 @@
         <url>
           <loc>http://localhost:4000/mentions-legales/</loc>
           
-            <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+            <lastmod>2025-09-30T15:14:16+02:00</lastmod>
           
 
           
@@ -246,7 +246,7 @@
       <url>
         <loc>http://localhost:4000/cours/vinyasa-yoga/</loc>
         
-          <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+          <lastmod>2025-09-30T15:14:16+02:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -277,7 +277,7 @@
       <url>
         <loc>http://localhost:4000/cours/yin-yoga/</loc>
         
-          <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+          <lastmod>2025-09-30T15:14:16+02:00</lastmod>
         
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -309,9 +309,46 @@
   
     
       <url>
+        <loc>http://localhost:4000/evenement/30h-intensif-change-perspective-pratique-enseignement/</loc>
+        
+          <lastmod>2025-09-30T15:14:16+02:00</lastmod>
+        
+
+        <!-- Fréquence basée sur la date de l'événement -->
+        
+        
+        
+          <changefreq>yearly</changefreq>
+          <priority>0.4</priority>
+        
+
+        <!-- Extraction automatique des images des événements -->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </url>
+    
+  
+    
+      <url>
         <loc>http://localhost:4000/evenement/awakened-souls/</loc>
         
-          <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+          <lastmod>2025-09-30T15:14:16+02:00</lastmod>
         
 
         <!-- Fréquence basée sur la date de l'événement -->
@@ -348,7 +385,7 @@
       <url>
         <loc>http://localhost:4000/evenement/vibrant/</loc>
         
-          <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+          <lastmod>2025-09-30T15:14:16+02:00</lastmod>
         
 
         <!-- Fréquence basée sur la date de l'événement -->
@@ -385,7 +422,7 @@
       <url>
         <loc>http://localhost:4000/evenement/workshop-spinal-mobility/</loc>
         
-          <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+          <lastmod>2025-09-30T15:14:16+02:00</lastmod>
         
 
         <!-- Fréquence basée sur la date de l'événement -->
@@ -425,7 +462,7 @@
       <url>
         <loc>http://localhost:4000/ceremonie-lune/23-07-2025/</loc>
         
-          <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+          <lastmod>2025-09-30T15:14:16+02:00</lastmod>
         
 
         <!-- Fréquence basée sur la date de la cérémonie -->
@@ -462,7 +499,7 @@
       <url>
         <loc>http://localhost:4000/ceremonie-lune/10-08-2025/</loc>
         
-          <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+          <lastmod>2025-09-30T15:14:16+02:00</lastmod>
         
 
         <!-- Fréquence basée sur la date de la cérémonie -->
@@ -499,7 +536,7 @@
       <url>
         <loc>http://localhost:4000/ceremonie-lune/24-08-2025/</loc>
         
-          <lastmod>2025-08-05T10:29:26+02:00</lastmod>
+          <lastmod>2025-09-30T15:14:16+02:00</lastmod>
         
 
         <!-- Fréquence basée sur la date de la cérémonie -->
