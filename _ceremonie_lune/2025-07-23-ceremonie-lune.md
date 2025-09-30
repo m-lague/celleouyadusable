@@ -1,7 +1,11 @@
 ---
-start_date: 2025-10-25
 early_bird_deadline: 2025-10-15
 level: Tous niveaux
+start_date: 2025-10-25
+title: Cérémonie de la Lune
+type: Cérémonie de Lune
+end_date: null
+duration: de 17h à 20h
 prices:
   standard:
     - amount: 40
@@ -11,14 +15,10 @@ prices:
   early_bird: 40
 participants_max: 40
 date: 2025-07-23T20:00:00+02:00
-end_date: null
-duration: de 17h à 20h
 sitemap:
   priority: 0.8
   changefreq: weekly
   lastmod: 2025-06-27
-title: Cérémonie de Lune
-type: Cérémonie de Lune
 location: BORDEAUX @bivouacdarwin
 image: /assets/images/celleouyadusable-ceremonie-de-lune-lacanau-ocean.jpeg
 booking_infos: SPOTS LIMITÉS! Book ton spot!
