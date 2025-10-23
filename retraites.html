@@ -64,7 +64,7 @@ past_retreats_title: "Retraites passées"
                                           lg:grid-cols-3
                                         {% endcase %}
                                         gap-8">
-            {% for event in upcoming_retreats %}
+            {% for event in past_retreats %}
               {% include card.html %}
             {% endfor %}
         </div>
