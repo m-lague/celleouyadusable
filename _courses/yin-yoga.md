@@ -14,11 +14,22 @@ sitemap:
 images:
   - image: /assets/images/celleouyadusable-cours-yin-yoga-lacanau.jpeg
   - image: /assets/images/celleouyadusable-cours-yin-yoga-lacanau-3.jpeg
+benefits:
+  - Relaxation profonde
+  - Amélioration de la souplesse
+  - Réduction du stress
+  - Équilibre énergétique
+  - Meilleur sommeil
 planning_creneaux:
   hors_saison:
     - jour: dimanche
       heure: 17h
       lieu: Bo&Co
+      duree: 60 min
+      niveau: Tous niveaux
+    - jour: lundi
+      heure: 19:30
+      lieu: Maison Pada
       duree: 60 min
       niveau: Tous niveaux
   ete:
@@ -48,12 +59,6 @@ planning_creneaux:
       duree: 60min
       niveau: Tous niveaux
 cta_text: Me contacter
-benefits:
-  - Relaxation profonde
-  - Amélioration de la souplesse
-  - Réduction du stress
-  - Équilibre énergétique
-  - Meilleur sommeil
 ---
 
 Le Yin Yoga est une pratique douce et méditative qui invite à la lenteur et à l'introspection. Les postures sont maintenues pendant plusieurs minutes pour permettre un étirement profond des tissus conjonctifs.
