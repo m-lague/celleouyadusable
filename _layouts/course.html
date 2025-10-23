@@ -20,7 +20,7 @@ layout: default
                 {% if page.images %}
                 <div class="w-full h-full"> <!-- Conteneur principal pour l'image -->
                     <div class="w-full" style="aspect-ratio: 2/3"> <!-- Conteneur pour le ratio -->
-                        <img src="{{ page.images | first }}"
+                        <img src="{{ page.images[0].image }}"
                              alt="{{ page.title }}"
                              class="w-full h-full object-cover">
                     </div>
@@ -99,7 +99,7 @@ layout: default
     </div>
 </section>
 <div class="flex justify-center pb-8 px-4 md:px-8 ">
-  <img src="{{ page.images.last }}" alt="" class="w-full h-full center">
+  <img src="{{ page.images[1].image }}" alt="" class="w-full h-full center">
 </div>
 
 <!-- Section CTA -->
@@ -111,7 +111,7 @@ layout: default
         <p class="text-xl opacity-90 mb-8">
             {{page.cta_subtitle}}
         </p>
-        
+
         {% include button.html
           text=page.cta_text
           url="/contact"
