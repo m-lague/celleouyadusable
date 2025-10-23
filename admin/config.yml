@@ -361,7 +361,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Jour", name: "jour", widget: "select", options: ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]}
-              - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30"}
+              - {label: "Heure", name: "heure", widget: "string", hint: "Ex: 18h30, NE PAS METTRE 18:30"}
               - label: "Lieu"
                 name: "lieu"
                 widget: "relation"
