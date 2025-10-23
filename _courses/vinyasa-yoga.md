@@ -9,8 +9,8 @@ cta_title: "Prêt(e) à commencer votre pratique ?"
 cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."
 cta_text: "Me contacter"
 images:
-  - "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg"
-  - "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg"
+  - image: "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg"
+  - image: "/assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg"
 benefits:
   - "Renforcement musculaire"
   - "Amélioration de la flexibilité"

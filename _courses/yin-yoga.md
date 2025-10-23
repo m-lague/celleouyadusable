@@ -9,8 +9,8 @@ cta_title: "Prêt(e) à commencer votre pratique ?"
 cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."
 cta_text: "Me contacter"
 images:
-  - "/assets/images/celleouyadusable-cours-yin-yoga-lacanau.jpeg"
-  - "/assets/images/celleouyadusable-cours-yin-yoga-lacanau-3.jpeg"
+  - image: "/assets/images/celleouyadusable-cours-yin-yoga-lacanau.jpeg"
+  - image: "/assets/images/celleouyadusable-cours-yin-yoga-lacanau-3.jpeg"
 benefits:
   - "Relaxation profonde"
   - "Amélioration de la souplesse"
