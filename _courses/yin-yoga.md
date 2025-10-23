@@ -19,11 +19,6 @@ planning_creneaux:
     - jour: dimanche
       heure: 17h
       lieu: Bo&Co
-      duree: 60min
-      niveau: Tous niveaux
-    - jour: lundi
-      heure: 19h30
-      lieu: Maison Pada
       duree: 60 min
       niveau: Tous niveaux
   ete:
