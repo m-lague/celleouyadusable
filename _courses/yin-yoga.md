@@ -1,59 +1,64 @@
 ---
-schema: "yin-yoga"
-permalink: "/cours/yin-yoga/"
-title: "Yin Yoga"
-style: "Yin"
-duration: "60-75 minutes"
+schema: yin-yoga
+cta_subtitle: Contactez-moi pour plus d'informations ou pour réserver votre première séance.
+cta_title: Prêt(e) à commencer votre pratique ?
+permalink: /cours/yin-yoga/
+title: Yin Yoga
+style: Yin
 start_price: 20
-cta_title: "Prêt(e) à commencer votre pratique ?"
-cta_subtitle: "Contactez-moi pour plus d'informations ou pour réserver votre première séance."
-cta_text: "Me contacter"
-images:
-  - image: "/assets/images/celleouyadusable-cours-yin-yoga-lacanau.jpeg"
-  - image: "/assets/images/celleouyadusable-cours-yin-yoga-lacanau-3.jpeg"
-benefits:
-  - "Relaxation profonde"
-  - "Amélioration de la souplesse"
-  - "Réduction du stress"
-  - "Équilibre énergétique"
-  - "Meilleur sommeil"
-planning_creneaux:
-  hors_saison:
-    - jour: "dimanche"
-      heure: "17h"
-      lieu: "Bo&Co"
-      duree: "60min"
-      niveau: "Tous niveaux"
-  ete:
-    - jour: "lundi"
-      heure: "10h30"
-      lieu: "Plage SUD"
-      duree: "1h15min"
-      niveau: "Tous niveaux"
-    - jour: "jeudi"
-      heure: "10h30"
-      lieu: "Plage SUD"
-      duree: "1h15"
-      niveau: "Tous niveaux"
-    - jour: "samedi"
-      heure: "10h30"
-      lieu: "Plage SUD"
-      duree: "1h15"
-      niveau: "Tous niveaux"
-    - jour: "dimanche"
-      heure: "10h30"
-      lieu: "Plage SUD"
-      duree: "1h15"
-      niveau: "Tous niveaux"
-    - jour: "dimanche"
-      heure: "18h"
-      lieu: "Bo&Co"
-      duree: "60min"
-      niveau: "Tous niveaux"
+duration: 60-75 minutes
 sitemap:
   priority: 0.9
-  changefreq: 'monthly'
+  changefreq: monthly
   lastmod: 2025-06-27
+images:
+  - image: /assets/images/celleouyadusable-cours-yin-yoga-lacanau.jpeg
+  - image: /assets/images/celleouyadusable-cours-yin-yoga-lacanau-3.jpeg
+planning_creneaux:
+  hors_saison:
+    - jour: dimanche
+      heure: 17h
+      lieu: Bo&Co
+      duree: 60min
+      niveau: Tous niveaux
+    - jour: lundi
+      heure: 19h30
+      lieu: Maison Pada
+      duree: 60 min
+      niveau: Tous niveaux
+  ete:
+    - jour: lundi
+      heure: 10h30
+      lieu: Plage SUD
+      duree: 1h15min
+      niveau: Tous niveaux
+    - jour: jeudi
+      heure: 10h30
+      lieu: Plage SUD
+      duree: 1h15
+      niveau: Tous niveaux
+    - jour: samedi
+      heure: 10h30
+      lieu: Plage SUD
+      duree: 1h15
+      niveau: Tous niveaux
+    - jour: dimanche
+      heure: 10h30
+      lieu: Plage SUD
+      duree: 1h15
+      niveau: Tous niveaux
+    - jour: dimanche
+      heure: 18h
+      lieu: Bo&Co
+      duree: 60min
+      niveau: Tous niveaux
+cta_text: Me contacter
+benefits:
+  - Relaxation profonde
+  - Amélioration de la souplesse
+  - Réduction du stress
+  - Équilibre énergétique
+  - Meilleur sommeil
 ---
 
 Le Yin Yoga est une pratique douce et méditative qui invite à la lenteur et à l'introspection. Les postures sont maintenues pendant plusieurs minutes pour permettre un étirement profond des tissus conjonctifs.
