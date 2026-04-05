@@ -14,11 +14,6 @@ sitemap:
 images:
   - image: /assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau.jpeg
   - image: /assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg
-benefits:
-  - Renforcement musculaire
-  - Amélioration de la flexibilité
-  - Réduction du stress
-  - Connexion avec la nature
 planning_creneaux:
   hors_saison:
     - jour: vendredi
@@ -46,6 +41,11 @@ planning_creneaux:
       lieu: Maison Pada
       duree: 1h
       niveau: Tous niveaux
+    - jour: lundi
+      heure: 11h
+      lieu: Plage SUD
+      duree: 75 min
+      niveau: Débutant
   ete:
     - jour: lundi
       heure: 8h30
@@ -88,6 +88,11 @@ planning_creneaux:
       duree: 1h15
       niveau: Tous niveaux
 cta_text: Me contacter
+benefits:
+  - Renforcement musculaire
+  - Amélioration de la flexibilité
+  - Réduction du stress
+  - Connexion avec la nature
 ---
 
 Le Vinyasa est un yoga dynamique qui synchronise mouvement et respiration dans un flow continu. Cette pratique développe force, souplesse et concentration.
