@@ -1,37 +1,41 @@
 ---
-title: "awakened souls - Yoga retraite"
-type: "Retraite"
+title: awakened souls - Yoga retraite
+type: Retraite
 start_date: 2026-03-09T09:00:00+02:00
-end_date: 2026-03-15T09:00:00+02:00
-duration: "7 jours"
+end_date: 2026-03-15T07:30:00.000+01:00
+duration: 7 jours
 prices:
   standard:
     - amount: 1340
-      details: "Dortoir de 3 ou 4 personnes, lit simple, salle de bain commune"
+      details: Dortoir de 3 ou 4 personnes, lit simple, salle de bain commune
     - amount: 1980
-      details: "Chambre privée, lit double, salle de bain privée"
+      details: Chambre privée, lit double, salle de bain privée
 early_bird_deadline: 2025-08-15
-location: "COSTA-RICA, Santa-Teresa"
+location: COSTA-RICA, Santa-Teresa
 participants_max: 8
-image: "/assets/images/celleouyadusable-retraite-yoga-costa-rica.jpeg"
+image: /assets/images/celleouyadusable-retraite-yoga-costa-rica.jpeg
 included:
-  - "4h de yoga / jour"
-  - "6 nuitées"
-  - "Les repas locaux et biologiques, réalisés par une Cheffe, pour éveiller vos sens"
-  - "1 cérémonies KIRTAN"
-  - "1 cérémonies Cacao"
-  - "Sounds healing"
+  - 4h de yoga / jour
+  - 6 nuitées
+  - Les repas locaux et biologiques, réalisés par une Cheffe, pour éveiller vos
+    sens
+  - 1 cérémonies KIRTAN
+  - 1 cérémonies Cacao
+  - Sounds healing
 not_included:
-  - "Les transports. Billets d’avion. Transfert Shuttle San-José Airport-Santa-Teresa."
-  - "les activités extérieures"
-  - "1 repas du soir en ville"
-  - "Cours de surf et locations de planches"
+  - Les transports. Billets d’avion. Transfert Shuttle San-José
+    Airport-Santa-Teresa.
+  - les activités extérieures
+  - 1 repas du soir en ville
+  - Cours de surf et locations de planches
   - "autres visites: Waterfalls Montezuma"
-level: "Tous niveaux"
-booking_infos: "Un acompte de 200€ est à verser pour l’inscription. Non remboursable. Le solde peut être versé en plusieurs fois au plus tard jusqu’au 31 janvier."
+level: Tous niveaux
+booking_infos: Un acompte de 200€ est à verser pour l’inscription. Non
+  remboursable. Le solde peut être versé en plusieurs fois au plus tard jusqu’au
+  31 janvier.
 sitemap:
   priority: 0.8
-  changefreq: 'weekly'
+  changefreq: weekly
   lastmod: 2025-06-27
 ---
 
