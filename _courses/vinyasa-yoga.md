@@ -16,11 +16,6 @@ images:
   - image: /assets/images/celleouyadusable-cours-vinyasa-yoga-lacanau-2.jpeg
 planning_creneaux:
   hors_saison:
-    - jour: vendredi
-      heure: 17h
-      lieu: Bo&Co
-      duree: 60 min
-      niveau: Tous niveaux
     - jour: samedi
       heure: 11h
       lieu: Plage SUD
@@ -41,17 +36,7 @@ planning_creneaux:
       lieu: Maison Pada
       duree: 1h
       niveau: Tous niveaux
-    - jour: lundi
-      heure: 11h
-      lieu: Plage SUD
-      duree: 75 min
-      niveau: Débutant
   ete:
-    - jour: lundi
-      heure: 8h30
-      lieu: Plage SUD
-      duree: 1h15
-      niveau: Tous niveaux
     - jour: lundi
       heure: 18h
       lieu: Maison Pada
@@ -66,16 +51,6 @@ planning_creneaux:
       heure: 18h
       lieu: Bo&Co
       duree: 60min
-      niveau: Tous niveaux
-    - jour: vendredi
-      heure: 8h30
-      lieu: Maison Pada
-      duree: 1h
-      niveau: Tous niveaux
-    - jour: vendredi
-      heure: 18h
-      lieu: Bo&Co
-      duree: 1h
       niveau: Tous niveaux
     - jour: samedi
       heure: 8h30
