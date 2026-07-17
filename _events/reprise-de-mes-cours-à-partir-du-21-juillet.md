@@ -1,5 +1,5 @@
 ---
-title: REPRISE DE MES COURS À PARTIR DU 21 JUILLET
+title: "REPRISE DE MES COURS LE 21 JUILLET "
 type: Retraite
 start_date: 2026-07-21T09:00:00.000+02:00
 duration: Saison
