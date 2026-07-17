@@ -15,7 +15,7 @@ main:
         url: /retraites/
       - name: Workshops
         url: /workshops/
-      - name: Cérémonies de Lune
+      - name: Kirtan & sounds healing
         url: /ceremonies-lune/
   - name: À PROPOS
     url: /a-propos/
