@@ -1,11 +1,11 @@
 ---
-title: "REPRISE DE MES COURS LE 21 JUILLET "
+title: REPRISE DE MES COURS LE 21 JUILLET! J’ai hâte de vous retrouver!
 type: Retraite
 start_date: 2026-07-21T09:00:00.000+02:00
 duration: Saison
 location: LACANAU-OCÉAN
 participants_max: 40
-image: /assets/images/12fcb52f-e788-47a2-b898-0fbc2ff3d6d3.jpeg
+image: /assets/images/f2734c68-43f3-45f4-8343-9f547acea869.jpeg
 included: []
 not_included: []
 level: Tous niveaux
