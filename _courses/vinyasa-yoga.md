@@ -49,15 +49,10 @@ planning_creneaux:
       niveau: Tous niveaux
     - jour: jeudi
       heure: 18h
-      lieu: Bo&Co
-      duree: 60min
-      niveau: Tous niveaux
-    - jour: samedi
-      heure: 8h30
-      lieu: Plage SUD
+      lieu: Surya le studio
       duree: 1h15
       niveau: Tous niveaux
-    - jour: dimanche
+    - jour: samedi
       heure: 8h30
       lieu: Plage SUD
       duree: 1h15
