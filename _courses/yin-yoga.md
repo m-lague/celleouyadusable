@@ -16,22 +16,12 @@ images:
   - image: /assets/images/celleouyadusable-cours-yin-yoga-lacanau-3.jpeg
 planning_creneaux:
   hors_saison:
-    - jour: dimanche
-      heure: 17h
-      lieu: Bo&Co
-      duree: 60 min
-      niveau: Tous niveaux
-    - jour: lundi
-      heure: 19h30
-      lieu: Maison Pada
-      duree: 60 min
+    - jour: samedi
+      heure: 11h
+      lieu: Plage SUD
+      duree: 1h15
       niveau: Tous niveaux
   ete:
-    - jour: lundi
-      heure: 10h30
-      lieu: Plage SUD
-      duree: 1h15min
-      niveau: Tous niveaux
     - jour: jeudi
       heure: 10h30
       lieu: Plage SUD
@@ -43,13 +33,8 @@ planning_creneaux:
       duree: 1h15
       niveau: Tous niveaux
     - jour: dimanche
-      heure: 10h30
-      lieu: Plage SUD
-      duree: 1h15
-      niveau: Tous niveaux
-    - jour: dimanche
       heure: 18h
-      lieu: Bo&Co
+      lieu: Maison Pada
       duree: 60min
       niveau: Tous niveaux
 cta_text: Me contacter
