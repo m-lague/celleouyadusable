@@ -260,14 +260,13 @@ function createCourseCard(course) {
     // Message WhatsApp contextualisé
     let reservationUrl;
 
-    if (course.lieu.trim().toLowerCase() === "plage sud") {
-        // WhatsApp pour Plage Sud
-        const whatsappMessage = `Bonjour Nathalie, je suis [ VOTRE PRENOM ],je souhaite réserver le cours ${course.style} prévu le ${course.jour} à ${course.heure} à ${course.lieu}. Merci`;
-        reservationUrl = `https://wa.me/33601283070?text=${encodeURIComponent(whatsappMessage)}`;
+    if (lieuInfo.booking_url && lieuInfo.booking_url.trim() !== '' && lieuInfo.booking_url.trim() !== '#') {
+        // Si le lieu a une URL de réservation valide, on l'utilise
+        reservationUrl = lieuInfo.booking_url;
     } else {
-        // URL de booking pour les autres lieux
-        const lieuInfo = lieuxData[course.lieu];
-        reservationUrl = lieuInfo?.booking_url || '#'; // fallback si pas d'URL
+        // Sinon, fallback WhatsApp
+        const whatsappMessage = `Bonjour Nathalie, je suis [ VOTRE PRENOM ], je souhaite réserver le cours ${course.style} prévu le ${course.jour} à ${course.heure} à ${course.lieu}. Merci`;
+        reservationUrl = `https://wa.me/33601283070?text=${encodeURIComponent(whatsappMessage)}`;
     }
 
 
