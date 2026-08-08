@@ -13,7 +13,7 @@ lieux:
     image: /assets/images/celleouyadusable-cours-de-yoga-plage-sub-lacanau.jpeg
     couleur: bleu
   - period: Avril à Octobre
-    booking_url: https://celleouyadusable.com/
+    booking_url: ""
     prices:
       unit_course: 20
     nom: Surya le studio
