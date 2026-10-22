@@ -5,9 +5,7 @@ start_date: 2026-12-30T15:45:00.000+01:00
 end_date: 2027-01-02T15:45:00.000+01:00
 duration: 3 jours
 prices:
-  early_bird:
-    - amount: 660
-      details: Avant le 1er décembre
+  early_bird: 660    
   standard:
     - amount: 710
       details: À partir du 1er décembre
