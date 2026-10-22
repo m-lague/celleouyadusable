@@ -407,11 +407,9 @@ collections:
         name: "prices"
         widget: "object"
         fields:
-          - {label: "Prix early bird", name: "early_bird", widget: "list", fields: [
-              {label: "Prix", name: "amount", widget: "number"},
-              {label: "Détails", name: "details", widget: "string", hint: "Ex: jusqu'au 1er juin"}]}
+          - {label: "Prix early bird", name: "early_bird", widget: "number", hint: "sans le signe €"}
           - {label: "Prix standard", name: "standard", widget: "list", fields: [
-              {label: "Prix", name: "amount", widget: "number"},
+              {label: "Prix", name: "amount", widget: "number", hint:"sans le signe €"},
               {label: "Détails", name: "details", widget: "string",required: false, hint: "Dortoir de 3 ou 4 personnes, lit simple, salle de bain commune"}]}
       - {label: "Date limite Early bird", name: "early_bird_deadline", widget: "datetime", required: false, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
       - {label: "Lieu", name: "location", widget: "string"}
