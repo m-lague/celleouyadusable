@@ -5,7 +5,7 @@ start_date: 2026-12-30T15:45:00.000+01:00
 end_date: 2027-01-02T15:45:00.000+01:00
 duration: 3 jours
 prices:
-  early_bird: 660    
+  early_bird: 660
   standard:
     - amount: 710
       details: À partir du 1er décembre
@@ -29,16 +29,7 @@ sitemap:
   changefreq: weekly
   lastmod: "{{date format='YYYY-MM-DD'}}"
 ---
-
 « COCOON AU BORD DE L’OCÉAN » 🫧🌿🌳
-
-
-
-YOGA RETRAITE à Lacanau-Océan
-
-
-
-DU 30 décembre 2026 au 2 janvier 2027.
 
 Une bulle de douceur pour transiter vers cette nouvelle année 🫧
 
@@ -48,46 +39,31 @@ Des pratiques douces et fluides, lentes et éveillées, méditatives, organiques
 
 Un cocon de présence.
 
-
-
 🌳Une cérémonie cacao et un KIRTAN pour voyager avec magie et conscience vers l’énergie nouvelle de l’année qui arrive.
 
 🌳Un voyage sonore enveloppant et doux pour imprimer le calme et la présence à l’intérieur de soi.
 
 Un temps de repos. De bien-être.
 
-
 🌳8 personnes maximum pour préserver la douceur et la chaleur des partages, une atmosphère paisible et ressourçante, une bulle de sérénité.
-
-
 
 🌳Arrivée: mercredi 30 décembre dès 15h. Première pratique de yin à 17h.
 
 🌳Départ: samedi 2 janvier 14h.
 
-
-
 🌳2h30 de pratiques de vinyasa douces et fluides, le matin
 
 🌳 1h30 de pratique de yin, sérénité et apaisement, le soir 
 
-
-
 🌳 repas vegan et healthy 
-
-
 
 Tarif early bird: 660€
 
 Jusqu’au 1er décembre.
 
-
-
 Tarif normal: 710€
 
 Depuis le 1er décembre 
-
-
 
 Acompte de 200€ a régler pour réserver ton spot! (Non remboursable)
 
