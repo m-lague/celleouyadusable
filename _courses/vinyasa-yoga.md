@@ -19,22 +19,22 @@ planning_creneaux:
     - jour: samedi
       heure: 11h
       lieu: Plage SUD
-      duree: 1h15
+      duree: 75 min
       niveau: Tous niveaux
     - jour: dimanche
       heure: 11h
       lieu: Plage SUD
-      duree: 1h15
+      duree: 75 min
       niveau: Tous niveaux
     - jour: lundi
-      heure: 18h
+      heure: 18h30
       lieu: Maison Pada
-      duree: 1h15
+      duree: 75 min
       niveau: Intermédiaire
-    - jour: vendredi
-      heure: 8h30
-      lieu: Maison Pada
-      duree: 1h
+    - jour: jeudi
+      heure: 17h
+      lieu: Surya le studio
+      duree: 75 min
       niveau: Tous niveaux
   ete:
     - jour: lundi
@@ -48,9 +48,9 @@ planning_creneaux:
       duree: 1h15
       niveau: Tous niveaux
     - jour: jeudi
-      heure: 18h
+      heure: 18h30
       lieu: Surya le studio
-      duree: 1h15
+      duree: 75 min
       niveau: Tous niveaux
     - jour: samedi
       heure: 8h30
