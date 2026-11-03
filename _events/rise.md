@@ -28,8 +28,6 @@ sitemap:
   changefreq: weekly
   lastmod: "{{date format='YYYY-MM-DD'}}"
 ---
-« RISE »
-
 S’élever, s’aligner, renaître.
 
 Au cœur des pins et face à l’immensité de l’océan à Lacanau, la retraite RISE est une invitation suspendue entre terre et ciel pour retrouver votre verticalité et vous déployer.
@@ -46,31 +44,19 @@ Fun et dépassement de soi!
 
 Un temps de repos. De bien-être.
 
-
-
 🌳8 personnes maximum pour préserver la douceur et la chaleur des partages d’un petit groupe, une atmosphère paisible et ressourçante, pour renaître à soi.
-
-
 
 🌳Arrivée: vendredi 14 mai, dès 15h. Cercle d’ouverture et première pratique de yin à 17h. Week-end de Pentecôte.
 
 🌳Départ: lundi 17 mai, 14h.
 
-
-
 Lieu: @casa.wow, une surfhouse chill et cocon, décorée avec goût et passion par notre hôte Sandrine. Un lieu aux énergies extraordinaires, au calme et à 2 pas de l’Océan. Chaque objet et mobilier y est pensé comme une invitation à rêver et se déposer.
-
-
 
 🌳2h30 de pratiques de vinyasa le matin
 
 🌳 1h30 de pratique de yin, sérénité et apaisement, le soir 
 
-
-
 🌳 repas vegan et healthy avec notre cheffe incroyable @stephanieguillemette qui régalera nos papilles et nos sens avec une cuisine végétarienne vivante et vibrante. 
-
-
 
 🌳 chambres de 2 personnes, 3 chambres de 2 lits simples, dont 1 avec sdb privée (celle-ci est déjà pleine), et 2 avec une sdb à partager. 
 
@@ -80,18 +66,12 @@ Tarif early bird: 765€
 
 Jusqu’au 1er janvier
 
-
-
 Tarif normal: 815€
 
 Depuis le 1er janvier
 
-
-
 Acompte de 200€ a régler pour réserver ton spot! (Non remboursable)
 
 Solde à verser sur place en espèces le jour de l’arrivée. 🌞✨
-
-
 
 IL RESTE 5 SPOTS!
