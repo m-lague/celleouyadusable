@@ -10,7 +10,7 @@ prices:
     - amount: 710
       details: À partir du 1er décembre
 early_bird_deadline: 2026-12-01
-location: Lacanau-Océan, Casa Wow
+location: Lacanau-Océan
 participants_max: 8
 image: /assets/images/img_7757.jpeg
 included:
