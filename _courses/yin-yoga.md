@@ -21,6 +21,11 @@ planning_creneaux:
       lieu: Plage SUD
       duree: 1h15
       niveau: Tous niveaux
+    - jour: dimanche
+      heure: 18h30
+      lieu: Maison Pada
+      duree: 60 min
+      niveau: Tous niveaux
   ete:
     - jour: jeudi
       heure: 10h30
