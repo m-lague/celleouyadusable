@@ -10,7 +10,7 @@ prices:
     - amount: 815
       details: ""
 early_bird_deadline: 2027-01-31
-location: Lacanau-Océan, @casa.wow
+location: Lacanau-Océan
 participants_max: 8
 image: /assets/images/dsc04842.jpeg
 included:
