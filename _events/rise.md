@@ -1,5 +1,5 @@
 ---
-title: RISE
+title: RISE - Yoga retraite
 type: Retraite
 start_date: 2027-05-14T16:46:00.000+02:00
 end_date: 2027-05-17T16:46:00.000+02:00
