@@ -1,5 +1,5 @@
 ---
-title: COCOON AU BORD DE L’OCÉAN-YOGA RETRAITE
+title: COCOON AU BORD DE L’OCÉAN-Yoga retraite
 type: Retraite
 start_date: 2026-12-30T15:45:00.000+01:00
 end_date: 2027-01-02T15:45:00.000+01:00
