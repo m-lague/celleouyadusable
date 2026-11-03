@@ -29,8 +29,6 @@ sitemap:
   changefreq: weekly
   lastmod: "{{date format='YYYY-MM-DD'}}"
 ---
-« COCOON AU BORD DE L’OCÉAN » 🫧🌿🌳
-
 Une bulle de douceur pour transiter vers cette nouvelle année 🫧
 
 Un espace de sérénité et de reconnection à soi, dans ce lieu magique à deux pas de l’océan, @casa.wow 
