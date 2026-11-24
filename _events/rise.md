@@ -12,7 +12,7 @@ prices:
 early_bird_deadline: 2027-01-31
 location: Lacanau-Océan
 participants_max: 8
-image: /assets/images/dsc04842.jpeg
+image: /assets/images/8413c531-55a7-4078-b4ae-d2673c26f932.jpeg
 included:
   - 3 nuitées. 4h de yoga par jour (2h30 Vinyasa, 1h30 yin). 1 cérémonie cacao
     et Kirtan. 1 atelier créatif avec Manon @manonevermote. 1 initiation
