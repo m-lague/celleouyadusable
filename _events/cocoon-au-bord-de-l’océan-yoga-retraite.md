@@ -12,7 +12,7 @@ prices:
 early_bird_deadline: 2026-12-01
 location: Lacanau-Océan
 participants_max: 8
-image: /assets/images/img_7757.jpeg
+image: /assets/images/2f1b2683-ed86-42c0-bb9f-1d76cc003939.jpeg
 included:
   - 4 heures de pratiques de yoga par jour. Une pratique fluide et organique de
     vinyasa le matin (2h30). Une pratique douce, et apaisante de yin le soir
